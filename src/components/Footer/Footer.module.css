@@ -1,0 +1,10 @@
+.footer {
+  height: 60vh;
+  overflow-x: hidden;
+  background-image: url("../../assets/blue-mountains.png");
+  background-size: cover;
+}
+
+.link {
+  color: white;
+}

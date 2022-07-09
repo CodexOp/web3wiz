@@ -1,0 +1,11 @@
+.primaryText {
+  color: var(--primary-font-color);
+}
+
+.secondaryText {
+  color: var(--secondary-font-color);
+}
+
+.divBorder {
+  border-color: var(--div-border);
+}

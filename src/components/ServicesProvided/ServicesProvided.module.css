@@ -1,0 +1,33 @@
+.borderText {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--border-font-stroke);
+  color: var(--border-font-fill);
+}
+
+.primaryText {
+  color: var(--primary-font-color);
+}
+
+.secondaryText {
+  color: var(--secondary-font-color);
+}
+
+.card {
+  background-color: var(--card-bg-transparent);
+}
+
+.image {
+  filter: var(--img-filter-light);
+}
+
+.card:nth-child(2) {
+  position: relative;
+  top: -70px;
+}
+
+@media screen and (max-width: 1240px) {
+  .card:nth-child(2) {
+    position: relative;
+    top: 0px;
+  }
+}

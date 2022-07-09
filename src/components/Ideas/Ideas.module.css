@@ -1,0 +1,7 @@
+.primaryText {
+  color: var(--primary-font-color);
+}
+
+.secondaryText {
+  color: var(--secondary-font-color);
+}

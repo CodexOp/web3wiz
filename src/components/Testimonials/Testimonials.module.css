@@ -1,0 +1,54 @@
+.quote {
+  position: relative;
+  top: -70px;
+  left: -65%;
+}
+
+.primaryText {
+  color: var(--primary-font-color);
+}
+
+.stars {
+  position: relative;
+  top: -160px;
+  left: 15%;
+}
+
+.card {
+  background-color: var(--card-bg-transparent);
+}
+
+.card:nth-child(2) {
+  position: relative;
+  top: -70px;
+}
+
+@media screen and (max-width: 1240px) {
+  .card:nth-child(2) {
+    position: relative;
+    top: 0px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .quote {
+    left: -33vw;
+  }
+  .stars {
+    top: -160px;
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .stars {
+    top: -110px;
+    left: -5%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .quote {
+    left: -26vw;
+  }
+}

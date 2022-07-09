@@ -1,0 +1,26 @@
+.borderText {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--border-font-stroke);
+  color: var(--border-font-fill);
+}
+
+.card {
+  background-color: var(--card-bg-non-transparent);
+}
+
+.borderAndText {
+  border-color: var(--team-btn-bg);
+  color: var(--team-btn-bg) !important;
+}
+
+.connectButton {
+  background: var(--team-btn-bg) !important;
+}
+
+.primaryText {
+  color: var(--primary-font-color);
+}
+
+.secondaryText {
+  color: var(--secondary-font-color);
+}

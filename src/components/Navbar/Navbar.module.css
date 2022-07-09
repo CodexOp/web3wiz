@@ -1,0 +1,24 @@
+.navBar {
+  background: var(--nav-bg);
+}
+
+.navText {
+  color: var(--primary-font-color) !important;
+}
+
+.dappModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 400px;
+  background-color: var(--modal-bg);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,34 @@
+.borderText {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--border-font-stroke);
+  color: var(--border-font-fill);
+}
+
+.primaryText {
+  color: var(--primary-font-color) !important;
+}
+
+.secondaryText {
+  color: var(--secondary-font-color);
+}
+
+.card {
+  background-color: var(--card-bg-transparent);
+}
+
+.image {
+  filter: var(--img-filter-full);
+}
+
+.projectNav::-webkit-scrollbar {
+  height: 10px;
+}
+
+.projectNav::-webkit-scrollbar-track {
+  background: #2b2b2b;
+}
+
+.projectNav::-webkit-scrollbar-thumb {
+  background: #00d186;
+  border-radius: 3px;
+}

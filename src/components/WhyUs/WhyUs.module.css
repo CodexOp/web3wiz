@@ -1,0 +1,21 @@
+.borderText {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--border-font-stroke);
+  color: var(--border-font-fill);
+}
+
+.primaryText {
+  color: var(--primary-font-color);
+}
+
+.secondaryText {
+  color: var(--secondary-font-color);
+}
+
+.card {
+  background-color: var(--card-bg-transparent);
+}
+
+.lightning {
+  filter: var(--img-darken-filter);
+}

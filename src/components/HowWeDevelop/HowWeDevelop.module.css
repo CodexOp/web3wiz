@@ -1,0 +1,13 @@
+.primaryText {
+  color: var(--primary-font-color);
+}
+
+.circleArrow {
+  filter: var(--img-filter-full);
+}
+
+@media screen and (max-width: 900px) {
+  .circleArrow {
+    transform: rotate(90deg);
+  }
+}
