@@ -16,20 +16,23 @@ const Team = () => {
       name: "BRICK MATRIX",
       position: "Contract and Web3 Dev",
       message: "https://t.me/brick_matrix",
+      connect: "https://t.me/brick_matrix",
     },
     {
       image: codex,
-      experience: "2 YRS OF EXPERINCE IN DESIGN",
-      name: "CODEX",
+      experience: "PINKSALE VERIFIED",
+      name: "WEBWIZARDZ",
       position: "DAPP and Web Dev",
-      message: "https://t.me/Cod3xOp",
+      message: "https://t.me/webwizardz",
+      connect: "https://t.me/webwizardz",
     },
     {
       image: brix,
-      experience: "ECSTATIC ROOKIE",
-      name: "BRIX",
-      position: "Marketing and Management",
-      message: "https://t.me/iiTzBrix",
+      experience: "1+ Years Experince In Marketing",
+      name: "JDTESLA",
+      position: "Marketing and KOL",
+      message: "https://t.me/JDTesla",
+      connect: "https://t.me/JDTesla",
     },
   ];
   return (
@@ -180,7 +183,8 @@ const Team = () => {
                     Message
                   </Button>
                 </a>
-                <Button
+                <a href={data.message} alt="connect" target="_blank" rel="noreferrer">
+                <Button 
                   className={styles.connectButton}
                   sx={{
                     fontFamily: "Nunito Sans",
@@ -194,6 +198,7 @@ const Team = () => {
                 >
                   Connect
                 </Button>
+                </a>
               </Box>
             </Box>
           );

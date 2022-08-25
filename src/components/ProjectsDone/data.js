@@ -11,6 +11,10 @@ import rocketGlobal from "../../assets/screenshots/rocketGlobal.png";
 import luckyMetaverse from "../../assets/screenshots/luckyMetaverse.png";
 import metaLoopSpecial from "../../assets/screenshots/metaLoopSpecial.png";
 import lmetaSpecial from "../../assets/screenshots/lmetaSpecial.png";
+import babykrakens from "../../assets/screenshots/babykrakenstaking.png";
+import kuppywebsite from "../../assets/screenshots/kuppywebsite.png";
+import rabbitinuwebite from "../../assets/screenshots/rabbitinuwebite.png";
+import primenftwebsite from "../../assets/screenshots/primenftwebsite.png";
 
 export const navData = {
   "NFT Minting Websites": [
@@ -18,7 +22,7 @@ export const navData = {
       header: "Quing Long Inu",
       image: qingLongInu,
       link: "https://codexop.github.io/qinglong/",
-    },
+    }
   ],
   Dashboards: [
     {
@@ -53,6 +57,11 @@ export const navData = {
       image: metaMarketingStaking,
       link: "https://main--metamarketingdao.netlify.app/",
     },
+    {
+      header: "Baby Krakens Staking",
+      image: babykrakens,
+      link: "https://babykrakens.netlify.app/",
+    },
   ],
   Calculators: [
     {
@@ -76,6 +85,21 @@ export const navData = {
       header: "Lucky Metaverse",
       image: luckyMetaverse,
       link: "https://lmeta.netlify.app/",
+    },
+    {
+      header: "Prime NFT",
+      image: primenftwebsite,
+      link: "http://primenft.co.in/",
+    },
+    {
+      header: "Kuppy Clans Website",
+      image: kuppywebsite,
+      link: "https://www.kuppyclans.com/",
+    },
+    {
+      header: "Happy Rabbit Inu",
+      image: rabbitinuwebite,
+      link: "https://happyrabitinuyear.netlify.app/",
     },
   ],
   "Special dApps": [
