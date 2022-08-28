@@ -30,7 +30,7 @@ const Team = () => {
       image: brix,
       experience: "1+ Years Experince In Marketing",
       name: "JDTESLA",
-      position: "Marketing and KOL",
+      position: "Marketing and Management",
       message: "https://t.me/JDTesla",
       connect: "https://t.me/JDTesla",
     },

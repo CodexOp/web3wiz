@@ -74,6 +74,7 @@ const WhyUs = () => {
           component="img"
           alt="blockchain"
           src={blockchain}
+          className={styles.whyusimage}
         ></Box>
         <Box
           sx={{

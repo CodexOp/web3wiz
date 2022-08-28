@@ -11,6 +11,7 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import FAQs from "./components/FAQs/FAQ";
 import Footer from "./components/Footer/Footer";
 import styles from "./App.module.css";
+import Partners from "./components/Partners/Partners";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Navbar />
       <Landing />
       <div className={styles.circleBg}>
+        <Partners />
         <div className={styles.greyMountainWrapper}>
           <WhyUs />
         </div>

@@ -145,6 +145,7 @@ const Landing = () => {
         </Box>
         <Box
           className={styles.earth}
+          id={styles.coin_image}
           sx={{
             height: "auto",
             width: "100%",

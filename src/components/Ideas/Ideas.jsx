@@ -80,6 +80,7 @@ const Ideas = () => {
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "space-between",
+                  marginTop:"20px",
                   mb: { xs: "0.2rem", md: "0.5rem" },
                 }}
               >
@@ -107,6 +108,7 @@ const Ideas = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-around",
+                
               }}
             >
               <Box
@@ -114,6 +116,7 @@ const Ideas = () => {
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "space-between",
+                  marginTop:"20px",
                   mb: { xs: "0.2rem", md: "0.5rem" },
                 }}
               >
@@ -149,6 +152,7 @@ const Ideas = () => {
                   flexDirection: "row",
                   justifyContent: "space-between",
                   mb: { xs: "0.2rem", md: "0.5rem" },
+                  marginTop:"20px",
                 }}
               >
                 <Typography

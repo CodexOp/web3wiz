@@ -17,5 +17,19 @@
 }
 
 .lightning {
-  filter: var(--img-darken-filter);
+  opacity: 0.8;
+}
+
+
+.whyusimage{
+  animation: rotate 12s infinite ease-in-out;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
