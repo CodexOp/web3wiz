@@ -19,7 +19,6 @@ function App() {
       <Navbar />
       <Landing />
       <div className={styles.circleBg}>
-        <Partners />
         <div className={styles.greyMountainWrapper}>
           <WhyUs />
         </div>
@@ -37,6 +36,8 @@ function App() {
           <HowWeDevelop />
         </div>
         <Team />
+        <Partners />
+
         <div className={styles.lineBgWrapper}>
           <Testimonials />
         </div>
