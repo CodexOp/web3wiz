@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import brickmatrix from "../../assets/team/brickmatrix.jpg";
 import codex from "../../assets/team/codex.jpg";
-import brix from "../../assets/team/brix.jpg";
+import blazematrix from "../../assets/team/blazematrix.jpeg";
 import styles from "./Team.module.css";
 
 const Team = () => {
@@ -15,8 +15,8 @@ const Team = () => {
       experience: "LISTED ON PINKSALE & GEMPAD",
       name: "BRICK MATRIX",
       position: "Contract and Web3 Dev",
-      message: "https://t.me/brick_matrix",
-      connect: "https://t.me/brick_matrix",
+      message: "https://t.me/brickMatrix",
+      connect: "https://t.me/brickMatrix",
     },
     {
       image: codex,
@@ -27,12 +27,12 @@ const Team = () => {
       connect: "https://t.me/webwizardz",
     },
     {
-      image: brix,
+      image: blazematrix,
       experience: "1+ Years Experince In Marketing",
-      name: "JDTESLA",
+      name: "Alex Blaze",
       position: "Marketing and Management",
-      message: "https://t.me/JDTesla",
-      connect: "https://t.me/JDTesla",
+      message: "https://t.me/BlazeMatrix",
+      connect: "https://t.me/BlazeMatrix",
     },
   ];
   return (
