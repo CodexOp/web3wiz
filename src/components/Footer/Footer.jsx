@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/system/Box";
 import Typography from "@mui/material/Typography";
 import Logo from "../../assets/logo.png";
-import { Instagram, LinkedIn, Twitter } from "@mui/icons-material";
+import { Facebook, Instagram, LinkedIn, Twitter, WhatsApp } from "@mui/icons-material";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
@@ -100,6 +100,22 @@ const Footer = () => {
             >
               {" "}
               <Twitter sx={{ ml: 2 }} />
+              <a
+                className={styles.link}
+                href="https://wa.me/12342559266"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <WhatsApp sx={{ ml: 2 }}/>
+              </a>
+              <a
+                className={styles.link}
+                href="https://www.facebook.com/profile.php?id=100088525749916&mibextid=LQQJ4d"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Facebook sx={{ ml: 2 }}/>
+              </a>
             </a>
           </Box>
         </Box>
