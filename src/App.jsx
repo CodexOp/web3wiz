@@ -12,14 +12,16 @@ import FAQs from "./components/FAQs/FAQ";
 import Footer from "./components/Footer/Footer";
 import styles from "./App.module.css";
 import Partners from "./components/Partners/Partners";
-import { logEvent } from "firebase/analytics";
-import { analytics } from "./firebaseConfig";
-import { useEffect } from "react";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 function App() {
-  useEffect(() => {
-    logEvent(analytics, "goal_completion", { name: "lever_puzzle" });
-  });
+  const analytics = getAnalytics();
+  console.log(
+    logEvent(analytics, "select_content", {
+      content_type: "image",
+      content_id: "P12453",
+    })
+  );
   return (
     <div className={styles.App}>
       <Navbar />

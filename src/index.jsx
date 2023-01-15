@@ -1,10 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import * as firebase from 'firebase/app';
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyC4E0q-7NLTfd3p9boFNDobDG3YN9iChMQ",
+  authDomain: "matrix-labs-main.firebaseapp.com",
+  projectId: "matrix-labs-main",
+  storageBucket: "matrix-labs-main.appspot.com",
+  messagingSenderId: "714045750698",
+  appId: "1:714045750698:web:6031cab5f8878a4bad7fd3",
+  measurementId: "G-3Q9V688SSV",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
