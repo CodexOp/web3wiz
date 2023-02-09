@@ -4,6 +4,17 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { initializeApp } from "firebase/app";
+import {  
+  BrowserRouter as Router,  
+  Routes,  
+  Route,  
+  Link  
+}   
+from 'react-router-dom';  
+import Thankyou from "./pages/thankyou/Thankyou";
+import Privacy from "./pages/privacy/Privacy";
+
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -25,7 +36,13 @@ const app = initializeApp(firebaseConfig);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />}/>
+        <Route exact path="/thankyou" element={<Thankyou/>}/>
+        <Route exact path="/privacy-policy" element={<Privacy/>}/>
+      </Routes> 
+    </Router>
   </React.StrictMode>
 );
 
