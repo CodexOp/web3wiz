@@ -1,0 +1,269 @@
+.App{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.AppHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  width: 100%;
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  color: #FEFEFE;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img{
+  width: 30px;
+  height: 30px;
+}
+
+.thankuWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.thankuTxt{
+  font-family: 'Phenomicon Laser';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6rem;
+  line-height: 90px;
+  gap: 1rem;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.highlighted{
+  color: #27B67A;    
+  font-weight: 500;
+}
+
+.contentWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.thankuWrapper p{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  text-align: center;
+  max-width: 450px;
+  color: #FFFFFF;
+}
+
+.contactsDiv{
+  display: flex;
+  gap: 30px;
+}
+
+.contactsDiv img{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.contactUsTxt{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 40px;
+  text-align: center;
+  gap: 10px;
+}
+
+.mainFooter{
+  display: flex;
+  justify-content: space-between;
+  background: #121212;
+  padding: 2% 8% 2% 8%;
+}
+
+.title{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.socialIconDiv{
+  display: flex;
+  gap: 10px;
+}
+
+.socialIconDiv img{
+  cursor: pointer;
+}
+
+.signupWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: center;
+}
+
+.signupInput{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 10px
+}
+
+.signupInput img{
+  background: #27B67A;
+  width: 15px;
+  height: 15px;
+}
+
+.signupInput input{
+  height: 100%;
+  border: none;
+  height: 47px;
+  background: #1F1F1F;
+  color: white;
+  padding: 16px;
+  line-height: 10px;
+  font-size: 15px;
+}
+
+.signupInput button{
+  border: none;
+  padding: 16px 14px;
+  background: #27B67A;
+}
+
+.signupTxt{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+
+.webpageLinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.desc{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.title p{
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.titleDesc{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.71);
+}
+
+.socials{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerLogoDiv{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.thumbsupIcon{
+  position: absolute;
+  right: 0;
+  transform: translateY(35%);
+}
+
+.footerLogoWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media only screen and (max-width: 800px) {
+  .mainFooter{
+    padding: 5% 8% 5% 8%;
+  }
+  .thumbsupIcon{
+    scale: 0.5;
+    transform: translate(50%, 10%);
+  }
+  .socials{
+    font-size: 0.75rem;
+  }
+  .socialIconDiv img{
+    scale: 0.75;
+  }
+  .socialIconDiv{
+    display: flex;
+    gap: 0;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .contactUsTxt{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    width: 70%;
+    margin-top: 10%;
+    font-size: 2rem;
+    line-height: 40px;
+    text-align: center;
+  }
+  .thankuTxt{
+    font-size: 5rem;
+  }
+  .thankuWrapper p{
+    max-width: 400px;
+    font-size: 1rem;
+  }
+}

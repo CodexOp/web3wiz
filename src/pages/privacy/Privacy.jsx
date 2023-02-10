@@ -1,12 +1,14 @@
-import React from "react";
-import "./privacy.css";
-
-const Privacy = () => {
+import React from 'react';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
+import './style.css'
+export default function Privacy() {
   return (
-<>
-<h2>Privacy Page</h2>
-</>
-  );
-};
-
-export default Privacy;
+    <div>
+        <Navbar/>
+        <Home/>
+        <Footer/>
+    </div>
+  )
+}

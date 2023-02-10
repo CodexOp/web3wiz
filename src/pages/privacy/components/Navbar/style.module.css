@@ -1,0 +1,210 @@
+.primaryHeader {
+    z-index: 5;
+    padding-top: 1rem;
+    display: grid;
+    place-items: center;
+    font-family: 'Montserrat';
+    position: sticky;
+    top: 0;
+  }
+  
+.navWrapper {
+  padding: 1em 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.14);
+  border-radius: 38.5px;
+  border: 1px solid;
+  border-image-source: linear-gradient(0deg, #FFFFFF -234.42%, rgba(255, 255, 255, 0) 72.08%);
+  background: linear-gradient(0deg, #040507, #040507),
+  linear-gradient(0deg, #FFFFFF -234.42%, rgba(255, 255, 255, 0) 72.08%);
+}
+
+.mobileNavToggle {
+  display: none;
+}
+  
+.navList {
+  font-size: 16px;
+}
+
+.navList {
+  display: flex;
+  gap: clamp(1rem, 5vw, 3rem);
+  font-weight: var(--fw-semi-bold);
+}
+  
+.navList{
+  color: white;
+}
+
+.navList :hover,
+.navList :focus {
+  color: black;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 10px;
+}
+
+.button {
+    display: inline-flex; 
+    background: linear-gradient(90.06deg, #386442 1.07%, #8EC367 99.95%);
+    border-radius: 10px;
+  }
+
+.display-sm-hidden {
+    display: none;
+  }
+.icon-close,
+.icon-hamburger{
+    color: white;
+    z-index: 10;
+}
+.toggleDisplay{
+  display: none;
+}
+
+.navbarOptionbtns
+{
+    display: flex;
+    gap: 20px;
+    align-self: center;
+    justify-content: space-between;
+    margin-left: auto;
+}
+
+.navbarOptionbtns button{
+  background: transparent;
+  color: #FEFEFE !important;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: none;
+}
+
+.highlightedOption{
+  font-weight: 600;
+}
+
+.QuotaBtn{
+  background: linear-gradient(90.06deg, #386442 1.07%, #8EC367 99.95%);
+  border-radius: 10px;
+  padding: 10px 30px;
+  color: #FFFFFF;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.headerTitle{
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  /* identical to box height, or 110% */
+
+  letter-spacing: 0.1em;
+}
+
+.menuIcon{
+  display: none;
+}
+
+@media(min-width: 50em){
+    .display-md-inline-flex{
+        display: inline-flex;
+    }
+}
+  @media (max-width: 50em) {
+    .primaryHeader {
+      padding-top: 0;
+      top: 0;
+    }
+    .mobileWidth{
+      width: 100% !important;
+    }
+    .navWrapper{
+      background: #040507;
+      border-radius: 0;
+      padding: 2em 1em;
+    }
+    .primaryNavigation {
+      display: none;
+      position: fixed;
+      padding: 4em;
+      inset: 1rem 0 auto;
+      max-width: 15rem;
+      margin-left: auto;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      z-index: 6;
+    }
+  
+    .primaryHeader[data-overlay]::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 5;
+      /* height: 100vh; */
+      background-image: linear-gradient(rgb(0 0 0 / 0.3), rgb(0 0 0 / 0.8));
+    }
+  
+    .navList {
+      display: grid;
+      gap: var(--size-600);
+      text-align: center;
+      font-weight: var(--fw-bold);
+    }
+  
+    .primaryNavigation[data-visible] {
+      display: block;
+    }
+    .toggleDisplay[data-visible]{
+      display: block;
+    }
+  
+    .mobileNavToggle {
+      z-index: 10;
+      display: block;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+      padding: 0.5em;
+    }
+
+    .logo img{
+        transform: scale(0.8);
+    }
+
+  }
+
+ 
+  @media only screen and (max-width: 800px) {
+    .headerTitle{
+      font-size: 15px;
+      line-height: 15px;
+    }
+    .navbarOptionbtns{
+      display: none;
+    }
+    .QuotaBtn{
+      display: none;
+    }
+    .menuIcon{
+      display: inline;
+      width: 20px;
+      height: 20px;
+    }
+}
