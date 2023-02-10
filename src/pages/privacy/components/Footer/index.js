@@ -7,6 +7,7 @@ import telegramIcon from "../assests/images/icon-telegram.svg"
 import twitterIcon from "../assests/images/icon-twitter.svg"
 import emailIcon from "../assests/images/icon-email.svg"
 import sendIcon from "../assests/images/icon-send.svg"
+import { Link } from "react-router-dom";
 
 export default function Footer()
 {
@@ -14,10 +15,12 @@ export default function Footer()
         <div className={styles.mainFooter}>
             <div className={styles.footerLogoDiv}>
                 <div>
-                    <div className={styles.title}>
-                        <img src={Logo} alt =""/>
-                        <p>MATRIX LABS</p>
-                    </div>
+                    <Link to="/">
+                        <div className={styles.title}>
+                            <img src={Logo} alt =""/>
+                            <p>MATRIX LABS</p>
+                        </div>
+                    </Link>
                     <div className={styles.titleDesc}>One stop for all Blockchain solutions</div>
                 </div>
                 <div className={styles.socials1}>
@@ -43,7 +46,9 @@ export default function Footer()
             </div>
             <div className={styles.webpageLinksWrapper}>
             <div className={styles.webpageLinks}>
-                <div className={styles.highlighted}>Home</div>
+                <Link to="/">
+                    <div className={styles.highlighted}>Home</div>
+                </Link>
                 <div>About</div>
                 <div>Services</div>
                 <div>Projects</div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from "./components/assests/images/logo.svg";
 import whatsappIcon from "./components/assests/images/icon-whatsapp.svg";
 import telegramIcon from "./components/assests/images/icon-telegram.svg";
@@ -14,10 +15,12 @@ function Thankyou() {
   return (
     <div className={styles.App}>
       <div className={styles.AppHeader}>
-        <div className={styles.logo} >
+        <Link to="/">
+        <div  className={styles.logo} >
           <img src={Logo} alt =""/>
           <p className={styles.headerTitle}>MATRIX LABS</p>
         </div>
+        </Link>
       </div>
       <div className={styles.thankuImageWrapper}>
           <img className={styles.thumbsupIcon} src={thumbsUpIcon} alt = "thumbsup-icon"/>
@@ -49,10 +52,12 @@ function Thankyou() {
       <div className={styles.mainFooter}>
             <div className={styles.footerLogoDiv}>
                 <div className={styles.footerLogoWrapper}>
-                    <div className={styles.title}>
-                        <img src={Logo} alt =""/>
-                        <p>MATRIX LABS</p>
-                    </div>
+                  <Link to="/">
+                      <div className={styles.title}>
+                          <img src={Logo} alt =""/>
+                          <p>MATRIX LABS</p>
+                      </div>
+                  </Link>
                     <div className="title-desc">One stop for all Blockchain solutions</div>
                 </div>
                 <div className={styles.socials}>
