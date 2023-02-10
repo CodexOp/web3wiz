@@ -36,7 +36,7 @@ function Thankyou() {
           </span>
         </div>
         <div className={styles.contactsDiv}>
-          <a href="https://wa.me/+917999378952">
+          <a href="https://api.whatsapp.com/send?phone=12342559266">
             <img src={whatsappIcon} alt="whatsapp-icon"/>
           </a>
           <a href="https://t.me/brickMatrix">
