@@ -102,7 +102,7 @@ const Footer = () => {
               <Twitter sx={{ ml: 2 }} />
               <a
                 className={styles.link}
-                href="https://wa.me/12342559266"
+                href="https://api.whatsapp.com/send?phone=12342559266"
                 target="_blank"
                 rel="noreferrer"
               >

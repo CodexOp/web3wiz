@@ -19,7 +19,9 @@ function Thankyou() {
           <p className={styles.headerTitle}>MATRIX LABS</p>
         </div>
       </div>
+      <div className={styles.thankuImageWrapper}>
           <img className={styles.thumbsupIcon} src={thumbsUpIcon} alt = "thumbsup-icon"/>
+      </div>
       <div className={styles.contentWrapper}>
         <div className={styles.thankuWrapper}>
           <div className={styles.thankuTxt}>

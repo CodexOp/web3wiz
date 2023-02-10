@@ -218,9 +218,8 @@
 }
 
 .thumbsupIcon{
-  position: absolute;
-  right: 0;
-  transform: translateY(35%);
+  margin-left: auto;
+  width: 7em;
 }
 
 .footerLogoWrapper{
@@ -229,13 +228,18 @@
   gap: 8px;
 }
 
+.thankuImageWrapper{
+  width: 100%;
+  transform: translateY(50%);
+  position: absolute;
+}
+
 @media only screen and (max-width: 800px) {
   .mainFooter{
     padding: 5% 8% 5% 8%;
   }
   .thumbsupIcon{
-    scale: 0.5;
-    transform: translate(50%, 10%);
+    width: 70px;
   }
   .socials{
     font-size: 0.75rem;
