@@ -29,12 +29,12 @@ export default function Form() {
         handlePageDown={handlePageDown}
       />
       <div className={styles.pagebtn}>
-        <div className={styles.pagebtn2} onClick={handlePageUp}>
+        {/* <div className={styles.pagebtn2} onClick={handlePageUp}>
           <PageBtnIcon className={styles.pagebtn2Icon} />
         </div>
         <div className={styles.pagebtn1} onClick={handlePageDown}>
           <PageBtnIcon className={styles.pagebtn1Icon} />
-        </div>
+        </div> */}
         <div className={styles.matrixlabDiv}>made with 💛 by Matrix Labs</div>
       </div>
     </div>

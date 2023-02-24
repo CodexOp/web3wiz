@@ -6,7 +6,8 @@ import { ReactComponent as Whatsapp } from "../../../assets/images/icon-whatsapp
 import { ReactComponent as SelectBtnIcon } from "../../../assets/images/icon-pagebtn.svg";
 import styles from "./style.module.css";
 import validator from 'validator'
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const options = [
   {
     label: "a.   Custom web development",
@@ -36,11 +37,20 @@ const options1 = [
 
 export default function Page({ pagenum, handlePageUp, handlePageDown }) {
   const [showOptions, setShowOptions] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
+  // const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOptionService, setSelectedOptionService] = useState(null);
+  const [selectedOptionBudget, setSelectedOptionBudget] = useState(null);
   const [validEmail, setValidEmail] = useState(true);
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [budget, setBudget] = useState("");
+  const [projectName, setProjectName] = useState("");
+  const [validProjectName, setValidProjectName] = useState(true);
+  const [validName, setValidName] = useState(true);
+  const [service, setService] = useState("");
   const emailRef = useRef()
-  const CustomSelect = ({ options, placeholder }) => {
+  
+  const CustomSelect = ({ options, placeholder, setWhat, setSelectedOption, selectedOption }) => {
     const handleToggleOptions = () => {
       setShowOptions((prevShowOptions) => !prevShowOptions);
     };
@@ -80,7 +90,10 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
                 className={`option ${
                   option === selectedOption ? "selected" : ""
                 }`}
-                onClick={() => handleSelectOption(option)}
+                onClick={() => {
+                  setWhat(option.value)
+                  handleSelectOption(option)
+                }}
               >
                 {option.label}
               </div>
@@ -93,8 +106,35 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
   useEffect(() => {
     const keyPressHandler = (e) =>{
       if(e.key === 'Enter'){
+        if(pagenum === 1){
+          if(name === ''){
+            setValidName(false)
+            return
+          }
+        }
+        if(pagenum === 2){
+          if(!validator.isEmail(email)){
+            setValidEmail(false)
+            return
+          }
+        }
+        if(pagenum === 3){
+          if(projectName === ''){
+            setValidProjectName(false)
+            return
+          }
+        }
+        if(pagenum === 4){
+          if(!selectedOptionService){
+            return
+          }
+        }
+        if(pagenum === 5){
+          if(!selectedOptionBudget){
+            return
+          }
+        }
         handlePageUp()
-        setValidEmail(true)
       }
     }
       document.addEventListener('keydown', keyPressHandler)
@@ -114,11 +154,15 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
     }
 
   }, [validEmail, emailRef])
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <>
+    <div className={styles.formContainer}>
+
       {pagenum === 0 && (
-        <div className={styles.App}>
-          <div className={styles.mainuiWrapper}>
+          <div className={styles.mainuiWrapper} data-aos="fade-up">
             <MainuiImg className={styles.mainuiImg} />
             <div className={styles.mainuiheading}>
               Hello! We're glad that you're interested in working with us.
@@ -129,7 +173,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
 
             <div className={styles.LetsgoBtn} onClick={()=>{
               handlePageUp()
-              setValidEmail(true)
+
             }
             }>
               Let’s Go
@@ -137,42 +181,51 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
             <p>press <span>Enter</span></p>
             </div>
           </div>
-        </div>
       )}
       {pagenum === 1 && (
-        <div className={styles.App}>
-          <div className={styles.formWrapper}>
+          <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               1. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
-              <div className={styles.primaryTxt}>Your name *</div>
-              <div className={styles.secondaryTxt}>Let’s get to know each other</div>
+              <div className={styles.primaryTxt}>My name*</div>
+              <div className={styles.secondaryTxt}>Let’s know each other</div>
               <input
                 className={styles.nameInput}
                 type="text"
                 autoComplete="name"
                 placeholder="type in your name"
+                value={name}
+                onChange={(e) => {
+                  if(e.target.value.length > 0){
+                    setValidName(true)
+                  }
+                  setName(e.target.value)}}
               />
+              {!validName && <div className={styles.errorMsg}>Please enter a valid name</div>}
               <div className={styles.okBtn} onClick={()=>{
+              if(name === ''){
+                setValidName(false)
+                return
+              }
+              setValidName(true)
               handlePageUp()
-              setValidEmail(true)
+              
+
             }}>
                 OK
               </div>
             </div>
           </div>
-        </div>
       )}
       
       {pagenum === 2 && (
-        <div className={styles.App}>
-          <div className={styles.formWrapper}>
+          <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               2. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
-              <div className={styles.primaryTxt}>Your Email *</div>
+              <div className={styles.primaryTxt}>My Email*</div>
               <div className={styles.secondaryTxt}>Just to stay in touch, no spam guarantee.</div>
               <input
                 className={styles.emailInput}
@@ -184,102 +237,98 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
                 onChange={(e)=>{
                   const temp = e.target.value
                   setEmail(temp)
-                  if(validator.isEmail(temp)){
-                    setValidEmail(true)
-                  }
-                  else{
-                    setValidEmail(false)
-                  }
+                  setValidEmail(true)
                 }}
               />
               {!validEmail && <div className={styles.errorMsg}>Please enter a valid email</div>}
               <div className={styles.okBtn} onClick={()=>{
-              handlePageUp()
+              if(!validator.isEmail(email)){
+                setValidEmail(false)
+                return
+              }
               setValidEmail(true)
+              handlePageUp()
             }}>
                 OK
               </div>
             </div>
           </div>
-        </div>
       )}
       {pagenum === 3 && (
-        <div className={styles.App}>
-          <div className={styles.formWrapper}>
+          <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               3. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
-              <div className={styles.primaryTxt}>Your Project Name*</div>
-              {/* <div className={styles.secondaryTxt}>Just to stay in touch, no spam guarantee.</div> */}
+              <div className={styles.primaryTxt}>My Project Name*</div>
               <input
                 className={styles.nameInput}
                 type="text"
                 autoComplete="name"
-                placeholder="type in your Project Name"
+                placeholder="Type in Your Project Name"
+                value={projectName}
+                onChange={(e) => setProjectName(e.target.value)}
               />
+              {!validProjectName && <div className={styles.errorMsg}>Please enter a valid project name</div>}
               <div className={styles.okBtn} onClick={()=>{
+              if(projectName === ''){
+                setValidProjectName(false)
+                return
+              }
+              setValidProjectName(true)
               handlePageUp()
-              setValidEmail(true)
             }}>
                 OK
               </div>
             </div>
           </div>
-        </div>
       )}
 
       {pagenum === 4 && (
-        <div className={styles.App}>
-          <div className={styles.formWrapper}>
+          <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               4. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
               <div className={styles.primaryTxt}>
-                What service do you need from us ?
+              I want…
               </div>
-              <CustomSelect options={options} placeholder={"Select Your Service"} defaultValue={1} />
-              {selectedOption && (
+              <CustomSelect options={options} placeholder={"Select Your Service"} setWhat={setService} setSelectedOption={setSelectedOptionService} 
+              selectedOption={selectedOptionService} defaultValue={1} />
+              {selectedOptionService && (
                 <div className={styles.okBtn} onClick={()=>{
                   handlePageUp()
-                  setValidEmail(true)
                 }}>
                   OK
                 </div>
               )}
             </div>
           </div>
-        </div>
       )}
       {pagenum === 5 && (
-        <div className={styles.App}>
-          <div className={styles.formWrapper}>
+          <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               5. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
               <div className={styles.primaryTxt}>
-                What is your budget for this project ?
+              My budget range is between…
               </div>
-              <CustomSelect options={options1} placeholder={"Select Your Budget"} defaultValue={1} />
-              {selectedOption && (
+              <CustomSelect options={options1} placeholder={"Select Your Budget"} setWhat={setBudget} setSelectedOption={setSelectedOptionBudget} selectedOption={selectedOptionBudget} defaultValue={1} />
+              {selectedOptionBudget && (
                 <div className={styles.okBtn} onClick={()=>{
                   handlePageUp()
-                  setValidEmail(true)
                 }}>
                   OK
                 </div>
               )}
             </div>
           </div>
-        </div>
       )}
       
 
       {pagenum === 6 && (
-        <div className={styles.App}>
-          <div className={styles.congratsWrapper}>
+          <div className={styles.congratsWrapper} data-aos="fade-up">
             <FinalImg />
             <div className={styles.congratsTxt}>
               You have made it!🥳 We have your information now and will be
@@ -293,8 +342,8 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
               <Whatsapp className={styles.whatsappIcon} />
             </div>
           </div>
-        </div>
       )}
+    </div>
     </>
   );
 }
