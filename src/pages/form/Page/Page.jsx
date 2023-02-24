@@ -2,8 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { ReactComponent as MainuiImg } from "../../../assets/images/mainuiImg.svg";
 import { ReactComponent as ArrowIcon } from "../../../assets/images/icon-arrow.svg";
 import { ReactComponent as FinalImg } from "../../../assets/images/finalImg.svg";
-import { ReactComponent as Whatsapp } from "../../../assets/images/icon-whatsapp.svg";
+import Whatsapp from "../../../assets/whatsapp.gif";
 import { ReactComponent as SelectBtnIcon } from "../../../assets/images/icon-pagebtn.svg";
+import { useSearchParams } from "react-router-dom";
 import styles from "./style.module.css";
 import validator from 'validator'
 import AOS from "aos";
@@ -11,14 +12,14 @@ import "aos/dist/aos.css";
 const options = [
   {
     label: "a.   Custom web development",
-    value: "a.   Custom web development",
+    value: "Custom web development",
   },
   {
     label: "b.   Decentralised Application",
-    value: "b.   Decentralised Application",
+    value: "Decentralised Application",
   },
-  { label: "c.   E-commerce Website", value: "c.   E-commerce Website" },
-  { label: "d.   Custom smart contract", value: "d.   Custom smart contract" },
+  { label: "c.   E-commerce Website", value: "E-commerce Website" },
+  { label: "d.   Other", value: "Other" },
 ];
 const options1 = [
   {
@@ -39,16 +40,36 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
   const [showOptions, setShowOptions] = useState(false);
   // const [selectedOption, setSelectedOption] = useState(null);
   const [selectedOptionService, setSelectedOptionService] = useState(null);
+  const [otherInput, settherInput] = useState(null);
   const [selectedOptionBudget, setSelectedOptionBudget] = useState(null);
   const [validEmail, setValidEmail] = useState(true);
   const [email, setEmail] = useState("");
+  const [campaign, setCampaign] = useState("");
+  const [adset, setAdset] = useState("");
+  const [ad, setAd] = useState("");
   const [name, setName] = useState("");
   const [budget, setBudget] = useState("");
+  const [leadsource, setLeadsource] = useState("");
   const [projectName, setProjectName] = useState("");
   const [validProjectName, setValidProjectName] = useState(true);
   const [validName, setValidName] = useState(true);
   const [service, setService] = useState("");
   const emailRef = useRef()
+  const queryParams = new URLSearchParams(window.location.search)
+  const data = {
+    "name":name,
+    "email":email,
+    "projectName":projectName,
+    "service":service,
+    "budget":budget,
+    "campaign":campaign,
+    "adset":adset,
+    "ad":ad,
+    "src":leadsource,
+
+  }
+  
+
   
   const CustomSelect = ({ options, placeholder, setWhat, setSelectedOption, selectedOption }) => {
     const handleToggleOptions = () => {
@@ -103,6 +124,26 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
       </div>
     );
   };
+
+useEffect(() => {
+  setCampaign(queryParams.get("campaign"));
+  setAdset(queryParams.get("adset"));
+  setAd(queryParams.get("ad"))
+  setLeadsource(queryParams.get("src"))
+}, [pagenum])
+
+
+
+const sendDataToPably = () => {
+  fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTZlMDYzNzA0MzI1MjZkNTUzMSI_3D_pc", {  // Enter your IP address here
+
+  method: 'POST', 
+  mode: 'cors', 
+  body: JSON.stringify(data) // body data type must match "Content-Type" header
+
+})
+}
+
   useEffect(() => {
     const keyPressHandler = (e) =>{
       if(e.key === 'Enter'){
@@ -178,7 +219,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
             }>
               Let’s Go
             </div>
-            <p>press <span>Enter</span></p>
+            <p className={styles.pressEnter}>press <span>Enter</span></p>
             </div>
           </div>
       )}
@@ -193,8 +234,8 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
               <input
                 className={styles.nameInput}
                 type="text"
-                autoComplete="name"
-                placeholder="type in your name"
+                autoComplete="off"
+                placeholder="Type in your name"
                 value={name}
                 onChange={(e) => {
                   if(e.target.value.length > 0){
@@ -213,7 +254,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
               
 
             }}>
-                OK
+                Next
               </div>
             </div>
           </div>
@@ -230,8 +271,8 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
               <input
                 className={styles.emailInput}
                 type="email"
-                autoComplete="name"
-                placeholder="type in your Email"
+                autoComplete="off"
+                placeholder="Type in your Email"
                 ref={emailRef}
                 value={email}
                 onChange={(e)=>{
@@ -249,7 +290,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
               setValidEmail(true)
               handlePageUp()
             }}>
-                OK
+                Next
               </div>
             </div>
           </div>
@@ -264,7 +305,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
               <input
                 className={styles.nameInput}
                 type="text"
-                autoComplete="name"
+                autoComplete="off"
                 placeholder="Type in Your Project Name"
                 value={projectName}
                 onChange={(e) => setProjectName(e.target.value)}
@@ -278,7 +319,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
               setValidProjectName(true)
               handlePageUp()
             }}>
-                OK
+                Next
               </div>
             </div>
           </div>
@@ -299,7 +340,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
                 <div className={styles.okBtn} onClick={()=>{
                   handlePageUp()
                 }}>
-                  OK
+                  Next
                 </div>
               )}
             </div>
@@ -318,8 +359,9 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
               {selectedOptionBudget && (
                 <div className={styles.okBtn} onClick={()=>{
                   handlePageUp()
+                  sendDataToPably()
                 }}>
-                  OK
+                  Next
                 </div>
               )}
             </div>
@@ -331,15 +373,14 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
           <div className={styles.congratsWrapper} data-aos="fade-up">
             <FinalImg />
             <div className={styles.congratsTxt}>
-              You have made it!🥳 We have your information now and will be
-              getting in touch with you shortly. Till then sit back and relax 🤙
+              You have made it!🥳 To Complete the process click on whatsapp button and contact us🤙
             </div>
             <div className={styles.contactUsWrapper}>
               <div className={styles.contactUsTxt}>
-                Can’t wait? Contact us{" "}
+                Contact us{" "}
                 <span className={styles.highlightedTxt}>NOW</span>
               </div>
-              <Whatsapp className={styles.whatsappIcon} />
+              <img src={Whatsapp} alt="whatsapp_icon" className={styles.whatsappIcon} />
             </div>
           </div>
       )}
