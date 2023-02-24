@@ -11,15 +11,15 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 const options = [
   {
-    label: "a.   Custom web development",
-    value: "Custom web development",
+    label: "web development",
+    value: "web development",
   },
   {
-    label: "b.   Decentralised Application",
+    label: "Decentralised Application",
     value: "Decentralised Application",
   },
-  { label: "c.   E-commerce Website", value: "E-commerce Website" },
-  { label: "d.   Other", value: "Other" },
+  { label: "E-commerce Website", value: "E-commerce Website" },
+  { label: "Other", value: "Other" },
 ];
 const options1 = [
   {
@@ -380,7 +380,7 @@ const sendDataToPably = () => {
                 Contact us{" "}
                 <span className={styles.highlightedTxt}>NOW</span>
               </div>
-              <img src={Whatsapp} alt="whatsapp_icon" className={styles.whatsappIcon} />
+              <a href="https://wa.me/12342559266?text=hey%20matrix%20labs%2C%20i%20need%20some%20help%20regarding%20my%20project"><img src={Whatsapp} alt="whatsapp_icon" className={styles.whatsappIcon} /></a>
             </div>
           </div>
       )}

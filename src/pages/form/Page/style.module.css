@@ -20,7 +20,7 @@
   scroll-behavior: smooth;
   color: white;
   background: linear-gradient(180deg, #002339 0%, #1D0B1D 100%);
-  padding: 3em;
+  padding: 1.5em;
 }
 .container {
   --max-width: 1500px;
@@ -154,7 +154,7 @@
     text-align: center;
     padding: 5px 8px;
     cursor: pointer;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 .okBtn:hover{
@@ -303,11 +303,11 @@
 
 /* Option styling */
 .option {
+  height: 35px !important;
   padding: 8px 12px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   color: #fff;
-  height: 35px;
 }
 
 .option:hover {
