@@ -142,7 +142,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
     return () => {
         document.removeEventListener('keydown', keyPressHandler)
     }
-  })
+  }, [pagenum, name, email, projectName, selectedOptionService, selectedOptionBudget, handlePageUp])
   useEffect(()=>{
     if(emailRef && emailRef.current){
       if(validEmail){
