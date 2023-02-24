@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ReactComponent as PageBtnIcon } from "../../assets/images/icon-pagebtn.svg";
+// import { ReactComponent as PageBtnIcon } from "../../assets/images/icon-pagebtn.svg";
 import styles from "./style.module.css";
 import Page from "./Page/Page";
 export default function Form() {
