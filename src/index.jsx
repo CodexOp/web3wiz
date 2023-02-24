@@ -13,6 +13,7 @@ import {
 from 'react-router-dom';  
 import Thankyou from "./pages/thankyou/Thankyou";
 import Privacy from "./pages/privacy/Privacy";
+import Form from "./pages/form/Form"
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -41,6 +42,7 @@ root.render(
         <Route path="/" element={<App />}/>
         <Route exact path="/thankyou" element={<Thankyou/>}/>
         <Route exact path="/privacy-policy" element={<Privacy/>}/>
+        <Route exact path="/form" element={<Form/>}/>
       </Routes> 
     </Router>
   </React.StrictMode>
