@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-// import { ReactComponent as MainuiImg } from "../../../assets/images/mainuiImg.svg";
+import  mainuiImg from "../../../assets//whatsapp.webp";
 import { ReactComponent as ArrowIcon } from "../../../assets/images/icon-arrow.svg";
 import { ReactComponent as FinalImg } from "../../../assets/images/finalImg.svg";
 import Whatsapp from "../../../assets/whatsapp.gif";
@@ -268,7 +268,7 @@ const sendDataToPably = () => {
 
       {pagenum === 0 && (
           <div className={styles.mainuiWrapper} data-aos="fade-up">
-            {/* <MainuiImg className={styles.mainuiImg} /> */}
+            <img src={mainuiImg} className={styles.mainuiImg} alt="test" />
             <div className={styles.mainuiheading}>
               Hello! We're glad that you're interested in working with us.
               <br />
