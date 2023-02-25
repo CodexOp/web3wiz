@@ -20,7 +20,7 @@
   scroll-behavior: smooth;
   color: white;
   background: linear-gradient(180deg, #002339 0%, #1D0B1D 100%);
-  padding: 1.5em;
+  padding: 0 1.5em;
 }
 .container {
   --max-width: 1500px;
