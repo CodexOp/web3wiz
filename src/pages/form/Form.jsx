@@ -6,8 +6,8 @@ export default function Form() {
   const [pagenum, setPagenum] = useState(0);
 
   const handlePageUp = () => {
-    if (pagenum + 1 >= 6) {
-      setPagenum(6);
+    if (pagenum + 1 >= 9) {
+      setPagenum(9);
     } else {
       setPagenum(pagenum + 1);
     }

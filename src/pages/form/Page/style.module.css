@@ -71,7 +71,7 @@
   text-align: center;
 }
 
-.nameInput{
+.nameInput, .countryInput, .phoneInput{
     display: block;
     width: 100%;
     font-family: inherit;
@@ -184,7 +184,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    gap: 20px;
+    gap: 5px;
 }
 
 .questionWrapper{
@@ -230,7 +230,7 @@
 }
 
 .whatsappIcon{
-    width: 100px;
+    width: 40px;
     cursor: pointer;
 }
 
@@ -360,6 +360,30 @@
   width: 100%;
   margin-top: 30px;
 }
+
+.phoneNodiv{
+  display: flex;
+}
+.countryInput{
+  width: 20% !important;
+}
+
+.phoneInput{
+  width: 80% !important;
+
+}
+
+.finish_button{
+display: flex !important;
+align-items: center;
+padding: 5px 30px;
+color:#fff !important;
+background-color: #28B77C;
+font-weight: bold;
+font-size: 20px;
+gap:10px;
+}
+
 .selectButton {
   display: flex;
   align-items: center;
@@ -379,4 +403,27 @@
   display: none;
 }
 
+}
+
+
+
+@media (max-width:400px) {
+  .selectBtnWrapper{
+    background: #527FA9;
+    border-radius: 0px 10px 10px 0px;
+    height: 55px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .selectBtnWrapper svg{
+    width: 15px;
+  }
+
+  .selectedTxt{
+    padding: 10px;
+    font-size: 16px;
+  }
 }

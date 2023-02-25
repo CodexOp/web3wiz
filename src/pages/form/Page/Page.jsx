@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ReactComponent as MainuiImg } from "../../../assets/images/mainuiImg.svg";
+// import { ReactComponent as MainuiImg } from "../../../assets/images/mainuiImg.svg";
 import { ReactComponent as ArrowIcon } from "../../../assets/images/icon-arrow.svg";
 import { ReactComponent as FinalImg } from "../../../assets/images/finalImg.svg";
 import Whatsapp from "../../../assets/whatsapp.gif";
@@ -9,6 +9,11 @@ import styles from "./style.module.css";
 import validator from 'validator'
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+
+export default function Page({ pagenum, handlePageUp, handlePageDown }) {
+  
+
 const options = [
   {
     label: "web development",
@@ -19,7 +24,7 @@ const options = [
     value: "Decentralised Application",
   },
   { label: "E-commerce Website", value: "E-commerce Website" },
-  { label: "Other", value: "Other" },
+  { label: "Other", value: "Other Services" },
 ];
 const options1 = [
   {
@@ -35,24 +40,50 @@ const options1 = [
     value: "Above 10000$",
   }
 ]
+const iamOption = [
+  {
+    label: "Founder",
+    value: "Founder",
+  },
+  {
+    label: "Marketer",
+    value: "Marketer",
+  },
+  {
+    label: "CTO",
+    value: "CTO",
+  },
+  {
+    label: "Other",
+    value: "Other",
+  },
 
-export default function Page({ pagenum, handlePageUp, handlePageDown }) {
+]
   const [showOptions, setShowOptions] = useState(false);
   // const [selectedOption, setSelectedOption] = useState(null);
   const [selectedOptionService, setSelectedOptionService] = useState(null);
+  const [selectedOptionIam, setSelectedOptionIam] = useState(null);
+  const [countryName, setCountryName] = useState(null);
+  const [validCountry, setValidCountry] = useState(true);
   const [otherInput, settherInput] = useState(null);
   const [selectedOptionBudget, setSelectedOptionBudget] = useState(null);
+  const [custom_href, setCustomHref] = useState(null);
   const [validEmail, setValidEmail] = useState(true);
   const [email, setEmail] = useState("");
   const [campaign, setCampaign] = useState("");
   const [adset, setAdset] = useState("");
   const [ad, setAd] = useState("");
   const [name, setName] = useState("");
+  const [iam, setIam] = useState("");
+  const [phoneNo, setPhoneNo] = useState("");
+  const [countryCode, setCountryCode] = useState("");
+  const [country, setCountry] = useState("");
   const [budget, setBudget] = useState("");
   const [leadsource, setLeadsource] = useState("");
   const [projectName, setProjectName] = useState("");
   const [validProjectName, setValidProjectName] = useState(true);
   const [validName, setValidName] = useState(true);
+  const [validPhone, setValidPhone] = useState(true);
   const [service, setService] = useState("");
   const emailRef = useRef()
   const queryParams = new URLSearchParams(window.location.search)
@@ -66,6 +97,10 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
     "adset":adset,
     "ad":ad,
     "src":leadsource,
+    "iam":iam,
+    "phoneNo":phoneNo,
+    "country":country,
+    "countryCode":countryCode
 
   }
   
@@ -126,10 +161,39 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
   };
 
 useEffect(() => {
-  setCampaign(queryParams.get("campaign"));
-  setAdset(queryParams.get("adset"));
-  setAd(queryParams.get("ad"))
-  setLeadsource(queryParams.get("src"))
+  if(queryParams.get("campaign") == undefined || null){
+    setCampaign("organic");
+  }
+  else{
+    setCampaign(queryParams.get("campaign"));
+  }
+
+  if((queryParams.get("adset")) == undefined || null){
+    setAdset('organic');
+  }
+  else{
+    setAdset(queryParams.get("adset"));
+  }
+
+  if(queryParams.get("ad") == undefined || null){
+    setAd('organic');
+  }
+  else{
+    setAd(queryParams.get("ad"));
+  }
+
+
+  if(queryParams.get("src") == undefined || null){
+    setLeadsource('organice')
+  }
+  else{
+    setLeadsource(queryParams.get("src"))
+  }
+
+  console.log(data)
+
+  setCustomHref("https://wa.me/12342559266?text=%20Hi%20I%20am%20"+name+"%2C%20I%20am%20looking%20for%20getting%20"+service+".%20Can%20you%20please%20tell%C2%A0more%C2%A0about%C2%A0it%3F%0A")
+
 }, [pagenum])
 
 
@@ -204,7 +268,7 @@ const sendDataToPably = () => {
 
       {pagenum === 0 && (
           <div className={styles.mainuiWrapper} data-aos="fade-up">
-            <MainuiImg className={styles.mainuiImg} />
+            {/* <MainuiImg className={styles.mainuiImg} /> */}
             <div className={styles.mainuiheading}>
               Hello! We're glad that you're interested in working with us.
               <br />
@@ -295,10 +359,112 @@ const sendDataToPably = () => {
             </div>
           </div>
       )}
-      {pagenum === 3 && (
+
+
+  {pagenum === 3 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               3. <ArrowIcon className={styles.arrowIcon} />
+            </div>
+            <div className={styles.questionWrapper}>
+              <div className={styles.primaryTxt}>
+              I Am
+              </div>
+              <CustomSelect options={iamOption} placeholder={"Select Your Designation"} setWhat={setIam} setSelectedOption={setSelectedOptionIam} 
+              selectedOption={selectedOptionIam} defaultValue={1} />
+              {selectedOptionIam && (
+                <div className={styles.okBtn} onClick={()=>{
+                  handlePageUp()
+                }}>
+                  Next
+                </div>
+              )}
+            </div>
+          </div>
+      )}
+      {pagenum === 4 && (
+          <div className={styles.formWrapper} data-aos="fade-up">
+            <div className={styles.counterDiv}>
+              4. <ArrowIcon className={styles.arrowIcon} />
+            </div>
+            <div className={styles.questionWrapper}>
+              <div className={styles.primaryTxt}>My Phone Number*</div>
+              <div className={styles.phoneNodiv}>
+              <input
+                className={styles.countryInput}
+                type="number"
+                autoComplete="off"
+                placeholder="+"
+                value={countryCode}
+                onChange={(e) => setCountryCode(e.target.value)}
+              />
+              <input
+                className={styles.phoneInput}
+                type="number"
+                autoComplete="off"
+                placeholder="Enter Your Phone Number"
+                value={phoneNo}
+                onChange={(e) => setPhoneNo(e.target.value)}
+              />
+              </div>
+              {!validPhone && <div className={styles.errorMsg}>Please enter a valid Phone Number</div>}
+              <div className={styles.okBtn} onClick={()=>{
+              if(phoneNo === ''){
+                setValidPhone(false)
+                return
+              }
+              setValidPhone(true)
+              handlePageUp()
+            }}>
+                Next
+              </div>
+            </div>
+          </div>
+      )}
+
+
+{pagenum === 5 && (
+          <div className={styles.formWrapper} data-aos="fade-up">
+            <div className={styles.counterDiv}>
+              5. <ArrowIcon className={styles.arrowIcon} />
+            </div>
+            <div className={styles.questionWrapper}>
+              <div className={styles.primaryTxt}>Country name*</div>
+              <div className={styles.secondaryTxt}>Contry In Which You Live</div>
+              <input
+                className={styles.nameInput}
+                type="text"
+                autoComplete="off"
+                placeholder="Type in your Country Name"
+                value={country}
+                onChange={(e) => {
+                  if(e.target.value.length > 0){
+                    setValidCountry(true)
+                  }
+                  setCountry(e.target.value)}}
+              />
+              {!validCountry && <div className={styles.errorMsg}>Please enter a valid country</div>}
+              <div className={styles.okBtn} onClick={()=>{
+              if(country === ''){
+                setValidCountry(false)
+                return
+              }
+              setValidCountry(true)
+              handlePageUp()
+              
+
+            }}>
+                Next
+              </div>
+            </div>
+          </div>
+      )}
+      
+
+      {pagenum === 6 && (
+          <div className={styles.formWrapper} data-aos="fade-up">
+            <div className={styles.counterDiv}>
+              6. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
               <div className={styles.primaryTxt}>My Project Name*</div>
@@ -325,10 +491,10 @@ const sendDataToPably = () => {
           </div>
       )}
 
-      {pagenum === 4 && (
+      {pagenum === 7 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
-              4. <ArrowIcon className={styles.arrowIcon} />
+              7. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
               <div className={styles.primaryTxt}>
@@ -346,10 +512,10 @@ const sendDataToPably = () => {
             </div>
           </div>
       )}
-      {pagenum === 5 && (
+      {pagenum === 8 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
-              5. <ArrowIcon className={styles.arrowIcon} />
+              8. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
               <div className={styles.primaryTxt}>
@@ -369,18 +535,18 @@ const sendDataToPably = () => {
       )}
       
 
-      {pagenum === 6 && (
+      {pagenum === 9 && (
           <div className={styles.congratsWrapper} data-aos="fade-up">
             <FinalImg />
             <div className={styles.congratsTxt}>
-              You have made it!🥳 To Complete the process click on whatsapp button and contact us🤙
+            We've got your response. Complete the process by contacting us below🤙
             </div>
             <div className={styles.contactUsWrapper}>
               <div className={styles.contactUsTxt}>
                 Contact us{" "}
                 <span className={styles.highlightedTxt}>NOW</span>
               </div>
-              <a href="https://wa.me/12342559266?text=hey%20matrix%20labs%2C%20i%20need%20some%20help%20regarding%20my%20project"><img src={Whatsapp} alt="whatsapp_icon" className={styles.whatsappIcon} /></a>
+              <a href={custom_href}><button className={styles.finish_button}>FINISH<img src={Whatsapp} alt="whatsapp_icon" className={styles.whatsappIcon} /></button></a>
             </div>
           </div>
       )}
