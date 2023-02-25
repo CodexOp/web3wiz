@@ -42,7 +42,7 @@
 
 
 .mainuiImg{
-  width: 400px;
+  width: 40%;
 }
 
 .LetsgoBtn{
@@ -425,5 +425,14 @@ gap:10px;
   .selectedTxt{
     padding: 10px;
     font-size: 16px;
+  }
+
+
+}
+
+
+@media (max-width:450px) {
+  .mainuiImg{
+    width: 75%;
   }
 }
