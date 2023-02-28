@@ -11,6 +11,7 @@ import {
   Link  
 }   
 from 'react-router-dom';  
+import {HelmetProvider} from 'react-helmet-async'
 import Thankyou from "./pages/thankyou/Thankyou";
 import Privacy from "./pages/privacy/Privacy";
 import Form from "./pages/form/Form"
@@ -37,6 +38,7 @@ const app = initializeApp(firebaseConfig);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <HelmetProvider>
     <Router>
       <Routes>
         <Route path="/" element={<App />}/>
@@ -45,6 +47,7 @@ root.render(
         <Route exact path="/form" element={<Form/>}/>
       </Routes> 
     </Router>
+    </HelmetProvider>
   </React.StrictMode>
 );
 

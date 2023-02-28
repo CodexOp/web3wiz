@@ -9,6 +9,7 @@ import styles from "./style.module.css";
 import validator from 'validator'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import {Helmet} from "react-helmet-async"
 
 
 export default function Page({ pagenum, handlePageUp, handlePageDown }) {
@@ -264,11 +265,17 @@ const sendDataToPably = () => {
   }, []);
   return (
     <>
+        <Helmet>
+    <title>Form</title>
+    <meta name="description" content="Contact us today for decentralized innovation and incredible websites."/>
+    <link rel="canonical" href="/form" />
+
+    </Helmet>
     <div className={styles.formContainer}>
 
       {pagenum === 0 && (
           <div className={styles.mainuiWrapper} data-aos="fade-up">
-            <img src={mainuiImg} className={styles.mainuiImg} alt="test" />
+            <img src={mainuiImg} className={styles.mainuiImg} alt="matrix labs contact" />
             <div className={styles.mainuiheading}>
               Hello! We're glad that you're interested in working with us.
               <br />

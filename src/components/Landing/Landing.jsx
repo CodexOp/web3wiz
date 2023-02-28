@@ -73,7 +73,7 @@ const Landing = () => {
             </Typography>
             <Typography
               id="txt-rotate"
-              variant="h3"
+              variant="h1"
               sx={{
                 fontWeight: 700,
                 fontSize: { xs: "2rem", sm: "3rem" },
