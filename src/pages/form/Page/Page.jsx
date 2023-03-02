@@ -82,6 +82,7 @@ const iamOption = [
   const [validProjectName, setValidProjectName] = useState(true);
   const [validName, setValidName] = useState(true);
   const [validPhone, setValidPhone] = useState(true);
+  const [validCC, setValidCC] = useState(true);
   const [service, setService] = useState("");
   const emailRef = useRef()
   const queryParams = new URLSearchParams(window.location.search)
@@ -412,12 +413,18 @@ const sendDataToPably = () => {
               />
               </div>
               {!validPhone && <div className={styles.errorMsg}>Please enter a valid Phone Number</div>}
+              {!validCC && <div className={styles.errorMsg}>Please enter a valid Country Code</div>}
               <div className={styles.okBtn} onClick={()=>{
               if(phoneNo === ''){
                 setValidPhone(false)
                 return
               }
+              if(countryCode === ''){
+                setValidCC(false)
+                return
+              }
               setValidPhone(true)
+              setValidCC(true)
               handlePageUp()
             }}>
                 Next
