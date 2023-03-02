@@ -16,17 +16,14 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
   
 
 const options = [
-  {
-    label: "web development",
-    value: "web development",
-  },
-  {
-    label: "Decentralised Application",
-    value: "Decentralised Application",
-  },
-  { label: "E-commerce Website", value: "E-commerce Website" },
+  { label: "Smart Contract", value: "Smart Contract" },
+  { label: "Decentralised Application", value: "Decentralised Application" },
+  { label: "Website development", value: "Website development" },
+  { label: "Website Designing", value: "Website Designing" },
+  { label: "Metaverse", value: "Metaverse" },
   { label: "Other", value: "Other Services" },
 ];
+
 const options1 = [
   {
     label: "1000$ - 5000$",

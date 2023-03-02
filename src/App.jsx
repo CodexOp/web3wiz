@@ -13,8 +13,19 @@ import Footer from "./components/Footer/Footer";
 import styles from "./App.module.css";
 import Partners from "./components/Partners/Partners";
 import { getAnalytics, logEvent } from "firebase/analytics";
+import ReactPixel from 'react-facebook-pixel';
 
+const advancedMatching = { em: 'sachinsinghjagawat@gmail.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
+const options = {
+  autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
+  debug: true, // enable logs
+};
+ReactPixel.init('1233452067589283', advancedMatching, options);
 function App() {
+
+  ReactPixel.pageView(); // For tracking page view
+  ReactPixel.trackCustom("LeadGenerated", { name: "lodu", value: "1" });
+
   const analytics = getAnalytics();
   console.log(
     logEvent(analytics, "select_content", {

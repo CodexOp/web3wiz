@@ -7,8 +7,14 @@ import Button from "@mui/material/Button";
 import coins from "../../assets/coins.png";
 import TxtRotate from "../../scripts/TextRotate";
 import styles from "./Landing.module.css";
+import ReactPixel from 'react-facebook-pixel';
+import { useNavigate  } from 'react-router-dom';
+
 
 const Landing = () => {
+
+  const navigate = useNavigate();
+
   React.useEffect(() => {
     const rotateElement = document.getElementById("txt-rotate");
     const toRotate = ["CUSTOM CONTRACTs", "NFT MARKETPLACEs", "DAPPs"];
@@ -117,11 +123,12 @@ const Landing = () => {
                   width: "100%",
                   padding: { xs: "1px 0.5rem", sm: "3px 1rem" },
                 }}
-                onClick={() => {
-                  window.location.href = "#about";
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate('/form');
                 }}
               >
-                KNOW MORE
+                Get Quote
               </Button>
               <Button
                 sx={{
