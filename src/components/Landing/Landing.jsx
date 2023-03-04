@@ -10,7 +10,11 @@ import styles from "./Landing.module.css";
 import ReactPixel from 'react-facebook-pixel';
 import { useNavigate  } from 'react-router-dom';
 
-
+const options = {
+  autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
+  debug: true, // enable logs
+};
+ReactPixel.init('1233452067589283', "", options);
 const Landing = () => {
 
   const navigate = useNavigate();
@@ -124,6 +128,7 @@ const Landing = () => {
                   padding: { xs: "1px 0.5rem", sm: "3px 1rem" },
                 }}
                 onClick={(e) => {
+                  ReactPixel.trackCustom("QouteClicked", {value: "10", currency: "USD" });
                   e.preventDefault();
                   navigate('/form');
                 }}

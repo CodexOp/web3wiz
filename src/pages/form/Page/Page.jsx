@@ -10,6 +10,7 @@ import validator from 'validator'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {Helmet} from "react-helmet-async"
+import ReactPixel from 'react-facebook-pixel';
 
 
 export default function Page({ pagenum, handlePageUp, handlePageDown }) {
@@ -84,6 +85,7 @@ const iamOption = [
   const [validPhone, setValidPhone] = useState(true);
   const [validCC, setValidCC] = useState(true);
   const [service, setService] = useState("");
+  const [budgetValue, setBudgetValue] = useState(0);
   const emailRef = useRef()
   const queryParams = new URLSearchParams(window.location.search)
   const data = {
@@ -102,8 +104,24 @@ const iamOption = [
     "countryCode":countryCode
 
   }
-  
-
+  useEffect(() => {
+    if(budget === "1000$ - 5000$"){
+      setBudgetValue(2500)
+    }
+    else if(budget === "5000$ - 10000$"){
+      setBudgetValue(7500)
+    }
+    else if(budget === "Above 10000$"){
+      setBudgetValue(15000)
+    }
+  }, [budget])
+  const conversionData = {
+    "name": name,
+    "email": email,
+    "phoneNo": phoneNo,
+    "countryCode": countryCode,
+    "value": budgetValue,
+  }
   
   const CustomSelect = ({ options, placeholder, setWhat, setSelectedOption, selectedOption }) => {
     const handleToggleOptions = () => {
@@ -204,7 +222,16 @@ const sendDataToPably = () => {
   mode: 'cors', 
   body: JSON.stringify(data) // body data type must match "Content-Type" header
 
-})
+}) 
+//   fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzY1MjZjNTUzNCI_3D_pc", {  // conversion Api webhook
+//   method: 'POST', 
+//   mode: 'cors', 
+//   body: JSON.stringify(conversionData) // body data type must match "Content-Type" header
+
+// })
+}
+const callFaceBookPixel = (value, leadName) => {
+  ReactPixel.trackCustom(leadName, {value: value, currency: "USD" })
 }
 
   useEffect(() => {
@@ -538,6 +565,7 @@ const sendDataToPably = () => {
                 <div className={styles.okBtn} onClick={()=>{
                   handlePageUp()
                   sendDataToPably()
+                  callFaceBookPixel(budgetValue, "leadGeneratedForm")
                 }}>
                   Next
                 </div>
