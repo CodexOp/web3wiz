@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 export default function Form() {
   const [pagenum, setPagenum] = useState(0);
   const matrix_button = useRef();
+  const [userData, setUserData] = useState()
 
   const handlePageUp = () => {
     if (pagenum + 1 >= 9) {
@@ -36,7 +37,23 @@ export default function Form() {
     }
 
   }, [pagenum])
+  const getData = async () => {
+    try{fetch('https://geolocation-db.com/json/')
+    .then((response) => response.json())
+    .then((data) => {
+      setUserData(data);
+      console.log(data, "user data");
+    })}
+    catch(err){
+      console.log(err)
+    }
+  }
   
+  useEffect( () => {
+    //passing getData method to the lifecycle method
+    getData()
+
+  }, [])
 
 
   return (

@@ -74,7 +74,7 @@ const iamOption = [
   const [name, setName] = useState("");
   const [iam, setIam] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
-  const [countryCode, setCountryCode] = useState("");
+  const [countryCode, setCountryCode] = useState("+");
   const [country, setCountry] = useState("");
   const [budget, setBudget] = useState("");
   const [leadsource, setLeadsource] = useState("");
@@ -160,21 +160,21 @@ const iamOption = [
   };
 
 useEffect(() => {
-  if(queryParams.get("campaign") == undefined || null){
+  if(queryParams.get("campaign") === undefined || null){
     setCampaign("organic");
   }
   else{
     setCampaign(queryParams.get("campaign"));
   }
 
-  if((queryParams.get("adset")) == undefined || null){
+  if((queryParams.get("adset")) === undefined || null){
     setAdset('organic');
   }
   else{
     setAdset(queryParams.get("adset"));
   }
 
-  if(queryParams.get("ad") == undefined || null){
+  if(queryParams.get("ad") === undefined || null){
     setAd('organic');
   }
   else{
@@ -182,7 +182,7 @@ useEffect(() => {
   }
 
 
-  if(queryParams.get("src") == undefined || null){
+  if(queryParams.get("src") === undefined || null){
     setLeadsource('organice')
   }
   else{
@@ -397,15 +397,16 @@ const sendDataToPably = () => {
               <div className={styles.phoneNodiv}>
               <input
                 className={styles.countryInput}
-                type="number"
+                type="text"
                 autoComplete="off"
-                placeholder="+"
+                
                 value={countryCode}
                 onChange={(e) => setCountryCode(e.target.value)}
               />
+              
               <input
                 className={styles.phoneInput}
-                type="number"
+                type="text"
                 autoComplete="off"
                 placeholder="Enter Your Phone Number"
                 value={phoneNo}

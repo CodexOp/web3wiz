@@ -14,6 +14,7 @@ import styles from "./App.module.css";
 import Partners from "./components/Partners/Partners";
 import { getAnalytics, logEvent } from "firebase/analytics";
 import ReactPixel from 'react-facebook-pixel';
+import { useEffect } from "react";
 
 const advancedMatching = { em: 'sachinsinghjagawat@gmail.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
 const options = {
@@ -24,8 +25,23 @@ ReactPixel.init('1233452067589283', advancedMatching, options);
 function App() {
 
   ReactPixel.pageView(); // For tracking page view
-  ReactPixel.trackCustom("LeadGenerated", { name: "lodu", value: "1" });
+  ReactPixel.trackCustom("LeadGenerated", {value: "1", currency: "USD" });
+  const getData = async () => {
+    try{fetch('https://geolocation-db.com/json/')
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    })}
+    catch(err){
+      console.log(err)
+    }
+  }
+  
+  useEffect( () => {
+    //passing getData method to the lifecycle method
+    getData()
 
+  }, [])
   const analytics = getAnalytics();
   console.log(
     logEvent(analytics, "select_content", {
