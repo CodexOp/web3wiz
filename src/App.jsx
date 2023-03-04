@@ -26,22 +26,6 @@ function App() {
 
   ReactPixel.pageView(); // For tracking page view
   ReactPixel.trackCustom("LeadGenerated", {value: "1", currency: "USD" });
-  const getData = async () => {
-    try{fetch('https://geolocation-db.com/json/')
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    })}
-    catch(err){
-      console.log(err)
-    }
-  }
-  
-  useEffect( () => {
-    //passing getData method to the lifecycle method
-    getData()
-
-  }, [])
   const analytics = getAnalytics();
   console.log(
     logEvent(analytics, "select_content", {
