@@ -7,6 +7,13 @@ import brickmatrix from "../../assets/team/brickmatrix.jpg";
 import codex from "../../assets/team/codex.jpg";
 import blazematrix from "../../assets/team/blazematrix.jpeg";
 import styles from "./Team.module.css";
+import ReactPixel from 'react-facebook-pixel';
+
+const options = {
+  autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
+  debug: true, // enable logs
+};
+ReactPixel.init('1233452067589283', "", options);
 
 const Team = () => {
   const cardData = [
@@ -179,6 +186,9 @@ const Team = () => {
                       borderRadius: "7px",
                       p: "0.6rem 1.1rem",
                     }}
+                    onClick={() => {
+                      ReactPixel.trackCustom("ContactClicked", {value: "10", currency: "USD" });
+                    }}
                   >
                     Message
                   </Button>
@@ -194,6 +204,9 @@ const Team = () => {
                     "&:hover": {
                       backgroundColor: "#00D186",
                     },
+                  }}
+                  onClick={() => {
+                    ReactPixel.trackCustom("ContactClicked", {value: "10", currency: "USD" });
                   }}
                 >
                   Connect

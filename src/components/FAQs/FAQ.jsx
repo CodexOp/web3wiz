@@ -6,7 +6,12 @@ import Button from "@mui/material/Button";
 import Card from "./Card";
 import { Instagram, LinkedIn, Twitter } from "@mui/icons-material";
 import styles from "./FAQs.module.css";
-
+import ReactPixel from 'react-facebook-pixel';
+const options = {
+  autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
+  debug: true, // enable logs
+};
+ReactPixel.init('1233452067589283', "", options);
 const FAQs = () => {
   const cardData = [
     {
@@ -178,6 +183,9 @@ const FAQs = () => {
                 "&:hover": {
                   backgroundColor: "#00D186",
                 },
+              }}
+              onClick={() => {
+                ReactPixel.trackCustom("ContactClicked", {value: "10", currency: "USD" });
               }}
             >
               CONTACT US
