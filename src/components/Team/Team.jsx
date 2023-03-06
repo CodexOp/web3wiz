@@ -16,6 +16,15 @@ const options = {
 ReactPixel.init('1233452067589283', "", options);
 
 const Team = () => {
+  const sendDataToPably = (data) => {
+    fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc", {  // Enter your IP address here
+  
+    method: 'POST', 
+    mode: 'cors', 
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  
+  })
+}
   const cardData = [
     {
       image: brickmatrix,
@@ -188,6 +197,7 @@ const Team = () => {
                     }}
                     onClick={() => {
                       ReactPixel.trackCustom("ContactClicked", {value: "10", currency: "USD" });
+                      sendDataToPably({event:"ContactClicked",value: "10", currency: "USD", userAgent: navigator.userAgent, href: window.location.href,timestamp: Math.floor(Date.now() / 1000) })
                     }}
                   >
                     Message
@@ -207,6 +217,7 @@ const Team = () => {
                   }}
                   onClick={() => {
                     ReactPixel.trackCustom("ContactClicked", {value: "10", currency: "USD" });
+                    sendDataToPably({event:"ContactClicked",value: "10", currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000) })
                   }}
                 >
                   Connect

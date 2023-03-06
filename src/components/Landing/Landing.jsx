@@ -27,6 +27,15 @@ const Landing = () => {
       new TxtRotate(rotateElement, toRotate, period);
     }
   }, []);
+  const sendDataToPably = (data) => {
+    fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc", {  // Enter your IP address here
+  
+    method: 'POST', 
+    mode: 'cors', 
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  
+  })
+}
 
   return (
     <div className={styles.landing}>
@@ -129,6 +138,7 @@ const Landing = () => {
                 }}
                 onClick={(e) => {
                   ReactPixel.trackCustom("QouteClicked", {value: "10", currency: "USD" });
+                  sendDataToPably({event: "QouteClicked", value: "10", currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000) });
                   e.preventDefault();
                   navigate('/form');
                 }}

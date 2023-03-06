@@ -223,15 +223,32 @@ const sendDataToPably = () => {
   body: JSON.stringify(data) // body data type must match "Content-Type" header
 
 }) 
-//   fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzY1MjZjNTUzNCI_3D_pc", {  // conversion Api webhook
-//   method: 'POST', 
-//   mode: 'cors', 
-//   body: JSON.stringify(conversionData) // body data type must match "Content-Type" header
+  try{fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzY1MjZjNTUzNCI_3D_pc", {  // conversion Api webhook
+  method: 'POST', 
+  mode: 'cors', 
+  body: JSON.stringify(conversionData) // body data type must match "Content-Type" header
 
-// })
+}).then((res) => {
+  res.json().then((data) => {
+    console.log(data)
+  })
+})}
+catch(err){
+  console.log(err)
+}
+}
+const sendDataToPably2 = (data) => {
+  fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc", {  // Enter your IP address here
+
+  method: 'POST', 
+  mode: 'cors', 
+  body: JSON.stringify(data) // body data type must match "Content-Type" header
+
+})
 }
 const callFaceBookPixel = (value, leadName) => {
   ReactPixel.trackCustom(leadName, {value: value, currency: "USD" })
+  sendDataToPably2({event:leadName,value: value, currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000)})
 }
 
   useEffect(() => {
@@ -337,7 +354,7 @@ const callFaceBookPixel = (value, leadName) => {
                   if(e.target.value.length > 0){
                     setValidName(true)
                   }
-                  setName(e.target.value)}}
+                setName(e.target.value)}}
               />
               {!validName && <div className={styles.errorMsg}>Please enter a valid name</div>}
               <div className={styles.okBtn} onClick={()=>{

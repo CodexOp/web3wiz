@@ -37,12 +37,22 @@ function App() {
   useEffect(()=>{
     ReactPixel.pageView(); // For tracking page view
   }, [])
+  const sendDataToPably = (data) => {
+    fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc", {  // Enter your IP address here
+  
+    method: 'POST', 
+    mode: 'cors', 
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  
+  })
+}
   useEffect(()=>{
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if(entry.isIntersecting){
           if (entry.target.className === "landing" && !isIntersecting.landing) {
           ReactPixel.trackCustom('LandingPageView', {value: 1, currency: 'USD'});
+          sendDataToPably({event: "LandingPageView", value: 1, currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000)});
           setIsIntersecting((state)=>{
             return {...state, landing: true}
           });
@@ -50,6 +60,7 @@ function App() {
         if (entry.target.className === "projectsDone" && !isIntersecting.projectsDone) {
           console.log("intersecting projects done");
           ReactPixel.trackCustom('ProjectsDonePageView', {value: 2, currency: 'USD'});
+          sendDataToPably({event: "ProjectsDonePageView", value: 2, currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000)});
           setIsIntersecting((state)=>{
             return {...state, projectsDone: true}
           });
@@ -57,6 +68,7 @@ function App() {
         if (entry.target.className === "servicesProvided" && !isIntersecting.servicesProvided) {
           console.log("intersecting services provided");
           ReactPixel.trackCustom('ServicesProvidedPageView', {value: 3, currency: 'USD'});
+          sendDataToPably({event: "ServicesProvidedPageView", value: 3, currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000)});
           setIsIntersecting((state)=>{
             return {...state, servicesProvided: true}
           });
@@ -64,6 +76,7 @@ function App() {
         if (entry.target.className === "testimonials" && !isIntersecting.testimonials) {
           console.log("intersecting testimonials");
           ReactPixel.trackCustom('TestimonialsPageView', {value: 4, currency: 'USD'});
+          sendDataToPably({event: "TestimonialsPageView", value: 4, currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000)});
           setIsIntersecting((state)=>{
             return {...state, testimonials: true}
           });

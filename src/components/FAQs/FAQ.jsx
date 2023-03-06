@@ -38,6 +38,15 @@ const FAQs = () => {
         "Yes, we will be taking 50% payment upfront before we start working on any order.",
     },
   ];
+  const sendDataToPably = (data) => {
+    fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc", {  // Enter your IP address here
+  
+    method: 'POST', 
+    mode: 'cors', 
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  
+  })
+}
   return (
     <Container
       maxWidth="xl"
@@ -186,6 +195,7 @@ const FAQs = () => {
               }}
               onClick={() => {
                 ReactPixel.trackCustom("ContactClicked", {value: "10", currency: "USD" });
+                sendDataToPably({event:"ContactClicked",value: "10", currency: "USD", userAgent: navigator.userAgent, href: window.location.href,timestamp: Math.floor(Date.now() / 1000) })
               }}
             >
               CONTACT US
