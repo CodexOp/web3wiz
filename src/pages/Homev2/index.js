@@ -15,11 +15,12 @@ import binanceIcon from "../../assets/images/icon-binance.svg";
 import polygonIcon from "../../assets/images/icon-polygon.svg";
 import tronIcon from "../../assets/images/icon-tron.svg";
 import Footer from './components/Footer';
-import igIcon from "./components/assests/images/icon-ig.svg"
-import linkedInIcon from "./components/assests/images/icon-linkedIn.svg"
-import telegramIcon from "./components/assests/images/icon-telegram.svg"
-import twitterIcon from "./components/assests/images/icon-twitter.svg"
-import emailIcon from "./components/assests/images/icon-email.svg"
+import igIcon from "./components/assests/images/icon-ig.svg";
+import linkedInIcon from "./components/assests/images/icon-linkedIn.svg";
+import telegramIcon from "./components/assests/images/icon-telegram.svg";
+import twitterIcon from "./components/assests/images/icon-twitter.svg";
+import emailIcon from "./components/assests/images/icon-email.svg";
+import blogImg from "./components/assests/images/icon-teamwork.svg";
 import styles from "./style.module.css";
 
 export default function Homev2()
@@ -212,6 +213,35 @@ export default function Homev2()
                 </div>
             </div>  
             <div className={styles.mainWrapper6}>
+                <div className={styles.blogsDiv}>
+                    <div className={styles.blogsDivHeading}>Latest <span>Blogs</span></div>
+                    <div className={styles.blogsGrid}>
+                    <div className={styles.blog}>
+                         <img src={blogImg} className={styles.blogImg} alt="blog-img" />
+                         <div className={styles.blogHeading}>How to build a decentralised App</div>
+                         <div className={styles.blogDesc}>
+                            Over time, blockchain, especially the crypto space, has been creating a bridge between traditional financial models with .&nbsp;.&nbsp;.<br/>
+                         </div>
+                        <div className={styles.readmoreBtn}>Read More{'>'}</div>
+                    </div>
+                    <div className={styles.blog}>
+                         <img src={blogImg} className={styles.blogImg} alt="blog-img" />
+                         <div className={styles.blogHeading}>How to build a decentralised App</div>
+                         <div className={styles.blogDesc}>
+                            Over time, blockchain, especially the crypto space, has been creating a bridge between traditional financial models with .&nbsp;.&nbsp;.<br/>
+                         </div>
+                        <div className={styles.readmoreBtn}>Read More{'>'}</div>
+                    </div>
+                    <div className={styles.blog}>
+                         <img src={blogImg} className={styles.blogImg} alt="blog-img" />
+                         <div className={styles.blogHeading}>How to build a decentralised App</div>
+                         <div className={styles.blogDesc}>
+                            Over time, blockchain, especially the crypto space, has been creating a bridge between traditional financial models with .&nbsp;.&nbsp;.<br/>
+                         </div>
+                        <div className={styles.readmoreBtn}>Read More{'>'}</div>
+                    </div>
+                    </div>
+                </div>
                 <div className={styles.newsletterHeading}>Subscribe TO Our <span>Newsletter</span></div>
                 <div className={styles.newsletterTxt}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus.</div>
                 <div className={styles.signupWrapper}>
