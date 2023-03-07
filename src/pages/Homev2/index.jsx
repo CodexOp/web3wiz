@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import bg1Img from "../../assets/images/icon-bg1.svg";
 import transparencyImg from "../../assets/images/icon-transparency.svg";
 import folderLockIcon from "../../assets/images/icon-folderLock.svg";
@@ -21,12 +21,18 @@ import telegramIcon from "./components/assests/images/icon-telegram.svg";
 import twitterIcon from "./components/assests/images/icon-twitter.svg";
 import emailIcon from "./components/assests/images/icon-email.svg";
 import blogImg from "./components/assests/images/icon-teamwork.svg";
+import arrowIcon from "./components/assests/images/icon-arrow.svg";
+import closeIcon from "./components/assests/images/icon-cross.svg";
 import Navbar from "./components/Navbar";
 
 import styles from "./style.module.css";
 
 export default function Homev2()
 {
+    const [isFaq1Open, setisFaq1Open] = useState(false);
+    const [isFaq2Open, setisFaq2Open] = useState(false);
+    const [isFaq3Open, setisFaq3Open] = useState(false);
+
     return (
         <>
             <Navbar/>
@@ -69,19 +75,6 @@ export default function Homev2()
                     <div className={styles.whyChooseHeading}>Why Choose us?</div>
                     <div className={styles.whyChooseTxt}>We make sure we bring you more value than you will be investing with us. <br/>Don’t just make dApps/Websites, build real profitable businesses with us.</div>
                 </div>
-                <div>
-                    <div>
-                        <div>50</div>
-                        <div>CLIENTS</div>
-                    </div>
-                    <div>+</div>
-                    <div>
-                        <div>$ 100 M</div>
-                        <div>RAISED BY OUR CLIENTS</div>
-                    </div>
-                </div>
-            </div>
-            <div className={styles.mainWrapper2}>
                 <div className={styles.featureGrid}>
                     <div className={styles.featureGridItems}>
                         <img src={transparencyImg} alt="transparency-img" className={styles.featureGridIcons}/>
@@ -100,7 +93,20 @@ export default function Homev2()
                         <div>Fast & Secure</div>
                     </div>
                 </div>
+                <div>
+                    <div>
+                        <div>50</div>
+                        <div>CLIENTS</div>
+                    </div>
+                    <div>+</div>
+                    <div>
+                        <div>$ 100 M</div>
+                        <div>RAISED BY OUR CLIENTS</div>
+                    </div>
+                </div>
             </div>
+            {/* <div className={styles.mainWrapper2}>
+            </div> */}
             <div className={styles.mainWrapper3}>
                 <div className={styles.ourServicesHeading}>Our <span>Services</span></div>
                 <div className={styles.ourServicesTxt}>Our services help everyone from startups to enterprises to launch and maintain their applications on the blockchain.</div>
@@ -219,6 +225,114 @@ export default function Homev2()
             <div className={styles.mainWrapper6}>
                 <div className={styles.faqsDiv}>
                     <div className={styles.faqsDivHeading}>Frequently Asked <span>Questions</span></div>
+                    <div className={styles.faqDropdown}>
+                        <div className={styles.faqDropdownheading}>
+                        <div>
+                            How You Develop Dapps?
+                        </div>
+                        <div>
+                            <div
+                            style={{
+                                display: isFaq1Open ? "none" : "flex",
+                                overflow: "hidden",
+                            }}
+                            >
+                            </div>
+                            <div
+                            onClick={() => setisFaq1Open(!isFaq1Open)}
+                            className={styles.dropdownArrowicon}
+                            >
+                            <img
+                                src={isFaq1Open? closeIcon :  arrowIcon}
+                                alt="arrow"
+                            />
+                            </div>
+                        </div>
+                        </div>
+                        <div
+                        className={styles.faqDropdowntxtContent}
+                        style={{
+                            height: isFaq1Open ? "auto" : 0,
+                            margin: isFaq1Open ? "10px 0" : "0",
+                            overflow: "hidden",
+                            transition: "height 0.5s ease-out",
+                        }}
+                        >
+                        Over time, blockchain, especially the crypto space, has been creating a bridge between traditional financial models with its own decentralized versions. Right from using cryptocurrencies to making.
+                    </div>
+                    </div>
+                    <div className={styles.faqDropdown}>
+                        <div className={styles.faqDropdownheading}>
+                        <div>
+                            How You Develop Dapps?
+                        </div>
+                        <div>
+                            <div
+                            style={{
+                                display: isFaq2Open ? "none" : "flex",
+                                overflow: "hidden",
+                            }}
+                            >
+                            </div>
+                            <div
+                            onClick={() => setisFaq2Open(!isFaq2Open)}
+                            className={styles.dropdownArrowicon}
+                            >
+                            <img
+                                src={isFaq2Open? closeIcon :  arrowIcon}
+                                alt="arrow"
+                            />
+                            </div>
+                        </div>
+                        </div>
+                        <div
+                        className={styles.faqDropdowntxtContent}
+                        style={{
+                            height: isFaq2Open ? "auto" : 0,
+                            margin: isFaq2Open ? "10px 0" : "0",
+                            overflow: "hidden",
+                            transition: "height 0.5s ease-out",
+                        }}
+                        >
+                        Over time, blockchain, especially the crypto space, has been creating a bridge between traditional financial models with its own decentralized versions. Right from using cryptocurrencies to making.
+                    </div>
+                    </div>
+                    <div className={styles.faqDropdown}>
+                        <div className={styles.faqDropdownheading}>
+                        <div>
+                            How You Develop Dapps?
+                        </div>
+                        <div>
+                            <div
+                            style={{
+                                display: isFaq3Open ? "none" : "flex",
+                                overflow: "hidden",
+                            }}
+                            >
+                            </div>
+                            <div
+                            onClick={() => setisFaq3Open(!isFaq3Open)}
+                            className={styles.dropdownArrowicon}
+                            >
+                            <img
+                                src={isFaq3Open? closeIcon :  arrowIcon}
+                                alt="arrow"
+                            />
+                            </div>
+                        </div>
+                        </div>
+                        <div
+                        className={styles.faqDropdowntxtContent}
+                        style={{
+                            height: isFaq3Open ? "auto" : 0,
+                            margin: isFaq3Open ? "10px 0" : "0",
+                            overflow: "hidden",
+                            transition: "height 0.5s ease-out",
+                        }}
+                        >
+                        Over time, blockchain, especially the crypto space, has been creating a bridge between traditional financial models with its own decentralized versions. Right from using cryptocurrencies to making.
+                    </div>
+                    </div>
                 </div>
 
                 <div className={styles.blogsDiv}>

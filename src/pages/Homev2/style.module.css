@@ -159,6 +159,7 @@
     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
     margin-inline: auto;
     padding: 2em 4em 0em 4em;
+    gap: 5em;
 }
 
 .whyChooseDiv{
@@ -300,6 +301,7 @@
     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
     margin-inline: auto;
     padding: 2em 4em 0em 4em;
+    gap: 2em;
 }
 
 .mainWrapper4{
@@ -310,7 +312,8 @@
     --container-padding: 1rem;
     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
     margin-inline: auto;
-    padding: 2em 4em 0em 4em;
+    padding: 6em 4em 6em 4em;
+    gap: 2em;
 }
 
 .serviceGrid{
@@ -320,7 +323,7 @@
     justify-content: center;
     align-items: center;
     gap: 100px;
-    margin-top: 5em;
+    margin: 5em 0 12em 0;
 }
 
 .serviceGridRow{
@@ -352,6 +355,7 @@
     background: linear-gradient(90deg, #9F01FF 9.77%, rgba(0, 233, 135, 0) 98.48%);
     max-width: 1500px;
     margin-inline: auto;
+    width: 100%;
 }
 
 .styledSection1{
@@ -404,6 +408,7 @@
     display: flex;
     position: relative;
     justify-content: center;
+    margin: 2em 0;
 }
 
 .scribbleImg{
@@ -432,7 +437,7 @@
     font-weight: 700;
     font-size: 52px;
     line-height: 78px;
-
+    margin-top: 3em;
     color: #FFFFFF;
 }
 
@@ -509,6 +514,7 @@
     line-height: 78px;
 
     color: #FFFFFF;
+    margin: 3em 0 0.5em 0;
 }
 
 .newsletterHeading span{
@@ -539,9 +545,8 @@
     text-align: center;
     max-width: 700px;
     color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5em;   
 }
-
-
 
 
 .signupWrapper{
@@ -619,6 +624,8 @@
     display: flex;
     justify-content: space-between;
     width: 60%;
+    max-width: 470px;
+    margin: 5em 0;
 }
 
 .socialIconDiv img{
@@ -648,6 +655,7 @@
     line-height: 78px;
 
     color: #FFFFFF;
+    margin: 1em 0;
 }
 
 .blogsDivHeading span{
@@ -657,14 +665,23 @@
     background-clip: text;
 }
 
+.faqsDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 2em;
+}
+
 .faqsDivHeading{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 52px;
     line-height: 78px;
-
+    text-align: center;
     color: #FFFFFF;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
 }
 
 .faqsDivHeading span{
@@ -709,6 +726,75 @@
 
     color: #FFFFFF
 }
+
+
+
+.faqDropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 1em 2em;
+    border-radius: 10px;
+    background: #272631;
+  }
+  
+
+.faqDropdownheading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+
+.faqDropdownheadingContent{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.dropdownArrowicon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 4px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdownArrowicon img{
+    width: 20px;
+}
+
+.dropdownArrowicon:hover{
+    background-color: rgba(153, 153, 153, 0.25);
+}
+
+
+.faqDropdownWrapper{
+    padding: 3px;
+    border-radius: 10px;
+    margin: 0.5em 0;
+}
+  
+.faqDropdowntxtContent{
+    text-align: left;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+}
+
 
 @media only screen and (max-width: 1020px) {
     .mainWrapper1{
