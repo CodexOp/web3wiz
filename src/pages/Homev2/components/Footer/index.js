@@ -6,7 +6,6 @@ import linkedInIcon from "../assests/images/icon-linkedIn.svg"
 import telegramIcon from "../assests/images/icon-telegram.svg"
 import twitterIcon from "../assests/images/icon-twitter.svg"
 import emailIcon from "../assests/images/icon-email.svg"
-import sendIcon from "../assests/images/icon-send.svg"
 import { Link } from "react-router-dom";
 
 export default function Footer()
