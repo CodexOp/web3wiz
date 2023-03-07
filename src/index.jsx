@@ -15,6 +15,7 @@ import {HelmetProvider} from 'react-helmet-async'
 import Thankyou from "./pages/thankyou/Thankyou";
 import Privacy from "./pages/privacy/Privacy";
 import Form from "./pages/form/Form"
+import Projects from "./pages/Projects/Projects"
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -45,6 +46,7 @@ root.render(
         <Route exact path="/thankyou" element={<Thankyou/>}/>
         <Route exact path="/privacy-policy" element={<Privacy/>}/>
         <Route exact path="/form" element={<Form/>}/>
+        <Route exact path="/projects" element={<Projects/>}/>
       </Routes> 
     </Router>
     </HelmetProvider>

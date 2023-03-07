@@ -1,0 +1,264 @@
+@font-face {
+    font-family: 'Phenomicon Laser';
+    src: url('../../assets/fonts/phenomiconlaser.ttf');
+  }
+
+.background{
+    background: linear-gradient(180deg, #002339 -19.53%, #1D0B1D 122.66%) !important;
+}
+
+.container{
+    --max-width: 1500px;
+    --container-padding: 1rem;
+    max-width: min(var(--max-width), 100%-2*var(--container-padding));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexContainer{
+    display: flex;
+    align-items: center;
+}
+
+.flexItem1{
+    padding: 8rem 0 8rem 5rem;
+}
+
+.flexItem1 p{
+    max-width: 45ch;
+    font-size: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.flexItem1 h1{
+    font-size: 64px;
+    font-weight: 700;
+}
+.flexItem1 h1 span{
+    background: linear-gradient(90.06deg, #27B67A 1.07%, #38FFCF 99.95%),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.flexItem2{
+    width: max-content;
+}
+
+.flexItem2 img{
+    width: 80%;
+    margin: auto;
+    object-fit: cover;
+}
+
+.button{
+    background: #27B67A;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-size: 24px;
+    text-decoration: none;
+    border: none;
+    color: white !important;
+}
+@media (max-width: 50em) {
+    .flexContainer{
+      flex-direction: column;
+      align-items: center;
+    }
+    .flexItem1{
+      padding: 2rem 0 2rem 1rem;
+    }
+    .flexItem1 h1{
+      font-size: 48px;
+    }
+    .flexItem1 p{
+      max-width: 30ch;
+      font-size: 16px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .button{
+      padding: 1rem 2rem;
+      font-size: 16px;
+      transform: translateX(65px);
+    }
+    .flexItem2 img{
+      width: 50%;
+      margin: auto;
+      object-fit: cover;
+    }  
+}
+.arrowDown{
+    padding-bottom: 3rem;
+}
+.arrowDown img{
+    margin: 0 auto;
+}
+
+
+.projectHeader{
+    color: var(--headerColor);
+}
+.index{
+    font-family: 'Phenomicon Laser';
+    font-size: 96px;
+}
+.projectName{
+    font-style: italic;
+    font-weight: 600;
+    font-size: 36px;
+}
+.connectToProject{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.connectToProject a{
+    color: var(--textColor);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.projectItem1{
+    padding: 8rem 0 8rem 10rem;
+}
+.projectItem1 p{
+    color: var(--textColor);
+    max-width: 45ch;
+    font-size: 16px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.image img{
+    width: 80%;
+    margin: auto;
+}
+@media (max-width: 50em){
+  .index{
+    font-size: 60px;
+  }
+  .projectName{
+      font-size: 24px;
+  }
+  .connectToProject{
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+  }
+  .projectItem1{
+      padding: 2rem 1rem 2rem 2rem;
+  }
+}
+
+/* Nav styling */
+
+.primaryHeader {
+    padding: 0.25em 0;
+    display: grid;
+    place-items: center;
+    font-family: 'Poppins';
+    background: transparent;
+    width: 90%;
+    margin: auto;
+    transform: translateY(30px);
+  }
+  .primaryNavigation{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  .navWrapper {
+    padding: 0.75em 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 44px;
+  }
+  
+  .mobileNavToggle {
+    display: none;
+  }
+  .mobileVisible{
+    display: none;
+  }
+  .navList {
+    font-family: "Poppins";
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    gap: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #000000;
+  }
+
+
+.iconClose,
+.iconHamburger{
+    color: white;
+    z-index: 10;
+}
+.toggleDisplay{
+  display: none;
+}
+.noStyle{
+    background: none ;
+    color: inherit ;
+    border: none ;
+    padding: 0 ;
+    font: inherit ;
+    cursor: pointer ;
+    outline: inherit ;
+ }
+ .btnStyle{
+    background: #00A9BE;
+    border-radius: 8px;
+    border: none;
+    outline: inherit;
+    color: white !important;
+    padding: 0.5rem 1rem;
+ }
+ .visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+  }
+  @media (max-width: 50em) {
+    .navList{
+      
+      max-width: 40vh;
+      font-size: 16px;
+    }
+    .btnStyle{
+      padding: 0.25rem 0.5rem;
+   }
+    .navWrapper {
+      overflow-x: scroll !important;
+      padding: 0.5em 1em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.15);
+      border-radius: 44px;
+      max-width: 45vh;
+    }
+  }
+
+ 
