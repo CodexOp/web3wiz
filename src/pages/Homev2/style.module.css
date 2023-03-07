@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Phenomicon Laser';
+    src: url('../../assets/fonts/phenomiconlaser.ttf');
+}
+
 .homeWrapper{
     --max-width: 1500px;
     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
@@ -351,7 +356,7 @@
     padding: 20px 25px;
 }
 
-.styledSection1Wrapper{
+.styledSectionWrapper{
     background: linear-gradient(90deg, #9F01FF 9.77%, rgba(0, 233, 135, 0) 98.48%);
     max-width: 1500px;
     margin-inline: auto;
@@ -362,11 +367,19 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-image: url("../../assets/images/bgImg2.svg");
-    padding: 30px 40px;
+    background-image: url("./components/assests/images/icon-styledsectionBg1.svg");
+    padding: 60px 70px 100px 90px;
 }
 
-.styledSection1Txt{
+.styledSection2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-image: url("./components/assests/images/icon-styledsectionBg2.svg");
+    padding: 60px 70px 100px 90px;
+}
+
+.styledSectionTxt{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
@@ -796,6 +809,126 @@
     line-height: 30px;
 }
 
+.mainWrapper5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    --max-width: 1300px;
+    --container-padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+    margin-inline: auto;
+    padding: 6em 4em 6em 4em;
+    gap: 2em;
+}
+
+.clientTxtWrapper{
+    font-family: 'Phenomicon Laser';
+    display: flex;
+    align-items: center;
+    gap: 70px;    
+}
+
+.clientTxt{
+    font-size: 60px;
+    display: flex;
+    align-items: flex-end;
+    line-height: 85px;
+    letter-spacing: 5px;
+}
+
+.clientTxtnum{
+    font-size: 130px;
+    line-height: 135px;
+    letter-spacing: 5px;
+}
+
+.clientTxt2{
+    font-size: 30px;
+}
+
+.clientTxt1{
+    font-size: 50px;
+}
+
+.ourClientReviewHeading{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 78px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+.ourClientReviewHeading span{
+    background: linear-gradient(90.06deg, #27B67A 1.07%, #38FFCF 99.95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+.clientReviewCrouselItem{
+    background: rgba(67, 67, 67, 0.19);
+    border-radius: 15px;
+    width: 1000px;
+    padding: 50px 100px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    gap: 25px;
+}
+
+.clientName{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+
+    color: #15D28E;
+}
+
+.clientInfo{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.starDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clientWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.quotesIcon{
+    position: absolute;
+    left: 100px;
+}
 
 @media only screen and (max-width: 1020px) {
     .mainWrapper1{
