@@ -16,6 +16,7 @@ import Thankyou from "./pages/thankyou/Thankyou";
 import Privacy from "./pages/privacy/Privacy";
 import Form from "./pages/form/Form"
 import Projects from "./pages/Projects/Projects"
+import Homev2 from "./pages/Homev2";
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -43,6 +44,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />}/>
+        <Route exact path="/homev2" element={<Homev2/>}/>
         <Route exact path="/thankyou" element={<Thankyou/>}/>
         <Route exact path="/privacy-policy" element={<Privacy/>}/>
         <Route exact path="/form" element={<Form/>}/>
