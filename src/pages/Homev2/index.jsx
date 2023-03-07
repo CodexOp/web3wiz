@@ -21,12 +21,16 @@ import telegramIcon from "./components/assests/images/icon-telegram.svg";
 import twitterIcon from "./components/assests/images/icon-twitter.svg";
 import emailIcon from "./components/assests/images/icon-email.svg";
 import blogImg from "./components/assests/images/icon-teamwork.svg";
+import Navbar from "./components/Navbar";
+
 import styles from "./style.module.css";
 
 export default function Homev2()
 {
     return (
         <>
+            <Navbar/>
+            <div className={styles.homeWrapper}>
             <div className={styles.backdropDiv1}>
             <div id="home" className={styles.mainWrapper1}>
                 <div className={styles.titleContent}>
@@ -213,6 +217,10 @@ export default function Homev2()
                 </div>
             </div>  
             <div className={styles.mainWrapper6}>
+                <div className={styles.faqsDiv}>
+                    <div className={styles.faqsDivHeading}>Frequently Asked <span>Questions</span></div>
+                </div>
+
                 <div className={styles.blogsDiv}>
                     <div className={styles.blogsDivHeading}>Latest <span>Blogs</span></div>
                     <div className={styles.blogsGrid}>
@@ -269,6 +277,7 @@ export default function Homev2()
                             <img src={emailIcon} className={styles.socialIcons} alt="email-icon"/>
                         </a>
                     </div>
+            </div>
             </div>
             <Footer/>
         </>

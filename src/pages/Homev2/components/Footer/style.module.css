@@ -2,7 +2,11 @@
     display: flex;
     justify-content: space-between;
     background: linear-gradient(180deg, #030405 0%, #120C19 100%);
-    padding: 4% 8% 8% 8%;
+    --max-width: 1680px;
+    --container-padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+    margin-inline: auto;
+    padding: 2em 4em;
 }
 .title{
     display: flex;
