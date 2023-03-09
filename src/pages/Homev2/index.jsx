@@ -23,6 +23,9 @@ import emailIcon from "./components/assests/images/icon-email.svg";
 import blogImg from "./components/assests/images/icon-teamwork.svg";
 import arrowIcon from "./components/assests/images/icon-arrow.svg";
 import closeIcon from "./components/assests/images/icon-cross.svg";
+import starIcon from "./components/assests/images/icon-star.svg";
+import quotesIcon from "./components/assests/images/icon-quotes.svg";
+import clientImg from "./components/assests/images/icon-clientimg.svg";
 import Navbar from "./components/Navbar";
 
 import styles from "./style.module.css";
@@ -93,20 +96,23 @@ export default function Homev2()
                         <div>Fast & Secure</div>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <div>50</div>
-                        <div>CLIENTS</div>
+                <div className={styles.clientTxtWrapper}>
+                    <div className={styles.clientTxtItem}>
+                        <div className={styles.clientTxtnum}>50+</div>
+                        <div className={styles.clientTxt1}>CLIENTS</div>
                     </div>
-                    <div>+</div>
-                    <div>
-                        <div>$ 100 M</div>
-                        <div>RAISED BY OUR CLIENTS</div>
+                    <div className={styles.clientTxtItem}>
+                        <div className={styles.clientTxt}>
+                            {'$'}
+                            <div className={styles.clientTxtnum}>
+                                100
+                            </div>
+                            M
+                        </div>
+                        <div className={styles.clientTxt2}>RAISED BY OUR CLIENTS</div>
                     </div>
                 </div>
             </div>
-            {/* <div className={styles.mainWrapper2}>
-            </div> */}
             <div className={styles.mainWrapper3}>
                 <div className={styles.ourServicesHeading}>Our <span>Services</span></div>
                 <div className={styles.ourServicesTxt}>Our services help everyone from startups to enterprises to launch and maintain their applications on the blockchain.</div>
@@ -153,9 +159,9 @@ export default function Homev2()
                     </div>
                 </div>
             </div>
-            <div className={styles.styledSection1Wrapper}>
+            <div className={styles.styledSectionWrapper}>
                 <div className={styles.styledSection1}>
-                    <div className={styles.styledSection1Txt}>
+                    <div className={styles.styledSectionTxt}>
                         Tap into the billion-dollar decentralized<br/>
                         market by leveraging our best-in-class<br/>
                         dapp development services
@@ -191,11 +197,11 @@ export default function Homev2()
                     </div>
                 </div>
             </div>
-            <div className={styles.styledSection1Wrapper}>
-                <div className={styles.styledSection1}>
-                    <div className={styles.styledSection1Txt}>
-                        Are you looking for a reliable
-                        Dapp solution that can give your
+            <div className={styles.styledSectionWrapper}>
+                <div className={styles.styledSection2}>
+                    <div className={styles.styledSectionTxt}>
+                        Are you looking for a reliable<br/>
+                        Dapp solution that can give your<br/>
                         business the much-needed boost?
                     </div>
                     <div className={styles.styledwhiteBtn}>Talk With Experts</div>
@@ -223,6 +229,31 @@ export default function Homev2()
                 </div>
             </div>  
             <div className={styles.mainWrapper6}>
+                <div>
+                    <div className={styles.ourClientReviewHeading}>Our Client <span>Reviews</span></div>
+                    <div className={styles.clientReviewCrousel}>
+                        <div className={styles.clientReviewCrouselItem}>
+                            <img src={quotesIcon} alt="quotesIcon" className={styles.quotesIcon}/>
+                            <div className={styles.clientWrapper}>
+                                <div className={styles.clientImgWrapper}>
+                                    <img src={clientImg} alt="clientImg"  className={styles.clientImgIcon}/>
+                                </div>
+                                <div className={styles.starDiv}>
+                                <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                </div>
+                            </div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                            <div className={styles.clientNameWrapper}>
+                                <div className={styles.clientName}>Joseph James</div>
+                                <div className={styles.clientInfo}>Founder - Cerebrum</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className={styles.faqsDiv}>
                     <div className={styles.faqsDivHeading}>Frequently Asked <span>Questions</span></div>
                     <div className={styles.faqDropdown}>
