@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "../styles.module.css";
 import arrowDown from "../../../assets/arrow-down.png"
 import landingImg from "../../../assets/projectLandingImg.png"
-export default function LandingProjects() {
+export default function LandingProjects({setIsLanding}) {
   return (
     <div className={styles.background}>
         <div className={styles.container}>
@@ -18,7 +18,11 @@ export default function LandingProjects() {
             </div>
         </div>
         <div className={styles.arrowDown}>
-            <img src={arrowDown} alt="" />
+            <button className={styles.noStyle} onClick={()=>{
+                setIsLanding(false)
+            }}>
+                <img src={arrowDown} alt="" />
+            </button>
         </div>
     </div>
   )
