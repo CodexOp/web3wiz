@@ -229,27 +229,69 @@ export default function Homev2()
                 </div>
             </div>  
             <div className={styles.mainWrapper6}>
-                <div>
+                <div className={styles.ourClientReview}>
                     <div className={styles.ourClientReviewHeading}>Our Client <span>Reviews</span></div>
-                    <div className={styles.clientReviewCrousel}>
-                        <div className={styles.clientReviewCrouselItem}>
-                            <img src={quotesIcon} alt="quotesIcon" className={styles.quotesIcon}/>
-                            <div className={styles.clientWrapper}>
-                                <div className={styles.clientImgWrapper}>
-                                    <img src={clientImg} alt="clientImg"  className={styles.clientImgIcon}/>
+                    <div className={styles.carouselWrapper}>
+                        <div className={styles.clientReviewCrousel}>
+                            <div className={styles.clientReviewCrouselItem}>
+                                <img src={quotesIcon} alt="quotesIcon" className={styles.quotesIcon}/>
+                                <div className={styles.clientWrapper}>
+                                    <div className={styles.clientImgWrapper}>
+                                        <img src={clientImg} alt="clientImg"  className={styles.clientImgIcon}/>
+                                    </div>
+                                    <div className={styles.starDiv}>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    </div>
                                 </div>
-                                <div className={styles.starDiv}>
-                                <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                                <div className={styles.clientNameWrapper}>
+                                    <div className={styles.clientName}>Joseph James</div>
+                                    <div className={styles.clientInfo}>Founder - Cerebrum</div>
                                 </div>
                             </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-                            <div className={styles.clientNameWrapper}>
-                                <div className={styles.clientName}>Joseph James</div>
-                                <div className={styles.clientInfo}>Founder - Cerebrum</div>
+                            <div className={styles.clientReviewCrouselItem}>
+                                <img src={quotesIcon} alt="quotesIcon" className={styles.quotesIcon}/>
+                                <div className={styles.clientWrapper}>
+                                    <div className={styles.clientImgWrapper}>
+                                        <img src={clientImg} alt="clientImg"  className={styles.clientImgIcon}/>
+                                    </div>
+                                    <div className={styles.starDiv}>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    </div>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                                <div className={styles.clientNameWrapper}>
+                                    <div className={styles.clientName}>Joseph James</div>
+                                    <div className={styles.clientInfo}>Founder - Cerebrum</div>
+                                </div>
+                            </div>
+                            <div className={styles.clientReviewCrouselItem}>
+                                <img src={quotesIcon} alt="quotesIcon" className={styles.quotesIcon}/>
+                                <div className={styles.clientWrapper}>
+                                    <div className={styles.clientImgWrapper}>
+                                        <img src={clientImg} alt="clientImg"  className={styles.clientImgIcon}/>
+                                    </div>
+                                    <div className={styles.starDiv}>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    </div>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                                <div className={styles.clientNameWrapper}>
+                                    <div className={styles.clientName}>Joseph James</div>
+                                    <div className={styles.clientInfo}>Founder - Cerebrum</div>
+                                </div>
                             </div>
                         </div>
                     </div>
