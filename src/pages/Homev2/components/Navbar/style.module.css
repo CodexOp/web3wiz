@@ -220,4 +220,7 @@
       width: 20px;
       height: 20px;
     }
+    .navWrapper{
+      border: none;
+    }
 }

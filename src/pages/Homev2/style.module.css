@@ -3,6 +3,10 @@
     src: url('../../assets/fonts/phenomiconlaser.ttf');
 }
 
+*{
+    box-sizing: border-box;
+}
+
 .homeWrapper{
     --max-width: 1500px;
     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
@@ -16,7 +20,6 @@
 
 .mainWrapper1{
     --max-width: 1500px;
-    --container-padding: 1rem;
     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
     margin-inline: auto;
     display: flex;
@@ -76,12 +79,12 @@
 
 .getaquotaBtn{
     border-radius: 10px;
-    padding: 12px 35px;
+    padding: 8px 35px;
     width: fit-content;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 26px;
     line-height: 48px;
     cursor: pointer;
     background: #27B67A;
@@ -144,7 +147,6 @@
     font-size: 64px;
     line-height: 96px;
     text-align: center;
-
     color: #FFFFFF;
 }
 
@@ -166,6 +168,18 @@
     padding: 2em 4em 0em 4em;
     gap: 5em;
 }
+
+.clientBoxes2{
+    transform: translateX(80px)
+}
+
+.projectDone{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
 
 .whyChooseDiv{
     display: flex;
@@ -263,12 +277,29 @@
     background-clip: text;
 }
 
+
+.serviceGrid{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 2em 0 6em 0;
+}
+
+
+
+
 .serviceGridItem{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     text-align: center;
+    width: 30%;
+    margin-top: 30px;
 }
 
 .serviceGridItemImg{
@@ -321,23 +352,6 @@
     gap: 2em;
 }
 
-.serviceGrid{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    margin: 5em 0 12em 0;
-}
-
-.serviceGridRow{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    gap: 10px;
-    align-items: center;
-}
 
 
 .styledwhiteBtn{
@@ -706,7 +720,7 @@
 }
 
 .blog{
-    width: 350px;
+    width: 45%;
 }
 
 
@@ -871,6 +885,8 @@
 .ourClientReview{
     width: 100%;
 }
+
+
 .carouselWrapper{
     width: 100%;
 }
@@ -910,7 +926,7 @@
 .clientReviewCrouselItem{
     background: rgba(67, 67, 67, 0.19);
     border-radius: 15px;
-    min-width: 1000px ;
+    min-width: 80%;
     padding: 50px 100px;    
     display: flex;
     flex-direction: column;
@@ -967,14 +983,71 @@
     left: 100px;
 }
 
+
+.box{
+    position: relative;
+    width: 200px;
+    margin: 0px 10px;
+    padding: 10px 30px;
+}
+
+    .box::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50px; 
+        border: 2px solid transparent;
+        background: linear-gradient(45deg,#27B67A,#00C9F5) border-box;
+        -webkit-mask:
+          linear-gradient(#fff 0 0) padding-box, 
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+      }
+
+
+.clientBoxes{
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}      
+
+.infoBox {
+    margin-left: 10px;
+}
+
+.bnbRaised{
+    display: flex;
+    align-items: center;
+    
+}
+.bnbRaised img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.raisedAmount{
+    font-size: 12px;
+
+}
+
+.projectName{
+    color:#15D28E;
+    font-size: 12px;
+}
+ 
+
+
 @media only screen and (max-width: 1020px) {
     .mainWrapper1{
         padding: 5px 20px;
         flex-direction: column;
     }
-    .mainWrapper1 img{
-        transform: translate(70px, -30px);
-    }
+
     .titleContent{
         margin-bottom: 0;
         padding: 0.5em 1em;
@@ -982,6 +1055,12 @@
     .mainHeadingTxt{
         font-size: 45px;
         line-height: 50px;
+    }
+
+    .maintext2{
+        font-size: 36px;
+        line-height: 40px;
+
     }
 }
 
@@ -1002,10 +1081,415 @@
     }
 }
 
-@media only screen and (max-width: 1120px) {
-    
-}
+
 
 .backdropDiv1>div{overflow-x: hidden;}
 .backdropDiv2>div{overflow-x: hidden;}
 
+@media only screen and (max-width: 850px) {
+    .mainHeadingTxt{
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    .gradientTxt{
+        font-size: 30px;
+        line-height: 30px;
+
+    }
+
+    .titleInfo{
+        font-size: 18px;
+        
+    }
+
+    .titleFeatureItemContent1{
+        font-size: 26px;
+    }
+    
+    .titleFeatureItemContent2{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #1CA57D;
+    }
+
+    .titleContent{
+        margin-top: 3em;
+    }
+
+    .getaquotaBtn{
+        border-radius: 10px;
+        padding: 2px 35px;
+        width: fit-content;
+        font-family: 'Poppins';
+        width: 100%;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 48px;
+        cursor: pointer;
+        background: #27B67A;
+        border-radius: 10px;
+        text-align: center;
+        transition: 300ms background-position ease-in-out;
+        margin-bottom: 20px;
+    }
+
+    .featureGrid{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1em;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:25px;
+    }
+    
+    .featureGridItems{
+        width: 45%;
+        font-size: 18px;
+        line-height: 34px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        color: #FFFFFF;
+    }
+
+    
+.mainWrapper3{
+    padding: 2em 0.5em 0em 0.5em;
+    margin-top: 50px;
+}
+
+.mainWrapper4{
+  
+    padding: 6em 0.5em 6em 0.5em;
+    gap: 2em;
+}
+.ourServicesHeading{
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.ourServicesTxt{
+    font-size: 18px;
+    line-height: 26px; 
+}
+
+
+.serviceGridItem{
+    width: 45%;
+}
+
+.serviceGridItemImg{
+    width: 50px;
+    height: 50px;
+}
+
+.serviceGridItemHeading{
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.serviceGridItemTxt{
+
+    font-size: 16px;
+    line-height: 24px;
+    
+}
+
+
+.styledwhiteBtn{
+    font-size: 20px;
+    line-height: 33px;
+    text-align: center;
+    color: #000000;
+    background: #FFFFFF;
+    border-radius: 12px;
+    width: fit-content;
+    padding: 20px 25px;
+}
+
+.knowmoreBtn{
+    font-size: 16px;
+}
+
+
+
+.styledSection1{
+    padding: 60px 20px 100px 20px;
+}
+
+.styledSection2{
+    padding: 60px 20px 100px 20px;
+}
+
+.styledSectionTxt{
+    font-size: 30px;
+    line-height: 46px;
+}
+
+
+.ourProjectsHeading{
+    font-size: 30px;
+    line-height: 36px;
+}
+
+
+.ourProjectTxt{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.projectImgWrapper{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 2em 0;
+}
+
+.scribbleImg{
+    position: absolute;
+    bottom: 100px;
+    left: -140px;
+}
+
+
+.seeallProjectsBtn{
+    font-size: 20px;
+    padding: 5px 15px;
+}
+
+.meetOurPartnersHeading{
+   
+    font-size: 30px;
+    line-height: 36px;
+   
+}
+
+
+
+.partnerDiv{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.partner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 40px;
+
+    color: #FFFFFF;
+}
+
+.platformHeading{
+    font-size: 30px;
+    line-height: 36px;
+}
+
+
+.mainWrapper5{
+    padding: 6em 0.5em 5em 0.5em;
+    gap: 2em;
+}
+
+
+.mainWrapper6{
+    padding: 0em 0.5em 6em 0.5em;
+    gap: 2em;
+}
+
+.platformsDiv{
+    margin-inline: auto;
+    padding: 2em 0.5em 0em 0.5em;
+    flex-wrap: wrap;
+
+}
+
+.platform{
+    font-size: 20px;
+    line-height: 26px;
+    width: 45%;
+    margin-top: 40px;
+    
+}
+
+
+.newsletterHeading{
+    font-size: 30px;
+    line-height: 36px;
+    
+}
+
+
+
+.ourClientReviewHeading{
+    
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 40px;
+    
+}
+
+
+
+.faqsDivHeading{
+    font-size: 30px;
+    line-height: 36px;
+}
+
+
+
+
+
+.blogHeading{
+    margin-top: 10px;
+}
+
+
+.blogDesc{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+  
+
+.faqDropdownheading{
+   
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    
+}
+
+  
+.faqDropdowntxtContent{
+   color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.blogsDivHeading{
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.blogsGrid{
+    flex-wrap: wrap;
+}
+
+.signupInput input{
+    height: 50px;
+    padding: 16px;
+   
+}
+
+
+
+.subscribeBtn{
+    border-radius: 0 10px 10px 0;
+    padding: 6px 5px;
+    background: #27B67A;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+ 
+}
+
+.socialIconDiv{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 470px;
+    margin: 5em 0;
+}
+
+.clientReviewCrouselItem{
+    min-width: 80% ;
+    padding: 50px 20px;    
+
+}
+
+.quotesIcon{
+    position: absolute;
+    left: 8%;
+    width: 40px;
+}
+
+}
+
+@media only screen and (max-width: 550px) {
+    .titleFeatures{
+        gap: 15px;
+    }
+
+    .mainWrapper1 img{
+        width: 100%;
+        min-width: 100%;
+        align-self: center;
+    }
+
+    .mainWrapper2{
+        padding: 2em 0.5em 0em 0.5em;
+    }
+
+    .whyChooseHeading{
+        font-size: 30px;
+        line-height: 36px;
+        }
+    
+    .whyChooseTxt{
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .clientTxtWrapper{
+        align-items: center;
+        gap: 40px;    
+        flex-direction: column;
+    }
+    
+    .clientTxt{
+        font-size: 60px;
+        display: flex;
+        align-items: flex-end;
+        line-height: 85px;
+        letter-spacing: 5px;
+    }
+    
+    .clientTxtnum{
+        font-size: 130px;
+        line-height: 135px;
+        letter-spacing: 5px;
+    }
+    
+    .clientTxt2{
+        font-size: 30px;
+    }
+    
+    .clientTxt1{
+        font-size: 50px;
+    }
+    
+    .blog{
+        width: 100%;
+    }
+    
+ 
+}

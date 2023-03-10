@@ -89,7 +89,7 @@ export default function Homev2()
                     </div>
                     <div className={styles.featureGridItems}>
                         <img src={shieldIcon} alt="shieldIcon" className={styles.featureGridIcons}/>
-                        <div>SAFU Developers</div>
+                        <div>SAFU Devs</div>
                     </div>
                     <div className={styles.featureGridItems}>
                         <img src={lockIcon} alt="lockIcon" className={styles.featureGridIcons} />
@@ -112,12 +112,247 @@ export default function Homev2()
                         <div className={styles.clientTxt2}>RAISED BY OUR CLIENTS</div>
                     </div>
                 </div>
+               
+                
+                
+
+            </div>
+            <div className={styles.projectDone}>
+            <div className={styles.clientBoxes}>
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                <div className={`${styles.clientBoxes} ${styles.clientBoxes2}`}>
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+                <div className={`${styles.clientBoxes} ${styles.clientBoxes3}`}>
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.box}>
+                        <div className={styles.bnbRaised}>
+                            <img src={lockIcon} alt="logo" />
+                            <div className={styles.infoBox}>
+                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                            <h3 className={styles.projectName}>Cerebrum</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
             </div>
             <div className={styles.mainWrapper3}>
                 <div className={styles.ourServicesHeading}>Our <span>Services</span></div>
                 <div className={styles.ourServicesTxt}>Our services help everyone from startups to enterprises to launch and maintain their applications on the blockchain.</div>
                 <div className={styles.serviceGrid}>
-                    <div className={styles.serviceGridRow}>
+            
                     <div className={styles.serviceGridItem}>
                         <img src={transparencyImg} alt="transparency-img"  className={styles.serviceGridItemImg}/>
                         <div className={styles.serviceGridItemHeading}>SMART CONTRACT</div>
@@ -136,8 +371,6 @@ export default function Homev2()
                         <div className={styles.serviceGridItemTxt}>Our services help everyone from startups to enterprises and more</div>
                         <div className={styles.knowmoreBtn}>Know More</div>
                     </div>
-                    </div>
-                    <div className={styles.serviceGridRow}>
                     <div className={styles.serviceGridItem}>
                         <img src={transparencyImg} alt="transparency-img"  className={styles.serviceGridItemImg}/>
                         <div className={styles.serviceGridItemHeading}>NFT AND TOKEN</div>
@@ -155,7 +388,6 @@ export default function Homev2()
                         <div className={styles.serviceGridItemHeading}>MARKETPLACES</div>
                         <div className={styles.serviceGridItemTxt}>Our services help everyone from startups to enterprises and more</div>
                         <div className={styles.knowmoreBtn}>Know More</div>
-                    </div>
                     </div>
                 </div>
             </div>
