@@ -27,8 +27,13 @@ import starIcon from "./components/assests/images/icon-star.svg";
 import quotesIcon from "./components/assests/images/icon-quotes.svg";
 import clientImg from "./components/assests/images/icon-clientimg.svg";
 import Navbar from "./components/Navbar";
+import ReactTypingEffect from 'react-typing-effect';
+import CountUp from 'react-countup';
 
 import styles from "./style.module.css";
+import Partners from './components/Partners/Partners';
+import Review from './components/reviews/Review';
+import Raised from './components/amountRaised/Raised';
 
 export default function Homev2()
 {
@@ -47,7 +52,9 @@ export default function Homev2()
                     <div className={styles.mainHeadingTxt}>
                         We&nbsp;create
                         <br />
-                        <div className={styles.gradientTxt}>Smart Contracts</div>
+                        <div className={styles.gradientTxt}>  <ReactTypingEffect speed={150}
+        text={["Smart Contract", "Websites!", "Dapps", "Marketplace"]}
+      /></div>
                     </div>
                     </div>
                     <div className={styles.titleInfo}>
@@ -55,15 +62,15 @@ export default function Homev2()
                     </div>
                     <div className={styles.titleFeatures}>
                         <div className={styles.titleFeatureItem}>
-                            <div className={styles.titleFeatureItemContent1}>40+</div>
+                            <div className={styles.titleFeatureItemContent1}><CountUp end={40} delay={2} />+</div>
                             <div className={styles.titleFeatureItemContent2}>SmartContract</div>
                         </div>
                         <div className={styles.titleFeatureItem}>
-                            <div className={styles.titleFeatureItemContent1}>100+</div>
+                            <div className={styles.titleFeatureItemContent1}><CountUp end={100} delay={2} />+</div>
                             <div className={styles.titleFeatureItemContent2}>Projects Completed </div>
                         </div>
                         <div className={styles.titleFeatureItem}>
-                            <div className={styles.titleFeatureItemContent1}>20+</div>
+                            <div className={styles.titleFeatureItemContent1}><CountUp end={20} delay={2} />+</div>
                             <div className={styles.titleFeatureItemContent2}>Team Members</div>
                         </div>
                     </div>
@@ -98,14 +105,15 @@ export default function Homev2()
                 </div>
                 <div className={styles.clientTxtWrapper}>
                     <div className={styles.clientTxtItem}>
-                        <div className={styles.clientTxtnum}>50+</div>
+                        <div className={styles.clientTxtnum}><CountUp end={50} delay={10}  duration={4}/>+</div>
                         <div className={styles.clientTxt1}>CLIENTS</div>
                     </div>
                     <div className={styles.clientTxtItem}>
                         <div className={styles.clientTxt}>
                             {'$'}
                             <div className={styles.clientTxtnum}>
-                                100
+                            <CountUp end={100} delay={10}  duration={4}
+/>
                             </div>
                             M
                         </div>
@@ -117,237 +125,8 @@ export default function Homev2()
                 
 
             </div>
-            <div className={styles.projectDone}>
-            <div className={styles.clientBoxes}>
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
+            <Raised />
 
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-
-                </div>
-                <div className={`${styles.clientBoxes} ${styles.clientBoxes2}`}>
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-
-                </div>
-
-                <div className={`${styles.clientBoxes} ${styles.clientBoxes3}`}>
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={lockIcon} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cerebrum</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-
-                </div>
-            </div>
             <div className={styles.mainWrapper3}>
                 <div className={styles.ourServicesHeading}>Our <span>Services</span></div>
                 <div className={styles.ourServicesTxt}>Our services help everyone from startups to enterprises to launch and maintain their applications on the blockchain.</div>
@@ -409,25 +188,7 @@ export default function Homev2()
                     <img src={projectsImg} alt="projectsImg" className={styles.projectsImg} />
                 </div>
                 <div className={styles.seeallProjectsBtn}>See&nbsp;all&nbsp;Projects</div>
-                <div className={styles.meetOurPartnersHeading}>Meet Our <span>Partners</span></div>
-                <div className={styles.partnerDiv}>
-                    <div className={styles.partner}>
-                        <img src={pinksaleIcon} alt="pinksaleIcon" className={styles.partnerIcons} />
-                        <div>Pinksale</div>
-                    </div>
-                    <div className={styles.partner}>
-                        <img src={contractcheckerIcon} alt="contractcheckerIcon" className={styles.partnerIcons} />
-                        <div>Contract Checker</div>
-                    </div>
-                    <div className={styles.partner}>
-                        <img src={cfgninjaIcon} alt="cfgninjaIcon" className={styles.partnerIcons} />
-                        <div>CFG Ninja</div>
-                    </div>
-                    <div className={styles.partner}>
-                        <img src={coinsultIcon} alt="coinsultIcon" className={styles.partnerIcons} />
-                        <div>Coinsult</div>
-                    </div>
-                </div>
+                <Partners />
             </div>
             <div className={styles.styledSectionWrapper}>
                 <div className={styles.styledSection2}>
@@ -461,73 +222,7 @@ export default function Homev2()
                 </div>
             </div>  
             <div className={styles.mainWrapper6}>
-                <div className={styles.ourClientReview}>
-                    <div className={styles.ourClientReviewHeading}>Our Client <span>Reviews</span></div>
-                    <div className={styles.carouselWrapper}>
-                        <div className={styles.clientReviewCrousel}>
-                            <div className={styles.clientReviewCrouselItem}>
-                                <img src={quotesIcon} alt="quotesIcon" className={styles.quotesIcon}/>
-                                <div className={styles.clientWrapper}>
-                                    <div className={styles.clientImgWrapper}>
-                                        <img src={clientImg} alt="clientImg"  className={styles.clientImgIcon}/>
-                                    </div>
-                                    <div className={styles.starDiv}>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    </div>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-                                <div className={styles.clientNameWrapper}>
-                                    <div className={styles.clientName}>Joseph James</div>
-                                    <div className={styles.clientInfo}>Founder - Cerebrum</div>
-                                </div>
-                            </div>
-                            <div className={styles.clientReviewCrouselItem}>
-                                <img src={quotesIcon} alt="quotesIcon" className={styles.quotesIcon}/>
-                                <div className={styles.clientWrapper}>
-                                    <div className={styles.clientImgWrapper}>
-                                        <img src={clientImg} alt="clientImg"  className={styles.clientImgIcon}/>
-                                    </div>
-                                    <div className={styles.starDiv}>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    </div>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-                                <div className={styles.clientNameWrapper}>
-                                    <div className={styles.clientName}>Joseph James</div>
-                                    <div className={styles.clientInfo}>Founder - Cerebrum</div>
-                                </div>
-                            </div>
-                            <div className={styles.clientReviewCrouselItem}>
-                                <img src={quotesIcon} alt="quotesIcon" className={styles.quotesIcon}/>
-                                <div className={styles.clientWrapper}>
-                                    <div className={styles.clientImgWrapper}>
-                                        <img src={clientImg} alt="clientImg"  className={styles.clientImgIcon}/>
-                                    </div>
-                                    <div className={styles.starDiv}>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
-                                    </div>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-                                <div className={styles.clientNameWrapper}>
-                                    <div className={styles.clientName}>Joseph James</div>
-                                    <div className={styles.clientInfo}>Founder - Cerebrum</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Review /> 
                 <div className={styles.faqsDiv}>
                     <div className={styles.faqsDivHeading}>Frequently Asked <span>Questions</span></div>
                     <div className={styles.faqDropdown}>
