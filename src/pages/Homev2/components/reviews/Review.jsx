@@ -84,7 +84,7 @@ const Review = () => {
                                     <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
                                     </div>
                                 </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                                <div>I really appreciate how quick your responses and corrections here. Unlike other companies, the changes are quick, even after payment processing. </div>
                                 <div className={styles.clientNameWrapper}>
                                     <div className={styles.clientName}>Joseph James</div>
                                     <div className={styles.clientInfo}>Founder - Cerebrum</div>
@@ -104,12 +104,14 @@ const Review = () => {
                                     <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
                                     </div>
                                 </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                                <div>Your team's attention to detail is impressive. I rarely need to request corrections or changes to your work, unlike other vendors I've worked with in the past.</div>
                                 <div className={styles.clientNameWrapper}>
                                     <div className={styles.clientName}>Joseph James</div>
-                                    <div className={styles.clientInfo}>Founder - Cerebrum</div>
+                                    <div className={styles.clientInfo}>CTO - PureWallet</div>
                                 </div>
                             </div>
+
+
                             <div className={styles.clientReviewCrouselItem}>
                                 <img src={quotesIcon} alt="quotesIcon" className={styles.quotesIcon}/>
                                 <div className={styles.clientWrapper}>
@@ -124,10 +126,32 @@ const Review = () => {
                                     <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
                                     </div>
                                 </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                                <div>Hey, just wanted to say that I'm really impressed with your work. I know we hit a little snag with the deadline, but I appreciate how hard you guys worked to make sure we were happy with the final result.</div>
                                 <div className={styles.clientNameWrapper}>
                                     <div className={styles.clientName}>Joseph James</div>
-                                    <div className={styles.clientInfo}>Founder - Cerebrum</div>
+                                    <div className={styles.clientInfo}>Founder & CEO - CakePool</div>
+                                </div>
+                            </div>
+
+
+                            <div className={styles.clientReviewCrouselItem}>
+                                <img src={quotesIcon} alt="quotesIcon" className={styles.quotesIcon}/>
+                                <div className={styles.clientWrapper}>
+                                    <div className={styles.clientImgWrapper}>
+                                        <img src={clientImg} alt="clientImg"  className={styles.clientImgIcon}/>
+                                    </div>
+                                    <div className={styles.starDiv}>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    <img src={starIcon} alt="starIcon"  className={styles.starIcon}/>
+                                    </div>
+                                </div>
+                                <div>Your team gave me a clear plan for building a dapp when I was clueless. Thanks for the great communication and collaboration - the end result exceeded my expectations!</div>
+                                <div className={styles.clientNameWrapper}>
+                                    <div className={styles.clientName}>Joseph James</div>
+                                    <div className={styles.clientInfo}>CMO - Cosmic Finance</div>
                                 </div>
                             </div>
   

@@ -9,7 +9,7 @@ export default function LandingProjects({setIsLanding}) {
             <div className={styles.flexContainer}>
                 <div className={styles.flexItem1}>
                     <h1>Our <span>Projects</span></h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.</p>
+                    <p>Securely build and launch your DApp with our expert development services.</p>
                     <button className={styles.button}>Contact Us</button>
                 </div>
                 <div className={styles.flexItem2}>
