@@ -7,7 +7,7 @@ import styles from "./style.module.css";
 
 export default function Navbar(props) {
   const navbar_mobile = useRef(false)
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   const toggleMenu = () => {
     // toggle the current state

@@ -78,8 +78,8 @@ export default function Homev2()
                             <div className={styles.titleFeatureItemContent2}>Team Members</div>
                         </div>
                     </div>
-                    <div className={styles.getaquotaBtn}>Get&nbsp;a&nbsp;Quote <img className={styles.rightarrow} src={rightarrow} alt="right arrow" />
-</div>
+                    <Link to="/form"><div className={styles.getaquotaBtn}>Get&nbsp;a&nbsp;Quote <img className={styles.rightarrow} src={rightarrow} alt="right arrow" />
+</div></Link>
                 </div>
                 <img src={bg1Img} alt="ai-img" className={styles.floatImg} />
             </div>
@@ -194,7 +194,7 @@ export default function Homev2()
                         market by leveraging our best-in-class<br/>
                         dapp development services
                     </div>
-                    <div className={styles.styledwhiteBtn}>Discuss Your Project Idea</div>
+                    <Link to="/form"><div className={styles.styledwhiteBtn}>Discuss Your Project Idea</div></Link>
                 </div>
             </div>
             <div className={styles.mainWrapper4}>
@@ -214,7 +214,7 @@ export default function Homev2()
                         Dapp solution that can give your<br/>
                         business the much-needed boost?
                     </div>
-                    <div className={styles.styledwhiteBtn}>Talk With Experts</div>
+                    <Link to="/form"><div className={styles.styledwhiteBtn}>Talk With Experts</div></Link>
                 </div>
             </div>
             <div className={styles.mainWrapper5}>
