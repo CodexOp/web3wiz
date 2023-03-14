@@ -18,6 +18,7 @@ import Footer from './components/Footer';
 import igIcon from "./components/assests/images/icon-ig.svg";
 import linkedInIcon from "./components/assests/images/icon-linkedIn.svg";
 import telegramIcon from "./components/assests/images/icon-telegram.svg";
+import rightarrow from "./components/assests/images/right-arrow.svg";
 import twitterIcon from "./components/assests/images/icon-twitter.svg";
 import emailIcon from "./components/assests/images/icon-email.svg";
 import blogImg from "./components/assests/images/icon-teamwork.svg";
@@ -30,7 +31,7 @@ import Navbar from "./components/Navbar";
 import ReactTypingEffect from 'react-typing-effect';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
-
+import {Link} from "react-router-dom"
 import styles from "./style.module.css";
 import Partners from './components/Partners/Partners';
 import Review from './components/reviews/Review';
@@ -47,7 +48,7 @@ export default function Homev2()
     return (
         <>
             <Navbar/>
-            <div className={styles.homeWrapper}>
+            <div className={styles.homeWrapper} id="home">
             <div className={styles.backdropDiv1}>
             <div id="home" className={styles.mainWrapper1}>
                 <div className={styles.titleContent}>
@@ -55,7 +56,7 @@ export default function Homev2()
                     <div className={styles.mainHeadingTxt}>
                         We&nbsp;create
                         <br />
-                        <div className={styles.gradientTxt}>  <ReactTypingEffect speed={150}
+                        <div className={styles.gradientTxt}>  <ReactTypingEffect speed={50}
         text={["Smart Contract", "Websites!", "Dapps", "Marketplace"]}
       /></div>
                     </div>
@@ -77,13 +78,14 @@ export default function Homev2()
                             <div className={styles.titleFeatureItemContent2}>Team Members</div>
                         </div>
                     </div>
-                    <div className={styles.getaquotaBtn}>Get&nbsp;a&nbsp;Quote</div>
+                    <div className={styles.getaquotaBtn}>Get&nbsp;a&nbsp;Quote <img className={styles.rightarrow} src={rightarrow} alt="right arrow" />
+</div>
                 </div>
                 <img src={bg1Img} alt="ai-img" className={styles.floatImg} />
             </div>
             </div>
             <div className={styles.mainWrapper2}>
-                <div className={styles.maintext2}>Build with us <span> where scalability is never and issue</span></div>
+                <div className={styles.maintext2}>Build with us <span> where scalability is never an issue</span></div>
                 <div className={styles.whyChooseDiv}>
                     <div className={styles.whyChooseHeading}>Why Choose us?</div>
                     <div className={styles.whyChooseTxt}>We make sure we bring you more value than you will be investing with us. <br/>Don’t just make dApps/Websites, build real profitable businesses with us.</div>
@@ -132,7 +134,7 @@ export default function Homev2()
                             </div>
                             M
                         </div>
-                        <div className={styles.clientTxt2}>RAISED BY OUR CLIENTS</div>
+                        <div className={styles.clientTxt2}>RAISED</div>
                     </div>
                 </div>
                
@@ -142,7 +144,7 @@ export default function Homev2()
             </div>
             <Raised />
 
-            <div className={styles.mainWrapper3}>
+            <div id="services" className={styles.mainWrapper3}>
                 <div className={styles.ourServicesHeading}>Our <span>Services</span></div>
                 <div className={styles.ourServicesTxt}>Our services help everyone from startups to enterprises to launch and maintain their applications on the blockchain.</div>
                 <div className={styles.serviceGrid}>
@@ -202,7 +204,7 @@ export default function Homev2()
                     <img src={scribbleImg} alt="scribbleImg" className={styles.scribbleImg} />
                     <img src={projectsImg} alt="projectsImg" className={styles.projectsImg} />
                 </div>
-                <div className={styles.seeallProjectsBtn}>See&nbsp;all&nbsp;Projects</div>
+                <Link to="/projects"><div className={styles.seeallProjectsBtn}>See&nbsp;all&nbsp;Projects</div></Link>
                 <Partners />
             </div>
             <div className={styles.styledSectionWrapper}>
@@ -238,7 +240,7 @@ export default function Homev2()
             </div>  
             <div className={styles.mainWrapper6}>
                 <Review /> 
-                <div className={styles.faqsDiv}>
+                <div className={styles.faqsDiv} id="faqs">
                     <div className={styles.faqsDivHeading}>Frequently Asked <span>Questions</span></div>
                     <div className={styles.faqDropdown}>
                         <div className={styles.faqDropdownheading}>
@@ -477,7 +479,7 @@ export default function Homev2()
                     </div>
                 </div>
                 <div className={styles.newsletterHeading}>Subscribe TO Our <span>Newsletter</span></div>
-                <div className={styles.newsletterTxt}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus.</div>
+                <div className={styles.newsletterTxt}>Get updates and information about crypto world by subscribe to our newsletter </div>
                 <div className={styles.signupWrapper}>
                     <div  className={styles.signupInput}>
                         <input placeholder="Enter Your Email Address" />
@@ -491,7 +493,8 @@ export default function Homev2()
                             <img src={igIcon} className={styles.socialIcons} alt="ig-icon" />
                         </a>
                         <a href="https://www.linkedin.com/company/thematrixlabs/">
-                            <img src={linkedInIcon} className={styles.socialIcons} alt="linkedIn-icon"/>
+                            <img src={linkedInIcon
+                            } className={styles.socialIcons} alt="linkedIn-icon"/>
                         </a>
                         <a href="https://twitter.com/TheMatrixLabs?t=WI-bvQduDTmbcLZ-ikyrbg&s=09">
                             <img src={twitterIcon} className={styles.socialIcons} alt="twitter-icon"/>

@@ -1,3 +1,9 @@
+html{
+  scroll-behavior: smooth;
+
+}
+
+
 .primaryHeader {
     z-index: 5;
     padding-top: 1rem;
@@ -20,6 +26,8 @@
   background: linear-gradient(180deg, #041422 -19.53%, #150B1D 122.66%);  
   border: 1px solid rgba(50, 94, 63, 1)
 }
+
+
 
 .mobileNavToggle {
   display: none;
@@ -75,6 +83,7 @@
     display: flex;
     gap: 20px;
     align-self: center;
+    align-items: center;
     justify-content: space-between;
     margin-left: auto;
 }
@@ -88,14 +97,19 @@
   line-height: 24px;
   letter-spacing: 0.1em;
   cursor: pointer;
+  transition:  all 0.3s ease-in-out;
   border: none;
 }
 
-.highlightedOption{
+.highlightedOption {
   font-weight: 600;
 }
 
-.highlighted{
+.navbarbtn:hover{
+  color: #27B67A;
+}
+
+.highlighted a{
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
@@ -153,6 +167,8 @@
       border-radius: 0;
       padding: 2em 1em;
     }
+
+
     .primaryNavigation {
       display: none;
       position: fixed;
@@ -203,17 +219,20 @@
 
   }
 
+  @media only screen and (min-width:800px)  {
+    .navbarOptionbtns{
+      display: flex !important;
+    }
+  }
  
   @media only screen and (max-width: 800px) {
     .headerTitle{
       font-size: 15px;
       line-height: 15px;
     }
-    .navbarOptionbtns{
-      display: none;
-    }
+   
     .QuotaBtn{
-      display: none;
+      display: block;
     }
     .menuIcon{
       display: inline;
@@ -223,4 +242,34 @@
     .navWrapper{
       border: none;
     }
+
+    .navbarOptionbtns
+{
+    width: 50%;
+    position: absolute;
+    top:90px;
+    right: 0;
+    padding: 100px 20px;
+    text-align: center;
+    background: #150B1D;
+}
+
+.navbarbtn{
+  line-height: 40px;
+
+}
+}
+
+
+@media (max-width:400px) {
+  .navbarOptionbtns
+  {
+      width: 70%;
+      position: absolute;
+      top:90px;
+      right: 0;
+      padding: 100px 20px;
+      text-align: center;
+      background: #150B1D;
+  }
 }

@@ -43,8 +43,8 @@ root.render(
     <HelmetProvider>
     <Router>
       <Routes>
-        <Route path="/" element={<App />}/>
-        <Route exact path="/homev2" element={<Homev2/>}/>
+        <Route path="/homev2" element={<App />}/>
+        <Route exact path="/" element={<Homev2/>}/>
         <Route exact path="/thankyou" element={<Thankyou/>}/>
         <Route exact path="/privacy-policy" element={<Privacy/>}/>
         <Route exact path="/form" element={<Form/>}/>

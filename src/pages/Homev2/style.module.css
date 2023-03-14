@@ -78,20 +78,78 @@
 }
 
 .getaquotaBtn{
-    border-radius: 10px;
-    padding: 8px 35px;
-    width: fit-content;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 48px;
-    cursor: pointer;
-    background: #27B67A;
-    border-radius: 10px;
-    text-align: center;
-    transition: 300ms background-position ease-in-out;
+
+
+        padding: 2px 35px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 48px;
+        cursor: pointer;
+        border-radius: 10px;
+        text-align: center;
+        transition: 300ms background-position ease-in-out;
+        margin-bottom: 20px;
+        width: fit-content;
+        cursor: pointer;
+        text-align: center;
+	    position: relative;
+	    overflow: hidden;
+	    z-index: 1;
 }
+
+
+  .getaquotaBtn:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #27B67A;
+    border-radius: 10px;
+    z-index: -2;
+  }
+  .getaquotaBtn:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+    transition: all 0.3s;
+    border-radius: 10px;
+    z-index: -1;
+  }
+  .getaquotaBtn:hover {
+    color: #000;
+  }
+  .getaquotaBtn:hover:before {
+    width: 100%;
+  }
+  
+  .rightarrow{
+    position: absolute;
+    width: 30px !important;
+    top:calc(50% - 15px);
+    right: 5px;
+    visibility: hidden;
+    min-width: 20px !important;
+    
+}
+
+
+.getaquotaBtn:hover > .rightarrow{
+    visibility: visible;
+    top:calc(50% - 15px);
+    right: 2px;
+    z-index: 1;
+  }
+
+
+
 
 
 .gradientTxt{
@@ -311,7 +369,7 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 39px;
 
     color: #FFFFFF;
@@ -321,7 +379,7 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     text-align: center;
     max-width: 300px;
@@ -361,14 +419,48 @@
     font-size: 22px;
     line-height: 33px;
     text-align: center;
-
+    z-index: 1;
     color: #000000;
-
-    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
     border-radius: 12px;
     width: fit-content;
     padding: 20px 25px;
+    cursor: pointer;
+
 }
+
+
+.styledwhiteBtn:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+    z-index: -2;
+  }
+  .styledwhiteBtn:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #27B67A;
+    transition: all 0.3s;
+    border-radius: 12px;
+    z-index: -1;
+  }
+  .styledwhiteBtn:hover {
+    color: #000;
+  }
+  .styledwhiteBtn:hover:before {
+    width: 100%;
+  }
+  
 
 .styledSectionWrapper{
     background: linear-gradient(90deg, #9F01FF 9.77%, rgba(0, 233, 135, 0) 98.48%);
@@ -397,8 +489,8 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 50px;
-    line-height: 70px;
+    font-size: 44px;
+    line-height: 60px;
 
     color: #FFFFFF;
 }
@@ -446,17 +538,64 @@
 
 
 .seeallProjectsBtn{
+  
+    padding: 2px 35px;
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 36px;
-    background: #27B67A;
-    border-radius: 10px;
-    padding: 10px 15px;
-    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 48px;
     cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    transition: 300ms background-position ease-in-out;
+    margin-bottom: 20px;
+    width: fit-content;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
+
+
+
+.seeallProjectsBtn::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #27B67A;
+    border-radius: 12px;
+    z-index: -2;
+  }
+  .seeallProjectsBtn::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+    transition: all 0.3s;
+    border-radius: 12px;
+    z-index: -1;
+  }
+  .seeallProjectsBtn:hover {
+    color: #000;
+  }
+  .seeallProjectsBtn:hover:before {
+    width: 100%;
+  }
+  
+
+
+a{
+    color: #fff;
+}
+
 
 .meetOurPartnersHeading{
     font-family: 'Poppins';
@@ -655,8 +794,13 @@
     margin: 5em 0;
 }
 
+.socialIconDiv img:hover{
+    transform: scale(1.2);
+}
+
 .socialIconDiv img{
     width: 50px;
+    transition: all 0.3s ease-in-out;
 }
 
 .blogsDiv{
@@ -857,7 +1001,7 @@
 }
 
 .clientTxt2{
-    font-size: 30px;
+    font-size: 50px;
 }
 
 .clientTxt1{
@@ -1127,6 +1271,8 @@
 
 .serviceGridItem{
     width: 45%;
+    margin-top: 50px;
+
 }
 
 .serviceGridItemImg{

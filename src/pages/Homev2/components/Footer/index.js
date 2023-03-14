@@ -46,11 +46,11 @@ export default function Footer()
             <div className={styles.webpageLinksWrapper}>
             <div className={styles.webpageLinks}>
                 <div className={styles.highlighted}>SITEMAP</div>
-                <div>About</div>
-                <div>Forms</div>
-                <div>Projects</div>
-                <div>Contact us</div>
-                <div>FAQs</div>
+                <Link to="/aboutus"><div>About</div></Link>
+                <Link to="/form"><div>Form</div></Link>
+                <Link to="/projects"><div>Projects</div></Link>
+                <Link to="/form"><div>Contact us</div></Link>
+                <a href="#faqs"><div>FAQs</div></a>
             </div>
             <div className={styles.webpageLinks}>
                 <div className={styles.highlighted}>Services Info</div>
