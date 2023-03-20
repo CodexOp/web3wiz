@@ -266,9 +266,15 @@
 }
 
 .selectedTxt{
-  padding: 10px 15px
+  padding: 10px 15px;
 }
 
+.selectedInputTxt{
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+}
 
 /* Arrow icon styling */
 .arrow {

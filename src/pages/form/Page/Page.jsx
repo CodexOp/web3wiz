@@ -22,7 +22,7 @@ const options = [
   { label: "Website development", value: "Website development" },
   { label: "Website Designing", value: "Website Designing" },
   { label: "Metaverse", value: "Metaverse" },
-  { label: "Other", value: "Other Services" },
+  { label: "Other", value: "" },
 ];
 
 const options1 = [
@@ -54,7 +54,7 @@ const iamOption = [
   },
   {
     label: "Other",
-    value: "Other",
+    value: "",
   },
 
 ]
@@ -82,6 +82,7 @@ const iamOption = [
   const [projectName, setProjectName] = useState("");
   const [validProjectName, setValidProjectName] = useState(true);
   const [validName, setValidName] = useState(true);
+  const [validOptions, setValidOptions] = useState(true);
   const [validPhone, setValidPhone] = useState(true);
   const [validCC, setValidCC] = useState(true);
   const [service, setService] = useState("");
@@ -143,14 +144,18 @@ const iamOption = [
             borderRadius: showOptions ? "10px 10px 10px 0" : "10px",
           }}
         >
-          <div
+          {selectedOption?.label === 'Other' ? <input placeholder="Other" className={`${styles.selectedTxt} ${styles.selectedInputTxt}`} autoFocus value={selectedOption.value} onChange={(e) => {
+            setWhat(e.target.value);
+            setSelectedOption({ label: "Other", value: e.target.value });
+            setValidOptions(true);
+          }}/> : <div
             className={styles.selectedTxt}
             style={{
               opacity: selectedOption ? "1" : "0.5",
             }}
           >
             {selectedOption ? selectedOption.label : placeholder}
-          </div>
+          </div>}
           <div className={styles.selectBtnWrapper}>
             <SelectBtnIcon className={`arrow ${showOptions ? "open" : ""}`} />
           </div>
@@ -165,7 +170,8 @@ const iamOption = [
                 }`}
                 onClick={() => {
                   setWhat(option.value)
-                  handleSelectOption(option)
+                  setValidOptions(true);
+                  handleSelectOption(option);
                 }}
               >
                 {option.label}
@@ -249,36 +255,60 @@ const sendDataToPably2 = (data) => {
 const callFaceBookPixel = (value, leadName) => {
   ReactPixel.trackCustom(leadName, {value: value, currency: "USD" })
   sendDataToPably2({event:leadName,value: value, currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000)})
-}
+  }
 
   useEffect(() => {
     const keyPressHandler = (e) =>{
-      if(e.key === 'Enter'){
-        if(pagenum === 1){
-          if(name === ''){
+      if (e.key === 'Enter') {
+        if (pagenum === 1) {
+          if (name === '') {
             setValidName(false)
             return
           }
         }
-        if(pagenum === 2){
-          if(!validator.isEmail(email)){
+        if (pagenum === 2) {
+          if (!validator.isEmail(email)) {
             setValidEmail(false)
             return
           }
         }
-        if(pagenum === 3){
-          if(projectName === ''){
+        if (pagenum === 3) {
+          if (iam === '') {
+            setValidOptions(false);
+            return;
+          }
+        }
+        if (pagenum === 4) {
+          if(phoneNo === ''){
+            setValidPhone(false)
+            return
+          }
+        }
+        if (pagenum === 4) {
+          if (countryCode.length === 1) {
+            setValidCC(false);
+          }
+        }
+        if (pagenum === 5) {
+          if(country === ''){
+            setValidCountry(false)
+            return
+          }
+        }
+        if (pagenum === 6) {
+          if (projectName === '') {
             setValidProjectName(false)
             return
           }
         }
-        if(pagenum === 4){
-          if(!selectedOptionService){
-            return
+        if (pagenum === 7) {
+          if (service === '') {
+            setValidOptions(false);
+            return;
           }
         }
-        if(pagenum === 5){
-          if(!selectedOptionBudget){
+        if (pagenum === 8) {
+          if (!selectedOptionBudget) {
             return
           }
         }
@@ -290,7 +320,7 @@ const callFaceBookPixel = (value, leadName) => {
     return () => {
         document.removeEventListener('keydown', keyPressHandler)
     }
-  }, [pagenum, name, email, projectName, selectedOptionService, selectedOptionBudget, handlePageUp])
+  }, [pagenum, name, email, projectName, selectedOptionService, selectedOptionBudget, handlePageUp, iam, service, selectedOptionIam, phoneNo, countryCode, country])
   useEffect(()=>{
     if(emailRef && emailRef.current){
       if(validEmail){
@@ -420,8 +450,9 @@ const callFaceBookPixel = (value, leadName) => {
               I Am
               </div>
               <CustomSelect options={iamOption} placeholder={"Select Your Designation"} setWhat={setIam} setSelectedOption={setSelectedOptionIam} 
-              selectedOption={selectedOptionIam} defaultValue={1} />
-              {selectedOptionIam && (
+                selectedOption={selectedOptionIam} defaultValue={1} />
+              {!validOptions && <div className={styles.errorMsg}>Please enter something</div>}
+              {selectedOptionIam?.value && (
                 <div className={styles.okBtn} onClick={()=>{
                   handlePageUp()
                 }}>
@@ -443,9 +474,16 @@ const callFaceBookPixel = (value, leadName) => {
                 className={styles.countryInput}
                 type="text"
                 autoComplete="off"
-                
-                value={countryCode}
-                onChange={(e) => setCountryCode(e.target.value)}
+                  value={countryCode}
+                  onChange={(e) => {
+                    const inputValue = e.target.value;
+                    if (inputValue.charAt(0) === '+') {
+                      setCountryCode(inputValue);
+                    }
+                    else {
+                      setCountryCode('+' + inputValue.slice(1));
+                    }
+                  }}
               />
               
               <input
@@ -557,8 +595,9 @@ const callFaceBookPixel = (value, leadName) => {
               I want…
               </div>
               <CustomSelect options={options} placeholder={"Select Your Service"} setWhat={setService} setSelectedOption={setSelectedOptionService} 
-              selectedOption={selectedOptionService} defaultValue={1} />
-              {selectedOptionService && (
+                selectedOption={selectedOptionService} defaultValue={1} />
+              {!validOptions && <div className={styles.errorMsg}>Please enter something</div>}
+              {selectedOptionService?.value && (
                 <div className={styles.okBtn} onClick={()=>{
                   handlePageUp()
                 }}>
