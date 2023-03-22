@@ -7,6 +7,7 @@ import styles from "./styles.module.css";
 import ProjectNav from "./Components/ProjectNav";
 export default function Projects() {
   const [backgroundColor, setBackgroundColor] = React.useState("#adf6ff");
+  const [imgDiv, setImgDiv] = React.useState(<div></div>);
   const colors = ["#c0f8ff", "#83f0fe", "#3760b2", "#0e3170", "#2d6470", "#5291c2", "#9f7bce", "#fb8a92", "#fbbb6a", "#a1bda7", "#6896d6", "#5f95e1", "#77dad7", "#568dab", "#4d3ac8", "#243491", "#b5349e"]
   const ref = React.useRef(null);
   const [projectImage, setProjectImage] = React.useState(contents.websites[0].projectImage);
@@ -22,6 +23,9 @@ export default function Projects() {
           for(let i=0; i<17; i++){
             if(entry.target.className.includes(`c${i}`)){
               setProjectImage(contents.websites[i].projectImage)
+              setImgDiv(<div key={`c${i}`} className={styles.image}>  
+                <img src={contents.websites[i].projectImage} alt="" />
+            </div>)
               setBackgroundColor(colors[i])
             }
           }
@@ -75,9 +79,10 @@ export default function Projects() {
                     </>
                   );
                 })}
-                <div className={styles.image} ref={ref}>  
+                {/* <div className={styles.image} ref={ref}>  
                     <img src={projectImage} alt="" />
-                </div>
+                </div> */}
+                {imgDiv}
                 </div>  
               </div>
           </div>

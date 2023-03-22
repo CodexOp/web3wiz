@@ -296,6 +296,15 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
   top: 50%;
   right: 100px;
   transform: translateY(-50%);
+  animation: zoomIn 0.25s ease-in-out;
+}
+@keyframes zoomIn{
+  0%{
+    transform: translateY(-50%) scale(0.5);
+  }
+  100%{
+    transform: translateY(-50%) scale(1);
+  }
 }
 .image img{
     width: min(80%, 500px);
