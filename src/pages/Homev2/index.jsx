@@ -344,7 +344,7 @@ export default function Homev2()
                 <div className={styles.faqsDiv} id="faqs">
                     <div className={styles.faqsDivHeading}>Frequently Asked <span>Questions</span></div>
                     <div className={styles.faqDropdown}>
-                        <div className={styles.faqDropdownheading}>
+                        <div className={styles.faqDropdownheading}  onClick={() => setisFaq1Open(!isFaq1Open)}>
                         <div>
                             Do you provide custom smart contracts?
                         </div>
@@ -386,7 +386,7 @@ export default function Homev2()
 
 
                     <div className={styles.faqDropdown}>
-                        <div className={styles.faqDropdownheading}>
+                        <div className={styles.faqDropdownheading} onClick={() => setisFaq2Open(!isFaq2Open)}> 
                         <div>
                             How long is the after sales service?
                         </div>
@@ -399,7 +399,7 @@ export default function Homev2()
                             >
                             </div>
                             <div
-                            onClick={() => setisFaq2Open(!isFaq2Open)}
+                            
                             className={styles.dropdownArrowicon}
                             >
                             <img
@@ -430,7 +430,7 @@ export default function Homev2()
 
                         
                     <div className={styles.faqDropdown}>
-                        <div className={styles.faqDropdownheading}>
+                        <div className={styles.faqDropdownheading} onClick={() => setisFaq3Open(!isFaq3Open)}>
                         <div>
                             Do you provide hosting as well?
                         </div>
@@ -443,7 +443,7 @@ export default function Homev2()
                             >
                             </div>
                             <div
-                            onClick={() => setisFaq3Open(!isFaq3Open)}
+                          
                             className={styles.dropdownArrowicon}
                             >
                             <img
@@ -471,7 +471,7 @@ export default function Homev2()
 
 
                     <div className={styles.faqDropdown}>
-                        <div className={styles.faqDropdownheading}>
+                        <div className={styles.faqDropdownheading}  onClick={() => setisFaq4Open(!isFaq4Open)}>
                         <div>
                             Do you provide presale support?
                         </div>
@@ -484,7 +484,7 @@ export default function Homev2()
                             >
                             </div>
                             <div
-                            onClick={() => setisFaq4Open(!isFaq4Open)}
+                           
                             className={styles.dropdownArrowicon}
                             >
                             <img
@@ -513,7 +513,7 @@ export default function Homev2()
 
 
                     <div className={styles.faqDropdown}>
-                        <div className={styles.faqDropdownheading}>
+                        <div className={styles.faqDropdownheading} onClick={() => setisFaq5Open(!isFaq5Open)}>
                         <div>
                             Do you take upfront payment?
                         </div>
@@ -526,7 +526,6 @@ export default function Homev2()
                             >
                             </div>
                             <div
-                            onClick={() => setisFaq5Open(!isFaq5Open)}
                             className={styles.dropdownArrowicon}
                             >
                             <img
