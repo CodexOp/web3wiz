@@ -30,7 +30,7 @@ const Review = () => {
         my: "5rem",
       }}
     >
-      <span id="services" />
+      <span id="testimonials" />
       <Box
         className={styles.primaryText}
         sx={{

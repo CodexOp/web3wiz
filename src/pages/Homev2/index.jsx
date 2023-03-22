@@ -338,8 +338,9 @@ export default function Homev2()
                     </div>
                 </div>
             </div>  
+            <Review />
             <div className={styles.mainWrapper6}>
-                <div className="testimonials"><Review /> </div>
+                <div className="testimonials"> </div>
                 <div className={styles.faqsDiv} id="faqs">
                     <div className={styles.faqsDivHeading}>Frequently Asked <span>Questions</span></div>
                     <div className={styles.faqDropdown}>
