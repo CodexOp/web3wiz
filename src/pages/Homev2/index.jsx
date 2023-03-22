@@ -152,7 +152,7 @@ export default function Homev2()
                     <div className={styles.mainHeadingTxt}>
                         We&nbsp;create
                         <br />
-                        <div className={styles.gradientTxt}>  <ReactTypingEffect speed={50}
+                        <div className={styles.gradientTxt}>  <ReactTypingEffect speed={50} typingDelay={1000} eraseDelay={2000} eraseSpeed={50}
         text={["Smart Contract", "Websites!", "Dapps", "Marketplace"]}
       /></div>
                     </div>

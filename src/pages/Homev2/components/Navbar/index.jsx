@@ -36,7 +36,7 @@ export default function Navbar(props) {
                 </div>
                 <a href="#services"><div className={styles.navbarbtn}>Services</div></a>
                 <Link to="/projects"> <div className={styles.navbarbtn}>Projects</div></Link>
-                <Link to="/form"><div  className={styles.QuotaBtn}>Get a Quote</div></Link>
+                <Link to="/form"><div  className={styles.getaquotaBtn}>Get a Quote</div></Link>
 
             </div>
             <img className={styles.menuIcon} src={menuIcon} alt="menu-icon" onClick={toggleMenu} />
