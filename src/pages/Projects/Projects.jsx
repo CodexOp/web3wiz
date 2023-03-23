@@ -44,12 +44,10 @@ export default function Projects() {
         } 
       });
     }, options);
-    if(!isLanding)
     for(let i=0; i<16; i++){
       observer.observe(document.querySelector(`.c${i}`));
     }
     return () => {
-      if(!isLanding)
       for(let i=0; i<16; i++){
         observer.unobserve(document.querySelector(`.c${i}`));
       }
