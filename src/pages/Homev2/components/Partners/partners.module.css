@@ -3,7 +3,15 @@
     color: #27B67A;
   }
 
-
+  .imgSizeReduce img{
+    width: 75%;
+  }
+.flexPartner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
   .partners_name{
     color: #fff;
     text-align: center;

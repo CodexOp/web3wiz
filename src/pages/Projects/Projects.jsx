@@ -8,7 +8,7 @@ import ProjectNav from "./Components/ProjectNav";
 export default function Projects() {
   const [backgroundColor, setBackgroundColor] = React.useState("#adf6ff");
   const [imgDiv, setImgDiv] = React.useState(<div></div>);
-  const colors = ["#c0f8ff", "#83f0fe", "#3760b2", "#0e3170", "#2d6470", "#5291c2", "#9f7bce", "#fb8a92", "#fbbb6a", "#a1bda7", "#6896d6", "#5f95e1", "#77dad7", "#568dab", "#4d3ac8", "#243491", "#b5349e"]
+  const colors = ["#86EBF8", "#64A4FF", "#5483E2", "#0F41A8", "#FF7DB6", "#FFB47D", "#FFD66B", "#C7AB64", "#BBAA8F", "#FFAAD4", "#BCBBFF", "#B5FFB1", "#51ADE5", "#CFB8FF", "#FFC48D", "#97ADFF", "#b5349e"]
   const ref = React.useRef(null);
   const [projectImage, setProjectImage] = React.useState(contents.websites[0].projectImage);
   const [isLanding, setIsLanding] = React.useState(true);
@@ -20,12 +20,24 @@ export default function Projects() {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          for(let i=0; i<17; i++){
+          for(let i=0; i<16; i++){
             if(entry.target.className.includes(`c${i}`)){
               setProjectImage(contents.websites[i].projectImage)
-              setImgDiv(<div key={`c${i}`} className={styles.image}>  
+              if(i==15){
+                setImgDiv(<div key={`c${i}`} className={styles.image16}>  
                 <img src={contents.websites[i].projectImage} alt="" />
             </div>)
+              }
+              else if(i==0){
+                setImgDiv(<div key={`c${i}`} className={styles.image0}>  
+                <img src={contents.websites[i].projectImage} alt="" />
+            </div>)
+              }
+              else{
+                setImgDiv(<div key={`c${i}`} className={styles.image}>  
+                  <img src={contents.websites[i].projectImage} alt="" />
+              </div>)
+              }
               setBackgroundColor(colors[i])
             }
           }
@@ -33,12 +45,12 @@ export default function Projects() {
       });
     }, options);
     if(!isLanding)
-    for(let i=0; i<17; i++){
+    for(let i=0; i<16; i++){
       observer.observe(document.querySelector(`.c${i}`));
     }
     return () => {
       if(!isLanding)
-      for(let i=0; i<17; i++){
+      for(let i=0; i<16; i++){
         observer.unobserve(document.querySelector(`.c${i}`));
       }
     }
@@ -46,11 +58,8 @@ export default function Projects() {
   return (
   <>
     <div>
-      {isLanding ? <div> 
-        <Navbar />
       <LandingProjects setIsLanding={setIsLanding}/>
-      </div>
-      : <div> 
+      <div className={styles.inner} id="projects"> 
         <div className={styles.animateBackground + " " + styles.desktopView} style={{backgroundColor: backgroundColor}}>
           <div className={styles.container}>
           <div className={styles.projectContent}>
@@ -79,10 +88,7 @@ export default function Projects() {
                     </>
                   );
                 })}
-                {/* <div className={styles.image} ref={ref}>  
-                    <img src={projectImage} alt="" />
-                </div> */}
-                {imgDiv}
+                  {imgDiv}
                 </div>  
               </div>
           </div>
@@ -125,8 +131,14 @@ export default function Projects() {
           );
         })}
       </div>
-    }
-              
+      <div className={styles.container}>
+        <div className={styles.centerElements}>
+          <h1>If you liked our work and have a project in mind come get in touch with us</h1>
+          <button className={styles.getaquotaBtn}>Contact Us</button>
+
+        </div>
+      </div>
+           
   </div>
   </>);
 }

@@ -97,35 +97,49 @@ const Partners = () => {
            margin:"auto"
           }}>
       <Slider {...settings}>
-      <div>
+      <div className={styles.imgSizeReduce}>
       <a href="https://www.pinksale.finance/" alt="partners" target="_blank" rel="noreferrer">
+        <div className={styles.flexPartner}>
+
       <img src={partner1} alt='partners' />
       <p className={styles.partners_name}>PINKSALE</p>
+        </div>
       </a>
       </div>
-      <div>
+      <div className={styles.imgSizeReduce}>
       <a href="https://www.interfi.network/" alt="partners" target="_blank" rel="noreferrer">
+        <div className={styles.flexPartner}>
+
       <img src={partner2} alt='partners' />
       <p className={styles.partners_name}>INTERFI</p>
+        </div>
       </a>
       </div>
-      <div>
+      <div className={styles.imgSizeReduce}>
       <a href="https://www.contractchecker.app/" alt="partners" target="_blank" rel="noreferrer">
-      <img src={partner6} alt='partners' />
-      <p className={styles.partners_name}>Contract Checker</p>
+        <div className={styles.flexPartner}>
+        <img src={partner6} alt='partners' />
+        <p className={styles.partners_name}>Contract Checker</p>
+        </div>
       </a>
       </div>
 
-      <div>
+      <div className={styles.imgSizeReduce}>
       <a href="https://coinsult.net/" alt="partners" target="_blank" rel="noreferrer">
+        <div className={styles.flexPartner}>
+
       <img src={partner4} alt='partners' />
       <p className={styles.partners_name}>COINSULT</p>
+        </div>
       </a>
       </div>
-      <div>
+      <div className={styles.imgSizeReduce}>
       <a href="https://cfg.ninja/" alt="partners" target="_blank" rel="noreferrer">
+        <div className={styles.flexPartner}>
+
       <img src={partner5} alt='partners' />
       <p className={styles.partners_name}>CFG NINJA</p>
+        </div>
       </a>
       </div>
   

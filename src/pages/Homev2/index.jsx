@@ -27,6 +27,12 @@ import closeIcon from "./components/assests/images/icon-cross.svg";
 import starIcon from "./components/assests/images/icon-star.svg";
 import quotesIcon from "./components/assests/images/icon-quotes.svg";
 import clientImg from "./components/assests/images/icon-clientimg.svg";
+import smartContract from "./components/assests/images/smartContract.svg";
+import website from "./components/assests/images/website.svg"
+import nft from "./components/assests/images/nft.svg"
+import marketplaces from "./components/assests/images/marketplaces.svg"
+import dappDevelopment from "./components/assests/images/dappDevelopment.svg"
+import android from "./components/assests/images/android.svg"
 import Navbar from "./components/Navbar";
 import ReactTypingEffect from 'react-typing-effect';
 import CountUp from 'react-countup';
@@ -248,37 +254,37 @@ export default function Homev2()
                 <div className={styles.serviceGrid}>
             
                     <div className={styles.serviceGridItem}>
-                        <img src={transparencyImg} alt="transparency-img"  className={styles.serviceGridItemImg}/>
+                        <img src={smartContract} alt="transparency-img"  className={styles.serviceGridItemImg}/>
                         <div className={styles.serviceGridItemHeading}>SMART CONTRACT</div>
                         <div className={styles.serviceGridItemTxt}>Ensure security with our custom smart contracts, Certik verified and tailored for you</div>
                         {/* <div className={styles.knowmoreBtn}>Know More</div> */}
                     </div>
                     <div className={styles.serviceGridItem}>
-                        <img src={folderLockIcon} alt="folderLockIcon"  className={styles.serviceGridItemImg}/>
+                        <img src={dappDevelopment} alt="folderLockIcon"  className={styles.serviceGridItemImg}/>
                         <div className={styles.serviceGridItemHeading}>DAPP DEVELOPMENT</div>
                         <div className={styles.serviceGridItemTxt}>Securely build and launch your DApp with our expert development services</div>
                         {/* <div className={styles.knowmoreBtn}>Know More</div> */}
                     </div>
                     <div className={styles.serviceGridItem}>
-                        <img src={shieldIcon} alt="shieldIcon"  className={styles.serviceGridItemImg}/>
+                        <img src={website} alt="shieldIcon"  className={styles.serviceGridItemImg}/>
                         <div className={styles.serviceGridItemHeading}>WEBSITE DEVELOPMENT</div>
                         <div className={styles.serviceGridItemTxt}>Create a sleek and user-friendly website of your desired theme with our team.</div>
                         {/* <div className={styles.knowmoreBtn}>Know More</div> */}
                     </div>
                     <div className={styles.serviceGridItem}>
-                        <img src={transparencyImg} alt="transparency-img"  className={styles.serviceGridItemImg}/>
+                        <img src={nft} alt="transparency-img"  className={styles.serviceGridItemImg}/>
                         <div className={styles.serviceGridItemHeading}>NFT AND TOKEN</div>
                         <div className={styles.serviceGridItemTxt}>Tokenize your assets with our NFT and token services.</div>
                         {/* <div className={styles.knowmoreBtn}>Know More</div> */}
                     </div>
                     <div className={styles.serviceGridItem}>
-                        <img src={folderLockIcon} alt="folderLockIcon"  className={styles.serviceGridItemImg}/>
+                        <img src={android} alt="folderLockIcon"  className={styles.serviceGridItemImg}/>
                         <div className={styles.serviceGridItemHeading}>ANDROID AND IOS APP</div>
                         <div className={styles.serviceGridItemTxt}>Launch your mobile app on both Android and iOS with us.</div>
                         {/* <div className={styles.knowmoreBtn}>Know More</div> */}
                     </div>
                     <div className={styles.serviceGridItem}>
-                        <img src={shieldIcon} alt="shieldIcon"  className={styles.serviceGridItemImg}/>
+                        <img src={marketplaces} alt="shieldIcon"  className={styles.serviceGridItemImg}/>
                         <div className={styles.serviceGridItemHeading}>MARKETPLACES</div>
                         <div className={styles.serviceGridItemTxt}>Join the NFT revolution with our NFT marketplace development service.</div>
                         {/* <div className={styles.knowmoreBtn}>Know More</div> */}

@@ -18,11 +18,11 @@ export default function LandingProjects({setIsLanding}) {
             </div>
         </div>
         <div className={styles.arrowDown}>
-            <button className={styles.noStyle} onClick={()=>{
-                setIsLanding(false)
-            }}>
+            <a href="#projects">
+            <button className={styles.noStyle}>
                 <img src={arrowDown} alt="" />
             </button>
+            </a>
         </div>
     </div>
   )

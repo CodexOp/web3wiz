@@ -203,7 +203,7 @@ const Raised = () => {
     <Container
       maxWidth="xl"
       sx={{
-        my: "0.5rem",
+        my: "1rem",
       }}
     >
       <span id="services" />
@@ -300,7 +300,6 @@ const Raised = () => {
     <Container
       maxWidth="xl"
       sx={{
-        my: "0.5rem",
         mb:"5rem"
       }}
     >

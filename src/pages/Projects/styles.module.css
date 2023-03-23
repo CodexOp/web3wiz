@@ -287,7 +287,10 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
     background-size: 100vh;
  }
 
- .projectContent{
+ /* .projectContent{
+  position: relative;
+ } */
+ .inner{
   position: relative;
  }
  .image{
@@ -295,6 +298,22 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
   width: 50%;
   top: 50%;
   right: 100px;
+  transform: translateY(-50%);
+  animation: zoomIn 0.25s ease-in-out;
+}
+.image0{
+  position: absolute;
+  width: 50%;
+  top: 50vh;
+  right: 100px;
+  transform: translateY(-50%);
+  animation: zoomIn 0.25s ease-in-out;
+}
+.image16{
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  right: 20px;
   transform: translateY(-50%);
   animation: zoomIn 0.25s ease-in-out;
 }
@@ -307,7 +326,18 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
   }
 }
 .image img{
-    width: min(80%, 500px);
+    max-height: max(380px, 50vh);
+    width: auto;
+    margin: auto;
+}
+.image16 img{
+    max-height: max(380px, 50vh);
+    width: auto;
+    margin: auto;
+}
+.image0 img{
+    max-height: max(380px, 50vh);
+    width: auto;
     margin: auto;
 }
 .displayNone{
@@ -339,4 +369,74 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
 .image1 img{
     width: min(80%, 500px);
     margin: auto;
+}
+
+.centerElements{
+  padding: 7rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.centerElements h1{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.getaquotaBtn{
+  padding: 2px 50px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 48px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  transition: 300ms background-position ease-in-out;
+  margin-bottom: 20px;
+  width: fit-content;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  z-index: 1;
+}
+
+
+.getaquotaBtn:after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #27B67A;
+border-radius: 10px;
+z-index: -2;
+}
+.getaquotaBtn:before {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0%;
+height: 100%;
+background-color: #fff;
+transition: all 0.3s;
+border-radius: 10px;
+z-index: -1;
+}
+.getaquotaBtn:hover {
+color: #000;
+}
+.getaquotaBtn:hover:before {
+width: 100%;
 }
