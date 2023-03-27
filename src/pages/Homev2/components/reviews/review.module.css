@@ -118,8 +118,32 @@
     font-size: 20px;
     line-height: 30px;
     text-align: center;
-
+    margin-top: 20px;
     color: rgba(255, 255, 255, 0.7);
+}
+
+.reviews_outer{
+  width: 70%;
+  margin: auto;
+}
+
+@media(max-width:800px){
+  .reviews_outer{
+    width: 90%;
+    margin: auto;
+  }
+}
+
+
+.clientImgIcon{
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.company_name{
+  color: #15D28E;
 }
 
 .starDiv{
@@ -133,6 +157,7 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin-bottom: 25px;
 }
 
 .quotesIcon{
