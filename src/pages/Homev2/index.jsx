@@ -71,6 +71,7 @@ export default function Homev2()
           testimonials: false,
           faqs: false,
         });
+        const [userEmail, setUserEmail] = useState("");
         useEffect(()=>{
           ReactPixel.pageView(); // For tracking page view
         }, [])
@@ -143,6 +144,19 @@ export default function Homev2()
             content_id: "P12453",
           })
         );
+
+        const handleOnClickSubscribe = () => {
+            if(userEmail != ""){
+            fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY0MDYzNTA0MzA1MjY1NTUzMCI_3D_pc", {  // Enter your IP address here
+        
+        method: 'POST', 
+        mode: 'cors', 
+        body: JSON.stringify({email : userEmail}) // body data type must match "Content-Type" header
+        
+        })
+    }            
+                
+        }
 
     const [isFaq1Open, setisFaq1Open] = useState(false);
     const [isFaq2Open, setisFaq2Open] = useState(false);
@@ -595,8 +609,12 @@ export default function Homev2()
                 <div className={styles.newsletterTxt}>Get updates and information about crypto world by subscribe to our newsletter </div>
                 <div className={styles.signupWrapper}>
                     <div  className={styles.signupInput}>
-                        <input placeholder="Enter Your Email Address" />
-                        <div className={styles.subscribeBtn}>
+                        <input placeholder="Enter Your Email Address" value={userEmail} onChange={(event)=>{
+                            setUserEmail(event.target.value)
+                        }}/>
+                        <div className={styles.subscribeBtn} onClick={()=> {
+                            handleOnClickSubscribe()
+                        }} style={{cursor: 'pointer'}}>
                             Subscribe
                         </div>
                     </div>
