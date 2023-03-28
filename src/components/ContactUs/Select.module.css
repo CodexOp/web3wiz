@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    background: #ededed;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    width: 100%;
+    min-height: 64px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #081c31;
+    outline: none;
+    resize: none;
+    position: relative;
+}
+
+.container div {
+    padding: 21px;
+}
+
+.container > div:nth-child(1) {
+    width: 100%;
+    border: 1px solid red;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #081c31;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.services {
+    background: #ededed;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    width: 100%;
+    position: absolute;
+    top: 105%;
+}
+
+.services > li {
+    cursor: pointer;
+    font-family: 'Poppins';
+    list-style: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(8, 28, 49, 0.69);
+    padding: 10px;
+}

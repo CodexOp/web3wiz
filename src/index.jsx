@@ -17,6 +17,7 @@ import Privacy from "./pages/privacy/Privacy";
 import Form from "./pages/form/Form"
 import Projects from "./pages/Projects/Projects"
 import Homev2 from "./pages/Homev2";
+import ContactUs from './pages/ContactUs/ContactUs'
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -49,6 +50,7 @@ root.render(
         <Route exact path="/privacy-policy" element={<Privacy/>}/>
         <Route exact path="/form" element={<Form/>}/>
         <Route exact path="/projects" element={<Projects/>}/>
+        <Route exact path="/contact-us" element={<ContactUs/>}/>
       </Routes> 
     </Router>
     </HelmetProvider>
