@@ -12,10 +12,9 @@ export default function ProjectNav() {
 	      <ul className={styles.navList} aria-label="Primary" id="primary-navigation">
 	        <li><button onClick={() => setSelected(0)} className={!(selected === 0)? styles.noStyle: styles.btnStyle}> Websites</button></li>
 	        <li><button onClick={() => setSelected(1)} className={!(selected === 1)? styles.noStyle: styles.btnStyle}> NFT&nbsp;minting&nbsp;websites</button></li>
-	        <li><button onClick={() => setSelected(2)} className={!(selected === 2)? styles.noStyle: styles.btnStyle}> Special&nbsp;Dapps</button></li>
-	        <li><button onClick={() => setSelected(3)} className={!(selected === 3)? styles.noStyle: styles.btnStyle}> Dashboards</button></li>
-	        <li><button onClick={() => setSelected(4)} className={!(selected === 4)? styles.noStyle: styles.btnStyle}> Calculators</button></li>
-	        <li><button onClick={() => setSelected(5)} className={!(selected === 5)? styles.noStyle: styles.btnStyle}> Staking&nbsp;Websites</button></li>
+	        <li><button onClick={() => setSelected(2)} className={!(selected === 2)? styles.noStyle: styles.btnStyle}> Dashboards</button></li>
+	        <li><button onClick={() => setSelected(3)} className={!(selected === 3)? styles.noStyle: styles.btnStyle}> Calculators</button></li>
+	        <li><button onClick={() => setSelected(4)} className={!(selected === 4)? styles.noStyle: styles.btnStyle}> Staking&nbsp;Websites</button></li>
 	      </ul>
 	    </nav>
 	  </div>

@@ -229,11 +229,6 @@
     line-height: 35px;
 }
 
-.whatsappIcon{
-    width: 40px;
-    cursor: pointer;
-}
-
 .highlightedTxt{
     color: rgba(39, 182, 122, 1);
     font-weight: 700;
@@ -370,6 +365,7 @@
 .phoneNodiv{
   display: flex;
   gap: 1rem;
+  border: 1px solid white;
 }
 .countryInput{
   width: 10% !important;
@@ -378,17 +374,6 @@
 .phoneInput{
   width: 80% !important;
 
-}
-
-.finish_button{
-display: flex !important;
-align-items: center;
-padding: 5px 30px;
-color:#fff !important;
-background-color: #28B77C;
-font-weight: bold;
-font-size: 20px;
-gap:10px;
 }
 
 .selectButton {

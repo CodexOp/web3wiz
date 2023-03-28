@@ -26,11 +26,11 @@ import kuppyClansProject from "../../assets/kuppyClansProject.png";
 export const contents = {
   websites: [
     {
-      projectName: "Cakepool",
+      projectName: "Cake Pool",
       index: "01",
       projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+        "Cake Pool operates a communal skating platform on PancakeSwap. Together with several dashboards that effectively fetch data from Blockchain, we developed a user experience that is attractive, engaging and informative.",
+      projectWebsite: "https://cake-pool.vercel.app/",
       projectImage: cakepoolProject,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",
@@ -42,8 +42,8 @@ export const contents = {
       projectName: "Lucky Metaverse",
       index: "02",
       projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+        "Variety of applications build upon decentralised network, like staking, token migration,  calculator and dashboard. You can now migrate your old token into new (v2) tokens with the help of all new token migration on our dapp. Not only this, you can access the calculator and dashboard to track your assets",
+      projectWebsite: "https://lmeta.netlify.app",
       projectImage: luckyMetaverseProject,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",
@@ -56,8 +56,8 @@ export const contents = {
       projectName: "Godzinu",
       index: "03",
       projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+        "Godzinu, a multichain dex aggregator for lighting fast transactions on multiple chains, with GODZ you can swap in 50+ blockchain amongst 10000+ assets/token, see the live rate while swapping the token with the fees required to swap.",
+      projectWebsite: "https://godzilla-swap.netlify.app/",
       projectImage: godzinuProject,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",
@@ -70,8 +70,8 @@ export const contents = {
       projectName: "Rewards Coin",
       index: "04",
       projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+        "REWARDSCoin- a platform where you directly receive BNB rewards without staking or claiming! We included top-notch 3D animations into the design of this website.",
+      projectWebsite: "https://reward-coin.vercel.app/",
       projectImage: rewardsCoinProject,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",
@@ -84,8 +84,8 @@ export const contents = {
       projectName: "Cerebreum",
       index: "05",
       projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+        "Offering a mystical motif and providing easy navigation, we designed a homepage website and staking platform for APY Token, first ever, sustainable and compounding token!",
+      projectWebsite: "https://cerebreum.netlify.app/",
       projectImage: cerebreumProject,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",
@@ -97,8 +97,8 @@ export const contents = {
       projectName: "AI Verse",
       index: "06",
       projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+        "Curated a homepage website for AI Verse, an artificial intelligence investment adviser that allows on-chain transactions for DeFi goods, decentralised AI evaluation of wealth management products, liquidity mining, private, and smart evaluation of presale risk.",
+      projectWebsite: "https://ai-verse.netlify.app/",
       projectImage: aiVerseProject,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",
@@ -110,8 +110,8 @@ export const contents = {
       projectName: "Croking",
       index: "07",
       projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+        "With the help of our Multi-Chain DEX aggregator, users may access several decentralised exchanges (DEXs) from a single interface. It seeks to give cryptocurrency traders a smooth and effective trading experience. This design includes features like token swaps, multi-chap support, optimised nodes for low gas costs, and a royal layout with gorgeous graphics.",
+      projectWebsite: "https://croking.netlify.app/",
       projectImage: crokingProject,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",
@@ -136,8 +136,8 @@ export const contents = {
       projectName: "Rent It",
       index: "09",
       projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+        "Say goodbye to traditional real estate investments with high barriers to entry. RentIt's fractional real estate investment platform makes it easy for anyone to invest in real estate. We use web3 to overcome the issue of huge capital required for buying a land, so now just hold the portion of the land according to your budget, also you can mining and earn a good profits.",
+      projectWebsite: "https://rentit.website/",
       projectImage: rentit,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",
@@ -150,7 +150,7 @@ export const contents = {
       index: "10",
       projectDescription:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+      projectWebsite: "https://main--cosmicfinances.netlify.app",
       projectImage: cosmikProject,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",
@@ -162,8 +162,8 @@ export const contents = {
       projectName: "Safe Earn",
       index: "11",
       projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+        "Safeearn, a web3 based application that focus on dashboard where you can track all of your crypto assets and manage its data, also it's rainbow kit is integrated to safeearn so it will be very easy to connect wallet.",
+      projectWebsite: "https://dashboard.safeearnfinance.net",
       projectImage: safeearn1,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",
@@ -175,8 +175,8 @@ export const contents = {
       projectName: "Safe Earn",
       index: "12",
       projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+        "Safeearn, a web3 based application that focus on dashboard where you can track all of your crypto assets and manage its data, also it's rainbow kit is integrated to safeearn so it will be very easy to connect wallet.",
+      projectWebsite: "https://dashboard.safeearnfinance.net",
       projectImage: safeearn2,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",
@@ -189,7 +189,7 @@ export const contents = {
       index: "13",
       projectDescription:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+      projectWebsite: "https://play.google.com/store/apps/details?id=com.zelo.customer",
       projectImage: zolo,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",
@@ -202,7 +202,7 @@ export const contents = {
       index: "14",
       projectDescription:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+      projectWebsite: "https://play.google.com/store/apps/details?id=finance.klever.bitcoin.wallet",
       projectImage: kleverWallet,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",
@@ -215,7 +215,7 @@ export const contents = {
       index: "15",
       projectDescription:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+      projectWebsite: "https://play.google.com/store/apps/details?id=com.truliv.community",
       projectImage: truliv,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",
@@ -229,7 +229,7 @@ export const contents = {
       index: "16",
       projectDescription:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite: "cakepool.io",
+      projectWebsite: "https://play.google.com/store/apps/details?id=io.nucle",
       projectImage: nucle,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/cakepool",

@@ -1,63 +1,62 @@
-import React, { useState, useEffect, useRef } from "react";
-import  mainuiImg from "../../../assets//whatsapp.webp";
-import { ReactComponent as ArrowIcon } from "../../../assets/images/icon-arrow.svg";
-import { ReactComponent as FinalImg } from "../../../assets/images/finalImg.svg";
-import Whatsapp from "../../../assets/whatsapp.gif";
-import { ReactComponent as SelectBtnIcon } from "../../../assets/images/icon-pagebtn.svg";
-import { useSearchParams } from "react-router-dom";
-import styles from "./style.module.css";
-import validator from 'validator'
-import AOS from "aos";
-import "aos/dist/aos.css";
-import {Helmet} from "react-helmet-async"
+import React, { useState, useEffect, useRef } from 'react';
+import mainuiImg from '../../../assets//whatsapp.webp';
+import { ReactComponent as ArrowIcon } from '../../../assets/images/icon-arrow.svg';
+import { ReactComponent as FinalImg } from '../../../assets/images/finalImg.svg';
+import { ReactComponent as Whatsapp } from '../../../assets/images/icon-whatsapp.svg';
+import { ReactComponent as SelectBtnIcon } from '../../../assets/images/icon-pagebtn.svg';
+import { useSearchParams } from 'react-router-dom';
+import styles from './style.module.css';
+import validator from 'validator';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet-async';
 import ReactPixel from 'react-facebook-pixel';
 
-
 export default function Page({ pagenum, handlePageUp, handlePageDown }) {
-  
+  const options = [
+    { label: 'Smart Contract', value: 'Smart Contract' },
+    {
+      label: 'Decentralised Application',
+      value: 'Decentralised Application',
+    },
+    { label: 'Website development', value: 'Website development' },
+    { label: 'Website Designing', value: 'Website Designing' },
+    { label: 'Metaverse', value: 'Metaverse' },
+    { label: 'Other', value: '' },
+  ];
 
-const options = [
-  { label: "Smart Contract", value: "Smart Contract" },
-  { label: "Decentralised Application", value: "Decentralised Application" },
-  { label: "Website development", value: "Website development" },
-  { label: "Website Designing", value: "Website Designing" },
-  { label: "Metaverse", value: "Metaverse" },
-  { label: "Other", value: "" },
-];
-
-const options1 = [
-  {
-    label: "1000$ - 5000$",
-    value: "1000$ - 5000$",
-  },
-  {
-    label: "5000$ - 10000$",
-    value: "5000$ - 10000$",
-  },
-  {
-    label: "Above 10000$",
-    value: "Above 10000$",
-  }
-]
-const iamOption = [
-  {
-    label: "Founder",
-    value: "Founder",
-  },
-  {
-    label: "Marketer",
-    value: "Marketer",
-  },
-  {
-    label: "CTO",
-    value: "CTO",
-  },
-  {
-    label: "Other",
-    value: "",
-  },
-
-]
+  const options1 = [
+    {
+      label: '1000$ - 5000$',
+      value: '1000$ - 5000$',
+    },
+    {
+      label: '5000$ - 10000$',
+      value: '5000$ - 10000$',
+    },
+    {
+      label: 'Above 10000$',
+      value: 'Above 10000$',
+    },
+  ];
+  const iamOption = [
+    {
+      label: 'Founder',
+      value: 'Founder',
+    },
+    {
+      label: 'Marketer',
+      value: 'Marketer',
+    },
+    {
+      label: 'CTO',
+      value: 'CTO',
+    },
+    {
+      label: 'Other',
+      value: '',
+    },
+  ];
   const [showOptions, setShowOptions] = useState(false);
   // const [selectedOption, setSelectedOption] = useState(null);
   const [selectedOptionService, setSelectedOptionService] = useState(null);
@@ -68,63 +67,66 @@ const iamOption = [
   const [selectedOptionBudget, setSelectedOptionBudget] = useState(null);
   const [custom_href, setCustomHref] = useState(null);
   const [validEmail, setValidEmail] = useState(true);
-  const [email, setEmail] = useState("");
-  const [campaign, setCampaign] = useState("");
-  const [adset, setAdset] = useState("");
-  const [ad, setAd] = useState("");
-  const [name, setName] = useState("");
-  const [iam, setIam] = useState("");
-  const [phoneNo, setPhoneNo] = useState("");
-  const [countryCode, setCountryCode] = useState("+");
-  const [country, setCountry] = useState("");
-  const [budget, setBudget] = useState("");
-  const [leadsource, setLeadsource] = useState("");
-  const [projectName, setProjectName] = useState("");
+  const [email, setEmail] = useState('');
+  const [campaign, setCampaign] = useState('');
+  const [adset, setAdset] = useState('');
+  const [ad, setAd] = useState('');
+  const [name, setName] = useState('');
+  const [iam, setIam] = useState('');
+  const [phoneNo, setPhoneNo] = useState('');
+  const [countryCode, setCountryCode] = useState('+');
+  const [country, setCountry] = useState('');
+  const [budget, setBudget] = useState('');
+  const [leadsource, setLeadsource] = useState('');
+  const [projectName, setProjectName] = useState('');
   const [validProjectName, setValidProjectName] = useState(true);
   const [validName, setValidName] = useState(true);
   const [validOptions, setValidOptions] = useState(true);
   const [validPhone, setValidPhone] = useState(true);
   const [validCC, setValidCC] = useState(true);
-  const [service, setService] = useState("");
+  const [service, setService] = useState('');
   const [budgetValue, setBudgetValue] = useState(0);
-  const emailRef = useRef()
-  const queryParams = new URLSearchParams(window.location.search)
+  const emailRef = useRef();
+  const queryParams = new URLSearchParams(window.location.search);
   const data = {
-    "name":name,
-    "email":email,
-    "projectName":projectName,
-    "service":service,
-    "budget":budget,
-    "campaign":campaign,
-    "adset":adset,
-    "ad":ad,
-    "src":leadsource,
-    "iam":iam,
-    "phoneNo":phoneNo,
-    "country":country,
-    "countryCode":countryCode
-
-  }
+    name: name,
+    email: email,
+    projectName: projectName,
+    service: service,
+    budget: budget,
+    campaign: campaign,
+    adset: adset,
+    ad: ad,
+    src: leadsource,
+    iam: iam,
+    phoneNo: phoneNo,
+    country: country,
+    countryCode: countryCode,
+  };
   useEffect(() => {
-    if(budget === "1000$ - 5000$"){
-      setBudgetValue(2500)
+    if (budget === '1000$ - 5000$') {
+      setBudgetValue(2500);
+    } else if (budget === '5000$ - 10000$') {
+      setBudgetValue(7500);
+    } else if (budget === 'Above 10000$') {
+      setBudgetValue(15000);
     }
-    else if(budget === "5000$ - 10000$"){
-      setBudgetValue(7500)
-    }
-    else if(budget === "Above 10000$"){
-      setBudgetValue(15000)
-    }
-  }, [budget])
+  }, [budget]);
   const conversionData = {
-    "name": name,
-    "email": email,
-    "phoneNo": phoneNo,
-    "countryCode": countryCode,
-    "value": budgetValue,
-  }
-  
-  const CustomSelect = ({ options, placeholder, setWhat, setSelectedOption, selectedOption }) => {
+    name: name,
+    email: email,
+    phoneNo: phoneNo,
+    countryCode: countryCode,
+    value: budgetValue,
+  };
+
+  const CustomSelect = ({
+    options,
+    placeholder,
+    setWhat,
+    setSelectedOption,
+    selectedOption,
+  }) => {
     const handleToggleOptions = () => {
       setShowOptions((prevShowOptions) => !prevShowOptions);
     };
@@ -139,25 +141,38 @@ const iamOption = [
           className={styles.selectButton}
           onClick={handleToggleOptions}
           style={{
-            backgroundColor: selectedOption ? "#fff" : "#1D3852",
-            color: selectedOption ? "#333" : "#bbb",
-            borderRadius: showOptions ? "10px 10px 10px 0" : "10px",
+            backgroundColor: selectedOption ? '#fff' : '#1D3852',
+            color: selectedOption ? '#333' : '#bbb',
+            borderRadius: showOptions ? '10px 10px 10px 0' : '10px',
           }}
         >
-          {selectedOption?.label === 'Other' ? <input placeholder="Other" className={`${styles.selectedTxt} ${styles.selectedInputTxt}`} autoFocus value={selectedOption.value} onChange={(e) => {
-            setWhat(e.target.value);
-            setSelectedOption({ label: "Other", value: e.target.value });
-            setValidOptions(true);
-          }}/> : <div
-            className={styles.selectedTxt}
-            style={{
-              opacity: selectedOption ? "1" : "0.5",
-            }}
-          >
-            {selectedOption ? selectedOption.label : placeholder}
-          </div>}
+          {selectedOption?.label === 'Other' ? (
+            <input
+              placeholder="Other"
+              className={`${styles.selectedTxt} ${styles.selectedInputTxt}`}
+              autoFocus
+              value={selectedOption.value}
+              onChange={(e) => {
+                setWhat(e.target.value);
+                setSelectedOption({
+                  label: 'Other',
+                  value: e.target.value,
+                });
+                setValidOptions(true);
+              }}
+            />
+          ) : (
+            <div
+              className={styles.selectedTxt}
+              style={{
+                opacity: selectedOption ? '1' : '0.5',
+              }}
+            >
+              {selectedOption ? selectedOption.label : placeholder}
+            </div>
+          )}
           <div className={styles.selectBtnWrapper}>
-            <SelectBtnIcon className={`arrow ${showOptions ? "open" : ""}`} />
+            <SelectBtnIcon className={`arrow ${showOptions ? 'open' : ''}`} />
           </div>
         </div>
         {showOptions && (
@@ -166,10 +181,10 @@ const iamOption = [
               <div
                 key={option.value}
                 className={`option ${
-                  option === selectedOption ? "selected" : ""
+                  option === selectedOption ? 'selected' : ''
                 }`}
                 onClick={() => {
-                  setWhat(option.value)
+                  setWhat(option.value);
                   setValidOptions(true);
                   handleSelectOption(option);
                 }}
@@ -183,93 +198,114 @@ const iamOption = [
     );
   };
 
-useEffect(() => {
-  if(queryParams.get("campaign") === undefined || null){
-    setCampaign("organic");
-  }
-  else{
-    setCampaign(queryParams.get("campaign"));
-  }
+  useEffect(() => {
+    if (queryParams.get('campaign') === undefined || null) {
+      setCampaign('organic');
+    } else {
+      setCampaign(queryParams.get('campaign'));
+    }
 
-  if((queryParams.get("adset")) === undefined || null){
-    setAdset('organic');
-  }
-  else{
-    setAdset(queryParams.get("adset"));
-  }
+    if (queryParams.get('adset') === undefined || null) {
+      setAdset('organic');
+    } else {
+      setAdset(queryParams.get('adset'));
+    }
 
-  if(queryParams.get("ad") === undefined || null){
-    setAd('organic');
-  }
-  else{
-    setAd(queryParams.get("ad"));
-  }
+    if (queryParams.get('ad') === undefined || null) {
+      setAd('organic');
+    } else {
+      setAd(queryParams.get('ad'));
+    }
 
+    if (queryParams.get('src') === undefined || null) {
+      setLeadsource('organice');
+    } else {
+      setLeadsource(queryParams.get('src'));
+    }
 
-  if(queryParams.get("src") === undefined || null){
-    setLeadsource('organice')
-  }
-  else{
-    setLeadsource(queryParams.get("src"))
-  }
+    console.log(data);
 
-  console.log(data)
+    setCustomHref(
+      'https://wa.me/12342559266?text=%20Hi%20I%20am%20' +
+        name +
+        '%2C%20I%20am%20looking%20for%20getting%20' +
+        service +
+        '.%20Can%20you%20please%20tell%C2%A0more%C2%A0about%C2%A0it%3F%0A'
+    );
 
-  setCustomHref("https://wa.me/12342559266?text=%20Hi%20I%20am%20"+name+"%2C%20I%20am%20looking%20for%20getting%20"+service+".%20Can%20you%20please%20tell%C2%A0more%C2%A0about%C2%A0it%3F%0A")
+    // User completes the form
+    if (pagenum === 9) {
+      callFaceBookPixel(1, 'formFinished');
+      sendDataToPably();
+    }
+  }, [pagenum]);
 
-}, [pagenum])
+  const sendDataToPably = () => {
+    fetch(
+      'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTZlMDYzNzA0MzI1MjZkNTUzMSI_3D_pc',
+      {
+        // Enter your IP address here
 
+        method: 'POST',
+        mode: 'cors',
+        body: JSON.stringify(data), // body data type must match "Content-Type" header
+      }
+    );
+    try {
+      fetch(
+        'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzY1MjZjNTUzNCI_3D_pc',
+        {
+          // conversion Api webhook
+          method: 'POST',
+          mode: 'cors',
+          body: JSON.stringify(conversionData), // body data type must match "Content-Type" header
+        }
+      ).then((res) => {
+        res.json().then((data) => {
+          console.log(data);
+        });
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  const sendDataToPably2 = (data) => {
+    fetch(
+      'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc',
+      {
+        // Enter your IP address here
 
-
-const sendDataToPably = () => {
-  fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTZlMDYzNzA0MzI1MjZkNTUzMSI_3D_pc", {  // Enter your IP address here
-
-  method: 'POST', 
-  mode: 'cors', 
-  body: JSON.stringify(data) // body data type must match "Content-Type" header
-
-}) 
-  try{fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzY1MjZjNTUzNCI_3D_pc", {  // conversion Api webhook
-  method: 'POST', 
-  mode: 'cors', 
-  body: JSON.stringify(conversionData) // body data type must match "Content-Type" header
-
-}).then((res) => {
-  res.json().then((data) => {
-    console.log(data)
-  })
-})}
-catch(err){
-  console.log(err)
-}
-}
-const sendDataToPably2 = (data) => {
-  fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc", {  // Enter your IP address here
-
-  method: 'POST', 
-  mode: 'cors', 
-  body: JSON.stringify(data) // body data type must match "Content-Type" header
-
-})
-}
-const callFaceBookPixel = (value, leadName) => {
-  ReactPixel.trackCustom(leadName, {value: value, currency: "USD" })
-  sendDataToPably2({event:leadName,value: value, currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000)})
-  }
+        method: 'POST',
+        mode: 'cors',
+        body: JSON.stringify(data), // body data type must match "Content-Type" header
+      }
+    );
+  };
+  const callFaceBookPixel = (value, leadName) => {
+    ReactPixel.trackCustom(leadName, { value: value, currency: 'USD' });
+    sendDataToPably2({
+      event: leadName,
+      value: value,
+      currency: 'USD',
+      userAgent: navigator.userAgent,
+      href: window.location.href,
+      timestamp: Math.floor(Date.now() / 1000),
+    });
+  };
 
   useEffect(() => {
-    const keyPressHandler = (e) =>{
+    const keyPressHandler = (e) => {
       if (e.key === 'Enter') {
         if (pagenum === 1) {
           if (name === '') {
-            setValidName(false)
-            return
+            setValidName(false);
+            return;
           }
         }
         if (pagenum === 2) {
           if (!validator.isEmail(email)) {
-            setValidEmail(false)
-            return
+            setValidEmail(false);
+            return;
           }
         }
         if (pagenum === 3) {
@@ -279,9 +315,9 @@ const callFaceBookPixel = (value, leadName) => {
           }
         }
         if (pagenum === 4) {
-          if(phoneNo === ''){
-            setValidPhone(false)
-            return
+          if (phoneNo === '') {
+            setValidPhone(false);
+            return;
           }
         }
         if (pagenum === 4) {
@@ -290,15 +326,15 @@ const callFaceBookPixel = (value, leadName) => {
           }
         }
         if (pagenum === 5) {
-          if(country === ''){
-            setValidCountry(false)
-            return
+          if (country === '') {
+            setValidCountry(false);
+            return;
           }
         }
         if (pagenum === 6) {
           if (projectName === '') {
-            setValidProjectName(false)
-            return
+            setValidProjectName(false);
+            return;
           }
         }
         if (pagenum === 7) {
@@ -309,64 +345,83 @@ const callFaceBookPixel = (value, leadName) => {
         }
         if (pagenum === 8) {
           if (!selectedOptionBudget) {
-            return
+            return;
           }
         }
-        handlePageUp()
+        handlePageUp();
       }
-    }
-      document.addEventListener('keydown', keyPressHandler)
-    console.log('useEffect')
+    };
+    document.addEventListener('keydown', keyPressHandler);
+    console.log('useEffect');
     return () => {
-        document.removeEventListener('keydown', keyPressHandler)
-    }
-  }, [pagenum, name, email, projectName, selectedOptionService, selectedOptionBudget, handlePageUp, iam, service, selectedOptionIam, phoneNo, countryCode, country])
-  useEffect(()=>{
-    if(emailRef && emailRef.current){
-      if(validEmail){
-        emailRef.current.style.boxShadow = "rgba(15, 253, 3, 0.833) 0px 1px";
+      document.removeEventListener('keydown', keyPressHandler);
+    };
+  }, [
+    pagenum,
+    name,
+    email,
+    projectName,
+    selectedOptionService,
+    selectedOptionBudget,
+    handlePageUp,
+    iam,
+    service,
+    selectedOptionIam,
+    phoneNo,
+    countryCode,
+    country,
+  ]);
+  useEffect(() => {
+    if (emailRef && emailRef.current) {
+      if (validEmail) {
+        emailRef.current.style.boxShadow = 'rgba(15, 253, 3, 0.833) 0px 1px';
+      } else {
+        emailRef.current.style.boxShadow = 'rgb(255, 0, 0) 0px 1px';
       }
-      else{
-        emailRef.current.style.boxShadow = "rgb(255, 0, 0) 0px 1px";
-      }
     }
-
-  }, [validEmail, emailRef])
+  }, [validEmail, emailRef]);
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
     <>
-        <Helmet>
-    <title>Form</title>
-    <meta name="description" content="Contact us today for decentralized innovation and incredible websites."/>
-    <link rel="canonical" href="/form" />
-
-    </Helmet>
-    <div className={styles.formContainer}>
-
-      {pagenum === 0 && (
+      <Helmet>
+        <title>Form</title>
+        <meta
+          name="description"
+          content="Contact us today for decentralized innovation and incredible websites."
+        />
+        <link rel="canonical" href="/form" />
+      </Helmet>
+      <div className={styles.formContainer}>
+        {pagenum === 0 && (
           <div className={styles.mainuiWrapper} data-aos="fade-up">
-            <img src={mainuiImg} className={styles.mainuiImg} alt="matrix labs contact" />
+            <img
+              src={mainuiImg}
+              className={styles.mainuiImg}
+              alt="matrix labs contact"
+            />
             <div className={styles.mainuiheading}>
               Hello! We're glad that you're interested in working with us.
               <br />
               Let’s get started 👋
             </div>
             <div className={styles.letsGOBtnWrapper}>
-
-            <div className={styles.LetsgoBtn} onClick={()=>{
-              handlePageUp()
-
-            }
-            }>
-              Let’s Go
-            </div>
-            <p className={styles.pressEnter}>press <span>Enter</span></p>
+              <div
+                className={styles.LetsgoBtn}
+                onClick={() => {
+                  handlePageUp();
+                }}
+              >
+                Let’s Go
+              </div>
+              <p className={styles.pressEnter}>
+                press <span>Enter</span>
+              </p>
             </div>
           </div>
-      )}
-      {pagenum === 1 && (
+        )}
+        {pagenum === 1 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               1. <ArrowIcon className={styles.arrowIcon} />
@@ -381,36 +436,42 @@ const callFaceBookPixel = (value, leadName) => {
                 placeholder="Type in your name"
                 value={name}
                 onChange={(e) => {
-                  if(e.target.value.length > 0){
-                    setValidName(true)
+                  if (e.target.value.length > 0) {
+                    setValidName(true);
                   }
-                setName(e.target.value)}}
+                  setName(e.target.value);
+                }}
               />
-              {!validName && <div className={styles.errorMsg}>Please enter a valid name</div>}
-              <div className={styles.okBtn} onClick={()=>{
-              if(name === ''){
-                setValidName(false)
-                return
-              }
-              setValidName(true)
-              handlePageUp()
-              
-
-            }}>
+              {!validName && (
+                <div className={styles.errorMsg}>Please enter a valid name</div>
+              )}
+              <div
+                className={styles.okBtn}
+                onClick={() => {
+                  if (name === '') {
+                    setValidName(false);
+                    return;
+                  }
+                  setValidName(true);
+                  handlePageUp();
+                }}
+              >
                 Next
               </div>
             </div>
           </div>
-      )}
-      
-      {pagenum === 2 && (
+        )}
+
+        {pagenum === 2 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               2. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
               <div className={styles.primaryTxt}>My Email*</div>
-              <div className={styles.secondaryTxt}>Just to stay in touch, no spam guarantee.</div>
+              <div className={styles.secondaryTxt}>
+                Just to stay in touch, no spam guarantee.
+              </div>
               <input
                 className={styles.emailInput}
                 type="email"
@@ -418,51 +479,66 @@ const callFaceBookPixel = (value, leadName) => {
                 placeholder="Type in your Email"
                 ref={emailRef}
                 value={email}
-                onChange={(e)=>{
-                  const temp = e.target.value
-                  setEmail(temp)
-                  setValidEmail(true)
+                onChange={(e) => {
+                  const temp = e.target.value;
+                  setEmail(temp);
+                  setValidEmail(true);
                 }}
               />
-              {!validEmail && <div className={styles.errorMsg}>Please enter a valid email</div>}
-              <div className={styles.okBtn} onClick={()=>{
-              if(!validator.isEmail(email)){
-                setValidEmail(false)
-                return
-              }
-              setValidEmail(true)
-              handlePageUp()
-            }}>
+              {!validEmail && (
+                <div className={styles.errorMsg}>
+                  Please enter a valid email
+                </div>
+              )}
+              <div
+                className={styles.okBtn}
+                onClick={() => {
+                  if (!validator.isEmail(email)) {
+                    setValidEmail(false);
+                    return;
+                  }
+                  setValidEmail(true);
+                  handlePageUp();
+                }}
+              >
                 Next
               </div>
             </div>
           </div>
-      )}
+        )}
 
-
-  {pagenum === 3 && (
+        {pagenum === 3 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               3. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
-              <div className={styles.primaryTxt}>
-              I Am
-              </div>
-              <CustomSelect options={iamOption} placeholder={"Select Your Designation"} setWhat={setIam} setSelectedOption={setSelectedOptionIam} 
-                selectedOption={selectedOptionIam} defaultValue={1} />
-              {!validOptions && <div className={styles.errorMsg}>Please enter something</div>}
+              <div className={styles.primaryTxt}>I Am</div>
+              <CustomSelect
+                options={iamOption}
+                placeholder={'Select Your Designation'}
+                setWhat={setIam}
+                setSelectedOption={setSelectedOptionIam}
+                selectedOption={selectedOptionIam}
+                defaultValue={1}
+              />
+              {!validOptions && (
+                <div className={styles.errorMsg}>Please enter something</div>
+              )}
               {selectedOptionIam?.value && (
-                <div className={styles.okBtn} onClick={()=>{
-                  handlePageUp()
-                }}>
+                <div
+                  className={styles.okBtn}
+                  onClick={() => {
+                    handlePageUp();
+                  }}
+                >
                   Next
                 </div>
               )}
             </div>
           </div>
-      )}
-      {pagenum === 4 && (
+        )}
+        {pagenum === 4 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               4. <ArrowIcon className={styles.arrowIcon} />
@@ -470,61 +546,72 @@ const callFaceBookPixel = (value, leadName) => {
             <div className={styles.questionWrapper}>
               <div className={styles.primaryTxt}>My Phone Number*</div>
               <div className={styles.phoneNodiv}>
-              <input
-                className={styles.countryInput}
-                type="text"
-                autoComplete="off"
+                <input
+                  className={styles.countryInput}
+                  type="text"
+                  autoComplete="off"
                   value={countryCode}
                   onChange={(e) => {
                     const inputValue = e.target.value;
                     if (inputValue.charAt(0) === '+') {
                       setCountryCode(inputValue);
-                    }
-                    else {
+                    } else {
                       setCountryCode('+' + inputValue.slice(1));
                     }
                   }}
-              />
-              
-              <input
-                className={styles.phoneInput}
-                type="text"
-                autoComplete="off"
-                placeholder="Enter Your Phone Number"
-                value={phoneNo}
-                onChange={(e) => setPhoneNo(e.target.value)}
-              />
+                />
+
+                <input
+                  className={styles.phoneInput}
+                  type="text"
+                  autoComplete="off"
+                  placeholder="Enter Your Phone Number"
+                  value={phoneNo}
+                  onChange={(e) => setPhoneNo(e.target.value)}
+                />
               </div>
-              {!validPhone && <div className={styles.errorMsg}>Please enter a valid Phone Number</div>}
-              {!validCC && <div className={styles.errorMsg}>Please enter a valid Country Code</div>}
-              <div className={styles.okBtn} onClick={()=>{
-              if(phoneNo === ''){
-                setValidPhone(false)
-                return
-              }
-              if(countryCode === ''){
-                setValidCC(false)
-                return
-              }
-              setValidPhone(true)
-              setValidCC(true)
-              handlePageUp()
-            }}>
+              {!validPhone && (
+                <div className={styles.errorMsg}>
+                  Please enter a valid Phone Number
+                </div>
+              )}
+              {!validCC && (
+                <div className={styles.errorMsg}>
+                  Please enter a valid Country Code
+                </div>
+              )}
+              <div
+                className={styles.okBtn}
+                onClick={() => {
+                  if (phoneNo === '') {
+                    setValidPhone(false);
+                    return;
+                  }
+                  if (countryCode === '') {
+                    setValidCC(false);
+                    return;
+                  }
+                  setValidPhone(true);
+                  setValidCC(true);
+                  handlePageUp();
+                }}
+              >
                 Next
               </div>
             </div>
           </div>
-      )}
+        )}
 
-
-{pagenum === 5 && (
+        {pagenum === 5 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               5. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
               <div className={styles.primaryTxt}>Country name*</div>
-              <div className={styles.secondaryTxt}>Contry In Which You Live</div>
+              <div className={styles.secondaryTxt}>
+                Contry In Which You Live
+              </div>
               <input
                 className={styles.nameInput}
                 type="text"
@@ -532,30 +619,35 @@ const callFaceBookPixel = (value, leadName) => {
                 placeholder="Type in your Country Name"
                 value={country}
                 onChange={(e) => {
-                  if(e.target.value.length > 0){
-                    setValidCountry(true)
+                  if (e.target.value.length > 0) {
+                    setValidCountry(true);
                   }
-                  setCountry(e.target.value)}}
+                  setCountry(e.target.value);
+                }}
               />
-              {!validCountry && <div className={styles.errorMsg}>Please enter a valid country</div>}
-              <div className={styles.okBtn} onClick={()=>{
-              if(country === ''){
-                setValidCountry(false)
-                return
-              }
-              setValidCountry(true)
-              handlePageUp()
-              
-
-            }}>
+              {!validCountry && (
+                <div className={styles.errorMsg}>
+                  Please enter a valid country
+                </div>
+              )}
+              <div
+                className={styles.okBtn}
+                onClick={() => {
+                  if (country === '') {
+                    setValidCountry(false);
+                    return;
+                  }
+                  setValidCountry(true);
+                  handlePageUp();
+                }}
+              >
                 Next
               </div>
             </div>
           </div>
-      )}
-      
+        )}
 
-      {pagenum === 6 && (
+        {pagenum === 6 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               6. <ArrowIcon className={styles.arrowIcon} />
@@ -570,83 +662,110 @@ const callFaceBookPixel = (value, leadName) => {
                 value={projectName}
                 onChange={(e) => setProjectName(e.target.value)}
               />
-              {!validProjectName && <div className={styles.errorMsg}>Please enter a valid project name</div>}
-              <div className={styles.okBtn} onClick={()=>{
-              if(projectName === ''){
-                setValidProjectName(false)
-                return
-              }
-              setValidProjectName(true)
-              handlePageUp()
-            }}>
+              {!validProjectName && (
+                <div className={styles.errorMsg}>
+                  Please enter a valid project name
+                </div>
+              )}
+              <div
+                className={styles.okBtn}
+                onClick={() => {
+                  if (projectName === '') {
+                    setValidProjectName(false);
+                    return;
+                  }
+                  setValidProjectName(true);
+                  handlePageUp();
+                }}
+              >
                 Next
               </div>
             </div>
           </div>
-      )}
+        )}
 
-      {pagenum === 7 && (
+        {pagenum === 7 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               7. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
-              <div className={styles.primaryTxt}>
-              I want…
-              </div>
-              <CustomSelect options={options} placeholder={"Select Your Service"} setWhat={setService} setSelectedOption={setSelectedOptionService} 
-                selectedOption={selectedOptionService} defaultValue={1} />
-              {!validOptions && <div className={styles.errorMsg}>Please enter something</div>}
+              <div className={styles.primaryTxt}>I want…</div>
+              <CustomSelect
+                options={options}
+                placeholder={'Select Your Service'}
+                setWhat={setService}
+                setSelectedOption={setSelectedOptionService}
+                selectedOption={selectedOptionService}
+                defaultValue={1}
+              />
+              {!validOptions && (
+                <div className={styles.errorMsg}>Please enter something</div>
+              )}
               {selectedOptionService?.value && (
-                <div className={styles.okBtn} onClick={()=>{
-                  handlePageUp()
-                }}>
+                <div
+                  className={styles.okBtn}
+                  onClick={() => {
+                    handlePageUp();
+                  }}
+                >
                   Next
                 </div>
               )}
             </div>
           </div>
-      )}
-      {pagenum === 8 && (
+        )}
+        {pagenum === 8 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               8. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
               <div className={styles.primaryTxt}>
-              My budget range is between…
+                My budget range is between…
               </div>
-              <CustomSelect options={options1} placeholder={"Select Your Budget"} setWhat={setBudget} setSelectedOption={setSelectedOptionBudget} selectedOption={selectedOptionBudget} defaultValue={1} />
+              <CustomSelect
+                options={options1}
+                placeholder={'Select Your Budget'}
+                setWhat={setBudget}
+                setSelectedOption={setSelectedOptionBudget}
+                selectedOption={selectedOptionBudget}
+                defaultValue={1}
+              />
               {selectedOptionBudget && (
-                <div className={styles.okBtn} onClick={()=>{
-                  handlePageUp()
-                  sendDataToPably()
-                  callFaceBookPixel(budgetValue, "leadGeneratedForm")
-                }}>
+                <div
+                  className={styles.okBtn}
+                  onClick={() => {
+                    handlePageUp();
+                    sendDataToPably();
+                    callFaceBookPixel(budgetValue, 'leadGeneratedForm');
+                  }}
+                >
                   Next
                 </div>
               )}
             </div>
           </div>
-      )}
-      
+        )}
 
-      {pagenum === 9 && (
+        {pagenum === 9 && (
           <div className={styles.congratsWrapper} data-aos="fade-up">
             <FinalImg />
             <div className={styles.congratsTxt}>
-            We've got your response. Complete the process by contacting us below🤙
+              We've got your response. Complete the process by contacting us
+              below🤙
             </div>
             <div className={styles.contactUsWrapper}>
               <div className={styles.contactUsTxt}>
-                Contact us{" "}
-                <span className={styles.highlightedTxt}>NOW</span>
+                Contact us <span className={styles.highlightedTxt}>NOW</span>
               </div>
-              <a href={custom_href}><button className={styles.finish_button}>FINISH<img src={Whatsapp} alt="whatsapp_icon" className={styles.whatsappIcon} /></button></a>
+              <a href={custom_href}>
+                <Whatsapp height={40} />
+              </a>
             </div>
           </div>
-      )}
-    </div>
+        )}
+      </div>
     </>
   );
 }
