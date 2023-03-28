@@ -411,6 +411,18 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
 }
 
 
+@media(max-width:850px){
+  .centerElements{
+    padding: 7rem 1rem;
+  
+  }
+  .centerElements h1{
+    font-size: 30px;
+    line-height: 36px;
+  
+  }
+}
+
 .getaquotaBtn:after {
 content: "";
 position: absolute;
