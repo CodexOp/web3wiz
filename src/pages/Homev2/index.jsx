@@ -24,6 +24,10 @@ import emailIcon from "./components/assests/images/icon-email.svg";
 import blogImg from "./components/assests/images/icon-teamwork.svg";
 import arrowIcon from "./components/assests/images/icon-arrow.svg";
 import closeIcon from "./components/assests/images/icon-cross.svg";
+import registered from "./components/assests/registered.svg";
+import teamofprofessionals from "./components/assests/teamofprofessionals.svg";
+import customerService from "./components/assests/customerService.svg";
+import endtoendservice from "./components/assests/endtoendservice.svg";
 import starIcon from "./components/assests/images/icon-star.svg";
 import quotesIcon from "./components/assests/images/icon-quotes.svg";
 import clientImg from "./components/assests/images/icon-clientimg.svg";
@@ -190,24 +194,27 @@ export default function Homev2()
                 <div className={styles.maintext2}>Build with us <span> where scalability is never an issue</span></div>
                 <div className={styles.whyChooseDiv}>
                     <div className={styles.whyChooseHeading}>Why Choose us?</div>
-                    <div className={styles.whyChooseTxt}>We make sure we bring you more value than you will be investing with us. <br/>Don’t just make dApps/Websites, build real profitable businesses with us.</div>
                 </div>
                 <div className={styles.featureGrid}>
                     <div className={styles.featureGridItems}>
-                        <img src={transparencyImg} alt="transparency-img" className={styles.featureGridIcons}/>
-                        <div>Transparency</div>
+                        <img src={endtoendservice} alt="transparency-img" className={styles.featureGridIcons}/>
+                        <h2>End to end service</h2>
+                        <p>You don't need to look for any other service provider for any technical stuff. We have got all covered for you.</p>
                     </div>
                     <div className={styles.featureGridItems}>
-                        <img src={folderLockIcon} alt="folderLockIcon" className={styles.featureGridIcons}/>
-                        <div>Data Protection</div>
+                        <img src={customerService} alt="folderLockIcon" className={styles.featureGridIcons}/>
+                        <h2>24/7 customer service</h2>
+                        <p>We understand that our customers may need assistance at any time, day or night, and we are committed to being available whenever they need us.</p>
                     </div>
                     <div className={styles.featureGridItems}>
-                        <img src={shieldIcon} alt="shieldIcon" className={styles.featureGridIcons}/>
-                        <div>SAFU Devs</div>
+                        <img src={teamofprofessionals} alt="shieldIcon" className={styles.featureGridIcons}/>
+                        <h2>Team of professionals</h2>
+                        <p>We understand that big and complex projects require professionals to work on. </p>
                     </div>
                     <div className={styles.featureGridItems}>
-                        <img src={lockIcon} alt="lockIcon" className={styles.featureGridIcons} />
-                        <div>Fast & Secure</div>
+                        <img src={registered} alt="lockIcon" className={styles.featureGridIcons} />
+                        <h2>USA registered</h2>
+                        <p>We are USA registered and comply all rules of US government.</p>
                     </div>
                 </div>
                 <div className={styles.clientTxtWrapper}>

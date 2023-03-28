@@ -272,23 +272,41 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 1em;
+    align-items: flex-start;
+    width: 100%;
+}
+.featureGridItems{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
     width: 100%;
 }
-
-.featureGridItems{
+.featureGridItems img{
+    width: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.featureGridItems h2{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 22px;
-    line-height: 34px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #38FFCF;
+    margin-top: 1rem;
 }
-
+.featureGridItems p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 30ch;
+}
 
 .knowmoreBtn{
     font-family: 'Poppins';
@@ -1229,9 +1247,9 @@ a{
         flex-direction: row;
         justify-content: space-between;
         margin-top: 1em;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
-        gap:25px;
+        gap: 2rem;
     }
     
     .featureGridItems{
