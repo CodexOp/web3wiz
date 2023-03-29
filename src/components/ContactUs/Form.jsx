@@ -8,6 +8,12 @@ import { ReactComponent as Mail } from '../../assets/images/icon-mail.svg';
 import Select from './Select.jsx';
 
 const Form = () => {
+    const [data, setData] = React.useState({
+        name: '',
+        email: '',
+        service: '',
+        msg: ''
+    });
     return (
         <div className={styles.container}>
             <div className={styles.box1}>
@@ -30,7 +36,7 @@ const Form = () => {
                 <div className={styles.location}>
                     <h3>Head office</h3>
                     <p>
-                        <span>Location</span> - 304/A1, Prospera, Bhopal
+                        <span>Location</span> - 3191, 1603 Capitol Avenue, Suite 413A, Cheyenne, WY, Laramie, US, 82001
                     </p>
                     <p>
                         <span>Tel. number</span> - +91 7999378952
@@ -40,10 +46,31 @@ const Form = () => {
                     </p>
                 </div>
                 <form>
-                    <input type="text" placeholder="Enter your name" />
-                    <input type="text" placeholder="Enter you email" />
-                    <Select />
-                    <textarea type="text" placeholder="Enter your message" />
+                    <input type="text" placeholder="Enter your name" value={data.name} onChange={(e)=>{
+                        setData((state)=>{
+                            return {
+                                ...state,
+                                name: e.target.value
+                            }
+                        })
+                    }}/>
+                    <input type="text" placeholder="Enter you email" value={data.email} onChange={(e)=>{
+                        setData((state)=>{
+                            return {
+                                ...state,
+                                email: e.target.value
+                            }
+                        })
+                    }}/>
+                    <Select service={setData}/>
+                    <textarea type="text" placeholder="Enter your message" value={data.msg} onChange={(e)=>{
+                        setData((state)=>{
+                            return {
+                                ...state,
+                                msg: e.target.value
+                            }
+                        })
+                    }}/>
                     <button>Submit</button>
                 </form>
             </div>

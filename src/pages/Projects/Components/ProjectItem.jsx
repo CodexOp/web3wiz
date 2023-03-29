@@ -10,7 +10,7 @@ export default function ProjectItem({index, projectName, projectDescription, pro
         <p>{projectDescription}</p>
         <div className={styles.connectToProject} style={{"--textColor": textColor}}>
           <a href={projectWebsite}>{connectText}</a>
-          <a href={projectTelegram}><img src={telegram} alt="" /></a>
+          <a href={projectWebsite}><img src={telegram} alt="" /></a>
         </div>
       </div>
     </>

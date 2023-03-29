@@ -3,9 +3,9 @@ import styles from './Select.module.css';
 import arrow from '../../assets/arrow.svg';
 import { useState } from 'react';
 
-const Select = () => {
+const Select = (props) => {
     const [isOpen, setIsOpen] = useState(false);
-
+    const [selected, setSelected] = useState("What services do you need?");
     const rotationStyle = {
         transform: `rotate(${isOpen ? -180 : 0}deg)`,
         transition: '.5s ease-out',
@@ -19,7 +19,7 @@ const Select = () => {
     return (
         <>
             <div className={styles.container}>
-                <div style={borderStyle}>What services do you need?</div>
+                <div style={borderStyle}>{selected}</div>
                 <div
                     className={styles.imageContainer}
                     onClick={() => setIsOpen(!isOpen)}
@@ -28,21 +28,99 @@ const Select = () => {
                 </div>
                 {isOpen ? (
                     <div className={`${styles.services}`}>
-                        <li>Smart Contract Developments</li>
+                        <li onClick={()=>{
+                            setIsOpen(false)
+                            setSelected("Smart Contract Developments")
+                            props.service((state)=>{
+                                return {
+                                    ...state,
+                                    service: "Smart Contract Developments"
+                                }
+                            })
+                        }}>Smart Contract Developments</li>
                         <hr />
-                        <li>Dapp Development</li>
+                        <li onClick={()=>{
+                            setIsOpen(false)
+                            setSelected("Dapp Development")
+                            props.service((state)=>{
+                                return {
+                                    ...state,
+                                    service: "Smart Contract Developments"
+                                }
+                            })
+                        }}>Dapp Development</li>
                         <hr />
-                        <li>Website Development</li>
+                        <li onClick={()=>{
+                            setIsOpen(false)
+                            setSelected("Website Development")
+                            props.service((state)=>{
+                                return {
+                                    ...state,
+                                    service: "Website Development"
+                                }
+                            })
+                            
+                        }}>Website Development</li>
                         <hr />
-                        <li>Landing page Development</li>
+                        <li onClick={()=>{
+                            setIsOpen(false)
+                            setSelected("Landing page Development")
+                            props.service((state)=>{
+                                return {
+                                    ...state,
+                                    service: "Landing page Development"
+                                }
+                            })
+                            
+                        }}>Landing page Development</li>
                         <hr />
-                        <li>Dashboard Development</li>
+                        <li onClick={()=>{
+                            setIsOpen(false)
+                            setSelected("Dashboard Development")
+                            props.service((state)=>{
+                                return {
+                                    ...state,
+                                    service: "Dashboard Development"
+                                }
+                            })
+                            
+                        }}>Dashboard Development</li>
                         <hr />
-                        <li>Cryptocurrency Wallet</li>
+                        <li onClick={()=>{
+                            setIsOpen(false)
+                            setSelected("Cryptocurrency Wallet")
+                            props.service((state)=>{
+                                return {
+                                    ...state,
+                                    service: "Cryptocurrency Wallet"
+                                }
+                            })
+                            
+                        }}>Cryptocurrency Wallet</li>
                         <hr />
-                        <li>NFT Marketplace</li>
+                        <li onClick={()=>{
+                            setIsOpen(false)
+                            setSelected("NFT Marketplace")
+                            props.service((state)=>{
+                                return {
+                                    ...state,
+                                    service: "NFT Marketplace"
+                                }
+                            })
+                            
+                        }}>NFT Marketplace</li>
                         <hr />
-                        <li>Others</li>
+                        <li onClick={()=>{
+                            setIsOpen(false)
+                            setSelected("Others")
+                            props.service((state)=>{
+                                return {
+                                    ...state,
+                                    service: "Others"
+                                }
+                            })
+                            
+                        }}>Others</li>
                     </div>
                 ) : null}
             </div>

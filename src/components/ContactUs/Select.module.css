@@ -28,6 +28,7 @@
 
 .imageContainer {
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     background-color: #081c31;
@@ -46,7 +47,7 @@
 }
 
 .services > li {
-    cursor: pointer;
+    cursor: pointer !important;
     font-family: 'Poppins';
     list-style: none;
     font-style: normal;

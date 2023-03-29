@@ -131,7 +131,8 @@ export default function Projects() {
       </div>
       <div className={styles.container}>
         <div className={styles.centerElements}>
-          <h1>If you liked our work and have a project in mind come get in touch with us</h1>
+          <h1>If you like what you see, imagine what we can do for you!
+Get in touch with us and let's turn your ideas into reality.</h1>
           <button className={styles.getaquotaBtn}>Contact Us</button>
 
         </div>

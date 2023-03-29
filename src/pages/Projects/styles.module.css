@@ -150,7 +150,7 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
 }
 .projectItem1 p{
     color: var(--textColor);
-    max-width: 45ch;
+    max-width: 40ch;
     font-size: 16px;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -295,7 +295,7 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
  }
  .image{
   position: fixed;
-  width: 50%;
+  /* width: 50%; */
   top: 50%;
   right: 100px;
   transform: translateY(-50%);
@@ -303,17 +303,17 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
 }
 .image0{
   position: absolute;
-  width: 50%;
-  top: 50vh;
+  /* width: 50%; */
+  top: 60vh;
   right: 100px;
   transform: translateY(-50%);
   animation: zoomIn 0.25s ease-in-out;
 }
 .image16{
   position: absolute;
-  width: 50%;
+  /* width: 50%; */
   bottom: 0;
-  right: 20px;
+  right: 100px;
   transform: translateY(-50%);
   animation: zoomIn 0.25s ease-in-out;
 }
@@ -326,17 +326,17 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
   }
 }
 .image img{
-    max-height: max(380px, 50vh);
+    max-height: max(350px, 50vh);
     width: auto;
     margin: auto;
 }
 .image16 img{
-    max-height: max(380px, 50vh);
+    max-height: max(350px, 50vh);
     width: auto;
     margin: auto;
 }
 .image0 img{
-    max-height: max(380px, 50vh);
+    max-height: max(350px, 50vh);
     width: auto;
     margin: auto;
 }
