@@ -14,6 +14,21 @@ const Form = () => {
         service: '',
         msg: ''
     });
+    const handleOnClickSubmit = (e) => {
+        e.preventDefault();
+        try{
+            fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY0MDYzMDA0M2Q1MjZiNTUzZCI_3D_pc", {  // Enter your IP address here
+        
+          method: 'POST', 
+          mode: 'cors', 
+          body: JSON.stringify(data) // body data type must match "Content-Type" header
+        
+        })
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
     return (
         <div className={styles.container}>
             <div className={styles.box1}>
@@ -71,7 +86,7 @@ const Form = () => {
                             }
                         })
                     }}/>
-                    <button>Submit</button>
+                    <button onClick={handleOnClickSubmit} >Submit</button>
                 </form>
             </div>
         </div>

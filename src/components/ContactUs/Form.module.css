@@ -143,6 +143,7 @@
     font-size: 20px;
     line-height: 30px;
     color: #ffffff !important;
+    cursor: pointer;
 }
 
 .box2 textarea {
