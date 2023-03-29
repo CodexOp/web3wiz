@@ -10,11 +10,11 @@ export default function ProjectNav() {
 	  <div className={styles.navWrapper} id='nav-wrapper' >
 	    <nav className={styles.primaryNavigation}>
 	      <ul className={styles.navList} aria-label="Primary" id="primary-navigation">
-	        <li><button onClick={() => setSelected(0)} className={!(selected === 0)? styles.noStyle: styles.btnStyle}> Websites</button></li>
-	        <li><button onClick={() => setSelected(1)} className={!(selected === 1)? styles.noStyle: styles.btnStyle}> NFT&nbsp;minting&nbsp;websites</button></li>
-	        <li><button onClick={() => setSelected(2)} className={!(selected === 2)? styles.noStyle: styles.btnStyle}> Dashboards</button></li>
-	        <li><button onClick={() => setSelected(3)} className={!(selected === 3)? styles.noStyle: styles.btnStyle}> Calculators</button></li>
-	        <li><button onClick={() => setSelected(4)} className={!(selected === 4)? styles.noStyle: styles.btnStyle}> Staking&nbsp;Websites</button></li>
+	        <a  href="#id1"><li><button onClick={() => setSelected(0)} className={!(selected === 0)? styles.noStyle: styles.btnStyle}> Websites</button></li></a>
+	        <a  href="#id9"><li><button onClick={() => setSelected(1)} className={!(selected === 1)? styles.noStyle: styles.btnStyle}> NFT&nbsp;minting&nbsp;websites</button></li></a>
+	        <a  href="#id16"><li><button onClick={() => setSelected(2)} className={!(selected === 2)? styles.noStyle: styles.btnStyle}> Dashboards</button></li></a>
+	        <a  href="#id14"><li><button onClick={() => setSelected(3)} className={!(selected === 3)? styles.noStyle: styles.btnStyle}> Calculators</button></li></a>
+	        <a  href="#id20"><li><button onClick={() => setSelected(4)} className={!(selected === 4)? styles.noStyle: styles.btnStyle}> Staking&nbsp;Websites</button></li></a>
 	      </ul>
 	    </nav>
 	  </div>
