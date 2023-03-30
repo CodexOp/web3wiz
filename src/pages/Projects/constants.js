@@ -7,6 +7,7 @@ import teslaBotsProject from "../../assets/teslaBotsProject.png";
 import qingLongInuProject from "../../assets/qingLongInuProject.png";
 import renq from "../../assets/renq.png";
 import rentItMiner from "../../assets/rentItMiner.png";
+import dcuStaking from "../../assets/dcuStaking.png";
 import cerebreumProject from "../../assets/cerebreumProject.png";
 import cerebreumStaking from "../../assets/cerebrumStaking.png";
 import cakepoolStaking from "../../assets/cakepoolStaking.png";
@@ -256,7 +257,7 @@ export const contents = {
       projectDescription:
         "calculation of rewards is now easy with Lmeta calculator, check your returns on investment with help of lmeta calculator Lucky Metaverse is a rebranding and restructuring of the old project Metaface",
       projectWebsite: "https://www.dashboard.luckymetaverse.org/",
-      projectImage: luckyCalc.png,
+      projectImage: luckyCalc,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/Luckymetaverse_official",
       backgroundColor: "#64A4FF",
@@ -390,8 +391,21 @@ export const contents = {
     },
 
     {
-      projectName: "Matrix",
+      projectName: "DCU Staking",
       index: "27",
+      projectDescription:
+        "DCU staking is mulyiple staking platform where you can stake your token for 30/60/90/ 180 days depends how much APY you want its vary from 10-23 depend on days locked also it is integrated with Rainbow Kit so you can easily connect ypur wallet and stake tokens",
+      projectWebsite: "https://dcustaking.netlify.app/",
+      projectImage: dcuStaking,
+      connectText: "Visit Website",
+      projectTelegram: "https://t.me/DecentralizedUnited",
+      backgroundColor: "#3F8EF7",
+      headerColor: "#001827",
+      textColor: "#001827",
+    },
+    {
+      projectName: "Matrix",
+      index: "28",
       projectDescription:
         "A unique concept website that show us how can we escape the matrix, this website is completely based on the choices people make, you can choose a blue pill (easy way) or red pill (toufgh way) ",
       projectWebsite: "https://matrix-labs-pills.netlify.app/",
@@ -405,7 +419,7 @@ export const contents = {
 
     {
       projectName: "Zolo",
-      index: "28",
+      index: "29",
       projectDescription:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
       projectWebsite:
@@ -419,7 +433,7 @@ export const contents = {
     },
     {
       projectName: "Klever Wallet",
-      index: "29",
+      index: "30",
       projectDescription:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
       projectWebsite:
@@ -434,7 +448,7 @@ export const contents = {
 
     {
       projectName: "Truliv",
-      index: "30",
+      index: "31",
       projectDescription:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
       projectWebsite:
@@ -448,7 +462,7 @@ export const contents = {
     },
     {
       projectName: "Nucle",
-      index: "31",
+      index: "32",
       projectDescription:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
       projectWebsite: "https://play.google.com/store/apps/details?id=io.nucle",

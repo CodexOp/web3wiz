@@ -8,7 +8,7 @@ import ProjectNav from "./Components/ProjectNav";
 export default function Projects() {
   const [backgroundColor, setBackgroundColor] = React.useState("#adf6ff");
   const [imgDiv, setImgDiv] = React.useState(<div></div>);
-  const colors = ["#86EBF8", "#64A4FF", "#5483E2", "#0F41A8", "#21C677", "#FFB47D", "#C7AB64", "#BBAA8F", "#FF7DB6", "#21C677", "#58C1EF", "#4792E4", "#3F84E5", "#FFD66B", "#86EBF8", "#64A4FF", "#FFAAD4",  "#BCBBFF", "#64A4FF", "#21C677", "#86EBF8", "#5483E2", "#FF7DB6", "#BBAA8F", "#21C677", "#B5FFB1", "#51ADE5", "#CFB8FF", "#FFC48D", "#97ADFF"]
+  const colors = ["#86EBF8", "#64A4FF", "#5483E2", "#0F41A8", "#21C677", "#FFB47D", "#C7AB64", "#BBAA8F", "#FF7DB6", "#21C677", "#58C1EF", "#4792E4", "#3F84E5", "#FFD66B", "#86EBF8", "#64A4FF", "#FFAAD4",  "#BCBBFF", "#64A4FF", "#21C677", "#86EBF8", "#5483E2", "#FF7DB6", "#BBAA8F", "#21C677","3F8EF7", "#B5FFB1", "#51ADE5", "#CFB8FF", "#FFC48D", "#97ADFF"]
   const ref = React.useRef(null);
   const [projectImage, setProjectImage] = React.useState(contents.websites[0].projectImage);
   const [isLanding, setIsLanding] = React.useState(true);
@@ -20,10 +20,10 @@ export default function Projects() {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          for(let i=0; i<30; i++){
+          for(let i=0; i<31; i++){
             if(entry.target.className.includes(`c${i}`)){
               setProjectImage(contents.websites[i].projectImage)
-              if(i==30){
+              if(i==31){
                 setImgDiv(<div key={`c${i}`} className={styles.image30}>  
                 <img src={contents.websites[i].projectImage} alt="" />
             </div>)
@@ -44,11 +44,11 @@ export default function Projects() {
         } 
       });
     }, options);
-    for(let i=0; i<30; i++){
+    for(let i=0; i<31; i++){
       observer.observe(document.querySelector(`.c${i}`));
     }
     return () => {
-      for(let i=0; i<30; i++){
+      for(let i=0; i<31; i++){
         observer.unobserve(document.querySelector(`.c${i}`));
       }
     }
