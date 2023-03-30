@@ -365,7 +365,6 @@
 .phoneNodiv{
   display: flex;
   gap: 1rem;
-  border: 1px solid white;
 }
 .countryInput{
   width: 10% !important;

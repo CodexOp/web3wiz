@@ -1,0 +1,314 @@
+.container {
+  --unit: 16px;
+  display: flex;
+  justify-content: space-evenly;
+  color: black;
+  background-color: white;
+  padding: calc(var(--unit) * 9.56) 0px;
+}
+
+.leftBox {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.leftBox > .contactus,
+.leftBox > .aboutus,
+.leftBox > .more {
+  display: none;
+}
+
+.rightBox {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--unit) * 4.8);
+  font-family: 'Poppins';
+  font-style: normal;
+}
+
+.rightBox button,
+.leftBox button {
+  border: none;
+}
+
+.contactus {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--unit) * 2.6);
+  padding: calc(var(--unit) * 5) calc(var(--unit) * 2.5);
+  background: #f2f2f2;
+  border-radius: calc(var(--unit) * 0.6);
+  text-align: center;
+  margin: 30px 0px;
+}
+
+.contactus input {
+  height: 100%;
+  width: 65%;
+  padding: calc(var(--unit) * 1.12) calc(var(--unit) * 1.18);
+  outline: none;
+  border: 1px solid #27b67a;
+  border-radius: calc(var(--unit) * 0.3) 0px 0px calc(var(--unit) * 0.3);
+  font-weight: 400;
+  font-size: calc(var(--unit) * 0.8);
+  line-height: calc(var(--unit) * 1.8);
+  color: rgba(0, 0, 0, 0.46);
+}
+
+.contactus > h2 {
+  font-weight: 400;
+  font-size: calc(var(--unit) * 2.25);
+  line-height: calc(var(--unit) * 2.8);
+  color: #000000;
+}
+
+.contactus > h2 > span {
+  font-weight: 700;
+}
+
+.contactus > p {
+  font-weight: 400;
+  font-size: calc(var(--unit) * 1.25);
+  line-height: calc(var(--unit) * 1.8);
+  color: #000000;
+}
+
+.contactus div {
+  height: calc(var(--unit) * 3.8);
+  display: flex;
+}
+
+.contactus button {
+  background: #27b67a;
+  border-radius: 0px calc(var(--unit) * 0.3) calc(var(--unit) * 0.3) 0px;
+  width: 35%;
+  height: 100%;
+  font-weight: 600;
+  font-size: calc(var(--unit) * 1.25);
+  line-height: calc(var(--unit) * 1.8);
+  color: #ffffff;
+}
+
+.aboutus {
+  background: #f2f2f2;
+  border: 1px solid #e6e6e6;
+  border-radius: calc(var(--unit) * 0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutus > div:nth-child(1) {
+  padding: calc(var(--unit) * 6.25) calc(var(--unit) * 1.62);
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  border-radius: calc(var(--unit) * 0.6) calc(var(--unit) * 0.6) 0px 0px;
+}
+
+.aboutus > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--unit) * 2.25);
+  padding: calc(var(--unit) * 3.3) calc(var(--unit) * 3.6);
+}
+
+.aboutus h2 {
+  font-weight: 700;
+  font-size: calc(var(--unit) * 2.25);
+  line-height: calc(var(--unit) * 2.8);
+  color: #000000;
+}
+
+.aboutus p {
+  font-weight: 400;
+  font-size: calc(var(--unit) * 1.25);
+  line-height: calc(var(--unit) * 2);
+  color: #000000;
+}
+
+.aboutus button {
+  color: #ffffff;
+  background: #27b67a;
+  border-radius: calc(var(--unit) * 0.3);
+  width: 50%;
+  height: calc(var(--unit) * 4.18);
+  align-self: center;
+  font-size: calc(var(--unit) * 1.25);
+  line-height: calc(var(--unit) * 1.8);
+}
+
+.more {
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f2;
+  border: 1px solid #e6e6e6;
+  border-radius: calc(var(--unit) * 0.6);
+}
+
+.more > h2 {
+  padding: calc(var(--unit) * 2.3);
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(var(--unit) * 1.5);
+  line-height: calc(var(--unit) * 2.8);
+  color: #000000;
+}
+
+.more > ul {
+  padding: 0px calc(var(--unit) * 4.6);
+}
+
+.more > ul > li {
+  list-style-type: disc;
+  margin-bottom: calc(var(--unit) * 1.12);
+  font-weight: 400;
+  font-size: calc(var(--unit) * 1.25);
+  line-height: calc(var(--unit) * 2);
+  color: #000000;
+}
+
+.dotHeading {
+  position: relative;
+}
+
+.dotHeading > h1 {
+  font-weight: 700;
+  font-size: calc(var(--unit) * 2.8);
+  line-height: calc(var(--unit) * 5.31);
+}
+
+.dotHeading > div {
+  width: calc(var(--unit) * 2.06);
+  height: calc(var(--unit) * 2.06);
+  border-radius: 50%;
+  background-color: #061f35;
+  position: absolute;
+  top: 0px;
+  left: calc(var(--unit) * -2.37);
+}
+
+/* custom size classes */
+.size_32 {
+  font-size: calc(var(--unit) * 2);
+}
+.size_28 {
+  font-size: calc(var(--unit) * 1.75);
+}
+.size_24 {
+  font-size: calc(var(--unit) * 1.5);
+}
+.size_20 {
+  font-size: calc(var(--unit) * 1.25);
+}
+
+/* custom line-height classes */
+.line_40 {
+  line-height: calc(var(--unit) * 2.5);
+}
+.line_36 {
+  line-height: calc(var(--unit) * 2.25);
+}
+.line_30 {
+  line-height: calc(var(--unit) * 1.8);
+}
+
+.twoImage {
+  display: flex;
+  justify-content: space-between;
+}
+
+.twoImage > img {
+  width: 49%;
+}
+
+.expand {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--unit) * 1.8);
+  padding: calc(var(--unit) * 1.75) calc(var(--unit) * 3.1);
+  background: #f2f2f2;
+  border: 1px solid #e6e6e6;
+  border-radius: calc(var(--unit) * 0.6);
+}
+
+.expand > h1 {
+  font-weight: 700;
+  font-size: calc(var(--unit) * 2.25);
+  line-height: calc(var(--unit) * 2.8);
+  color: #000000;
+}
+
+.expand > p {
+  font-weight: 400;
+  font-size: calc(var(--unit) * 1.25);
+  line-height: calc(var(--unit) * 1.87);
+  color: #000000;
+}
+
+.expand > button {
+  color: #ffffff;
+  background: #27b67a;
+  border-radius: calc(var(--unit) * 0.3);
+  width: 40%;
+  height: calc(var(--unit) * 4.18);
+  align-self: center;
+  font-size: calc(var(--unit) * 1.25);
+  line-height: calc(var(--unit) * 1.8);
+}
+
+.para > span {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    --unit: 14px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    --unit: 12px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    --unit: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    --unit: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    --unit: 10px;
+  }
+
+  .rightBox {
+    display: none;
+  }
+
+  .leftBox {
+    width: 80%;
+  }
+
+  .leftBox > .contactus,
+  .leftBox > .aboutus,
+  .leftBox > .more {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    --unit: 8px;
+  }
+}

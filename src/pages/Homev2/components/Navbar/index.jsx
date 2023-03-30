@@ -30,7 +30,7 @@ export default function Navbar(props) {
             </Link>
             <div className={styles.navbarOptionbtns} style={{display: show ? 'block' : 'none'}} >
                 <div className={styles.highlighted}>
-                  <a href="#home">
+                  <a href="/#home">
                   Home
                   </a>
                 </div>

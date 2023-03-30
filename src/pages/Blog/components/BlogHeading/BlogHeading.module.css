@@ -1,0 +1,84 @@
+.container {
+  --unit: 16px;
+  font-size: var(--font-size);
+  background: linear-gradient(180deg, #002339 -19.53%, #1d0b1d 122.66%);
+  padding: calc(var(--unit) * 14.6) calc(var(--unit) * 10.3);
+}
+
+.container > p {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-size: calc(var(--unit) * 1.5);
+  line-height: calc(var(--unit) * 2.25);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.container > h1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(var(--unit) * 4);
+  line-height: calc(var(--unit) * 5.3);
+  color: #ffffff;
+}
+
+/* @media screen and (max-width: 1000px) {
+  .container {
+    --unit: 12px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    --unit: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    --unit: 8px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    --unit: 6px;
+  }
+} */
+
+@media screen and (max-width: 1400px) {
+  .container {
+    --unit: 14px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    --unit: 12px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    --unit: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    --unit: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    --unit: 6px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    --unit: 4px;
+  }
+}
