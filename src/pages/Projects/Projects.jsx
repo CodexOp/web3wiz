@@ -8,7 +8,7 @@ import ProjectNav from "./Components/ProjectNav";
 export default function Projects() {
   const [backgroundColor, setBackgroundColor] = React.useState("#adf6ff");
   const [imgDiv, setImgDiv] = React.useState(<div></div>);
-  const colors = ["#86EBF8", "#64A4FF", "#5483E2", "#0F41A8", "#FF7DB6", "#FFB47D", "#FFD66B", "#C7AB64", "#BBAA8F", "#FFAAD4", "#BCBBFF", "#B5FFB1", "#51ADE5", "#CFB8FF", "#FFC48D", "#97ADFF", "#b5349e"]
+  const colors = ["#86EBF8", "#64A4FF", "#5483E2", "#0F41A8", "#21C677", "#FFB47D", "#C7AB64", "#BBAA8F", "#FF7DB6", "#21C677", "#58C1EF", "#4792E4", "#3F84E5", "#FFD66B", "#86EBF8", "#64A4FF", "#FFAAD4",  "#BCBBFF", "#64A4FF", "#21C677", "#86EBF8", "#5483E2", "#FF7DB6", "#BBAA8F", "#21C677", "#B5FFB1", "#51ADE5", "#CFB8FF", "#FFC48D", "#97ADFF"]
   const ref = React.useRef(null);
   const [projectImage, setProjectImage] = React.useState(contents.websites[0].projectImage);
   const [isLanding, setIsLanding] = React.useState(true);
@@ -20,11 +20,11 @@ export default function Projects() {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          for(let i=0; i<16; i++){
+          for(let i=0; i<30; i++){
             if(entry.target.className.includes(`c${i}`)){
               setProjectImage(contents.websites[i].projectImage)
-              if(i==15){
-                setImgDiv(<div key={`c${i}`} className={styles.image16}>  
+              if(i==30){
+                setImgDiv(<div key={`c${i}`} className={styles.image30}>  
                 <img src={contents.websites[i].projectImage} alt="" />
             </div>)
               }
@@ -44,11 +44,11 @@ export default function Projects() {
         } 
       });
     }, options);
-    for(let i=0; i<16; i++){
+    for(let i=0; i<30; i++){
       observer.observe(document.querySelector(`.c${i}`));
     }
     return () => {
-      for(let i=0; i<16; i++){
+      for(let i=0; i<30; i++){
         observer.unobserve(document.querySelector(`.c${i}`));
       }
     }
@@ -67,7 +67,7 @@ export default function Projects() {
                   // setBackgroundColor(content.backgroundColor)
                   return (
                     <>
-                    <div className={`c${index.toString()}`}>
+                    <div className={`c${index.toString()}`} id={`id${index.toString()}`}>
                       <ProjectItem
                         key={index}
                         index={content.index}
@@ -80,6 +80,7 @@ export default function Projects() {
                         backgroundColor={content.backgroundColor}
                         textColor={content.textColor}
                         headerColor={content.headerColor}
+                        techUsed={content.techUsed}
                       />
                     </div>
                 
@@ -103,7 +104,7 @@ export default function Projects() {
                   <div className={styles.container}>
                     <div className={styles.flexContainer1}>
                       {index === 0 && <ProjectNav />}
-                      <div className={`c${index.toString()}`}>
+                      <div className={`c${index.toString()}`}  id={`id${index.toString()}`}>
                         <ProjectItem
                           key={index}
                           index={content.index}
@@ -116,6 +117,8 @@ export default function Projects() {
                           backgroundColor={content.backgroundColor}
                           textColor={content.textColor}
                           headerColor={content.headerColor}
+                          techUsed={content.techUsed}
+
                         />
                       </div>
                       <div className={styles.image1} ref={ref}>  
