@@ -6,7 +6,7 @@ import lottie from 'lottie-web';
 import animation from '../../assets/success_animation.json';
 let triggerLottie;
 
-const Lottie = () => {
+const Lottie = ({ text }) => {
   const ref = useRef(null);
   const [active, setActive] = useState(false);
 
@@ -28,7 +28,12 @@ const Lottie = () => {
 
   triggerLottie = trigger;
 
-  return <div className={styles.lottie} ref={ref} style={{ display: `${active ? 'block' : 'none'}` }}></div>;
+  return (
+    <div className={styles.lottie} style={{ display: `${active ? 'block' : 'none'}` }}>
+      <p>{text}</p>
+      <div ref={ref}></div>
+    </div>
+  );
 };
 
 export { Lottie, triggerLottie };
