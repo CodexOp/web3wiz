@@ -11,6 +11,9 @@ import content from '../data/data';
 import BlogHeading from '../BlogHeading/BlogHeading';
 
 const MainBody = ({ id }) => {
+  var num = 0;
+  if(id === "Which-platforms-should-you-use-to-buy-NFTs-in-2023") num = 1;
+  else if(id === "Top-5-real-world-use-cases-of-blockchain-technology") num = 2;
   return (
     <>
       <BlogHeading read={content[id].heading.read} heading={content[id].heading.text} />
@@ -41,7 +44,7 @@ const MainBody = ({ id }) => {
         <div className={styles.rightBox}>
           <ContactUs />
           <AboutUs />
-          <More />
+          <More num={num}/>
           <ContactUs sticky={true} />
         </div>
       </div>
