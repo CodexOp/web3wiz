@@ -52,6 +52,7 @@ import ReactPixel from "react-facebook-pixel"
 import { getAnalytics, logEvent } from "firebase/analytics";
 import { Lottie, triggerLottie } from '../../components/Lottie/Lottie'
 import useFacebookPixel from '../../hooks/FacebookPixel/useFacebookPixel';
+import validator from 'validator';
 
 
 const options = {
@@ -77,6 +78,7 @@ export default function Homev2()
           faqs: false,
         });
         const [userEmail, setUserEmail] = useState("");
+        const [validEmail, setValidEmail] = useState(true);
         useEffect(()=>{
           ReactPixel.pageView(); // For tracking page view
         }, [])
@@ -171,7 +173,7 @@ export default function Homev2()
 
     return (
         <>
-            <Lottie/>
+            <Lottie text={ 'Thank you for subscribing! Stay tuned for our latest news and updates.'} />
             <Navbar />
             <div className='landing'></div>
             <div className={styles.homeWrapper} id="home" >
@@ -616,15 +618,23 @@ export default function Homev2()
                 <div className={styles.signupWrapper}>
                     <div  className={styles.signupInput}>
                         <input placeholder="Enter Your Email Address" value={userEmail} onChange={(event)=>{
-                            setUserEmail(event.target.value)
+                                setUserEmail(event.target.value);
+                                setValidEmail(true);
                         }}/>
-                        <div className={styles.subscribeBtn} onClick={()=> {
-                                handleOnClickSubscribe();
-                                triggerLottie();
+                            <div className={styles.subscribeBtn} onClick={() => {
+                                if (validator.isEmail(userEmail)) {
+                                    handleOnClickSubscribe();
+                                    triggerLottie();
+                                    setUserEmail('');
+                                }
+                                else {
+                                    setValidEmail(false);
+                                }
                         }} style={{cursor: 'pointer'}}>
                             Subscribe
                         </div>
-                    </div>
+                        </div>
+                        {validEmail ? null : <p className={styles.emailError}>Please enter valid Email</p>}
                 </div>
                 <div className={styles.socialIconDiv}>
                         <a href="https://instagram.com/thematrixlabs.eth?igshid=NDk5N2NlZjQ=">

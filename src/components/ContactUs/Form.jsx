@@ -33,7 +33,7 @@ const Form = () => {
     }
     return (
         <div className={styles.container}>
-            <Lottie/>
+            <Lottie text={"Thanks for reaching out! We'll be in touch soon." } />
             <div className={styles.box1}>
                 <div>
                     <h1>Have a project?</h1>
