@@ -104,24 +104,24 @@ export default function Homev2()
               }
               if (entry.target.className === "projectsDone" && !isIntersecting.projectsDone) {
                 console.log("intersecting projects done");
-                ReactPixel.trackCustom('ProjectsDonePageView', {value: 2, currency: 'USD'});
-                sendDataToPably({event: "ProjectsDonePageView", value: 2, currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000)});
+                ReactPixel.trackCustom('ProjectsDoneSectionView', {value: 2, currency: 'USD'});
+                sendDataToPably({event: "ProjectsDoneSectionView", value: 2, currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000)});
                 setIsIntersecting((state)=>{
                   return {...state, projectsDone: true}
                 });
               }
               if (entry.target.className === "servicesProvided" && !isIntersecting.servicesProvided) {
                 console.log("intersecting services provided");
-                ReactPixel.trackCustom('ServicesProvidedPageView', {value: 3, currency: 'USD'});
-                sendDataToPably({event: "ServicesProvidedPageView", value: 3, currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000)});
+                ReactPixel.trackCustom('ServicesProvidedSectionView', {value: 3, currency: 'USD'});
+                sendDataToPably({event: "ServicesProvidedSectionView", value: 3, currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000)});
                 setIsIntersecting((state)=>{
                   return {...state, servicesProvided: true}
                 });
               }
               if (entry.target.className === "testimonials" && !isIntersecting.testimonials) {
                 console.log("intersecting testimonials");
-                ReactPixel.trackCustom('TestimonialsPageView', {value: 4, currency: 'USD'});
-                sendDataToPably({event: "TestimonialsPageView", value: 4, currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000)});
+                ReactPixel.trackCustom('TestimonialsSectionView', {value: 4, currency: 'USD'});
+                sendDataToPably({event: "TestimonialsSectionView", value: 4, currency: "USD", userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000)});
                 setIsIntersecting((state)=>{
                   return {...state, testimonials: true}
                 });
@@ -129,6 +129,9 @@ export default function Homev2()
             }
             });
           });
+
+ 
+
           const landingElement = document.querySelector(".landing");
           const projectsDoneElement = document.querySelector(".projectsDone");
           const servicesProvidedElement = document.querySelector(".servicesProvided");
@@ -626,6 +629,8 @@ export default function Homev2()
                                     handleOnClickSubscribe();
                                     triggerLottie();
                                     setUserEmail('');
+                                    ReactPixel.trackCustom('newsletterSubscribed', {value: 7500, currency: 'USD'});
+                                     sendDataToPably({event: "newsletterSubscribed", value: 7500, currency: "USD", email:userEmail, userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000)});
                                 }
                                 else {
                                     setValidEmail(false);

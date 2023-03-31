@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import starIcon from "../../components/assests/images/icon-star.svg"
 import quotesIcon from "../../components/assests/images/icon-quotes.svg"
-import clientImg from "../../components/assests/images/icon-clientimg.svg";
+import clientImg from "../../components/assests/images/cakepool.jpg";
 import cosmic from "../../components/assests/images/raised3.png";
 import cerebrum from "../../components/assests/images/cerebreum.jpg";
 import purewallet from "../../components/assests/images/purewallet.jpg";
