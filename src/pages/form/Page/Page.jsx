@@ -223,8 +223,6 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
       setLeadsource(queryParams.get('src'));
     }
 
-    console.log(data);
-
     setCustomHref(
       'https://wa.me/12342559266?text=%20Hi%20I%20am%20' +
         name +

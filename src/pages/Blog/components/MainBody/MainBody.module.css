@@ -32,6 +32,7 @@
 .rightBox button,
 .leftBox button {
   border: none;
+  color: white !important;
 }
 
 .contactus {
