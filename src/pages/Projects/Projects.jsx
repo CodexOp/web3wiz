@@ -6,6 +6,8 @@ import { contents } from "./constants";
 import styles from "./styles.module.css";
 import ProjectNav from "./Components/ProjectNav";
 import { Link } from 'react-router-dom';
+import useFacebookPixel from '../../hooks/FacebookPixel/useFacebookPixel'
+
 export default function Projects() {
   const [backgroundColor, setBackgroundColor] = React.useState("#adf6ff");
   const [imgDiv, setImgDiv] = React.useState(<div></div>);
@@ -13,6 +15,7 @@ export default function Projects() {
   const ref = React.useRef(null);
   const [projectImage, setProjectImage] = React.useState(contents.websites[0].projectImage);
   const [isLanding, setIsLanding] = React.useState(true);
+  const callFacebookPixel = useFacebookPixel();
   useEffect(() => {
     const options = {
       threshold: 0.6,
@@ -49,8 +52,10 @@ export default function Projects() {
       observer.observe(document.querySelector(`.c${i}`));
     }
     return () => {
-      for(let i=0; i<31; i++){
-        observer.unobserve(document.querySelector(`.c${i}`));
+      for (let i = 0; i < 31; i++) {
+        if (document.querySelector(`.c${i}`)) {
+          observer.unobserve(document.querySelector(`.c${i}`));
+        }
       }
     }
   }, [])
@@ -137,8 +142,7 @@ export default function Projects() {
         <div className={styles.centerElements}>
           <h1>If you like what you see, imagine what we can do for you!
 Get in touch with us and let's turn your ideas into reality.</h1>
-          <button className={styles.getaquotaBtn}>Contact Us</button>
-
+          <Link to='/contact-us' rel="noopener noreferrer"><button className={styles.getaquotaBtn} onClick={() => callFacebookPixel('ClickedContactUs', 10)}>Contact Us</button></Link>
         </div>
       </div>
            

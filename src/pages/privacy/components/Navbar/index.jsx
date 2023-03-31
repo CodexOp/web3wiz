@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom';
 import Logo from '../assests/images/logo.svg';
 import menuIcon from "../assests/images/icon-menu.svg";
 import styles from "./style.module.css";
+// import ReactPixel from 'react-facebook-pixel';
+import useFacebookPixel from '../../../../hooks/FacebookPixel/useFacebookPixel';
 
 export default function Navbar(props) {
+  const callFacebookPixel = useFacebookPixel();
+
   return (
     <>
       <header className={styles.primaryHeader}>
@@ -25,7 +29,7 @@ export default function Navbar(props) {
                 <button>Services</button>
                 <button>Projects</button>
             </div>
-            <div  className={styles.QuotaBtn}>Get a Quote</div>
+            <div  className={styles.QuotaBtn} onClick={() => callFacebookPixel('ClickedGetQuote', 10)}>Get a Quote</div>
             <img className={styles.menuIcon} src={menuIcon} alt="menu-icon"/>
           </div>
         </div>

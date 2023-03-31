@@ -64,6 +64,7 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
     text-decoration: none;
     border: none;
     color: white !important;
+    cursor: pointer;
 }
 @media (max-width: 50em) {
     .flexContainer{

@@ -50,7 +50,8 @@ import Review from './components/reviews/Review';
 import Raised from './components/amountRaised/Raised';
 import ReactPixel from "react-facebook-pixel"
 import { getAnalytics, logEvent } from "firebase/analytics";
-import {Lottie, triggerLottie} from '../../components/Lottie/Lottie'
+import { Lottie, triggerLottie } from '../../components/Lottie/Lottie'
+import useFacebookPixel from '../../hooks/FacebookPixel/useFacebookPixel';
 
 
 const options = {
@@ -62,6 +63,7 @@ const options = {
 
 export default function Homev2()
 {
+        const callFacebookPixel = useFacebookPixel();
         const [isIntersecting, setIsIntersecting] = useState({
           landing: false,
           whyUs: false,
@@ -202,7 +204,7 @@ export default function Homev2()
                             <div className={styles.titleFeatureItemContent2}>Team Members</div>
                         </div>
                     </div>
-                    <Link to="/form"><div className={styles.getaquotaBtn}>Get&nbsp;a&nbsp;Quote <img className={styles.rightarrow} src={rightarrow} alt="right arrow" />
+                    <Link to="/form"><div className={styles.getaquotaBtn} onClick={() => callFacebookPixel('GetQuoteClicked', 10)}>Get&nbsp;a&nbsp;Quote <img className={styles.rightarrow} src={rightarrow} alt="right arrow" />
 </div></Link>
                 </div>
                 <img src={bg1Img} alt="ai-img" className={styles.floatImg} />
@@ -323,7 +325,7 @@ export default function Homev2()
                         market by leveraging our best-in-class<br/>
                         dapp development services
                     </div>
-                    <Link to="/form"><div className={styles.styledwhiteBtn}>Discuss Your Project Idea</div></Link>
+                    <Link to="/form"><div className={styles.styledwhiteBtn} onClick={() => callFacebookPixel('ClickedDiscussProjectIdea', 10)}>Discuss Your Project Idea</div></Link>
                 </div>
             </div>
             <div className='projectsDone'> </div>
@@ -335,7 +337,7 @@ export default function Homev2()
                     <img src={scribbleImg} alt="scribbleImg" className={styles.scribbleImg} />
                     <img src={projectsImg} alt="projectsImg" className={styles.projectsImg} />
                 </div>
-                <Link to="/projects"><div className={styles.seeallProjectsBtn}>See&nbsp;all&nbsp;Projects</div></Link>
+                <Link to="/projects"><div className={styles.seeallProjectsBtn} onClick={() => callFacebookPixel('ClickedSeeAllProjects', 3)}>See&nbsp;all&nbsp;Projects</div></Link>
                 <Partners />
             </div>
             <div className={styles.styledSectionWrapper}>
@@ -345,7 +347,7 @@ export default function Homev2()
                         Dapp solution that can give your<br/>
                         business the much-needed boost?
                     </div>
-                    <Link to="/form"><div className={styles.styledwhiteBtn}>Talk With Experts</div></Link>
+                    <Link to="/form" onClick={() => callFacebookPixel('ClickedTalkWithExperts', 4)}><div className={styles.styledwhiteBtn}>Talk With Experts</div></Link>
                 </div>
             </div>
             <div className={styles.mainWrapper5}>
@@ -589,7 +591,7 @@ export default function Homev2()
                                 <div className={styles.blogDesc}>
                                 Blockchain technology can be used to create an unchangeable and secure record of a product's journey  <br/> .&nbsp;.&nbsp;.
                          </div>
-                        <Link to='blog/Top-5-real-world-use-cases-of-blockchain-technology' target='_blank' rel="noopener noreferrer"><div className={styles.readmoreBtn}>Read More{'>'}</div></Link>
+                        <Link to='blog/Top-5-real-world-use-cases-of-blockchain-technology' target='_blank' rel="noopener noreferrer"><div className={styles.readmoreBtn} onClick={() => callFacebookPixel('ClickedReadMore', 3)}>Read More{'>'}</div></Link>
                     </div>
                     <div className={styles.blog}>
                          <img src={blogImg2} className={styles.blogImg} alt="blog-img" />
@@ -597,7 +599,7 @@ export default function Homev2()
                          <div className={styles.blogDesc}>
                          In recent years, the world of NFTs has exploded, with more and more people investing in digital assets like <br/> .&nbsp;.&nbsp;.
                          </div>
-                        <Link to='blog/Which-platforms-should-you-use-to-buy-NFTs-in-2023' target='_blank' rel="noopener noreferrer"><div className={styles.readmoreBtn}>Read More{'>'}</div></Link>
+                        <Link to='blog/Which-platforms-should-you-use-to-buy-NFTs-in-2023' target='_blank' rel="noopener noreferrer"><div className={styles.readmoreBtn} onClick={() => callFacebookPixel('ClickedReadMore', 3)}>Read More{'>'}</div></Link>
                     </div>
                     <div className={styles.blog}>
                          <img src={blogImg3} className={styles.blogImg} alt="blog-img" />
@@ -605,7 +607,7 @@ export default function Homev2()
                          <div className={styles.blogDesc}>
                          Metaverse games are online virtual worlds where players can interact with each other, explore, create, and play games <br/> .&nbsp;.&nbsp;.
                          </div>
-                        <Link to='blog/Top-5-Metaverse-Games,-2023-edition' target='_blank' rel="noopener noreferrer"><div className={styles.readmoreBtn}>Read More{'>'}</div></Link>
+                        <Link to='blog/Top-5-Metaverse-Games,-2023-edition' target='_blank' rel="noopener noreferrer"><div className={styles.readmoreBtn} onClick={() => callFacebookPixel('ClickedReadMore', 3)}>Read More{'>'}</div></Link>
                     </div>
                     </div>
                 </div>

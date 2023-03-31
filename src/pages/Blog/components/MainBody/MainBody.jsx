@@ -13,10 +13,7 @@ import BlogHeading from '../BlogHeading/BlogHeading';
 const MainBody = ({ id }) => {
   return (
     <>
-      <BlogHeading
-        read={content[id].heading.read}
-        heading={content[id].heading.text}
-      />
+      <BlogHeading read={content[id].heading.read} heading={content[id].heading.text} />
       <div className={styles.container}>
         <div className={styles.leftBox}>
           {content[id].body.map((elm, id) => {
@@ -27,15 +24,7 @@ const MainBody = ({ id }) => {
             } else if (type === 'image') {
               return <Image src1={src1} src2={src2} key={id} />;
             } else if (type === 'para') {
-              return (
-                <Para
-                  text={text}
-                  weight={weight}
-                  line={line}
-                  size={size}
-                  key={id}
-                />
-              );
+              return <Para text={text} weight={weight} line={line} size={size} key={id} />;
             } else if (type === 'expand') {
               return <Expand key={id} />;
             } else if (type === 'contactus') {
@@ -53,7 +42,7 @@ const MainBody = ({ id }) => {
           <ContactUs />
           <AboutUs />
           <More />
-          <ContactUs />
+          <ContactUs sticky={true} />
         </div>
       </div>
     </>
