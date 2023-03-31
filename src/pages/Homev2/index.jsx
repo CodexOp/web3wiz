@@ -337,7 +337,7 @@ export default function Homev2()
                     <img src={scribbleImg} alt="scribbleImg" className={styles.scribbleImg} />
                     <img src={projectsImg} alt="projectsImg" className={styles.projectsImg} />
                 </div>
-                <Link to="/projects"><div className={styles.seeallProjectsBtn} onClick={() => callFacebookPixel('ClickedSeeAllProjects', 3)}>See&nbsp;all&nbsp;Projects</div></Link>
+                <Link to="/projects" target='_blank' rel="noopener noreferrer"><div className={styles.seeallProjectsBtn} onClick={() => callFacebookPixel('ClickedSeeAllProjects', 3)}>See&nbsp;all&nbsp;Projects</div></Link>
                 <Partners />
             </div>
             <div className={styles.styledSectionWrapper}>

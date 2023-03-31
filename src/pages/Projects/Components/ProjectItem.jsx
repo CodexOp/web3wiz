@@ -15,10 +15,10 @@ export default function ProjectItem({index, projectName, projectDescription, pro
         </div>
         <p>{projectDescription} <span><button onClick={()=>{
           navigator.clipboard.writeText("https://thematrixlabs.com/projects/" + `#id${index.toString()}`)
-        }} style={{all: "unset", cursor: "pointer"}}><LinkImg stroke={textColor} width={"20px"}/></button></span> </p>
+        }}><LinkImg stroke={textColor} width={"20px"}/></button></span> </p>
         <div className={styles.connectToProject} style={{ "--textColor": textColor }}>
-          <a href={projectWebsite} onClick={() => callFacebookPixel(`Clicked${projectName}`, 3)}>{connectText}</a>
-          {projectTelegram ? <a href={projectWebsite}><img src={telegram} alt="" onClick={() => callFacebookPixel(`Clicked${projectName}Telegram`, 3)}/></a>: <></>}
+          <a href={projectWebsite} onClick={() => callFacebookPixel(`Clicked${projectName}`, 3)}  target='_blank' rel="noopener noreferrer">{connectText}</a>
+          <a href={projectWebsite} target='_blank' rel="noopener noreferrer"><img src={telegram} alt="" onClick={() => callFacebookPixel(`Clicked${projectName}Telegram`, 3)}/></a>
         </div>
       </div>
     </>

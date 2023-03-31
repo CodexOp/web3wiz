@@ -4,11 +4,12 @@ import arrowDown from "../../../assets/arrow-down.png"
 import landingImg from "../../../assets/projectLandingImg.png"
 import { Link } from 'react-router-dom';
 import useFacebookPixel from '../../../hooks/FacebookPixel/useFacebookPixel';
-
+import Navbar from '../../Homev2/components/Navbar';
 export default function LandingProjects({ setIsLanding }) {
     const callFacebookPixel = useFacebookPixel();
   return (
     <div className={styles.background}>
+        <Navbar/>
         <div className={styles.container}>
             <div className={styles.flexContainer}>
                 <div className={styles.flexItem1}>

@@ -14,11 +14,12 @@ export default function Projects() {
   const colors = ["#86EBF8", "#64A4FF", "#5483E2", "#0F41A8", "#21C677", "#FFB47D", "#C7AB64", "#BBAA8F", "#FF7DB6", "#21C677", "#58C1EF", "#4792E4", "#3F84E5", "#FFD66B", "#86EBF8", "#64A4FF", "#FFAAD4",  "#BCBBFF", "#64A4FF", "#21C677", "#86EBF8", "#5483E2", "#FF7DB6", "#BBAA8F", "#21C677","3F8EF7", "#B5FFB1", "#51ADE5", "#CFB8FF", "#FFC48D", "#97ADFF"]
   const ref = React.useRef(null);
   const [projectImage, setProjectImage] = React.useState(contents.websites[0].projectImage);
+  const [navSelected, setNavSelected] = React.useState(0)
   const [isLanding, setIsLanding] = React.useState(true);
   const callFacebookPixel = useFacebookPixel();
   useEffect(() => {
     const options = {
-      threshold: 0.6,
+      threshold: 0.5,
       rootMargin: "0px 0px -50px 0px"
     }
     const observer = new IntersectionObserver(entries => {
@@ -27,6 +28,12 @@ export default function Projects() {
           for(let i=0; i<31; i++){
             if(entry.target.className.includes(`c${i}`)){
               setProjectImage(contents.websites[i].projectImage)
+              if(i <= 8) setNavSelected(0)
+              else if(i < 14) setNavSelected(9)
+              else if(i < 16) setNavSelected(14)
+              else if(i < 20) setNavSelected(16)
+              else if(i < 27) setNavSelected(20)
+              else setNavSelected(27)
               if(i===30){
                 setImgDiv(<div key={`c${i}`} className={styles.image30}>  
                 <img src={contents.websites[i].projectImage} alt="" />
@@ -51,6 +58,7 @@ export default function Projects() {
     for(let i=0; i<31; i++){
       observer.observe(document.querySelector(`.c${i}`));
     }
+    window.scrollTo(0, 0)
     return () => {
       for (let i = 0; i < 31; i++) {
         if (document.querySelector(`.c${i}`)) {
@@ -58,6 +66,7 @@ export default function Projects() {
         }
       }
     }
+    
   }, [])
   return (
   <>
@@ -68,7 +77,7 @@ export default function Projects() {
           <div className={styles.container}>
           <div className={styles.projectContent}>
               <div>
-                <ProjectNav />
+                <ProjectNav navSelected={navSelected}/>
                 {contents.websites.map((content, index) => {
                   // setBackgroundColor(content.backgroundColor)
                   return (
