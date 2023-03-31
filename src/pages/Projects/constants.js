@@ -5,7 +5,7 @@ import godzStaking from "../../assets/godzStaking.png";
 import rewardsCoinProject from "../../assets/rewardsCoinProject.png";
 import teslaBotsProject from "../../assets/teslaBotsProject.png";
 import qingLongInuProject from "../../assets/qingLongInuProject.png";
-import renq from "../../assets/renq.png";
+import renq from "../../assets/renq1.png";
 import rentItMiner from "../../assets/rentItMiner.png";
 import dcuStaking from "../../assets/dcuStaking.png";
 import cerebreumProject from "../../assets/cerebreumProject.png";
@@ -13,15 +13,16 @@ import cerebreumStaking from "../../assets/cerebrumStaking.png";
 import cakepoolStaking from "../../assets/cakepoolStaking.png";
 import matrix from "../../assets/matrix.png";
 import lmetaDapp from "../../assets/lmetaDapp.png";
+import lmetaDashboard from "../../assets/lmetaDashboard.png";
 import metaLoop from "../../assets/metaloop.png";
 import kuppyStake from "../../assets/kuppyStake.png";
 import kuppyCalci from "../../assets/kuppyCalci.png";
-import crokingProject from "../../assets/crokingProject.png";
+import crokingProject from "../../assets/crokingProject1.png";
 import aiVerseProject from "../../assets/aiVerseProject.png";
 import cakeCalc from "../../assets/cakeCalc.png";
 import luckyCalc from "../../assets/luckyCalc.png";
 import kuppyWebsite from "../../assets/kuppyWebsite.png";
-import kuppyMint from "../../assets/kuppyMint.png";
+import kuppyMint from "../../assets/kuppyClansProject1.png";
 import rewardsCoin from "../../assets/rewardsCoin.png";
 import pandoraxProject from "../../assets/pandoraxProject.png";
 import mktkings from "../../assets/mktkings.png";
@@ -59,7 +60,7 @@ export const contents = {
       projectName: "Lucky Metaverse",
       index: "02",
       projectDescription:
-        "Variety of applications build upon decentralised network, like staking, token migration,  calculator and dashboard. You can now migrate your old token into new (v2) tokens with the help of all new token migration on our dapp. Not only this, you can access the calculator and dashboard to track your assets",
+        "A variety of applications build upon decentralised networks, like staking, token migration,  calculator and dashboard. You can now migrate your old token into new (v2) tokens with the help of all new token migration on our dapp. Not only this, you can access the calculator and dashboard to track your assets",
       projectWebsite: "https://lmeta.netlify.app",
       projectImage: luckyMetaverseProject,
       connectText: "Visit Website",
@@ -73,7 +74,7 @@ export const contents = {
       projectName: "Godzinu",
       index: "03",
       projectDescription:
-        "Godzinu, a multichain dex aggregator for lighting fast transactions on multiple chains, with GODZ you can swap in 50+ blockchain amongst 10000+ assets/token, see the live rate while swapping the token with the fees required to swap.",
+        "Godzinu, is a multichain dex aggregator for lighting fast transactions on multiple chains, with GODZ you can swap in 50+ blockchains amongst 10000+ assets/tokens, and see the live rate while swapping the token with the fees required to swap.",
       projectWebsite: "https://godzilla-project.vercel.app/",
       projectImage: godzinuProject,
       connectText: "Visit Website",
@@ -87,7 +88,7 @@ export const contents = {
       projectName: "Rewards Coin",
       index: "04",
       projectDescription:
-        "a platform where you directly receive BNB rewards without staking or claiming! We included top-notch 3D animations into the design of this website.",
+        "A platform where you directly receive BNB rewards without staking or claiming! We included top-notch 3D animations in the design of this website.",
       projectWebsite: "https://rewardscoin.tech/",
       projectImage: rewardsCoin,
       connectText: "Visit Website",
@@ -101,7 +102,7 @@ export const contents = {
       projectName: "Kuppy Clans",
       index: "05",
       projectDescription:
-        "Kuppy clans is a real-time strategy game set in a unique ecosystem which uses our native Tokens- Canine and Feline Master. Kuppy Clans has the potential to revolutionize the gaming industry and provide a fun and engaging learning experience for players all over the world.",
+        "Kuppy clans is a real-time strategy game set in a unique ecosystem that uses our native Tokens- Canine and Feline Master. Kuppy Clans has the potential to revolutionize the gaming industry and provide a fun and engaging learning experience for players worldwide.",
       projectWebsite: "https://kuppyclans.com/",
       projectImage: kuppyWebsite,
       connectText: "Visit Website",
@@ -131,7 +132,7 @@ export const contents = {
       projectName: "MKT Kings",
       index: "07",
       projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
+        "MarketKings is a development and marketing agency dedicated to helping EVM projects by raising capital funds and providing unique utility to their token holders with 45+ completed projects and almost 1M$ funds raised.",
       projectWebsite: "cakepool.io",
       projectImage: mktkings,
       connectText: "Visit Website",
@@ -144,7 +145,7 @@ export const contents = {
       projectName: "Rent It",
       index: "08",
       projectDescription:
-        "Say goodbye to traditional real estate investments with high barriers to entry. RentIt's fractional real estate investment platform makes it easy for anyone to invest in real estate. We use web3 to overcome the issue of huge capital required for buying a land, so now just hold the portion of the land according to your budget, also you can mining and earn a good profits.",
+        "Say goodbye to traditional real estate investments with high barriers to entry. RentIt's fractional real estate investment platform makes it easy for anyone to invest in real estate. We use web3 to overcome the issue of the huge capital required for buying land, so now just hold the portion of the land according to your budget, also you can mine and earn good profits.",
       projectWebsite: "https://rentit.website/",
       projectImage: rentit,
       connectText: "Visit Website",
@@ -157,7 +158,7 @@ export const contents = {
       projectName: "Cerebreum",
       index: "09",
       projectDescription:
-        "Offering a mystical motif and providing easy navigation, we designed a homepage website and staking platform for APY Token, first ever, sustainable and compounding token!",
+        "Offering a mystical motif and providing easy navigation, we designed a homepage website and staking platform for APY Token, the first-ever, sustainable and compounding token!",
       projectWebsite: "https://cerebreum.netlify.app/",
       projectImage: cerebreumProject,
       connectText: "Visit Website",
@@ -171,7 +172,7 @@ export const contents = {
       projectName: "Kuppy Clans Mint",
       index: "10",
       projectDescription:
-        "Kupply clans provide a unique NFT minting, you can mint Village Land with just some $CM and $FM Tokens, and the best part about this is Land prices increases by 500 $FM/$CM for every 1000 land sold",
+        "Kupply clans provide a unique NFT minting, you can mint Village Land with just some $CM and $FM Tokens, and the best part about this is Land prices increase by 500 $FM/$CM for every 1000 land sold",
       projectWebsite: "https://kuppyclans.com/mint",
       projectImage: kuppyMint,
       connectText: "Visit Website",
@@ -186,7 +187,7 @@ export const contents = {
       projectName: "Renq ICO",
       index: "11",
       projectDescription:
-        "Renq is a community-driven organization that is established to provide a one stop solution for all kind of traders under one platform in the DeFi world. Renq has special features like Multi Chain Dex and a Never Ending Liquidity      ",
+        "Renq is a community-driven organization that is established to provide a one-stop solution for all kinds of traders under one platform in the DeFi world. Renq has special features like Multi Chain Dex and a Never Ending Liquidity",
       projectWebsite: "https://renq.io/",
       projectImage: renq,
       connectText: "Visit Website",
@@ -200,7 +201,7 @@ export const contents = {
       projectName: "Meta Loop",
       index: "12",
       projectDescription:
-        "A special dapp in which  user can swap their NFT from one Chain to another, it is one of the rarest dapp of its kind, user can connect wallet through metamask and trustwallet and as soon as they connect wallet they can see all the NFT they hold and can easily transfer to other blockchian      ",
+        "A special dapp in which  user can swap their NFT from one Chain to another, it is one of the rarest dapp of its kind, user can connect wallet through metamask and trustwallet and as soon as they connect wallet they can see all the NFTs they hold and can easily transfer them to other blockchains",
       projectWebsite: "https://meta-loop.netlify.app/",
       projectImage: metaLoop,
       connectText: "Visit Website",
@@ -214,7 +215,7 @@ export const contents = {
       projectName: "LMETA",
       index: "13",
       projectDescription:
-        "we have variety of applications build upon decentralised network, like staking, token migration and calculator and dashboard, you can now migrate your old token into new (v2) tokens with the help of all new token migration on our dapp, also you can access the calculator and dashboard to track your assets      ",
+        "We have a variety of applications built upon decentralised networks, like staking, token migration and calculator and a dashboard, you can now migrate your old token into new (v2) tokens with the help of all new token migration on our dapp, also can access the calculator and dashboard to track your assets",
       projectWebsite: "https://www.dashboard.luckymetaverse.org/",
       projectImage: lmetaDapp,
       connectText: "Visit Website",
@@ -242,7 +243,7 @@ export const contents = {
       projectName: "Cakepool Calculator",
       index: "15",
       projectDescription:
-        "CakePool is a community pool used for staking Cake on PancakeSwap. We are a rewards token that is working towards self sustainability as opposed to relying on daily trading volume. Most reward tokens rely solely on trading volume. If there is little to no volume then there will be no rewards. CakePool is set up in a way where there will be rewards given out even if there is zero trading being done.       ",
+        "CakePool is a community pool used for staking Cake on PancakeSwap. We are a rewards token working towards self-sustainability instead of relying on daily trading volume. Most reward tokens rely solely on trading volume. If there is little to no volume then there will be no rewards. CakePool is set up in a way where rewards will be given out even if zero trading is being done.",
       projectWebsite: "https://cakepool-reward-dashboard.netlify.app/",
       projectImage: cakeCalc,
       connectText: "Visit Website",
@@ -255,7 +256,7 @@ export const contents = {
       projectName: "LMETA Calculator",
       index: "16",
       projectDescription:
-        "calculation of rewards is now easy with Lmeta calculator, check your returns on investment with help of lmeta calculator Lucky Metaverse is a rebranding and restructuring of the old project Metaface",
+        "Calculation of rewards is now easy with Lmeta calculator, check your returns on investment with the help of lmeta calculator. Lucky Metaverse is a rebranding and restructuring of the old project Metaface.",
       projectWebsite: "https://www.dashboard.luckymetaverse.org/",
       projectImage: luckyCalc,
       connectText: "Visit Website",
@@ -269,7 +270,7 @@ export const contents = {
       projectName: "Cosmic Finance",
       index: "17",
       projectDescription:
-        "Cosmic Finance focus on dashboard where you can track all of your crypto assets manage it also you can track the next rebase of the token and can swap the token from the dashboard and it's rainbow kit is integrated to safeearn so it will be very easy to connect wallet        ",
+        "Cosmic Finance focuses on a dashboard where you can track all of your crypto assets, manage it and also you can track the next rebase of the token and can swap the token from the dashboard. Also, rainbow kit is integrated into it, so connecting your wallet will be very easy.",
       projectWebsite: "https://main--cosmicfinances.netlify.app",
       projectImage: cosmikProject,
       connectText: "Visit Website",
@@ -283,7 +284,7 @@ export const contents = {
       projectName: "Safe Earn",
       index: "18",
       projectDescription:
-        "Safeearn, a web3 based application that focus on dashboard where you can track all of your crypto assets and manage its data, also it's rainbow kit is integrated to safeearn so it will be very easy to connect wallet.",
+        "Safeearn, is a web3-based application focusing on a dashboard where you can track all of your crypto assets and manage their data. Also, rainbow kit is integrated to safeearn, so connecting your wallet will be very easy.",
       projectWebsite: "https://dashboard.safeearnfinance.net",
       projectImage: safeearn1,
       connectText: "Visit Website",
@@ -297,9 +298,9 @@ export const contents = {
       projectName: "Lmeta token migration dashboard ",
       index: "19",
       projectDescription:
-        "Lmeta migration is used migrate your old token into new (v2) tokens with the help of all new token migration on our dapp, to make the process straline and transparent we came up with the migration, to maintain the trust and integrity of previous holder of project we launched migration, get true worth of your old tokens while move to V2",
+        "Lmeta migration is used to migrate your old token into new (v2) tokens with the help of all new token migration on our dapp, to make the process streamlined and transparent, we came up with the migration to maintain the trust and integrity of previous holder of project we launched migration so that you can get the true worth of your old tokens while moving to V2",
       projectWebsite: "https://www.dashboard.luckymetaverse.org/#/migrate",
-      projectImage: lmetaDapp,
+      projectImage: lmetaDashboard,
       connectText: "Visit Website",
       projectTelegram: "https://t.me/Luckymetaverse_official",
       backgroundColor: "#64A4FF",
@@ -311,7 +312,7 @@ export const contents = {
       projectName: "Kuppy Clans Calculator",
       index: "20",
       projectDescription:
-        "Kuppy clans is a real-time strategy game set in a unique ecosystem which uses our native Tokens- Canine and Feline Master. Kuppy Clans has the potential to revolutionize the gaming industry and provide a fun and engaging learning experience for players all over the world      ",
+        "Kuppy clans is a real-time strategy game set in a unique ecosystem that uses our native Tokens- Canine and Feline Master. Kuppy Clans has the potential to revolutionize the gaming industry and provide a fun and engaging learning experience for players all over the world",
       projectWebsite: "https://kuppyclans.com/stake/calci",
       projectImage: kuppyCalci,
       connectText: "Visit Website",
@@ -325,7 +326,7 @@ export const contents = {
       projectName: "Cakepool Staking",
       index: "21",
       projectDescription:
-        "Stake your $CAKE and earn passive income on your investment, to make process seamline you can connect your wallet by multiple ways, check who is staking, witdrawing and lots of information on our platform      ",
+        "Stake your $CAKE and earn passive income on your investment, to make process seamline you can connect your wallet in multiple ways, check who is staking, withdrawing and lots of information on our platform",
       projectWebsite: "https://cakepoolstaking.com/",
       projectImage: cakepoolStaking,
       connectText: "Visit Website",
@@ -338,7 +339,7 @@ export const contents = {
       projectName: "Godzilla Staking",
       index: "22",
       projectDescription:
-        "Stake your $GODZ or $GODZLP tokens to earn reward funded buy Buy and Sale Tax, earn every time a person buys or sells the token,  with staking period of only 30days and average 9% APR you can connect your wallet by multiple ways      ",
+        "Stake your $GODZ or $GODZLP tokens to earn rewards funded by Buy and Sale Tax, earn every time a person buys or sells the token, with a staking period of only 30 days and average APY, you can connect your wallet in multiple ways.",
       projectWebsite: "https://godzilla-swap.netlify.app/",
       projectImage: godzStaking,
       connectText: "Visit Website",
@@ -352,7 +353,7 @@ export const contents = {
       projectName: "Cerebreum Staking",
       index: "23",
       projectDescription:
-        "Stake your token and earn passive incove with cerebreum staking,  with different staking period with average 9% APR you can connect your wallet by multiple ways",
+        "With Cerebreum staking, you can stake your token and earn passive income. With different staking periods and an average of 9% APY, you can connect your wallet in multiple ways.",
       projectWebsite: "https://cerebreum.netlify.app/",
       projectImage: cerebreumStaking,
       connectText: "Visit Website",
@@ -379,7 +380,7 @@ export const contents = {
       projectName: "Kuppy Clans Staking",
       index: "26",
       projectDescription:
-        "Kuppy clans staking is a advance staking platform where you can stake both of your token Canine ($CM) and Feline ($FM) for 30/60/90 days depends how much APY you want and capital you can hold",
+        "Kuppy clans staking is an advanced staking platform where you can stake both of your token Canine($CM) and Feline ($FM) for 30/60/90 days depending on how much APY you want and capital you can hold.",
       projectWebsite: "https://kuppyclans.com/stake",
       projectImage: kuppyStake,
       connectText: "Visit Website",
@@ -394,7 +395,7 @@ export const contents = {
       projectName: "DCU Staking",
       index: "27",
       projectDescription:
-        "DCU staking is mulyiple staking platform where you can stake your token for 30/60/90/ 180 days depends how much APY you want its vary from 10-23 depend on days locked also it is integrated with Rainbow Kit so you can easily connect ypur wallet and stake tokens",
+        "Dcu staking is a multiple staking platform where you can stake your token for 30/60/90/180 days, depending on how much APY you want. It varies from 10-23 depending upon the number of days locked. It is also integrated with Rainbow Kit, so you easily connect your wallet and stake tokens.",
       projectWebsite: "https://dcustaking.netlify.app/",
       projectImage: dcuStaking,
       connectText: "Visit Website",
@@ -407,7 +408,7 @@ export const contents = {
       projectName: "Matrix",
       index: "28",
       projectDescription:
-        "A unique concept website that show us how can we escape the matrix, this website is completely based on the choices people make, you can choose a blue pill (easy way) or red pill (toufgh way) ",
+        "A unique concept website that show us how can we escape the matrix, this website is completely based on the choices people make, you can choose a blue pill (easy way) or red pill (tough way) ",
       projectWebsite: "https://matrix-labs-pills.netlify.app/",
       projectImage: matrix,
       connectText: "Visit Website",
@@ -420,8 +421,10 @@ export const contents = {
     {
       projectName: "Zolo",
       index: "29",
-      projectDescription:"Find the perfect accommodation in your city with Zolo Coliving. Don't waste time and money on bad deals from brokers. Our hassle-free rental options across 10 Indian cities are just a click away on the Zolo app",
-      projectWebsite:"https://play.google.com/store/apps/details?id=com.zelo.customer",
+      projectDescription:
+        "Find the perfect accommodation in your city with Zolo Coliving. Don't waste time and money on bad deals from brokers. Our hassle-free rental options across 10 Indian cities are just a click away on the Zolo app",
+      projectWebsite:
+        "https://play.google.com/store/apps/details?id=com.zelo.customer",
       projectImage: zolo,
       connectText: "Visit Website",
       backgroundColor: "#51ADE5",
@@ -431,8 +434,10 @@ export const contents = {
     {
       projectName: "Klever Wallet",
       index: "30",
-      projectDescription:"Klever Wallet has got you covered for all your crypto needs. Access over 17 blockchain networks and store your coins and tokens securely. Klever Wallet supports top crypto assets like BTC, TRX, ETH, and KLV, giving you the anonymity you need.      ",
-            projectWebsite: "https://play.google.com/store/apps/details?id=finance.klever.bitcoin.wallet",
+      projectDescription:
+        "Klever Wallet has got you covered for all your crypto needs. Access over 17 blockchain networks and store your coins and tokens securely. Klever Wallet supports top crypto assets like BTC, TRX, ETH, and KLV, giving you the anonymity you need.      ",
+      projectWebsite:
+        "https://play.google.com/store/apps/details?id=finance.klever.bitcoin.wallet",
       projectImage: kleverWallet,
       connectText: "Visit Website",
       backgroundColor: "#CFB8FF",
@@ -443,8 +448,10 @@ export const contents = {
     {
       projectName: "Truliv",
       index: "31",
-      projectDescription:"Truliv makes home maintenance and society payments a breeze. Schedule appointments, raise tickets, view announcements and engage with your neighbours. Pay your bills and manage your home with ease, all through one convenient app.      ",
-      projectWebsite:"https://play.google.com/store/apps/details?id=com.truliv.community",
+      projectDescription:
+        "Truliv makes home maintenance and society payments a breeze. Schedule appointments, raise tickets, view announcements and engage with your neighbours. Pay your bills and manage your home with ease, all through one convenient app.      ",
+      projectWebsite:
+        "https://play.google.com/store/apps/details?id=com.truliv.community",
       projectImage: truliv,
       connectText: "Visit Website",
       backgroundColor: "#FFC48D",
@@ -454,7 +461,8 @@ export const contents = {
     {
       projectName: "Nucle",
       index: "32",
-      projectDescription:"Nucle is a secure and user-friendly crypto wallet that allows for easy transactions through QR code scans. Trust us to keep your assets safe and transactions smooth",
+      projectDescription:
+        "Nucle is a secure and user-friendly crypto wallet that allows for easy transactions through QR code scans. Trust us to keep your assets safe and transactions smooth",
       projectWebsite: "https://play.google.com/store/apps/details?id=io.nucle",
       projectImage: nucle,
       connectText: "Visit Website",
