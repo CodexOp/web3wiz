@@ -190,6 +190,7 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
     background: transparent;
     width: 90%;
     margin: auto;
+    margin-top: 1rem;
     position: sticky;
     top: 30px;
     z-index: 10;
@@ -374,7 +375,34 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
     width: min(80%, 500px);
     margin: auto;
 }
-
+.projectContact{
+  position: relative;
+}
+.projectContact::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: min(200px, 20vw);
+  height: min(70%, 50vh);
+  background-image: url('../../assets/images/projectsContactBackground1.png');
+  background-repeat: no-repeat;
+}
+.projectContact::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: min(200px, 10vw);
+  height: min(60%, 40vh);
+  background-image: url('../../assets/images/projectsContactBackground2.png');
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px){
+  .projectContact::after, .projectContact::before{
+    display: none;
+  }
+}
 .centerElements{
   padding: 7rem 5rem;
   display: flex;
@@ -387,8 +415,18 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 60px;
+  text-align: center;
+  color: #27B67A;
+  max-width: 35ch;
+}
+.centerElements h2{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 40px;
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -397,8 +435,8 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
   padding: 2px 50px;
   font-family: 'Poppins';
   font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 24px;
   line-height: 48px;
   cursor: pointer;
   border-radius: 10px;

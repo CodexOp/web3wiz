@@ -7,7 +7,7 @@ import styles from "./styles.module.css";
 import ProjectNav from "./Components/ProjectNav";
 import { Link } from 'react-router-dom';
 import useFacebookPixel from '../../hooks/FacebookPixel/useFacebookPixel'
-
+import Footer from "../Homev2/components/Footer";
 export default function Projects() {
   const [backgroundColor, setBackgroundColor] = React.useState("#adf6ff");
   const [imgDiv, setImgDiv] = React.useState(<div></div>);
@@ -147,15 +147,17 @@ export default function Projects() {
           );
         })}
       </div>
-      <div className={styles.container}>
-        <div className={styles.centerElements}>
-          <h1>If you like what you see, imagine what we can do for you!
-Get in touch with us and let's turn your ideas into reality.</h1>
-<Link to="/form"  target="_blank" rel="noopener noreferrer"> <button className={styles.getaquotaBtn} onClick={() => callFacebookPixel('ClickedContactUs', 10)}>Contact Us</button> </Link>
+      <div style={{background: "linear-gradient(180deg, #002339 -19.53%, #1D0B1D 122.66%)"}}>
+        <div className={styles.container + ' ' + styles.projectContact}>
+          <div className={styles.centerElements}>
+            <h1>If you like what you see, imagine what we can do for you!</h1>
+            <h2>Get in touch with us and let's turn your ideas into reality.</h2>
+  <Link to="/form"  target="_blank" rel="noopener noreferrer"> <button className={styles.getaquotaBtn} onClick={() => callFacebookPixel('ClickedContactUs', 10)}>Get Started</button> </Link>
 
+          </div>
         </div>
       </div>
-           
+      <Footer />
   </div>
   </>);
 }
