@@ -195,6 +195,11 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
     top: 30px;
     z-index: 10;
   }
+  @media (max-width: 50em) {
+    .primaryHeader {
+      margin-top: auto;
+    }
+  }
   .primaryNavigation{
     display: flex;
     flex-grow: 1;
@@ -248,7 +253,7 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
     outline: inherit ;
  }
  .btnStyle{
-    background: #00A9BE;
+    background: #0000001f;
     border-radius: 8px;
     border: none;
     outline: inherit;

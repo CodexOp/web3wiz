@@ -14,8 +14,8 @@ export default function LandingProjects({ setIsLanding }) {
             <div className={styles.flexContainer}>
                 <div className={styles.flexItem1}>
                     <h1>Our <span>Projects</span></h1>
-                    <p>Securely build and launch your DApp with our expert development services.</p>
-                    <Link to="/form"  target="_blank" rel="noopener noreferrer"><button className={styles.button}onClick={() => callFacebookPixel('ClickedContactUs', 10)}>Contact Us</button></Link>
+                    <p>If you're looking for top-quality work that meets your unique needs, you've come to the right place.</p>
+                    <Link to="/form"  target="_blank" rel="noopener noreferrer"><button className={styles.button}onClick={() => callFacebookPixel('ClickedContactUs', 10)}>Contact Experts</button></Link>
                 </div>
                 <div className={styles.flexItem2}>
                     <img src={landingImg} alt="" />

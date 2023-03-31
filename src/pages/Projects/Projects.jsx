@@ -77,7 +77,7 @@ export default function Projects() {
           <div className={styles.container}>
           <div className={styles.projectContent}>
               <div>
-                <ProjectNav navSelected={navSelected}/>
+                <ProjectNav navSelected={navSelected} isMobile={false}/>
                 {contents.websites.map((content, index) => {
                   // setBackgroundColor(content.backgroundColor)
                   return (
@@ -107,21 +107,21 @@ export default function Projects() {
               </div>
           </div>
         </div>
-        
+        <div className={styles.mobileView} style={{backgroundColor: "#86EBF8", paddingTop: "1rem"}}>
+        <ProjectNav isMobile={true}/>
         {contents.websites.map((content, index) => {
           return (
             <>
-              <div>
+              <div key={index} id={`id${index.toString()}0`}>
                 <div 
-                  className={styles.animateBackground + " " + styles.mobileView} 
+                  className={styles.animateBackground} 
                   style={{background: content.backgroundColor}}
                 >
                   <div className={styles.container}>
                     <div className={styles.flexContainer1}>
-                      {index === 0 && <ProjectNav />}
-                      <div className={`c${index.toString()}`}  id={`id${index.toString()}`}>
+                      <div className={`c${index.toString()}`}>
                         <ProjectItem
-                          key={index}
+                          
                           index={content.index}
                           projectName={content.projectName}
                           projectDescription={content.projectDescription}
@@ -146,6 +146,7 @@ export default function Projects() {
             </>
           );
         })}
+        </div>
       </div>
       <div style={{background: "linear-gradient(180deg, #002339 -19.53%, #1D0B1D 122.66%)"}}>
         <div className={styles.container + ' ' + styles.projectContact}>
