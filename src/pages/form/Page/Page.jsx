@@ -74,7 +74,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
   const [name, setName] = useState('');
   const [iam, setIam] = useState('');
   const [phoneNo, setPhoneNo] = useState('');
-  const [countryCode, setCountryCode] = useState('+');
+  const [countryCode, setCountryCode] = useState('');
   const [country, setCountry] = useState('');
   const [budget, setBudget] = useState('');
   const [leadsource, setLeadsource] = useState('');
@@ -325,7 +325,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
           }
         }
         if (pagenum === 4) {
-          if (countryCode.length === 1) {
+          if (countryCode === "") {
             setValidCC(false);
           }
         }
@@ -552,8 +552,9 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
               <div className={styles.phoneNodiv}>
                 
 <select name="countryCode" id="" className={styles.countrySelect} onChange={(e)=>{setCountryCode(e.target.value)}}>
-	<option data-countryCode="GB" value="44" Selected>USA (+1)</option>
-	<option data-countryCode="US" value="1">UK (+44)</option>
+	<option data-countryCode="GB" value="" Selected>Select Country</option>
+	<option data-countryCode="GB" value="1" >USA (+1)</option>
+	<option data-countryCode="US" value="44">UK (+44)</option>
 	<optgroup label="Other countries">
 		<option data-countryCode="DZ" value="213">Algeria (+213)</option>
 		<option data-countryCode="AD" value="376">Andorra (+376)</option>
@@ -776,7 +777,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
 
                 <input
                   className={styles.phoneInput}
-                  type="text"
+                  type="number"
                   autoComplete="off"
                   placeholder="Enter Your Phone Number"
                   value={phoneNo}
@@ -966,14 +967,15 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
             <FinalImg />
             <div className={styles.congratsTxt}>
               We've got your response. Complete the process by contacting us
-              below🤙
+              below👇
             </div>
             <div className={styles.contactUsWrapper}>
               <div className={styles.contactUsTxt}>
                 Contact us <span className={styles.highlightedTxt}>NOW</span>
               </div>
-              <a>
-                <Whatsapp height={40} onClick={() => {callFaceBookPixel(10000, "finalformContact"); console.log('Test')}} />
+              <a href={custom_href} className={styles.finishButton}>
+                <p>Finish</p>
+                <Whatsapp height={30} width={40} onClick={() => {callFaceBookPixel(10000, "finalformContact");}} />
               </a>
             </div>
           </div>
