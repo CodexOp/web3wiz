@@ -6,6 +6,7 @@ import { ReactComponent as Twitter } from '../../assets/images/icon-twitter.svg'
 import { ReactComponent as Telegram } from '../../assets/images/icon-telegram-vector.svg';
 import { ReactComponent as Mail } from '../../assets/images/icon-mail.svg';
 import Select from './Select.jsx';
+import {Lottie, triggerLottie} from '../../components/Lottie/Lottie'
 
 const Form = () => {
     const [data, setData] = React.useState({
@@ -24,6 +25,7 @@ const Form = () => {
           body: JSON.stringify(data) // body data type must match "Content-Type" header
         
         })
+        triggerLottie();
         }
         catch(err){
             console.log(err)
@@ -31,6 +33,7 @@ const Form = () => {
     }
     return (
         <div className={styles.container}>
+            <Lottie/>
             <div className={styles.box1}>
                 <div>
                     <h1>Have a project?</h1>

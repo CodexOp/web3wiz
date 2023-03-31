@@ -5,6 +5,7 @@ import ProjectItem from "./Components/ProjectItem";
 import { contents } from "./constants";
 import styles from "./styles.module.css";
 import ProjectNav from "./Components/ProjectNav";
+import { Link } from 'react-router-dom';
 export default function Projects() {
   const [backgroundColor, setBackgroundColor] = React.useState("#adf6ff");
   const [imgDiv, setImgDiv] = React.useState(<div></div>);

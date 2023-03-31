@@ -2,6 +2,7 @@ import React from 'react'
 import styles from "../styles.module.css";
 import arrowDown from "../../../assets/arrow-down.png"
 import landingImg from "../../../assets/projectLandingImg.png"
+import { Link } from 'react-router-dom';
 export default function LandingProjects({setIsLanding}) {
   return (
     <div className={styles.background}>

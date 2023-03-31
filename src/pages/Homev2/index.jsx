@@ -21,7 +21,9 @@ import telegramIcon from "./components/assests/images/icon-telegram.svg";
 import rightarrow from "./components/assests/images/right-arrow.svg";
 import twitterIcon from "./components/assests/images/icon-twitter.svg";
 import emailIcon from "./components/assests/images/icon-email.svg";
-import blogImg from "./components/assests/images/icon-teamwork.svg";
+import blogImg1 from "./components/assests/images/blogImg1.svg";
+import blogImg2 from "./components/assests/images/blogImg2.svg";
+import blogImg3 from "./components/assests/images/blogImg3.svg";
 import arrowIcon from "./components/assests/images/icon-arrow.svg";
 import closeIcon from "./components/assests/images/icon-cross.svg";
 import registered from "./components/assests/registered.svg";
@@ -48,6 +50,7 @@ import Review from './components/reviews/Review';
 import Raised from './components/amountRaised/Raised';
 import ReactPixel from "react-facebook-pixel"
 import { getAnalytics, logEvent } from "firebase/analytics";
+import {Lottie, triggerLottie} from '../../components/Lottie/Lottie'
 
 
 const options = {
@@ -166,7 +169,8 @@ export default function Homev2()
 
     return (
         <>
-            <Navbar/>
+            <Lottie/>
+            <Navbar />
             <div className='landing'></div>
             <div className={styles.homeWrapper} id="home" >
             <div className={styles.backdropDiv1}>
@@ -580,28 +584,28 @@ export default function Homev2()
                     <div className={styles.blogsDivHeading}>Latest <span>Blogs</span></div>
                     <div className={styles.blogsGrid}>
                     <div className={styles.blog}>
-                         <img src={blogImg} className={styles.blogImg} alt="blog-img" />
-                         <div className={styles.blogHeading}>How to build a decentralised App</div>
-                         <div className={styles.blogDesc}>
-                            Over time, blockchain, especially the crypto space, has been creating a bridge between traditional financial models with .&nbsp;.&nbsp;.<br/>
+                         <img src={blogImg1} className={styles.blogImg} alt="blog-img" />
+                         <div className={styles.blogHeading}>Top 5 real-world use cases of blockchain technology</div>
+                                <div className={styles.blogDesc}>
+                                Blockchain technology can be used to create an unchangeable and secure record of a product's journey  <br/> .&nbsp;.&nbsp;.
                          </div>
-                        <div className={styles.readmoreBtn}>Read More{'>'}</div>
+                        <Link to='blog/Top-5-real-world-use-cases-of-blockchain-technology' target='_blank' rel="noopener noreferrer"><div className={styles.readmoreBtn}>Read More{'>'}</div></Link>
                     </div>
                     <div className={styles.blog}>
-                         <img src={blogImg} className={styles.blogImg} alt="blog-img" />
-                         <div className={styles.blogHeading}>How to build a decentralised App</div>
+                         <img src={blogImg2} className={styles.blogImg} alt="blog-img" />
+                         <div className={styles.blogHeading}>Which platforms should you use to buy NFTs in 2023?</div>
                          <div className={styles.blogDesc}>
-                            Over time, blockchain, especially the crypto space, has been creating a bridge between traditional financial models with .&nbsp;.&nbsp;.<br/>
+                         In recent years, the world of NFTs has exploded, with more and more people investing in digital assets like <br/> .&nbsp;.&nbsp;.
                          </div>
-                        <div className={styles.readmoreBtn}>Read More{'>'}</div>
+                        <Link to='blog/Which-platforms-should-you-use-to-buy-NFTs-in-2023' target='_blank' rel="noopener noreferrer"><div className={styles.readmoreBtn}>Read More{'>'}</div></Link>
                     </div>
                     <div className={styles.blog}>
-                         <img src={blogImg} className={styles.blogImg} alt="blog-img" />
-                         <div className={styles.blogHeading}>How to build a decentralised App</div>
+                         <img src={blogImg3} className={styles.blogImg} alt="blog-img" />
+                         <div className={styles.blogHeading}>Top 5 Metaverse Games, 2023 edition</div>
                          <div className={styles.blogDesc}>
-                            Over time, blockchain, especially the crypto space, has been creating a bridge between traditional financial models with .&nbsp;.&nbsp;.<br/>
+                         Metaverse games are online virtual worlds where players can interact with each other, explore, create, and play games <br/> .&nbsp;.&nbsp;.
                          </div>
-                        <div className={styles.readmoreBtn}>Read More{'>'}</div>
+                        <Link to='blog/Top-5-Metaverse-Games,-2023-edition' target='_blank' rel="noopener noreferrer"><div className={styles.readmoreBtn}>Read More{'>'}</div></Link>
                     </div>
                     </div>
                 </div>
@@ -613,7 +617,8 @@ export default function Homev2()
                             setUserEmail(event.target.value)
                         }}/>
                         <div className={styles.subscribeBtn} onClick={()=> {
-                            handleOnClickSubscribe()
+                                handleOnClickSubscribe();
+                                triggerLottie();
                         }} style={{cursor: 'pointer'}}>
                             Subscribe
                         </div>

@@ -34,7 +34,7 @@ export default function Navbar(props) {
                   Home
                   </a>
                 </div>
-                <a href="#services"><div className={styles.navbarbtn}>Services</div></a>
+                <a href="/#services"><div className={styles.navbarbtn}>Services</div></a>
                 <Link to="/projects" target="_blank" rel="noopener noreferrer"> <div className={styles.navbarbtn}>Projects</div></Link>
                 <Link to="/form" target="_blank" rel="noopener noreferrer"><div  className={styles.getaquotaBtn}>Get a Quote</div></Link>
 
