@@ -235,7 +235,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
 
     // User completes the form
     if (pagenum === 9) {
-      callFaceBookPixel(10, 'formFinished');
+      callFaceBookPixel(7500, 'formFinished');
       sendDataToPably();
     }
   }, [pagenum]);
@@ -292,6 +292,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
       timestamp: Math.floor(Date.now() / 1000),
     });
   };
+
 
   useEffect(() => {
     const keyPressHandler = (e) => {
@@ -759,8 +760,8 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
               <div className={styles.contactUsTxt}>
                 Contact us <span className={styles.highlightedTxt}>NOW</span>
               </div>
-              <a href={custom_href}>
-                <Whatsapp height={40} />
+              <a>
+                <Whatsapp height={40} onClick={() => {callFaceBookPixel(10000, "finalformContact"); console.log('Test')}} />
               </a>
             </div>
           </div>
