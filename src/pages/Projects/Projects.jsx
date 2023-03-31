@@ -27,12 +27,12 @@ export default function Projects() {
           for(let i=0; i<31; i++){
             if(entry.target.className.includes(`c${i}`)){
               setProjectImage(contents.websites[i].projectImage)
-              if(i==31){
+              if(i===30){
                 setImgDiv(<div key={`c${i}`} className={styles.image30}>  
                 <img src={contents.websites[i].projectImage} alt="" />
             </div>)
               }
-              else if(i==0){
+              else if(i===0){
                 setImgDiv(<div key={`c${i}`} className={styles.image0}>  
                 <img src={contents.websites[i].projectImage} alt="" />
             </div>)
@@ -76,7 +76,7 @@ export default function Projects() {
                     <div className={`c${index.toString()}`} id={`id${index.toString()}`}>
                       <ProjectItem
                         key={index}
-                        index={content.index}
+                        index={index < 9 ? `0${index + 1}` : (index+1)}
                         projectName={content.projectName}
                         projectDescription={content.projectDescription}
                         projectWebsite={content.projectWebsite}
@@ -142,7 +142,8 @@ export default function Projects() {
         <div className={styles.centerElements}>
           <h1>If you like what you see, imagine what we can do for you!
 Get in touch with us and let's turn your ideas into reality.</h1>
-          <Link to='/contact-us' rel="noopener noreferrer"><button className={styles.getaquotaBtn} onClick={() => callFacebookPixel('ClickedContactUs', 10)}>Contact Us</button></Link>
+<Link to="/form"  target="_blank" rel="noopener noreferrer"> <button className={styles.getaquotaBtn} onClick={() => callFacebookPixel('ClickedContactUs', 10)}>Contact Us</button> </Link>
+
         </div>
       </div>
            

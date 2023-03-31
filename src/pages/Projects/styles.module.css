@@ -14,6 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 40px;
 }
 
 .flexContainer{
@@ -123,6 +124,7 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
 
 .projectHeader{
     color: var(--headerColor);
+    max-width: 45ch;
 }
 .index{
     font-family: 'Phenomicon Laser';
@@ -296,24 +298,25 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
  }
  .image{
   position: fixed;
-  /* width: 50%; */
+  width: 40%;
   top: 50%;
   right: 100px;
+  padding-bottom:40px;
   transform: translateY(-50%);
   animation: zoomIn 0.25s ease-in-out;
 }
 .image0{
   position: absolute;
-  /* width: 50%; */
+  width: 40%;
   top: 60vh;
   right: 100px;
   transform: translateY(-50%);
   animation: zoomIn 0.25s ease-in-out;
 }
-.image16{
+.image30{
   position: absolute;
-  /* width: 50%; */
-  bottom: 0;
+  width: 40%;
+  bottom: 60px;
   right: 100px;
   transform: translateY(-50%);
   animation: zoomIn 0.25s ease-in-out;
@@ -328,17 +331,17 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
 }
 .image img{
     max-height: max(350px, 50vh);
-    width: auto;
+    max-width: 500px;
     margin: auto;
 }
-.image16 img{
+.image30 img{
     max-height: max(350px, 50vh);
-    width: auto;
+    max-width: 500px;
     margin: auto;
 }
 .image0 img{
     max-height: max(350px, 50vh);
-    width: auto;
+    max-width: 500px;
     margin: auto;
 }
 .displayNone{
@@ -452,4 +455,7 @@ color: #000;
 }
 .getaquotaBtn:hover:before {
 width: 100%;
+}
+.projectItem1 button{
+  transform: rotate(45deg);
 }

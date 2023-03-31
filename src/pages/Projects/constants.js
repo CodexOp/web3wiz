@@ -420,13 +420,10 @@ export const contents = {
     {
       projectName: "Zolo",
       index: "29",
-      projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite:
-        "https://play.google.com/store/apps/details?id=com.zelo.customer",
+      projectDescription:"Find the perfect accommodation in your city with Zolo Coliving. Don't waste time and money on bad deals from brokers. Our hassle-free rental options across 10 Indian cities are just a click away on the Zolo app",
+      projectWebsite:"https://play.google.com/store/apps/details?id=com.zelo.customer",
       projectImage: zolo,
       connectText: "Visit Website",
-      projectTelegram: "https://t.me/cakepool",
       backgroundColor: "#51ADE5",
       headerColor: "#004370",
       textColor: "#004370D4",
@@ -434,13 +431,10 @@ export const contents = {
     {
       projectName: "Klever Wallet",
       index: "30",
-      projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite:
-        "https://play.google.com/store/apps/details?id=finance.klever.bitcoin.wallet",
+      projectDescription:"Klever Wallet has got you covered for all your crypto needs. Access over 17 blockchain networks and store your coins and tokens securely. Klever Wallet supports top crypto assets like BTC, TRX, ETH, and KLV, giving you the anonymity you need.      ",
+            projectWebsite: "https://play.google.com/store/apps/details?id=finance.klever.bitcoin.wallet",
       projectImage: kleverWallet,
       connectText: "Visit Website",
-      projectTelegram: "https://t.me/cakepool",
       backgroundColor: "#CFB8FF",
       headerColor: "#20136A",
       textColor: "#20136A",
@@ -449,13 +443,10 @@ export const contents = {
     {
       projectName: "Truliv",
       index: "31",
-      projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
-      projectWebsite:
-        "https://play.google.com/store/apps/details?id=com.truliv.community",
+      projectDescription:"Truliv makes home maintenance and society payments a breeze. Schedule appointments, raise tickets, view announcements and engage with your neighbours. Pay your bills and manage your home with ease, all through one convenient app.      ",
+      projectWebsite:"https://play.google.com/store/apps/details?id=com.truliv.community",
       projectImage: truliv,
       connectText: "Visit Website",
-      projectTelegram: "https://t.me/cakepool",
       backgroundColor: "#FFC48D",
       headerColor: "#CB5500",
       textColor: "#CB5500",
@@ -463,12 +454,10 @@ export const contents = {
     {
       projectName: "Nucle",
       index: "32",
-      projectDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel massa efficitur, lacinia ex sed, porta metus. Aenean lorem enim, semper at varius sed, ornare et diam.",
+      projectDescription:"Nucle is a secure and user-friendly crypto wallet that allows for easy transactions through QR code scans. Trust us to keep your assets safe and transactions smooth",
       projectWebsite: "https://play.google.com/store/apps/details?id=io.nucle",
       projectImage: nucle,
       connectText: "Visit Website",
-      projectTelegram: "https://t.me/cakepool",
       backgroundColor: "#97ADFF",
       headerColor: "#0F0061",
       textColor: "#0F0061",

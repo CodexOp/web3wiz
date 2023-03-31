@@ -60,7 +60,7 @@ export default function Form() {
     <>
     <Helmet>
     <title>Form</title>
-    <meta name="description" content="get a quote from i"/>
+    <meta name="description" content="get a quote from matrix labs"/>
     <link rel="canonical" href="/form" />
 
     </Helmet>
