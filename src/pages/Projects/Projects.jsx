@@ -137,7 +137,7 @@ export default function Projects() {
         <div className={styles.centerElements}>
           <h1>If you like what you see, imagine what we can do for you!
 Get in touch with us and let's turn your ideas into reality.</h1>
-          <button className={styles.getaquotaBtn}>Contact Us</button>
+<Link to="/form"  target="_blank" rel="noopener noreferrer"> <button className={styles.getaquotaBtn}>Contact Us</button> </Link>
 
         </div>
       </div>

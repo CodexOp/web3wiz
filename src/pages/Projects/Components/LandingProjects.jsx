@@ -11,7 +11,7 @@ export default function LandingProjects({setIsLanding}) {
                 <div className={styles.flexItem1}>
                     <h1>Our <span>Projects</span></h1>
                     <p>Securely build and launch your DApp with our expert development services.</p>
-                    <button className={styles.button}>Contact Us</button>
+                    <Link to="/form"  target="_blank" rel="noopener noreferrer"><button className={styles.button}>Contact Us</button></Link>
                 </div>
                 <div className={styles.flexItem2}>
                     <img src={landingImg} alt="" />

@@ -15,7 +15,7 @@ export default function ProjectItem({index, projectName, projectDescription, pro
         }} style={{all: "unset", cursor: "pointer"}}><LinkImg stroke={textColor} width={"20px"}/></button></span> </p>
         <div className={styles.connectToProject} style={{"--textColor": textColor}}>
           <a href={projectWebsite}>{connectText}</a>
-          <a href={projectWebsite}><img src={telegram} alt="" /></a>
+          {projectTelegram ? <a href={projectWebsite}><img src={telegram} alt="" /></a>: <></>}
         </div>
       </div>
     </>
