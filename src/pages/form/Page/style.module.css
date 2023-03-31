@@ -71,6 +71,12 @@
   text-align: center;
 }
 
+.countrySelect{
+  height: 50px !important;
+  width: 25%;
+
+}
+
 .nameInput, .countryInput, .phoneInput{
     display: block;
     width: 100%;
@@ -365,6 +371,8 @@
 .phoneNodiv{
   display: flex;
   gap: 1rem;
+  margin-top: 30px;
+  align-items: center;
 }
 .countryInput{
   width: 10% !important;
@@ -372,7 +380,7 @@
 
 .phoneInput{
   width: 80% !important;
-
+  margin-top: 0;
 }
 
 .selectButton {
@@ -426,4 +434,14 @@
   .mainuiImg{
     width: 75%;
   }
+}
+@media (max-width:550px) {
+  
+.phoneInput{
+  font-size: 16px;
+}
+
+.countrySelect{
+  width: 35%;
+}
 }
