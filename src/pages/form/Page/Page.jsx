@@ -233,7 +233,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
 
     // User completes the form
     if (pagenum === 9) {
-      callFaceBookPixel(7500, 'formFinished');
+      callFaceBookPixel(budgetValue, 'leadGeneratedForm');
       sendDataToPably();
     }
   }, [pagenum]);
@@ -950,7 +950,6 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
                   onClick={() => {
                     handlePageUp();
                     sendDataToPably();
-                    callFaceBookPixel(budgetValue, 'leadGeneratedForm');
                   }}
                 >
                   Next
@@ -973,7 +972,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
               </div>
               <a href={custom_href} className={styles.finishButton}>
                 <p>Finish</p>
-                <Whatsapp height={30} width={40} onClick={() => {callFaceBookPixel(10000, "finalformContact");}} />
+                <Whatsapp height={30} width={40} onClick={() => {callFaceBookPixel(budgetValue, "formFinished");}} />
               </a>
             </div>
           </div>
