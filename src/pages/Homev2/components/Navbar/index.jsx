@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assests/images/logo.svg';
 import menuIcon from '../assests/images/icon-menu.svg';
@@ -8,13 +8,17 @@ import useFacebookPixel from '../../../../hooks/FacebookPixel/useFacebookPixel'
 export default function Navbar(props) {
   const navbar_mobile = useRef(false);
   const [show, setShow] = useState(false);
+  const [params, setParams] = useState(false);
   const callFacebookPixel = useFacebookPixel();
 
   const toggleMenu = () => {
     // toggle the current state
     setShow((current) => !current);
   };
+  useEffect(() => {
+    setParams(window.location.search);
 
+}, [])
   return (
     <>
       <header className={styles.primaryHeader}>
@@ -37,7 +41,7 @@ export default function Navbar(props) {
                 {' '}
                 <div className={styles.navbarbtn}>Projects</div>
               </Link>
-              <Link to="/form" target="_blank" rel="noopener noreferrer">
+              <Link to={"/form"+params} target="_blank" rel="noopener noreferrer">
                 <div className={styles.getaquotaBtn} onClick={() => callFacebookPixel('ClickedGetQuote', 10)}>
                   Get a Quote
                 </div>

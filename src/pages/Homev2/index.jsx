@@ -64,6 +64,15 @@ const options = {
 
 export default function Homev2()
 {
+
+    useEffect(() => {
+        setParams(window.location.search);
+  
+    }, [])
+    
+    
+
+        const [params, setParams] = useState();
         const callFacebookPixel = useFacebookPixel();
         const [isIntersecting, setIsIntersecting] = useState({
           landing: false,
@@ -209,7 +218,7 @@ export default function Homev2()
                             <div className={styles.titleFeatureItemContent2}>Team Members</div>
                         </div>
                     </div>
-                    <Link to="/form"><div className={styles.getaquotaBtn} onClick={() => callFacebookPixel('GetQuoteClicked', 10)}>Get&nbsp;a&nbsp;Quote <img className={styles.rightarrow} src={rightarrow} alt="right arrow" />
+                    <Link to={"/form" + params}><div className={styles.getaquotaBtn} onClick={() => callFacebookPixel('GetQuoteClicked', 10)}>Get&nbsp;a&nbsp;Quote <img className={styles.rightarrow} src={rightarrow} alt="right arrow" />
 </div></Link>
                 </div>
                 <img src={bg1Img} alt="ai-img" className={styles.floatImg} />
@@ -330,7 +339,7 @@ export default function Homev2()
                         market by leveraging our best-in-class<br/>
                         dapp development services
                     </div>
-                    <Link to="/form"><div className={styles.styledwhiteBtn} onClick={() => callFacebookPixel('ClickedDiscussProjectIdea', 10)}>Discuss Your Project Idea</div></Link>
+                    <Link to={"/form"+params}><div className={styles.styledwhiteBtn} onClick={() => callFacebookPixel('ClickedDiscussProjectIdea', 10)}>Discuss Your Project Idea</div></Link>
                 </div>
             </div>
             <div className='projectsDone'> </div>
@@ -352,7 +361,7 @@ export default function Homev2()
                         Dapp solution that can give your<br/>
                         business the much-needed boost?
                     </div>
-                    <Link to="/form" onClick={() => callFacebookPixel('ClickedTalkWithExperts', 4)}><div className={styles.styledwhiteBtn}>Talk With Experts</div></Link>
+                    <Link to={"/form"+params} onClick={() => callFacebookPixel('ClickedTalkWithExperts', 4)}><div className={styles.styledwhiteBtn}>Talk With Experts</div></Link>
                 </div>
             </div>
             <div className={styles.mainWrapper5}>
