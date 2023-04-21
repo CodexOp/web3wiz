@@ -9,9 +9,13 @@ const Newsletter = () => {
       <div className={styles.container}>
         <Logo className={styles.logo} />
         <div className={styles.box}>
-          <p>Don’t miss updates on important events</p>
-          <input type="email" placeholder="email address" />
-          <button> Sign Up</button>
+          <p>
+            Don’t miss updates on <span>important events</span>
+          </p>
+          <div>
+            <input type="email" placeholder="email address" />
+            <button> Sign Up</button>
+          </div>
         </div>
       </div>
       <Footer />
