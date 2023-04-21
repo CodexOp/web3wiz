@@ -1,0 +1,112 @@
+.container {
+  background: linear-gradient(180deg, #001323 0%, #0b001b 100%);
+  padding-top: 40px;
+  padding-bottom: 112px;
+  font-family: 'Poppins';
+  font-style: normal;
+}
+
+.logo {
+  margin-left: 4em;
+  height: 2.5em;
+}
+
+.box {
+  background: linear-gradient(180deg, #003353 -19.53%, #431c43 122.66%);
+  border-radius: 20px;
+  width: 40%;
+  margin: 7em auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.875em;
+  padding: 2.938em;
+}
+
+.box > input {
+  background-color: transparent;
+  border: 1px solid #96cc6a;
+  border-radius: 0.625em;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25em;
+  color: rgba(255, 255, 255, 0.7);
+  height: 3.625em;
+  padding: 1.188em;
+  outline: none;
+}
+
+.box > p {
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.box > button {
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 1.875em;
+  text-align: center;
+  color: #000000;
+  background: #96cc6a;
+  border-radius: 0.625em;
+  border: none;
+  width: 60%;
+  align-self: center;
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    font-size: 14px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding-bottom: 70px;
+  }
+  .box {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    font-size: 10px;
+    padding-bottom: 56px;
+  }
+  .box {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    font-size: 8px;
+  }
+  .logo {
+    margin: auto;
+  }
+  .box {
+    width: 70%;
+  }
+}
