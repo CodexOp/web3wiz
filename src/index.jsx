@@ -13,7 +13,7 @@ import Projects from './pages/Projects/Projects';
 import Homev2 from './pages/Homev2';
 import ContactUs from './pages/ContactUs/ContactUs';
 import Blog from './pages/Blog/Blog';
-import Newsletter from './pages/Newsletter/Newsletter';
+import EventSignup from './pages/EventSignup/EventSignup';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -47,7 +47,7 @@ root.render(
           <Route exact path="/projects" element={<Projects />} />
           <Route exact path="/contact-us" element={<ContactUs />} />
           <Route exact path="/blog/:title" element={<Blog />} />
-          <Route exact path="/newsletter" element={<Newsletter />} />
+          <Route exact path="/eventsignup" element={<EventSignup />} />
         </Routes>
       </Router>
     </HelmetProvider>

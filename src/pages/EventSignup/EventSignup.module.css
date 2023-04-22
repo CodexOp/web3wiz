@@ -45,12 +45,12 @@
 }
 
 .box > p > span {
-  color: #96cc6a;
+  color: #27b67a;
 }
 
 .box input {
   background-color: transparent;
-  border: 1px solid #96cc6a;
+  border: 1px solid #27b67a;
   border-radius: 0.625em 0 0 0.625em;
   font-weight: 400;
   font-size: 1em;
@@ -78,7 +78,7 @@
   text-align: center;
   color: #ffffff !important;
   cursor: pointer;
-  background: #96cc6a;
+  background: #27b67a;
   border-radius: 0 0.6em 0.6em 0;
   border: none;
   align-self: center;
