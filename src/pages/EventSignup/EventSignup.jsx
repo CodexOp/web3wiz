@@ -41,7 +41,9 @@ const EventSignup = () => {
           <Logo className={styles.logo} />
           <div className={styles.box}>
             <p>
-              Don’t miss updates on <span>important events</span>
+              Don’t miss updates on
+              <br />
+              <span> important Web3 events</span>
             </p>
             <div>
               <input

@@ -8,7 +8,7 @@
   padding-bottom: 112px;
   font-family: 'Poppins';
   font-style: normal;
-  background: url('./assets/ball.png'), linear-gradient(180deg, #001323 0%, #0b001b 100%);
+  background: url('./assets/ball.png'), #110d1e;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -31,7 +31,7 @@
   margin: 7em auto;
   display: flex;
   flex-direction: column;
-  gap: 5.813em;
+  gap: 4em;
   align-items: center;
   position: relative;
 }
@@ -49,14 +49,13 @@
 }
 
 .box input {
-  background-color: transparent;
-  border: 1px solid #27b67a;
+  background-color: #1F1F1F;
+  border: none;
   border-radius: 0.625em 0 0 0.625em;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1em;
   line-height: 1.25em;
   color: rgba(255, 255, 255, 0.7);
-  height: 3.625em;
   padding: 1.188em;
   outline: none;
   width: 80%;
@@ -65,10 +64,10 @@
 
 .box > p {
   font-weight: 600;
-  font-size: 4em;
+  font-size: 3.25em;
   text-align: center;
   color: #ffffff;
-  text-transform: uppercase;
+  text-transform:capitalize;
 }
 
 .box button {
@@ -79,7 +78,7 @@
   color: #ffffff !important;
   cursor: pointer;
   background: #27b67a;
-  border-radius: 0 0.6em 0.6em 0;
+  border-radius: 0 1.5em 1.5em 0;
   border: none;
   align-self: center;
   width: 20%;
@@ -133,8 +132,9 @@
   }
   .box input {
     border-radius: 0.6em;
-    height: 6em;
     width: 100%;
+    font-size: 1.5em;
+    box-sizing: border-box;
   }
   .box button {
     border-radius: 0.6em;
