@@ -40,8 +40,7 @@
   height: 3.625em;
   display: flex;
   align-items: center;
-  min-width: 80%;
-  max_width: 80%;
+  width: 80%;
 }
 
 .box > p > span {
