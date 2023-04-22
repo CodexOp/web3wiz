@@ -18,6 +18,7 @@ const Lottie = ({ text }) => {
         container: ref.current,
         loop: false,
       });
+      instance.setSpeed(0.7);
       instance.addEventListener('complete', () => {
         instance.removeEventListener('complete');
         instance.destroy();

@@ -13,6 +13,13 @@
   background-position: center;
 }
 
+.emailError {
+  color: red !important;
+  font-size: 1em !important;
+  position: absolute;
+  bottom: -4em;
+}
+
 .logo {
   margin-left: 4em;
   height: 2.5em;
@@ -26,6 +33,7 @@
   flex-direction: column;
   gap: 5.813em;
   align-items: center;
+  position: relative;
 }
 
 .box > div {
@@ -121,6 +129,7 @@
   .box > div {
     flex-direction: column;
     gap: 2em;
+    height: auto;
   }
   .box input {
     border-radius: 0.6em;
