@@ -33,6 +33,7 @@ import safeearn1 from "../../assets/safeearn1.png";
 import safeearn2 from "../../assets/safeearn2.png";
 import truliv from "../../assets/truliv.png";
 import zolo from "../../assets/zolo.png";
+import lottery from "../../assets/lottery.png";
 import luckyMetaverseStakingProject from "../../assets/luckyMetaverseStakingProject.png";
 import metamarketingProject from "../../assets/metamarketingProject.png";
 import crokingDashboardProject from "../../assets/crokingDashBoardProject.png";
@@ -417,7 +418,18 @@ export const contents = {
       headerColor: "#045B00",
       textColor: "rgba(4, 91, 0, 0.76)",
     },
-
+    {
+      projectName: "NWT-DAO Lottery",
+      projectDescription:
+        "A web3 based lottery application with no bias, The Contract Randomly Selects 9 Lucky Winners And Sents The Rewards To Their Address Automatically. Everything Is Open, Safe, And Decentralized. Users Can Go To Their Wallet And Check.",
+      projectWebsite: "https://probable-system-9ocf1ul9c-mfrancisdy.vercel.app/",
+      projectImage: lottery,
+      connectText: "Visit Website",
+      projectTelegram: "https://probable-system-9ocf1ul9c-mfrancisdy.vercel.app/",
+      backgroundColor: "#6A68A4",
+      headerColor: "#FFFFFF",
+      textColor: "rgba(255, 255, 255, 0.72)",
+    },
     {
       projectName: "Zolo",
       index: "29",
