@@ -16,6 +16,7 @@ export default function Projects() {
   const [navSelected, setNavSelected] = React.useState(0)
   const [isLanding, setIsLanding] = React.useState(true);
   const callFacebookPixel = useFacebookPixel();
+  
   useEffect(() => {
     const options = {
       threshold: 0.5,
