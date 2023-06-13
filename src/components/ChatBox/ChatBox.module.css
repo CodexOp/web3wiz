@@ -24,6 +24,10 @@
   font-size: x-large;
 }
 
+.title>img{
+  cursor: pointer;
+}
+
 .chat-box input[type="text"] {
   width: 100%;
   outline: none;

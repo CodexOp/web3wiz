@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import chatIcon from "../../assets/images/icons8-chat-bubble-30.png";
 import closeIcon from "../../assets/images/icons8-multiply-30.png";
 import styles from "./ChatBox.module.css";
@@ -6,10 +6,10 @@ import styles from "./ChatBox.module.css";
 const ChatBox = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [message, setMessage] = useState("");
-  let [chatData, setchatData] = useState(["Hi, How can I help you?"]);
+  const [chatData, setChatData] = useState(["Hi, How can I help you?"]);
+  const chatContainerRef = useRef(null);
 
   const handleChatClose = () => {
-    // handle close button
     setIsVisible(false);
   };
 
@@ -25,22 +25,26 @@ const ChatBox = () => {
   };
 
   const handleSendClick = () => {
-    // Implement your send functionality here
     if (message.includes("@") && message.includes(".com")) {
       console.log("make a post request");
-      chatData.push(message);
+      const newChatData = [...chatData, message];
+      setChatData(newChatData);
 
       setTimeout(() => {
-        setchatData((prevchatData) => [...prevchatData, "Thank you our Team get in Touch"]);
-      }, 500);
+        const updatedChatData = [...newChatData, "Thank you, our team will get in touch"];
+        setChatData(updatedChatData);
+      }, 1000);
       // makeEmailPostRequest("url", chatData)
     } else {
-      chatData.push(message);
+      const newChatData = [...chatData, message];
+      setChatData(newChatData);
 
       setTimeout(() => {
-        setchatData((prevchatData) => [...prevchatData, "Please provide your email address our team will contact you soon"]);
-      }, 500);
+        const updatedChatData = [...newChatData, "Please provide your email address, our team will contact you soon"];
+        setChatData(updatedChatData);
+      }, 1000);
     }
+
     setMessage("");
   };
 
@@ -59,10 +63,8 @@ const ChatBox = () => {
       }
 
       const responseData = await response.json();
-      // Handle the response data as needed
       console.log(responseData);
     } catch (error) {
-      // Handle any errors that occur during the request
       console.error(error);
     }
   }
@@ -82,13 +84,13 @@ const ChatBox = () => {
   }, [chatData]);
 
   return (
-    <div className={`${styles["chat-box"]} ${isVisible ? styles["visible"] : ""}`}>
+    <div className={`${styles["chat-box"]} ${isVisible && styles["visible"]}`}>
       <div className={styles.title}>
-        <img src={chatIcon} alt="ig-icon" />
-        <h3>Chat Support </h3>
-        <img src={closeIcon} onClick={handleChatClose} alt="ig-icon" />
+        <img src={chatIcon} alt="chat-icon" />
+        <h3>Chat Support</h3>
+        <img src={closeIcon} onClick={handleChatClose} alt="close-icon" />
       </div>
-      <div className={styles.Textbody}>
+      <div className={styles.Textbody} ref={chatContainerRef}>
         {chatData.map((item, index) => (
           <div className={`${index === chatData.length - 1 ? styles["last-message"] : ""} ${index % 2 === 0 ? styles.TextbodyLeft : styles.TextbodyRight}`} key={index}>
             <div>{item}</div>
@@ -97,7 +99,7 @@ const ChatBox = () => {
       </div>
       <div className={styles.inputboxdiv}>
         <input type="text" value={message} onChange={handleMessageChange} placeholder="Enter your message" className={styles["chat-input"]} onKeyDown={handleKeyDown} />
-        <button className={styles.sendButton} onClick={handleSendClick} onKeyDown={handleKeyDown}>
+        <button className={styles.sendButton} onClick={handleSendClick}>
           Send
         </button>
       </div>
