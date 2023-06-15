@@ -26,9 +26,10 @@ const ChatBox = () => {
 
   const handleSendClick = () => {
     if (message.includes("@") && message.includes(".com")) {
-      console.log("make a post request");
       const newChatData = [...chatData, message];
       setChatData(newChatData);
+      // console.log("make a post request",newChatData);
+      makeEmailPostRequest("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZkMDYzMzA0Mzc1MjY1NTUzMDUxMzAi_pc", newChatData);
 
       setTimeout(() => {
         const updatedChatData = [...newChatData, "Thank you, our team will get in touch"];
@@ -48,25 +49,24 @@ const ChatBox = () => {
     setMessage("");
   };
 
-  async function makeEmailPostRequest(url, data) {
-    try {
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+  async function makeEmailPostRequest(url, payload) {
+    let headersList = {
+      Accept: "*/*",
+      "Content-Type": "application/json",
+    };
 
-      if (!response.ok) {
-        throw new Error("Request failed");
-      }
+    let bodyContent = JSON.stringify({
+      emaildata: payload,
+    });
 
-      const responseData = await response.json();
-      console.log(responseData);
-    } catch (error) {
-      console.error(error);
-    }
+    let response = await fetch(url, {
+      method: "POST",
+      body: bodyContent,
+      headers: headersList,
+    });
+
+    let data = await response.text();
+    console.log(data);
   }
 
   useEffect(() => {
