@@ -7,6 +7,7 @@ import { initializeApp } from 'firebase/app';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Thankyou from './pages/thankyou/Thankyou';
+import {Thankyou as ThankyouG} from './pages/thankyou-G/Thankyou'
 import Privacy from './pages/privacy/Privacy';
 import Form from './pages/form/Form';
 import Projects from './pages/Projects/Projects';
@@ -41,7 +42,8 @@ root.render(
         <Routes>
           <Route path="/homev2" element={<App />} />
           <Route exact path="/" element={<Homev2 />} />
-          <Route exact path="/thankyou" element={<Thankyou />} />
+          <Route exact path="/thankyou-b" element={<Thankyou />} />
+          <Route exact path="/thankyou-g" element={<ThankyouG />} />
           <Route exact path="/privacy-policy" element={<Privacy />} />
           <Route exact path="/form" element={<Form />} />
           <Route exact path="/projects" element={<Projects />} />
