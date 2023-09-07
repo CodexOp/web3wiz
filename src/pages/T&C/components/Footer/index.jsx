@@ -6,6 +6,7 @@ import linkedInIcon from "../assests/images/icon-linkedIn.svg"
 import telegramIcon from "../assests/images/icon-telegram.svg"
 import twitterIcon from "../assests/images/icon-twitter.svg"
 import emailIcon from "../assests/images/icon-email.svg"
+import sendIcon from "../assests/images/icon-send.svg"
 import { Link } from "react-router-dom";
 
 export default function Footer()
@@ -20,7 +21,7 @@ export default function Footer()
                             <p>MATRIX LABS</p>
                         </div>
                     </Link>
-                    <div className={styles.titleDesc}>Over time, blockchain, especially the crypto space, has been creating a bridge between traditional financial models</div>
+                    <div className={styles.titleDesc}>One stop for all Blockchain solutions</div>
                 </div>
                 <div className={styles.socials1}>
                     <div>Reach out to us:</div>
@@ -45,26 +46,26 @@ export default function Footer()
             </div>
             <div className={styles.webpageLinksWrapper}>
             <div className={styles.webpageLinks}>
-                <div className={styles.highlighted}>SITEMAP</div>
-                <Link to="/aboutus"><div>About</div></Link>
-                <Link to="/form"><div>Form</div></Link>
-                <Link to="/projects"><div>Projects</div></Link>
-                <Link to="/form"><div>Contact us</div></Link>
-                <a href="#faqs"><div>FAQs</div></a>
+                <Link to="/">
+                    <div className={styles.highlighted}>Home</div>
+                </Link>
+                <div>About</div>
+                <div>Services</div>
+                <div>Projects</div>
             </div>
             <div className={styles.webpageLinks}>
-                <div className={styles.highlighted}>Services Info</div>
-                <div>Dapp</div>
-                <div><Link to="projects">Websites</Link></div>
-                <div><Link to="projects">Smart Contract</Link></div>
-                <div><Link to="projects">Marketplaces</Link></div>
+                <div>Contact us</div>
+                <div>FAQs</div>
             </div>
-            <div className={styles.webpageLinks}>
-                <div className={styles.highlighted}>Policies</div>
-                <div><Link to="/privacy-policy">Privacy Policy</Link></div>
-                <div><Link to='/terms-and-conditions'>Terms And Condition</Link></div>
-                <div><Link to='/contact-us'>Contact Us</Link></div>
             </div>
+            <div className={styles.signupWrapper}>
+                <div className={styles.signupTxt}>Sign up for updates</div>
+                <div  className={styles.signupInput}>
+                    <input placeholder="email@address.com" />
+                    <button>
+                        <img src={sendIcon} className={styles.sendIcon} alt="send-icon" />
+                    </button>
+                </div>
             </div>
             <div className={styles.socials2}>
                     <div>Reach out to us:</div>

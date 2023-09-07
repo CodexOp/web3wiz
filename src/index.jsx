@@ -15,6 +15,7 @@ import Homev2 from './pages/Homev2';
 import ContactUs from './pages/ContactUs/ContactUs';
 import Blog from './pages/Blog/Blog';
 import EventSignup from './pages/EventSignup/EventSignup';
+import TermsAndConditions from './pages/T&C/TermsAndCondition';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -50,6 +51,7 @@ root.render(
           <Route exact path="/contact-us" element={<ContactUs />} />
           <Route exact path="/blog/:title" element={<Blog />} />
           <Route exact path="/eventsignup" element={<EventSignup />} />
+          <Route exact path="/terms-and-conditions" element={<TermsAndConditions />} />
         </Routes>
       </Router>
     </HelmetProvider>
