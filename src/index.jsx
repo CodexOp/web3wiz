@@ -16,6 +16,8 @@ import ContactUs from './pages/ContactUs/ContactUs';
 import Blog from './pages/Blog/Blog';
 import EventSignup from './pages/EventSignup/EventSignup';
 import TermsAndConditions from './pages/T&C/TermsAndCondition';
+import OurCompany from './pages/Our-Company-Details/OurCompany';
+
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -49,9 +51,11 @@ root.render(
           <Route exact path="/form" element={<Form />} />
           <Route exact path="/projects" element={<Projects />} />
           <Route exact path="/contact-us" element={<ContactUs />} />
+          <Route exact path="/our-company" element={<OurCompany />} />
           <Route exact path="/blog/:title" element={<Blog />} />
           <Route exact path="/eventsignup" element={<EventSignup />} />
           <Route exact path="/terms-and-conditions" element={<TermsAndConditions />} />
+
         </Routes>
       </Router>
     </HelmetProvider>

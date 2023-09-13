@@ -132,25 +132,57 @@ export default function Home ()
                 <div className={styles.desc}>
                     If you have any questions or concerns about our Privacy Policy or the handling of your information, <br/>please contact us at:
                 </div>
-                <div className={styles.contact}>
+
+                <div className={styles.location}>
                     <div className={styles.contactDesc}>
                         <img className={styles.contactLocationIcon} src={IconLocation} alt="icon-location"/>
                         <div className={styles.locationTxt}>
-                            The Matrix Labs <br/>
-                            304/A1, Prospera, Bhopal, India
+                            The Matrix Lab<br/>
+                            Head Office US<br/>
+                            <div style={{fontSize : '14px'}}>3191, 1603 Capitol Avenue, Suite 413A, Cheyenne, WY, Laramie, US, 82001</div>
                         </div>
                     </div>
-                    <div className={styles.contactDesc}>
-                        <img className={styles.contactPhoneIcon} src={IconPhone} alt="icon-phone"/>
-                        <div>
-                            7999378952
-                        </div>
-                    </div>
-                    <div className={styles.contactDesc}>
+                    <div style={{marginTop : "10px"}} className={styles.contactDesc}>
                         <img className={styles.contactEmailIcon} src={IconMail} alt="icon-email"/>
                         <div className={styles.contactEmail}>
                             contact@thematrixlabs.com
                         </div>
+                    </div>
+                    <div style={{marginTop : "10px"}} className={styles.contactDesc}>
+                        <img className={styles.contactPhoneIcon} src={IconPhone} alt="icon-phone"/>
+                        <div>
+                            <a href="tel:+12342559266">+1 (234) 255-9266</a>
+                        </div>
+                    </div>
+                    <div style={{marginTop : "10px"}} className={styles.contactDesc}>
+                            <div>EIN &nbsp; &nbsp; 320721211</div>
+                    </div>
+                </div>
+
+
+                <div style={{marginTop : "30px"}} className={styles.location}>
+                    <div className={styles.contactDesc}>
+                        <img className={styles.contactLocationIcon} src={IconLocation} alt="icon-location"/>
+                        <div className={styles.locationTxt}>
+                            The Matrix Lab<br/>
+                            Head Office India<br/>
+                            <div style={{fontSize : '14px'}}>304/A1, Prospera, Bhopal, india</div>
+                        </div>
+                    </div>
+                    <div style={{marginTop : "10px"}} className={styles.contactDesc}>
+                        <img className={styles.contactEmailIcon} src={IconMail} alt="icon-email"/>
+                        <div className={styles.contactEmail}>
+                            contact@thematrixlabs.com
+                        </div>
+                    </div>
+                    <div style={{marginTop : "10px"}} className={styles.contactDesc}>
+                        <img className={styles.contactPhoneIcon} src={IconPhone} alt="icon-phone"/>
+                        <div>
+                            <a href="tel:+917999378952">+91 7999378952</a>
+                        </div>
+                    </div>
+                    <div style={{marginTop : "10px"}} className={styles.contactDesc}>
+                            <div>GST &nbsp; &nbsp; 23BWVPJ4749M1ZQ</div>
                     </div>
                 </div>
             </div>

@@ -46,11 +46,11 @@ export default function Footer()
             <div className={styles.webpageLinksWrapper}>
             <div className={styles.webpageLinks}>
                 <div className={styles.highlighted}>SITEMAP</div>
-                <Link to="/aboutus"><div>About</div></Link>
-                <Link to="/form"><div>Form</div></Link>
-                <Link to="/projects"><div>Projects</div></Link>
-                <Link to="/form"><div>Contact us</div></Link>
-                <a href="#faqs"><div>FAQs</div></a>
+                {/* <Link to="/aboutUs"><div>About</div></Link> */}
+                <a href="/form"><div>Form</div></a>
+                <a href="/projects"><div>Projects</div></a>
+                {/* <Link to="/form"><div>Contact us</div></Link> */}
+                {/* <a href="#faqs"><div>FAQs</div></a> */}
             </div>
             <div className={styles.webpageLinks}>
                 <div className={styles.highlighted}>Services Info</div>
@@ -64,6 +64,7 @@ export default function Footer()
                 <div><Link to="/privacy-policy">Privacy Policy</Link></div>
                 <div><Link to='/terms-and-conditions'>Terms And Condition</Link></div>
                 <div><Link to='/contact-us'>Contact Us</Link></div>
+                <div><Link to='/our-company'>Our Company</Link></div>
             </div>
             </div>
             <div className={styles.socials2}>

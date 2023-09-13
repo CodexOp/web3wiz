@@ -51,10 +51,10 @@ export default function Footer()
                 </Link>
                 <div>About</div>
                 <div>Services</div>
-                <div>Projects</div>
+                <a href="/projects"><div>Projects</div></a>
             </div>
             <div className={styles.webpageLinks}>
-                <div>Contact us</div>
+                <a href="/contact-us"><div>Contact us</div></a>
                 <div>FAQs</div>
             </div>
             </div>

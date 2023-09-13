@@ -36,7 +36,7 @@ const Form = () => {
             <Lottie text={"Thanks for reaching out! We'll be in touch soon." } />
             <div className={styles.box1}>
                 <div>
-                    <h1>Have a project?</h1>
+                    <h1>Our Company Details</h1>
                     <p>We would love to hear from you</p>
                 </div>
                 <div>
@@ -52,50 +52,42 @@ const Form = () => {
             </div>
             <div className={styles.box2}>
                 <div className={styles.location}>
-                    <h3>Head office</h3>
+                    <h3>Head office US</h3>
                     <p>
                         <span>Location</span> - 3191, 1603 Capitol Avenue, Suite 413A, Cheyenne, WY, Laramie, US, 82001
                     </p>
                     <p>
-                        <span>Tel. number</span> - <a style={{color: "black"}} href="tel:+917999378952">+91 7999378952</a>
+                        <span>Email</span> <a style={{color : 'black'}} href="mailto:contact@thematrixlabs.com">contact@thematrixlabs.com</a>
                     </p>
                     <p>
-                        <span>Email</span> - <a href="mailto:careers@thematrixlabs.com" style={{color: "black"}}>careers@thematrixlabs.com</a>
+                        <span>Tel. number</span> - <a style={{color : 'black'}} href="tel:+12342559266">+1 (234) 255-9266</a>
                     </p>
                     <p>
                         <span>EIN</span> - 320721211
                     </p>
                 </div>
-                <form>
-                    <input type="text" placeholder="Enter your name" value={data.name} onChange={(e)=>{
-                        setData((state)=>{
-                            return {
-                                ...state,
-                                name: e.target.value
-                            }
-                        })
-                    }}/>
-                    <input type="text" placeholder="Enter you email" value={data.email} onChange={(e)=>{
-                        setData((state)=>{
-                            return {
-                                ...state,
-                                email: e.target.value
-                            }
-                        })
-                    }}/>
-                    <Select service={setData}/>
-                    <textarea type="text" placeholder="Enter your message" value={data.msg} onChange={(e)=>{
-                        setData((state)=>{
-                            return {
-                                ...state,
-                                msg: e.target.value
-                            }
-                        })
-                    }}/>
-                    <button onClick={handleOnClickSubmit} >Submit</button>
-                </form>
-            </div>
+
+                <div className={styles.location}>
+                    <h3>Head office India</h3>
+                    <p>
+                        <span>Location</span> - 304/A1, Prospera, Bhopal, india
+                    </p>
+                    <p>
+                        <span>Tel. number</span> - <a style={{color : 'black'}} href="tel:+917999378952">+91 7999378952</a>
+                    </p>
+                    <p>
+                        <span>Email</span> <a style={{color : 'black'}} href="mailto:contact@thematrixlabs.com">contact@thematrixlabs.com</a>
+                    </p>
+                    <p>
+                        <span>GST</span> - 23BWVPJ4749M1ZQ
+                    </p>
+                </div>
+
+                <a href="contact-us" style={{width : "133%"}}>
+                    <button style={{background: "#27B67A", borderRadius : "10px"}}>Contact Us</button>
+                </a>
         </div>
+    </div>
     );
 };
 
