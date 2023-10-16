@@ -1,0 +1,51 @@
+.pagebtn{
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    width: auto;
+    transform: translate(-50%, 0);
+    text-align: center;
+    }
+    
+    .pagebtn1{
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background: #28B77C;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .pagebtn2{
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background: #28B77C;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .pagebtn1Icon{
+      width: 15px;
+      transform: rotate(180deg);
+    }
+    
+    .pagebtn2Icon{
+      width: 15px;
+    }
+    
+    .matrixlabDiv{
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      background: #28B77C;
+      border-radius: 4px;
+      padding: 10px 15px;
+      margin-left: 5px;
+    }
+    
+    .main{
+      color: white;
+    }

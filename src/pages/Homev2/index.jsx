@@ -178,7 +178,7 @@ export default function Homev2() {
     <>
       <Lottie text={"Thank you for subscribing! Stay tuned for our latest news and updates."} />
       <Navbar />
-      <ChatBox/>
+      <ChatBox />
       <div className="landing"></div>
       <div className={styles.homeWrapper} id="home">
         <div className={styles.backdropDiv1}>
@@ -226,10 +226,12 @@ export default function Homev2() {
         </div>
         <div className={styles.mainWrapper2}>
           <div className={styles.maintext2}>
-            Build with us <span> where scalability is never an issue</span>
+            <h1>Build with us <span> where scalability is never an issue</span></h1>
           </div>
           <div className={styles.whyChooseDiv}>
-            <div className={styles.whyChooseHeading}>Why Choose us?</div>
+            <div className={styles.whyChooseHeading}>
+              <h2>Why Choose us?</h2>
+            </div>
           </div>
           <div className={styles.featureGrid}>
             <div className={styles.featureGridItems}>
@@ -290,45 +292,62 @@ export default function Homev2() {
         <div id="services" className={styles.mainWrapper3}>
           <div className="servicesProvided">
             <div className={styles.ourServicesHeading}>
-              Our <span>Services</span>
+              <h1>Our <span>Services</span></h1>
             </div>
-            <div className={styles.ourServicesTxt}>Our services help everyone from startups to enterprises to launch and maintain their applications on the blockchain.</div>
+            <div className={styles.ourServicesTxt}>
+              <p>Our services help everyone from startups to enterprises to launch and maintain their applications on the blockchain.</p>
+            </div>
           </div>
           <div className={styles.serviceGrid}>
             <div className={styles.serviceGridItem}>
               <img src={smartContract} alt="transparency-img" className={styles.serviceGridItemImg} />
-              <div className={styles.serviceGridItemHeading}>SMART CONTRACT</div>
-              <div className={styles.serviceGridItemTxt}>Ensure security with our custom smart contracts, Certik verified and tailored for you</div>
+              <div className={styles.serviceGridItemHeading}>
+                <h2>SMART CONTRACT</h2>
+              </div>
+              <div className={styles.serviceGridItemTxt}>
+                <p>Ensure security with our custom smart contracts, Certik verified and tailored for you</p></div>
               {/* <div className={styles.knowmoreBtn}>Know More</div> */}
             </div>
             <div className={styles.serviceGridItem}>
               <img src={dappDevelopment} alt="folderLockIcon" className={styles.serviceGridItemImg} />
-              <div className={styles.serviceGridItemHeading}>DAPP DEVELOPMENT</div>
-              <div className={styles.serviceGridItemTxt}>Securely build and launch your DApp with our expert development services</div>
+              <div className={styles.serviceGridItemHeading}>
+                <h2>DAPP DEVELOPMENT</h2></div>
+              <div className={styles.serviceGridItemTxt}>
+                <p>Securely build and launch your DApp with our expert development services</p></div>
               {/* <div className={styles.knowmoreBtn}>Know More</div> */}
             </div>
             <div className={styles.serviceGridItem}>
               <img src={website} alt="shieldIcon" className={styles.serviceGridItemImg} />
-              <div className={styles.serviceGridItemHeading}>WEBSITE DEVELOPMENT</div>
-              <div className={styles.serviceGridItemTxt}>Create a sleek and user-friendly website of your desired theme with our team.</div>
+              <div className={styles.serviceGridItemHeading}>
+                <h2> WEBSITE DEVELOPMENT</h2>
+              </div>
+              <div className={styles.serviceGridItemTxt}>
+                <p>Create a sleek and user-friendly website of your desired theme with our team.</p></div>
               {/* <div className={styles.knowmoreBtn}>Know More</div> */}
             </div>
             <div className={styles.serviceGridItem}>
               <img src={nft} alt="transparency-img" className={styles.serviceGridItemImg} />
-              <div className={styles.serviceGridItemHeading}>NFT AND TOKEN</div>
-              <div className={styles.serviceGridItemTxt}>Tokenize your assets with our NFT and token services.</div>
+              <div className={styles.serviceGridItemHeading}>
+                <h2>NFT AND TOKEN </h2></div>
+              <div className={styles.serviceGridItemTxt}>
+                <p>Tokenize your assets with our NFT and token services.</p></div>
               {/* <div className={styles.knowmoreBtn}>Know More</div> */}
             </div>
             <div className={styles.serviceGridItem}>
               <img src={android} alt="folderLockIcon" className={styles.serviceGridItemImg} />
-              <div className={styles.serviceGridItemHeading}>ANDROID AND IOS APP</div>
-              <div className={styles.serviceGridItemTxt}>Launch your mobile app on both Android and iOS with us.</div>
+              <div className={styles.serviceGridItemHeading}>
+                <h2>ANDROID AND IOS APP</h2></div>
+              <div className={styles.serviceGridItemTxt}>
+                <p>Launch your mobile app on both Android and iOS with us.</p></div>
               {/* <div className={styles.knowmoreBtn}>Know More</div> */}
             </div>
             <div className={styles.serviceGridItem}>
               <img src={marketplaces} alt="shieldIcon" className={styles.serviceGridItemImg} />
-              <div className={styles.serviceGridItemHeading}>MARKETPLACES</div>
-              <div className={styles.serviceGridItemTxt}>Join the NFT revolution with our NFT marketplace development service.</div>
+              <div className={styles.serviceGridItemHeading}>
+                <h2>MARKETPLACES</h2>
+              </div>
+              <div className={styles.serviceGridItemTxt}>
+                <p>Join the NFT revolution with our NFT marketplace development service.</p></div>
               {/* <div className={styles.knowmoreBtn}>Know More</div> */}
             </div>
           </div>
@@ -352,9 +371,10 @@ export default function Homev2() {
         <div className="projectsDone"> </div>
         <div className={styles.mainWrapper4}>
           <div className={styles.ourProjectsHeading}>
-            Our <span>Projects</span>
+            <h1> Our <span>Projects</span></h1>
           </div>
-          <div className={styles.ourProjectTxt}>Explore our diverse portfolio of projects, including website and dapp development, among other services.</div>
+          <div className={styles.ourProjectTxt}>
+            <p>Explore our diverse portfolio of projects, including website and dapp development, among other services.</p></div>
 
           <div className={styles.projectImgWrapper}>
             <img src={scribbleImg} alt="scribbleImg" className={styles.scribbleImg} />
@@ -370,35 +390,48 @@ export default function Homev2() {
         <div className={styles.styledSectionWrapper}>
           <div className={styles.styledSection2}>
             <div className={styles.styledSectionTxt}>
-              Are you looking for a reliable
-              <br />
-              Dapp solution that can give your
-              <br />
-              business the much-needed boost?
+              <h1>
+                Are you looking for a reliable
+                <br />
+                Dapp solution that can give your
+                <br />
+                business the much-needed boost?
+              </h1>
             </div>
             <Link to={"/form" + params} onClick={() => callFacebookPixel("ClickedTalkWithExperts", 4)}>
-              <div className={styles.styledwhiteBtn}>Talk With Experts</div>
+              <div className={styles.styledwhiteBtn}>
+                <p>  Talk With Experts </p>
+              </div>
             </Link>
           </div>
         </div>
         <div className={styles.mainWrapper5}>
-          <div className={styles.platformHeading}>Platforms We Work On</div>
+          <div className={styles.platformHeading}>
+            <h2>Platforms We Work On </h2> </div>
           <div className={styles.platformsDiv}>
             <div className={styles.platform}>
               <img src={ethereumIcon} alt="ethereumIcon" className={styles.platformIcon} />
-              <div>Ethereum</div>
+              <div>
+                <h2> Ethereum </h2>
+              </div>
             </div>
             <div className={styles.platform}>
               <img src={binanceIcon} alt="binanceIcon" className={styles.platformIcon} />
-              <div>Binance</div>
+              <div>
+                <h2> Binance </h2>
+              </div>
             </div>
             <div className={styles.platform}>
               <img src={polygonIcon} alt="polygonIcon" className={styles.platformIcon} />
-              <div>Polygon</div>
+              <div>
+                <h2> Polygon </h2>
+
+              </div>
             </div>
             <div className={styles.platform}>
               <img src={tronIcon} alt="tronIcon" className={styles.platformIcon} />
-              <div>Tron</div>
+              <div>
+                <h2>Tron</h2></div>
             </div>
           </div>
         </div>
@@ -407,11 +440,12 @@ export default function Homev2() {
           <div className="testimonials"> </div>
           <div className={styles.faqsDiv} id="faqs">
             <div className={styles.faqsDivHeading}>
-              Frequently Asked <span>Questions</span>
+              <h1>   Frequently Asked <span>Questions</span> </h1>
             </div>
             <div className={styles.faqDropdown}>
               <div className={styles.faqDropdownheading} onClick={() => setisFaq1Open(!isFaq1Open)}>
-                <div>Do you provide custom smart contracts?</div>
+                <div>
+                  <h2>Do you provide custom smart contracts? </h2></div>
                 <div>
                   <div
                     style={{
@@ -433,13 +467,14 @@ export default function Homev2() {
                   transition: "height 0.5s ease-out",
                 }}
               >
-                Yes, we do provide Custom Smart Contracts according to the client’s needs.
+                <h2>Yes, we do provide Custom Smart Contracts according to the client’s needs.</h2>
               </div>
             </div>
 
             <div className={styles.faqDropdown}>
               <div className={styles.faqDropdownheading} onClick={() => setisFaq2Open(!isFaq2Open)}>
-                <div>How long is the after sales service?</div>
+                <div>
+                  <h2>How long is the after sales service? </h2></div>
                 <div>
                   <div
                     style={{
@@ -461,13 +496,14 @@ export default function Homev2() {
                   transition: "height 0.5s ease-out",
                 }}
               >
-                Customer satisfaction is our top priority. So we provide upto 7 days of service from the date of delivery.
+                <h2>  Customer satisfaction is our top priority. So we provide upto 7 days of service from the date of delivery.</h2>
               </div>
             </div>
 
             <div className={styles.faqDropdown}>
               <div className={styles.faqDropdownheading} onClick={() => setisFaq3Open(!isFaq3Open)}>
-                <div>Do you provide hosting as well?</div>
+                <div>
+                  <h2>Do you provide hosting as well? </h2></div>
                 <div>
                   <div
                     style={{
@@ -489,13 +525,14 @@ export default function Homev2() {
                   transition: "height 0.5s ease-out",
                 }}
               >
-                Yes, we do provide hosting solutions if the clients need it.
+                <h2> Yes, we do provide hosting solutions if the clients need it. </h2>
               </div>
             </div>
 
             <div className={styles.faqDropdown}>
               <div className={styles.faqDropdownheading} onClick={() => setisFaq4Open(!isFaq4Open)}>
-                <div>Do you provide presale support?</div>
+                <div>
+                  <h2>Do you provide presale support? </h2></div>
                 <div>
                   <div
                     style={{
@@ -517,13 +554,14 @@ export default function Homev2() {
                   transition: "height 0.5s ease-out",
                 }}
               >
-                Yes, will be providing presale support if the clients need it.
+                <h2>  Yes, will be providing presale support if the clients need it. </h2>
               </div>
             </div>
 
             <div className={styles.faqDropdown}>
               <div className={styles.faqDropdownheading} onClick={() => setisFaq5Open(!isFaq5Open)}>
-                <div>Do you take upfront payment?</div>
+                <div>
+                  <h2>Do you take upfront payment? </h2></div>
                 <div>
                   <div
                     style={{
@@ -545,58 +583,62 @@ export default function Homev2() {
                   transition: "height 0.5s ease-out",
                 }}
               >
-                Yes, we will be taking 50% payment upfront before we start working on any order.
+                <h2>  Yes, we will be taking 50% payment upfront before we start working on any order.</h2>
               </div>
             </div>
           </div>
 
           <div className={styles.blogsDiv}>
             <div className={styles.blogsDivHeading}>
-              Latest <span>Blogs</span>
+              <h1> Latest <span>Blogs</span> </h1>
             </div>
             <div className={styles.blogsGrid}>
               <div className={styles.blog}>
                 <img src={blogImg1} className={styles.blogImg} alt="blog-img" />
-                <div className={styles.blogHeading}>Top 5 real-world use cases of blockchain technology</div>
+                <div className={styles.blogHeading}>
+                  <h2>Top 5 real-world use cases of blockchain technology </h2></div>
                 <div className={styles.blogDesc}>
-                  Blockchain technology can be used to create an unchangeable and secure record of a product's journey <br /> .&nbsp;.&nbsp;.
+                  <p>  Blockchain technology can be used to create an unchangeable and secure record of a product's journey <br /> .&nbsp;.&nbsp;. </p>
                 </div>
                 <Link to="blog/Top-5-real-world-use-cases-of-blockchain-technology" target="_blank" rel="noopener noreferrer">
                   <div className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
-                    Read More{">"}
+                    <p> Read More{">"} </p>
                   </div>
                 </Link>
               </div>
               <div className={styles.blog}>
                 <img src={blogImg2} className={styles.blogImg} alt="blog-img" />
-                <div className={styles.blogHeading}>Which platforms should you use to buy NFTs in 2023?</div>
+                <div className={styles.blogHeading}>
+                  <h2>Which platforms should you use to buy NFTs in 2023? </h2></div>
                 <div className={styles.blogDesc}>
-                  In recent years, the world of NFTs has exploded, with more and more people investing in digital assets like <br /> .&nbsp;.&nbsp;.
+                  <p> In recent years, the world of NFTs has exploded, with more and more people investing in digital assets like <br /> .&nbsp;.&nbsp;. </p>
                 </div>
                 <Link to="blog/Which-platforms-should-you-use-to-buy-NFTs-in-2023" target="_blank" rel="noopener noreferrer">
                   <div className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
-                    Read More{">"}
+                    <p> Read More{">"} </p>
                   </div>
                 </Link>
               </div>
               <div className={styles.blog}>
                 <img src={blogImg3} className={styles.blogImg} alt="blog-img" />
-                <div className={styles.blogHeading}>Top 5 Metaverse Games, 2023 edition</div>
+                <div className={styles.blogHeading}>
+                  <h2>Top 5 Metaverse Games, 2023 edition </h2></div>
                 <div className={styles.blogDesc}>
-                  Metaverse games are online virtual worlds where players can interact with each other, explore, create, and play games <br /> .&nbsp;.&nbsp;.
+                  <p> Metaverse games are online virtual worlds where players can interact with each other, explore, create, and play games <br /> .&nbsp;.&nbsp;. </p>
                 </div>
                 <Link to="blog/Top-5-Metaverse-Games,-2023-edition" target="_blank" rel="noopener noreferrer">
                   <div className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
-                    Read More{">"}
+                    <p> Read More{">"} </p>
                   </div>
                 </Link>
               </div>
             </div>
           </div>
           <div className={styles.newsletterHeading}>
-            Subscribe TO Our <span>Newsletter</span>
+            <h1>  Subscribe TO Our <span>Newsletter</span> </h1>
           </div>
-          <div className={styles.newsletterTxt}>Get updates and information about crypto world by subscribe to our newsletter </div>
+          <div className={styles.newsletterTxt}>
+            <p>Get updates and information about crypto world by subscribe to our newsletter </p> </div>
           <div className={styles.signupWrapper}>
             <div className={styles.signupInput}>
               <input
