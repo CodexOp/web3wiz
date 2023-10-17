@@ -20,10 +20,10 @@ export default function Footer()
                             <p>MATRIX LABS</p>
                         </div>
                     </Link>
-                    <div className={styles.titleDesc}>Over time, blockchain, especially the crypto space, has been creating a bridge between traditional financial models</div>
+                    <p className={styles.titleDesc}>Over time, blockchain, especially the crypto space, has been creating a bridge between traditional financial models</p>
                 </div>
                 <div className={styles.socials1}>
-                    <div>Reach out to us:</div>
+                    <h4>Reach out to us:</h4>
                     <div className={styles.socialIconDiv}>
                         <a href="https://instagram.com/thematrixlabs.eth?igshid=NDk5N2NlZjQ=">
                             <img src={igIcon} className={styles.socialIcons} alt="ig-icon" />
@@ -45,30 +45,34 @@ export default function Footer()
             </div>
             <div className={styles.webpageLinksWrapper}>
             <div className={styles.webpageLinks}>
-                <div className={styles.highlighted}>SITEMAP</div>
+                <h3 className={styles.highlighted}>
+                    SITEMAP </h3>
                 {/* <Link to="/aboutUs"><div>About</div></Link> */}
-                <a href="/form"><div>Form</div></a>
-                <a href="/projects"><div>Projects</div></a>
+                <a href="/form">Form</a>
+                <a href="/projects">Project</a>
                 {/* <Link to="/form"><div>Contact us</div></Link> */}
                 {/* <a href="#faqs"><div>FAQs</div></a> */}
             </div>
             <div className={styles.webpageLinks}>
-                <div className={styles.highlighted}>Services Info</div>
-                <div>Dapp</div>
-                <div><Link to="projects">Websites</Link></div>
-                <div><Link to="projects">Smart Contract</Link></div>
-                <div><Link to="projects">Marketplaces</Link></div>
+                <h3 className={styles.highlighted}>
+                    Services Info </h3>
+                <h4>Dapp</h4>
+                <h4><Link to="projects">Websites</Link></h4>
+                <h4><Link to="projects">Smart Contract</Link></h4>
+                <h4><Link to="projects">Marketplaces</Link></h4>
             </div>
             <div className={styles.webpageLinks}>
-                <div className={styles.highlighted}>Policies</div>
-                <div><Link to="/privacy-policy">Privacy Policy</Link></div>
-                <div><Link to='/terms-and-conditions'>Terms And Condition</Link></div>
-                <div><Link to='/contact-us'>Contact Us</Link></div>
-                <div><Link to='/our-company'>Our Company</Link></div>
+                <h3 className={styles.highlighted}>
+                    Policies </h3>
+                <h4><Link to="/privacy-policy">Privacy Policy</Link></h4>
+                <h4><Link to='/terms-and-conditions'>Terms And Condition</Link></h4>
+                <h4><Link to='/contact-us'>Contact Us</Link></h4>
+                <h4><Link to='/our-company'>Our Company</Link></h4>
             </div>
             </div>
             <div className={styles.socials2}>
-                    <div>Reach out to us:</div>
+                    <p>
+                        Reach out to us: </p>
                     <div className={styles.socialIconDiv}>
                         <a href="https://instagram.com/thematrixlabs.eth?igshid=NDk5N2NlZjQ=">
                             <img src={igIcon} className={styles.socialIcons} alt="ig-icon" />

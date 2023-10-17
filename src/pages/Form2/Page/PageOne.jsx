@@ -258,7 +258,7 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
     if (pagenum === 10) {
       try {
         callFaceBookPixel(budgetValue, 'leadGeneratedForm');
-        sendDataToPably();
+        // sendDataToPably();
       } catch (error) {
         console.log(error)
       }
@@ -272,14 +272,12 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
       'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTZlMDYzNzA0MzI1MjZkNTUzMSI_3D_pc',
       {
         // Enter your IP address here
-
         method: 'POST',
         mode: 'cors',
         body: JSON.stringify(data), // body data type must match "Content-Type" header
       }
     );
-    try {
-      fetch(
+    fetch(
         'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzY1MjZjNTUzNCI_3D_pc',
         {
           // conversion Api webhook
@@ -287,40 +285,37 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
           mode: 'cors',
           body: JSON.stringify(conversionData), // body data type must match "Content-Type" header
         }
-      ).then((res) => {
-        res.json().then((data) => {
-          console.log(data);
-        });
-      });
-    } catch (err){
-      console.log(err);
-    }
-  };
-  const sendDataToPably2 = (data) => {
-    fetch(
-      'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc',
-      {
-        // Enter your IP address here
+      )
+      .then((res) =>res.json())
+      .then((res) =>console.log("fetching datas..", res))
+      .catch((err)=> console.log(err));
 
-        method: 'POST',
-        mode: 'cors',
-        body: JSON.stringify(data), // body data type must match "Content-Type" header
-      }
-    );
   };
+  // const sendDataToPably2 = (data) => {
+  //   fetch(
+  //     'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc',
+  //     {
+  //       // Enter your IP address here
+
+  //       method: 'POST',
+  //       mode: 'cors',
+  //       body: JSON.stringify(data), // body data type must match "Content-Type" header
+  //     }
+  //   );
+  // };
 
 
 
   const callFaceBookPixel = (value, leadName) => {
     ReactPixel.trackCustom(leadName, { value: value, currency: 'USD' });
-    sendDataToPably2({
-      event: leadName,
-      value: value,
-      currency: 'USD',
-      userAgent: navigator.userAgent,
-      href: window.location.href,
-      timestamp: Math.floor(Date.now() / 1000),
-    });
+    // sendDataToPably2({
+    //   event: leadName,
+    //   value: value,
+    //   currency: 'USD',
+    //   userAgent: navigator.userAgent,
+    //   href: window.location.href,
+    //   timestamp: Math.floor(Date.now() / 1000),
+    // });
   };
 
 
@@ -375,13 +370,15 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
           }
         }
         if (pagenum === 6) {
-          if (!selectedOptionBudget) {
+          if (selectedOptionBudget == "") {
+            setSelectedOptionBudget(false);
             return;
           }
         }
 
         if (pagenum === 7) {
-          if (!selectedOptionStartDate) {
+          if (selectedOptionStartDate == "") {
+            setSelectedOptionStartDate(false);
             return;
           }
         }
@@ -963,7 +960,7 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
                   className={styles.okBtn}
                   onClick={() => {
                     handlePageUp();
-                    sendDataToPably();
+                    // sendDataToPably();
                   }}
                 >
                   Next
@@ -994,7 +991,7 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
                   className={styles.okBtn}
                   onClick={() => {
                     handlePageUp();
-                    sendDataToPably();
+                    // sendDataToPably();
                   }}
                 >
                   Next

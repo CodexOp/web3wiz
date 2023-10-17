@@ -4,185 +4,196 @@ import IconPhone from "../assests/images/icon-phone.svg";
 import IconMail from "../assests/images/icon-mail.svg";
 import styles from "./style.module.css";
 
-export default function Home ()
-{
+export default function Home() {
     return (
         <div className={styles.contentWrapper}>
             <div className={styles.mainTitleDiv}>
-                <div className={styles.mainTitle}>Privacy Policy</div>
+                <div className={styles.mainTitle}>
+                    <h1>Privacy Policy </h1></div>
                 <p>Please read this agreement carefully, as it contains important information regarding your legal rights and remedies.</p>
             </div>
             <div className={styles.noticeDesc}>
-                The English version of legal agreements and policies is considered as the only current and valid version of this document. Any translated version is provided for your convenience only, to facilitate reading and understanding of the English version. Any translated versions are not legally binding and cannot replace the English versions. In the event of disagreement or conflict, the English language legal agreements and policies shall prevail.
+              <p> The English version of legal agreements and policies is considered as the only current and valid version of this document. Any translated version is provided for your convenience only, to facilitate reading and understanding of the English version. Any translated versions are not legally binding and cannot replace the English versions. In the event of disagreement or conflict, the English language legal agreements and policies shall prevail.</p> 
             </div>
-            <div className={styles.effeDate}>Effective Date: January 9, 2023</div>
+            <div className={styles.effeDate}>
+                <p>Effective Date: January 9, 2023</p></div>
             <div className={styles.policyTnc}>
-            <div className={styles.policyTncContent}>
-                <div className={styles.titles}>Introduction</div>
-                <div className={styles.desc}>
-                    This Privacy Policy explains how The Matrix Labs and its affiliates (“we”, “us”, or “our”) collect, use, and share information about you when you use our websites and online services, including mobile applications (“Services”).
+                <div className={styles.policyTncContent}>
+                    <div className={styles.titles}>
+                        <h1>Introduction </h1></div>
+                    <div className={styles.desc}>
+                      <p> This Privacy Policy explains how The Matrix Labs and its affiliates (“we”, “us”, or “our”) collect, use, and share information about you when you use our websites and online services, including mobile applications (“Services”). </p> 
+                    </div>
+                    <div className={styles.desc}>
+                     <p>  By using our Services, you agree to the collection, use, and sharing of your information as described in this Privacy Policy. If you do not agree with our policies and practices, do not use our Services. </p> 
+                    </div>
+                    <div className={styles.desc}>
+                       <p> We may change our policies and practices from time to time, and we encourage you to review our Privacy Policy whenever you access our Services. If we make changes that are material, we will provide appropriate notice as required by law. </p>
+                    </div>
                 </div>
-                <div className={styles.desc}>
-                    By using our Services, you agree to the collection, use, and sharing of your information as described in this Privacy Policy. If you do not agree with our policies and practices, do not use our Services.
+                <div className={styles.policyTncContent}>
+                    <div className={styles.titles}>
+                        <h1>Information We Collect and How We Collect It </h1></div>
+                    <div className={styles.descWrapper}>
+                        <div className={styles.desc}>
+                           <p> We may collect information about you when you use our Services, including the following: </p>
+                        </div>
+                        <ol>
+                            <li>
+                                1. Personal Information:  We may collect personal information that can be used to identify you, such as your name, email address, and phone number. We may also collect other personal information, such as your age, gender, and interests. We may collect this information when you create an account, register for a service, participate in a survey or contest, or communicate with us.
+                            </li>
+                            <li>
+                                2. Usage Information: We may collect information about your usage of our Services, such as the pages you visit, the features you use, and the links you click. We may also collect information about your device, such as the type of device you are using, your device’s IP address, and your device’s operating system.
+                            </li>
+                            <li>
+                                3. Location Information: We may collect information about your location when you use our Services, such as your IP address and device location data.
+                            </li>
+                            <li>
+                                4. Information from Cookies and Other Tracking Technologies: We may use cookies, web beacons, and other tracking technologies to collect information about your use of our Services. Cookies are small text files that are placed on your device when you visit a website. We may use cookies to personalize your experience, track your usage of our Services, and target advertisements to you. You can disable cookies through your browser settings, but this may impact your ability to use certain features of our Services.
+                            </li>
+                        </ol>
+                    </div>
                 </div>
-                <div className={styles.desc}>
-                    We may change our policies and practices from time to time, and we encourage you to review our Privacy Policy whenever you access our Services. If we make changes that are material, we will provide appropriate notice as required by law.
+                <div className={styles.policyTncContent}>
+                    <div className={styles.titles}>
+                        <h1>How We Use Your Information </h1></div>
+                    <div className={styles.descWrapper}>
+                        <div className={styles.desc}>
+                          <p> We may use your information for the following purposes: </p> 
+                        </div>
+                        <ol>
+                            <li>
+                                1. To provide, maintain, and improve our Services:  We may use your information to provide, maintain, and improve our Services, including to troubleshoot and fix issues, to personalize your experience, and to improve the features and functionality of our Services.
+                            </li>
+                            <li>
+                                2. To communicate with you:  We may use your information to communicate with you about our Services, such as to send you updates, newsletters, marketing materials, or other information that may be of interest to you.
+                            </li>
+                            <li>
+                                3. To protect our legal rights:  We may use your information to protect our legal rights and interests, such as to enforce our policies and to comply with legal and regulatory requirements.
+                            </li>
+                            <li>
+                                4. For research and analytics:  We may use your information for research and analytics purposes, such as to understand how our Services are used and to improve the effectiveness of our marketing efforts.
+                            </li>
+                        </ol>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.policyTncContent}>
-            <div className={styles.titles}>Information We Collect and How We Collect It</div>
-                <div className={styles.descWrapper}>
-                <div className={styles.desc}>
-                    We may collect information about you when you use our Services, including the following:
+                <div className={styles.policyTncContent}>
+                    <div className={styles.titles}>
+                        <h1>How We Share Your Information </h1></div>
+                    <div className={styles.descWrapper}>
+                        <div className={styles.desc}>
+                         <p>   We may share your information as follows: </p>
+                        </div>
+                        <ol>
+                            <li>
+                                1. With service providers: We may share your information with third-party service providers who perform services on our behalf, such as hosting, data analysis, payment processing, and customer service. These service providers are required to protect your information and may use your information only as directed by us.
+                            </li>
+                            <li>
+                                2. With third parties for legal reasons: We may share your information with third parties if we believe it is necessary to comply with a legal obligation, such as in response to a court order or a subpoena. We may also share your information with third parties if we believe it is necessary to protect our rights or the rights of others, to prevent fraud or abuse, or to prevent any other illegal or unethical activity.s, newsletters, marketing materials, or other information that may be of interest to you.
+                            </li>
+                            <li>
+                                3. With affiliates: We may share your information with our affiliates for the purposes described in this Privacy Policy. Our affiliates are companies that are related to us by common ownership or control.
+                            </li>
+                            <li>
+                                4. With third parties in the event of a merger or acquisition: If we are involved in a merger, acquisition, or sale of all or a portion of our assets, we may share your information with the third party involved in the transaction.
+                            </li>
+                            <li>
+                                5. With your consent: We may share your information with third parties if we have your consent to do so.
+                            </li>
+                        </ol>
+                    </div>
                 </div>
-                    <ol>
-                        <li>
-                            1. Personal Information:  We may collect personal information that can be used to identify you, such as your name, email address, and phone number. We may also collect other personal information, such as your age, gender, and interests. We may collect this information when you create an account, register for a service, participate in a survey or contest, or communicate with us.
-                        </li>
-                        <li>
-                            2. Usage Information: We may collect information about your usage of our Services, such as the pages you visit, the features you use, and the links you click. We may also collect information about your device, such as the type of device you are using, your device’s IP address, and your device’s operating system.
-                        </li>
-                        <li>
-                            3. Location Information: We may collect information about your location when you use our Services, such as your IP address and device location data. 
-                        </li>
-                        <li>
-                            4. Information from Cookies and Other Tracking Technologies: We may use cookies, web beacons, and other tracking technologies to collect information about your use of our Services. Cookies are small text files that are placed on your device when you visit a website. We may use cookies to personalize your experience, track your usage of our Services, and target advertisements to you. You can disable cookies through your browser settings, but this may impact your ability to use certain features of our Services.
-                        </li>
-                    </ol>
+                <div className={styles.policyTncContent}>
+                    <div className={styles.titles}>
+                        <h1>Your Choices and Rights </h1></div>
+                    <div className={styles.descWrapper}>
+                        <div className={styles.desc}>
+                           <p> You have the following choices and rights regarding your information: </p>
+                        </div>
+                        <ol>
+                            <li>
+                                1. Opt-out of marketing communications: You can opt-out of receiving marketing communications from us by following the unsubscribe instructions included in such communications or by contacting us as indicated below.
+                            </li>
+                            <li>
+                                2. Access and update your information: You can access and update your account information at any time by logging into your account or by contacting us as indicated below.
+                            </li>
+                            <li>
+                                3. Delete your information: You can request that we delete your information by contacting us as indicated below. Please note that we may be required to retain some of your information for legal or business purposes.
+                            </li>
+                            <li>
+                                4. Restrict the use of your information: You can request that we restrict the use of your information by contacting us as indicated below. Please note that we may still be required to use your information for legal or business purposes.
+                            </li>
+                            <li>
+                                5. Exercise your rights under the California Consumer Privacy Act: If you are a resident of California, you have the right to request that we disclose to you the categories and specific pieces of personal information we have collected about you, the categories of sources from which the personal information was collected, the business or commercial purpose for collecting or selling personal information, and the categories of third parties with whom we have shared personal information. You also have the right to request that we delete your personal information. To exercise these rights, please contact us as indicated below.
+                            </li>
+                            <li>
+                                6. Exercise your rights under the European General Data Protection Regulation: If you are a resident of the European Union, you have the right to access, rectify, erase, restrict, object to, or withdraw your consent to the processing of your personal information at any time. You also have the right to data portability and the right to file a complaint with a supervisory authority. To exercise these rights, please contact us as indicated below.
+                            </li>
+                        </ol>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.policyTncContent}>
-                <div className={styles.titles}>How We Use Your Information</div>
-                <div className={styles.descWrapper}>
-                <div className={styles.desc}>
-                    We may use your information for the following purposes:
-                </div>
-                    <ol>
-                        <li>
-                            1. To provide, maintain, and improve our Services:  We may use your information to provide, maintain, and improve our Services, including to troubleshoot and fix issues, to personalize your experience, and to improve the features and functionality of our Services.
-                        </li>
-                        <li>
-                            2. To communicate with you:  We may use your information to communicate with you about our Services, such as to send you updates, newsletters, marketing materials, or other information that may be of interest to you.
-                        </li>
-                        <li>
-                            3. To protect our legal rights:  We may use your information to protect our legal rights and interests, such as to enforce our policies and to comply with legal and regulatory requirements.
-                        </li>
-                        <li>
-                            4. For research and analytics:  We may use your information for research and analytics purposes, such as to understand how our Services are used and to improve the effectiveness of our marketing efforts.
-                        </li>
-                    </ol>
-                </div>
-            </div>
-            <div className={styles.policyTncContent}>
-                <div className={styles.titles}>How We Share Your Information</div>
-                <div className={styles.descWrapper}>
-                <div className={styles.desc}>
-                    We may share your information as follows:   
-                </div>
-                <ol>
-                <li>
-                    1. With service providers: We may share your information with third-party service providers who perform services on our behalf, such as hosting, data analysis, payment processing, and customer service. These service providers are required to protect your information and may use your information only as directed by us.
-                </li>
-                <li>
-                    2. With third parties for legal reasons: We may share your information with third parties if we believe it is necessary to comply with a legal obligation, such as in response to a court order or a subpoena. We may also share your information with third parties if we believe it is necessary to protect our rights or the rights of others, to prevent fraud or abuse, or to prevent any other illegal or unethical activity.s, newsletters, marketing materials, or other information that may be of interest to you.
-                </li>
-                <li>
-                    3. With affiliates: We may share your information with our affiliates for the purposes described in this Privacy Policy. Our affiliates are companies that are related to us by common ownership or control.
-                </li>
-                <li>
-                    4. With third parties in the event of a merger or acquisition: If we are involved in a merger, acquisition, or sale of all or a portion of our assets, we may share your information with the third party involved in the transaction.
-                </li>
-                <li>
-                    5. With your consent: We may share your information with third parties if we have your consent to do so.
-                </li>
-                </ol>
-                </div>
-                </div>
-            <div className={styles.policyTncContent}>
-                <div className={styles.titles}>Your Choices and Rights</div>
-                <div className={styles.descWrapper}>
-                <div className={styles.desc}>
-                    You have the following choices and rights regarding your information:
-                </div>
-                <ol>
-                    <li>
-                        1. Opt-out of marketing communications: You can opt-out of receiving marketing communications from us by following the unsubscribe instructions included in such communications or by contacting us as indicated below.
-                    </li>
-                    <li>
-                        2. Access and update your information: You can access and update your account information at any time by logging into your account or by contacting us as indicated below.
-                    </li>
-                    <li>
-                        3. Delete your information: You can request that we delete your information by contacting us as indicated below. Please note that we may be required to retain some of your information for legal or business purposes.
-                    </li>
-                    <li>
-                        4. Restrict the use of your information: You can request that we restrict the use of your information by contacting us as indicated below. Please note that we may still be required to use your information for legal or business purposes.
-                    </li>
-                    <li>
-                        5. Exercise your rights under the California Consumer Privacy Act: If you are a resident of California, you have the right to request that we disclose to you the categories and specific pieces of personal information we have collected about you, the categories of sources from which the personal information was collected, the business or commercial purpose for collecting or selling personal information, and the categories of third parties with whom we have shared personal information. You also have the right to request that we delete your personal information. To exercise these rights, please contact us as indicated below.
-                    </li>
-                    <li>
-                        6. Exercise your rights under the European General Data Protection Regulation: If you are a resident of the European Union, you have the right to access, rectify, erase, restrict, object to, or withdraw your consent to the processing of your personal information at any time. You also have the right to data portability and the right to file a complaint with a supervisory authority. To exercise these rights, please contact us as indicated below.
-                    </li>
-                </ol>
-                </div>
-            </div>
             </div>
             <div className={styles.contentDiv}>
-                <div className={styles.titles}>Contact Us</div>
+                <div className={styles.titles}>
+                    <h1>Contact Us </h1></div>
                 <div className={styles.desc}>
-                    If you have any questions or concerns about our Privacy Policy or the handling of your information, <br/>please contact us at:
+                   <p> If you have any questions or concerns about our Privacy Policy or the handling of your information, <br />please contact us at:</p>
                 </div>
 
                 <div className={styles.location}>
                     <div className={styles.contactDesc}>
-                        <img className={styles.contactLocationIcon} src={IconLocation} alt="icon-location"/>
+                        <img className={styles.contactLocationIcon} src={IconLocation} alt="icon-location" />
                         <div className={styles.locationTxt}>
-                            The Matrix Lab<br/>
-                            Head Office US<br/>
-                            <div style={{fontSize : '14px'}}>3191, 1603 Capitol Avenue, Suite 413A, Cheyenne, WY, Laramie, US, 82001</div>
+                            The Matrix Lab<br />
+                            Head Office US<br />
+                            <div style={{ fontSize: '14px' }}>
+                                <p>3191, 1603 Capitol Avenue, Suite 413A, Cheyenne, WY, Laramie, US, 82001 </p></div>
                         </div>
                     </div>
-                    <div style={{marginTop : "10px"}} className={styles.contactDesc}>
-                        <img className={styles.contactEmailIcon} src={IconMail} alt="icon-email"/>
+                    <div style={{ marginTop: "10px" }} className={styles.contactDesc}>
+                        <img className={styles.contactEmailIcon} src={IconMail} alt="icon-email" />
                         <div className={styles.contactEmail}>
-                            contact@thematrixlabs.com
+                           <a> contact@thematrixlabs.com </a>
                         </div>
                     </div>
-                    <div style={{marginTop : "10px"}} className={styles.contactDesc}>
-                        <img className={styles.contactPhoneIcon} src={IconPhone} alt="icon-phone"/>
+                    <div style={{ marginTop: "10px" }} className={styles.contactDesc}>
+                        <img className={styles.contactPhoneIcon} src={IconPhone} alt="icon-phone" />
                         <div>
                             <a href="tel:+12342559266">+1 (234) 255-9266</a>
                         </div>
                     </div>
-                    <div style={{marginTop : "10px"}} className={styles.contactDesc}>
-                            <div>EIN &nbsp; &nbsp; 320721211</div>
+                    <div style={{ marginTop: "10px" }} className={styles.contactDesc}>
+                        <div>
+                            <p>EIN &nbsp; &nbsp; 320721211 </p></div>
                     </div>
                 </div>
 
 
-                <div style={{marginTop : "30px"}} className={styles.location}>
+                <div style={{ marginTop: "30px" }} className={styles.location}>
                     <div className={styles.contactDesc}>
-                        <img className={styles.contactLocationIcon} src={IconLocation} alt="icon-location"/>
+                        <img className={styles.contactLocationIcon} src={IconLocation} alt="icon-location" />
                         <div className={styles.locationTxt}>
-                            The Matrix Lab<br/>
-                            Head Office India<br/>
-                            <div style={{fontSize : '14px'}}>304/A1, Prospera, Bhopal, india</div>
+                            The Matrix Lab<br />
+                            Head Office India<br />
+                            <div style={{ fontSize: '14px' }}>
+                                <p>304/A1, Prospera, Bhopal, india </p></div>
                         </div>
                     </div>
-                    <div style={{marginTop : "10px"}} className={styles.contactDesc}>
-                        <img className={styles.contactEmailIcon} src={IconMail} alt="icon-email"/>
+                    <div style={{ marginTop: "10px" }} className={styles.contactDesc}>
+                        <img className={styles.contactEmailIcon} src={IconMail} alt="icon-email" />
                         <div className={styles.contactEmail}>
-                            contact@thematrixlabs.com
+                        <a> contact@thematrixlabs.com </a>
                         </div>
                     </div>
-                    <div style={{marginTop : "10px"}} className={styles.contactDesc}>
-                        <img className={styles.contactPhoneIcon} src={IconPhone} alt="icon-phone"/>
+                    <div style={{ marginTop: "10px" }} className={styles.contactDesc}>
+                        <img className={styles.contactPhoneIcon} src={IconPhone} alt="icon-phone" />
                         <div>
                             <a href="tel:+917999378952">+91 7999378952</a>
                         </div>
                     </div>
-                    <div style={{marginTop : "10px"}} className={styles.contactDesc}>
-                            <div>GST &nbsp; &nbsp; 23BWVPJ4749M1ZQ</div>
+                    <div style={{ marginTop: "10px" }} className={styles.contactDesc}>
+                        <div>
+                            <p>GST &nbsp; &nbsp; 23BWVPJ4749M1ZQ</p></div>
                     </div>
                 </div>
             </div>
