@@ -12,49 +12,58 @@ import 'aos/dist/aos.css';
 import { Helmet } from 'react-helmet-async';
 import ReactPixel from 'react-facebook-pixel';
 
-export default function Page({ pagenum, handlePageUp, handlePageDown }) {
+const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
   const options = [
-    { label: 'Smart Contract', value: 'Smart Contract' },
+    { label: 'Yes, extensively', value: 'Yes, extensively' },
     {
-      label: 'Decentralised Application',
-      value: 'Decentralised Application',
+      label: 'Yes, but only a few times',
+      value: 'Yes, but only a few times',
     },
-    { label: 'Website development', value: 'Website development' },
-    { label: 'Website Designing', value: 'Website Designing' },
-    { label: 'Metaverse', value: 'Metaverse' },
-    { label: 'Other', value: '' },
+    { label: 'No, this is my first time', value: 'No, this is my first time' },
   ];
 
   const options1 = [
     {
-      label: '1000$ - 5000$',
-      value: '1000$ - 5000$',
+      label: 'Less than ₹ 1,50,000',
+      value: 'Less than ₹ 1,50,000',
     },
     {
-      label: '5000$ - 10000$',
-      value: '5000$ - 10000$',
+      label: '₹ 1,50,000 - ₹ 3,00,000',
+      value: '₹ 1,50,000 - ₹ 3,00,000',
     },
     {
-      label: 'Above 10000$',
-      value: 'Above 10000$',
+      label: '₹ 3,00,000 - ₹ 4,50,000',
+      value: '₹ 3,00,000 - ₹ 4,50,000',
+    },
+    {
+      label: '₹ 4,50,000 - ₹ 5,00,000',
+      value: '₹ 4,50,000 - ₹ 5,00,000',
+    },
+    {
+      label: '₹ 5,00,000 - ₹ 6,50,000',
+      value: '₹ 5,00,000 - ₹ 6,50,000',
+    },
+    {
+      label: '₹ 6,50,000 +',
+      value: '₹ 6,50,000 +',
     },
   ];
-  const iamOption = [
+  const options2 = [
     {
-      label: 'Founder',
-      value: 'Founder',
+      label: 'ASAP (within 10-15 days)',
+      value: 'ASAP (within 10-15 days)',
     },
     {
-      label: 'Marketer',
-      value: 'Marketer',
+      label: '20-25Days',
+      value: '20-25Days',
     },
     {
-      label: 'CTO',
-      value: 'CTO',
+      label: 'More than a month',
+      value: 'More than a month',
     },
     {
-      label: 'Other',
-      value: '',
+      label: 'Flexible',
+      value: 'Flexible',
     },
   ];
   const [showOptions, setShowOptions] = useState(false);
@@ -65,6 +74,9 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
   const [validCountry, setValidCountry] = useState(true);
   const [otherInput, settherInput] = useState(null);
   const [selectedOptionBudget, setSelectedOptionBudget] = useState(null);
+  //FOR DEVELOPMENT START DATE
+  const [selectedOptionStartDate, setSelectedOptionStartDate] = useState(null);
+
   const [custom_href, setCustomHref] = useState(null);
   const [validEmail, setValidEmail] = useState(true);
   const [email, setEmail] = useState('');
@@ -72,15 +84,26 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
   const [adset, setAdset] = useState('');
   const [ad, setAd] = useState('');
   const [name, setName] = useState('');
+  //FOR Taking Project Link
+  const [link, setLink] = useState('');
+  //FOR Taking Details of the Projects 
+  const [details, setDetails] = useState('');
   const [iam, setIam] = useState('');
   const [phoneNo, setPhoneNo] = useState('');
   const [countryCode, setCountryCode] = useState('');
   const [country, setCountry] = useState('');
   const [budget, setBudget] = useState('');
+  //FOR START DATE 
+  const [startDate, setStartDate] = useState('');
   const [leadsource, setLeadsource] = useState('');
   const [projectName, setProjectName] = useState('');
   const [validProjectName, setValidProjectName] = useState(true);
   const [validName, setValidName] = useState(true);
+  // For Taking Project Link
+  const [validLink, setValidLink] = useState(true);
+  // For Taking Project Link
+  const [validDetails, setValidDetails] = useState(true);
+
   const [validOptions, setValidOptions] = useState(true);
   const [validPhone, setValidPhone] = useState(true);
   const [validCC, setValidCC] = useState(true);
@@ -231,25 +254,30 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
     );
 
     // User completes the form
-    if (pagenum === 9) {
-      callFaceBookPixel(budgetValue, 'leadGeneratedForm');
-      sendDataToPably();
+
+    if (pagenum === 10) {
+      try {
+        callFaceBookPixel(budgetValue, 'leadGeneratedForm');
+        // sendDataToPably();
+      } catch (error) {
+        console.log(error)
+      }
     }
   }, [pagenum]);
 
+
+  //ISSUE
   const sendDataToPably = () => {
     fetch(
       'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTZlMDYzNzA0MzI1MjZkNTUzMSI_3D_pc',
       {
         // Enter your IP address here
-
         method: 'POST',
         mode: 'cors',
         body: JSON.stringify(data), // body data type must match "Content-Type" header
       }
     );
-    try {
-      fetch(
+    fetch(
         'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzY1MjZjNTUzNCI_3D_pc',
         {
           // conversion Api webhook
@@ -257,40 +285,37 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
           mode: 'cors',
           body: JSON.stringify(conversionData), // body data type must match "Content-Type" header
         }
-      ).then((res) => {
-        res.json().then((data) => {
-          console.log(data);
-        });
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  const sendDataToPably2 = (data) => {
-    fetch(
-      'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc',
-      {
-        // Enter your IP address here
+      )
+      .then((res) =>res.json())
+      .then((res) =>console.log("fetching datas..", res))
+      .catch((err)=> console.log(err));
 
-        method: 'POST',
-        mode: 'cors',
-        body: JSON.stringify(data), // body data type must match "Content-Type" header
-      }
-    );
   };
+  // const sendDataToPably2 = (data) => {
+  //   fetch(
+  //     'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc',
+  //     {
+  //       // Enter your IP address here
+
+  //       method: 'POST',
+  //       mode: 'cors',
+  //       body: JSON.stringify(data), // body data type must match "Content-Type" header
+  //     }
+  //   );
+  // };
 
 
 
   const callFaceBookPixel = (value, leadName) => {
     ReactPixel.trackCustom(leadName, { value: value, currency: 'USD' });
-    sendDataToPably2({
-      event: leadName,
-      value: value,
-      currency: 'USD',
-      userAgent: navigator.userAgent,
-      href: window.location.href,
-      timestamp: Math.floor(Date.now() / 1000),
-    });
+    // sendDataToPably2({
+    //   event: leadName,
+    //   value: value,
+    //   currency: 'USD',
+    //   userAgent: navigator.userAgent,
+    //   href: window.location.href,
+    //   timestamp: Math.floor(Date.now() / 1000),
+    // });
   };
 
 
@@ -309,43 +334,66 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
             return;
           }
         }
+        // if (pagenum === 3) {
+        //   if (iam === '') {
+        //     setValidOptions(false);
+        //     return;
+        //   }
+        // }
         if (pagenum === 3) {
-          if (iam === '') {
-            setValidOptions(false);
-            return;
-          }
-        }
-        if (pagenum === 4) {
           if (phoneNo === '') {
             setValidPhone(false);
             return;
           }
         }
+        // if (pagenum === 4) {
+        //   if (countryCode === "") {
+        //     setValidCC(false);
+        //   }
+        // }
         if (pagenum === 4) {
-          if (countryCode === "") {
-            setValidCC(false);
-          }
-        }
-        if (pagenum === 5) {
           if (country === '') {
             setValidCountry(false);
             return;
           }
         }
-        if (pagenum === 6) {
-          if (projectName === '') {
-            setValidProjectName(false);
-            return;
-          }
-        }
-        if (pagenum === 7) {
+        // if (pagenum === 5) {
+        //   if (projectName === '') {
+        //     setValidProjectName(false);
+        //     return;
+        //   }
+        // }
+        if (pagenum === 5) {
           if (service === '') {
             setValidOptions(false);
             return;
           }
         }
+        if (pagenum === 6) {
+          if (selectedOptionBudget == "") {
+            setSelectedOptionBudget(false);
+            return;
+          }
+        }
+
+        if (pagenum === 7) {
+          if (selectedOptionStartDate == "") {
+            setSelectedOptionStartDate(false);
+            return;
+          }
+        }
+
+
         if (pagenum === 8) {
-          if (!selectedOptionBudget) {
+          if (link === '') {
+            setValidLink(false);
+            return;
+          }
+        }
+
+        if (pagenum === 9) {
+          if (details === '') {
+            setValidDetails(false);
             return;
           }
         }
@@ -371,6 +419,8 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
     phoneNo,
     countryCode,
     country,
+    details,
+    link
   ]);
   useEffect(() => {
     if (emailRef && emailRef.current) {
@@ -508,41 +558,41 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
           </div>
         )}
 
+        {/* {pagenum === 3 && (
+              <div className={styles.formWrapper} data-aos="fade-up">
+                <div className={styles.counterDiv}>
+                  3. <ArrowIcon className={styles.arrowIcon} />
+                </div>
+                <div className={styles.questionWrapper}>
+                  <div className={styles.primaryTxt}>I Am</div>
+                  <CustomSelect
+                    options={iamOption}
+                    placeholder={'Select Your Designation'}
+                    setWhat={setIam}
+                    setSelectedOption={setSelectedOptionIam}
+                    selectedOption={selectedOptionIam}
+                    defaultValue={1}
+                  />
+                  {!validOptions && (
+                    <div className={styles.errorMsg}>Please enter something</div>
+                  )}
+                  {selectedOptionIam?.value && (
+                    <div
+                      className={styles.okBtn}
+                      onClick={() => {
+                        handlePageUp();
+                      }}
+                    >
+                      Next
+                    </div>
+                  )}
+                </div>
+              </div>
+            )} */}
         {pagenum === 3 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
               3. <ArrowIcon className={styles.arrowIcon} />
-            </div>
-            <div className={styles.questionWrapper}>
-              <div className={styles.primaryTxt}>I Am</div>
-              <CustomSelect
-                options={iamOption}
-                placeholder={'Select Your Designation'}
-                setWhat={setIam}
-                setSelectedOption={setSelectedOptionIam}
-                selectedOption={selectedOptionIam}
-                defaultValue={1}
-              />
-              {!validOptions && (
-                <div className={styles.errorMsg}>Please enter something</div>
-              )}
-              {selectedOptionIam?.value && (
-                <div
-                  className={styles.okBtn}
-                  onClick={() => {
-                    handlePageUp();
-                  }}
-                >
-                  Next
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-        {pagenum === 4 && (
-          <div className={styles.formWrapper} data-aos="fade-up">
-            <div className={styles.counterDiv}>
-              4. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
               <div className={styles.primaryTxt}>My Phone Number*</div>
@@ -813,21 +863,21 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
           </div>
         )}
 
-        {pagenum === 5 && (
+        {pagenum === 4 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
-              5. <ArrowIcon className={styles.arrowIcon} />
+              4. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
-              <div className={styles.primaryTxt}>Country name*</div>
+              <div className={styles.primaryTxt}>State name*</div>
               <div className={styles.secondaryTxt}>
-                Contry In Which You Live
+                State In Which You Live
               </div>
               <input
                 className={styles.nameInput}
                 type="text"
                 autoComplete="off"
-                placeholder="Type in your Country Name"
+                placeholder="Type in your State Name"
                 value={country}
                 onChange={(e) => {
                   if (e.target.value.length > 0) {
@@ -858,53 +908,16 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
           </div>
         )}
 
-        {pagenum === 6 && (
+        {pagenum === 5 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
-              6. <ArrowIcon className={styles.arrowIcon} />
+              5. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
-              <div className={styles.primaryTxt}>My Project Name*</div>
-              <input
-                className={styles.nameInput}
-                type="text"
-                autoComplete="off"
-                placeholder="Type in Your Project Name"
-                value={projectName}
-                onChange={(e) => setProjectName(e.target.value)}
-              />
-              {!validProjectName && (
-                <div className={styles.errorMsg}>
-                  Please enter a valid project name
-                </div>
-              )}
-              <div
-                className={styles.okBtn}
-                onClick={() => {
-                  if (projectName === '') {
-                    setValidProjectName(false);
-                    return;
-                  }
-                  setValidProjectName(true);
-                  handlePageUp();
-                }}
-              >
-                Next
-              </div>
-            </div>
-          </div>
-        )}
-
-        {pagenum === 7 && (
-          <div className={styles.formWrapper} data-aos="fade-up">
-            <div className={styles.counterDiv}>
-              7. <ArrowIcon className={styles.arrowIcon} />
-            </div>
-            <div className={styles.questionWrapper}>
-              <div className={styles.primaryTxt}>I want…</div>
+              <div className={styles.primaryTxt}>Have you worked with a blockchain development team or agency before?</div>
               <CustomSelect
                 options={options}
-                placeholder={'Select Your Service'}
+                placeholder={'Select'}
                 setWhat={setService}
                 setSelectedOption={setSelectedOptionService}
                 selectedOption={selectedOptionService}
@@ -926,18 +939,17 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
             </div>
           </div>
         )}
-        {pagenum === 8 && (
+        {pagenum === 6 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
-              8. <ArrowIcon className={styles.arrowIcon} />
+              6. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
               <div className={styles.primaryTxt}>
-                My budget range is between…
-              </div>
+                What is your budget range for this project, considering its complexity and scope?                  </div>
               <CustomSelect
                 options={options1}
-                placeholder={'Select Your Budget'}
+                placeholder={'Select'}
                 setWhat={setBudget}
                 setSelectedOption={setSelectedOptionBudget}
                 selectedOption={selectedOptionBudget}
@@ -948,7 +960,7 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
                   className={styles.okBtn}
                   onClick={() => {
                     handlePageUp();
-                    sendDataToPably();
+                    // sendDataToPably();
                   }}
                 >
                   Next
@@ -958,7 +970,122 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
           </div>
         )}
 
+        {pagenum === 7 && (
+          <div className={styles.formWrapper} data-aos="fade-up">
+            <div className={styles.counterDiv}>
+              7. <ArrowIcon className={styles.arrowIcon} />
+            </div>
+            <div className={styles.questionWrapper}>
+              <div className={styles.primaryTxt}>
+                When would you like the project development to start?  </div>
+              <CustomSelect
+                options={options2}
+                placeholder={'Select'}
+                setWhat={setStartDate}
+                setSelectedOption={setSelectedOptionStartDate}
+                selectedOption={selectedOptionStartDate}
+                defaultValue={1}
+              />
+              {selectedOptionStartDate && (
+                <div
+                  className={styles.okBtn}
+                  onClick={() => {
+                    handlePageUp();
+                    // sendDataToPably();
+                  }}
+                >
+                  Next
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+
+
+        {pagenum === 8 && (
+          <div className={styles.formWrapper} data-aos="fade-up">
+            <div className={styles.counterDiv}>
+              8. <ArrowIcon className={styles.arrowIcon} />
+            </div>
+            <div className={styles.questionWrapper}>
+              <div className={styles.primaryTxt}> Do You Have a company website?if yes, please share the link.</div>
+              {/* <div className={styles.secondaryTxt}>Let’s know each other</div> */}
+              <input
+                className={styles.nameInput}
+                type="text"
+                autoComplete="off"
+                placeholder="Enter your answer"
+                value={link}
+                onChange={(e) => {
+                  if (e.target.value.length > 0) {
+                    setValidLink(true);
+                  }
+                  setLink(e.target.value);
+                }}
+              />
+              {!validLink && (
+                <div className={styles.errorMsg}>Please enter a valid link</div>
+              )}
+              <div
+                className={styles.okBtn}
+                onClick={() => {
+                  if (link === '') {
+                    setValidLink(false);
+                    return;
+                  }
+                  setValidLink(true);
+                  handlePageUp();
+                }}
+              >
+                Next
+              </div>
+            </div>
+          </div>
+        )}
+
         {pagenum === 9 && (
+          <div className={styles.formWrapper} data-aos="fade-up">
+            <div className={styles.counterDiv}>
+              9. <ArrowIcon className={styles.arrowIcon} />
+            </div>
+            <div className={styles.questionWrapper}>
+              <div className={styles.primaryTxt}>Could you provide comprehensive details about the nature of the blockchain project you intend to build or have in mind ?</div>
+              {/* <div className={styles.secondaryTxt}>Let’s know each other</div> */}
+              <input
+                className={styles.nameInput}
+                type="text"
+                autoComplete="off"
+                placeholder="Enter your answer"
+                value={details}
+                onChange={(e) => {
+                  if (e.target.value.length > 0) {
+                    setValidDetails(true);
+                  }
+                  setDetails(e.target.value);
+                }}
+              />
+              {!validDetails && (
+                <div className={styles.errorMsg}>Please enter a valid link</div>
+              )}
+              <div
+                className={styles.okBtn}
+                onClick={() => {
+                  if (details === '') {
+                    setValidDetails(false);
+                    return;
+                  }
+                  setValidDetails(true);
+                  handlePageUp();
+                }}
+              >
+                Next
+              </div>
+            </div>
+          </div>
+        )}
+
+        {pagenum === 10 && (
           <div className={styles.congratsWrapper} data-aos="fade-up">
             <FinalImg />
             <div className={styles.congratsTxt}>
@@ -980,3 +1107,5 @@ export default function Page({ pagenum, handlePageUp, handlePageDown }) {
     </>
   );
 }
+
+export default PageOne

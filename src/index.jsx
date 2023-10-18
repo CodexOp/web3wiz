@@ -17,7 +17,7 @@ import Blog from './pages/Blog/Blog';
 import EventSignup from './pages/EventSignup/EventSignup';
 import TermsAndConditions from './pages/T&C/TermsAndCondition';
 import OurCompany from './pages/Our-Company-Details/OurCompany';
-
+import FormTwo from './pages/Form2/FormTwo';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -49,6 +49,7 @@ root.render(
           <Route exact path="/thankyou-g" element={<ThankyouG />} />
           <Route exact path="/privacy-policy" element={<Privacy />} />
           <Route exact path="/form" element={<Form />} />
+          <Route exact path="/blockchain" element={<FormTwo/>} />
           <Route exact path="/projects" element={<Projects />} />
           <Route exact path="/contact-us" element={<ContactUs />} />
           <Route exact path="/our-company" element={<OurCompany />} />

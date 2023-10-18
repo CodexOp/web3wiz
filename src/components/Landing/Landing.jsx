@@ -103,7 +103,7 @@ const Landing = () => {
               CUSTOM CONTRACT
             </Typography>
             <Typography
-              variant="p"
+              variant="h1"
               sx={{
                 fontWeight: 500,
                 mt: 2,

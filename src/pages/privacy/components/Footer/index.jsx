@@ -21,10 +21,12 @@ export default function Footer()
                             <p>MATRIX LABS</p>
                         </div>
                     </Link>
-                    <div className={styles.titleDesc}>One stop for all Blockchain solutions</div>
+                    <div className={styles.titleDesc}>
+                        <p>One stop for all Blockchain solutions </p></div>
                 </div>
                 <div className={styles.socials1}>
-                    <div>Reach out to us:</div>
+                    <div>
+                        <h3>Reach out to us:</h3></div>
                     <div className={styles.socialIconDiv}>
                         <a href="https://instagram.com/thematrixlabs.eth?igshid=NDk5N2NlZjQ=">
                             <img src={igIcon} className={styles.socialIcons} alt="ig-icon" />
@@ -47,22 +49,24 @@ export default function Footer()
             <div className={styles.webpageLinksWrapper}>
             <div className={styles.webpageLinks}>
                 <Link to="/">
-                    <div className={styles.highlighted}>Home</div>
+                    <div className={styles.highlighted}>
+                        <p>Home</p></div>
                 </Link>
-                <div>About</div>
-                <div>Services</div>
-                <div>Projects</div>
+                <div>  <p>About</p></div>
+                <div><p>Services</p></div>
+                <div><p>Projects</p></div>
             </div>
             <div className={styles.webpageLinks}>
-                <div>Contact us</div>
-                <div>FAQs</div>
+                <div> <p>Contact us</p> </div>
+                <div> <p>FAQs</p></div>
             </div>
             </div>
             <div className={styles.signupWrapper}>
-                <div className={styles.signupTxt}>Sign up for updates</div>
+                <div className={styles.signupTxt}>
+                    <p>Sign up for updates </p></div>
                 <div  className={styles.signupInput}>
                     <input placeholder="email@address.com" />
-                    <button>
+                    <button style={{cursor:"pointer"}}>
                         <img src={sendIcon} className={styles.sendIcon} alt="send-icon" />
                     </button>
                 </div>
