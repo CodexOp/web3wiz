@@ -22,7 +22,7 @@ export default function Footer() {
           <div className={styles.titleDesc}>One stop for all Blockchain solutions</div>
         </div>
         <div className={styles.socials1}>
-          <div>Reach out to us:</div>
+          <h3>Reach out to us:</h3>
           <div className={styles.socialIconDiv}>
             <a href="https://instagram.com/thematrixlabs.eth?igshid=NDk5N2NlZjQ=">
               <img src={igIcon} className={styles.socialIcons} alt="ig-icon" />
