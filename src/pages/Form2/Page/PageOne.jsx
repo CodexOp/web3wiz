@@ -258,7 +258,7 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
     if (pagenum === 10) {
       try {
         callFaceBookPixel(budgetValue, 'leadGeneratedForm');
-        // sendDataToPably();
+        sendDataToPably();
       } catch (error) {
         console.log(error)
       }
@@ -291,31 +291,31 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
       .catch((err)=> console.log(err));
 
   };
-  // const sendDataToPably2 = (data) => {
-  //   fetch(
-  //     'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc',
-  //     {
-  //       // Enter your IP address here
+  const sendDataToPably2 = (data) => {
+    fetch(
+      'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc',
+      {
+        // Enter your IP address here
 
-  //       method: 'POST',
-  //       mode: 'cors',
-  //       body: JSON.stringify(data), // body data type must match "Content-Type" header
-  //     }
-  //   );
-  // };
+        method: 'POST',
+        mode: 'cors',
+        body: JSON.stringify(data), // body data type must match "Content-Type" header
+      }
+    );
+  };
 
 
 
   const callFaceBookPixel = (value, leadName) => {
     ReactPixel.trackCustom(leadName, { value: value, currency: 'USD' });
-    // sendDataToPably2({
-    //   event: leadName,
-    //   value: value,
-    //   currency: 'USD',
-    //   userAgent: navigator.userAgent,
-    //   href: window.location.href,
-    //   timestamp: Math.floor(Date.now() / 1000),
-    // });
+    sendDataToPably2({
+      event: leadName,
+      value: value,
+      currency: 'USD',
+      userAgent: navigator.userAgent,
+      href: window.location.href,
+      timestamp: Math.floor(Date.now() / 1000),
+    });
   };
 
 
@@ -960,7 +960,7 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
                   className={styles.okBtn}
                   onClick={() => {
                     handlePageUp();
-                    // sendDataToPably();
+                    sendDataToPably();
                   }}
                 >
                   Next
@@ -991,7 +991,7 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
                   className={styles.okBtn}
                   onClick={() => {
                     handlePageUp();
-                    // sendDataToPably();
+                    sendDataToPably();
                   }}
                 >
                   Next

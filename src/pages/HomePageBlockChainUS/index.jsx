@@ -61,7 +61,7 @@ const options = {
 };
 ReactPixel.init("1233452067589283", "", options);
 
-export default function HomePageBlockChain() {
+export default function HomePageBlockChainUS() {
   useEffect(() => {
     setParams(window.location.search);
   }, []);
@@ -215,7 +215,7 @@ export default function HomePageBlockChain() {
                   <h5 className={styles.titleFeatureItemContent2}>Team Members</h5>
                 </div>
               </div>
-              <Link to={"/blockchainForm" + params}>
+              <Link to={"/blockchainFormUS" + params}>
                 <button className={styles.getaquotaBtn} onClick={() => callFacebookPixel("GetQuoteClicked", 10)} style={{ border: "0px" }}>
                   Get&nbsp;a&nbsp;Quote <img className={styles.rightarrow} src={rightarrow} alt="right arrow" />
                 </button>
@@ -361,7 +361,7 @@ export default function HomePageBlockChain() {
               <br />
               dapp development services
             </h1>
-            <Link to={"/blockchainForm" + params}>
+            <Link to={"/blockchainFormUS" + params}>
               <button className={styles.styledwhiteBtn} onClick={() => callFacebookPixel("ClickedDiscussProjectIdea", 10)} style={{ border: "0px" }}>
                 Discuss Your Project Idea
               </button>
@@ -398,7 +398,7 @@ export default function HomePageBlockChain() {
               <br />
               business the much-needed boost?
             </h1>
-            <Link to={"/blockchainForm" + params} onClick={() => callFacebookPixel("ClickedTalkWithExperts", 4)}>
+            <Link to={"/blockchainFormUS" + params} onClick={() => callFacebookPixel("ClickedTalkWithExperts", 4)}>
               <button className={styles.styledwhiteBtn} style={{ border: "0px" }}>
                 Talk With Experts
               </button>

@@ -48,7 +48,7 @@ export default function Footer()
                 <h3 className={styles.highlighted}>
                     SITEMAP </h3>
                 {/* <Link to="/aboutUs"><div>About</div></Link> */}
-                <a href="/blockchainFormUS">Form</a>
+                <a href="/blockchainForm">Form</a>
                 <a href="/projects">Project</a>
                 {/* <Link to="/form"><div>Contact us</div></Link> */}
                 {/* <a href="#faqs"><div>FAQs</div></a> */}
