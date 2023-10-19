@@ -19,6 +19,8 @@ import TermsAndConditions from './pages/T&C/TermsAndCondition';
 import OurCompany from './pages/Our-Company-Details/OurCompany';
 import FormTwo from './pages/Form2/FormTwo';
 import HomePageBlockChain from './pages/HomePageBlockChain';
+import FormTwoUS from './pages/FormUS/FormTwo';
+import HomePageBlockChainUS from './pages/HomePageBlockChain';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -46,11 +48,13 @@ root.render(
           <Route path="/homev2" element={<App />} />
           <Route exact path="/" element={<Homev2 />} />
           <Route exact path="/blockchain" element={<HomePageBlockChain />} />
+          <Route exact path="/blockchainUS" element={<HomePageBlockChainUS/>} />
           <Route exact path="/thankyou-b" element={<Thankyou />} />
           <Route exact path="/thankyou-g" element={<ThankyouG />} />
           <Route exact path="/privacy-policy" element={<Privacy />} />
           <Route exact path="/form" element={<Form />} />
           <Route exact path="/blockchainForm" element={<FormTwo />} />
+          <Route exact path="/blockchainFormUS" element={<FormTwoUS/>} />
           <Route exact path="/projects" element={<Projects />} />
           <Route exact path="/contact-us" element={<ContactUs />} />
           <Route exact path="/our-company" element={<OurCompany />} />

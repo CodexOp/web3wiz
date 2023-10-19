@@ -41,7 +41,7 @@ export default function Navbar(props) {
                 {' '}
                 <div className={styles.navbarbtn}>Projects</div>
               </Link>
-              <Link to={"/blockchainForm"+params} target="_blank" rel="noopener noreferrer">
+              <Link to={"/blockchainFormUS"+params} target="_blank" rel="noopener noreferrer">
                 <div className={styles.getaquotaBtn} onClick={() => callFacebookPixel('ClickedGetQuote', 10)}>
                   Get a Quote
                 </div>
