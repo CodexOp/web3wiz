@@ -265,7 +265,7 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
   //ISSUE
   const sendDataToPably = () => {
     fetch(
-      'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTZlMDYzNzA0MzI1MjZkNTUzMSI_3D_pc',
+      'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzNzA0MzU1MjZhNTUzMDUxMzQi_pc',
       {
         // Enter your IP address here
         method: 'POST',
