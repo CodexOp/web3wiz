@@ -258,7 +258,7 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
     if (pagenum === 10) {
       try {
         callFaceBookPixel(budgetValue, 'leadGeneratedForm');
-        // sendDataToPably();
+        sendDataToPably();
       } catch (error) {
         console.log(error)
       }
