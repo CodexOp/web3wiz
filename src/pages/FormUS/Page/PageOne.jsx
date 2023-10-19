@@ -110,16 +110,13 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
   const data = {
     name: name,
     email: email,
-    projectName: projectName,
-    service: service,
-    budget: budget,
-    campaign: campaign,
-    adset: adset,
-    ad: ad,
-    src: leadsource,
-    iam: iam,
     phoneNo: phoneNo,
     country: country,
+    service: service,
+    budget: budget,
+    startDate: startDate,
+    link: link,
+    details: details,
     countryCode: countryCode,
   };
   useEffect(() => {
@@ -135,8 +132,12 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
     name: name,
     email: email,
     phoneNo: phoneNo,
+    service: service,
+    budget: budget,
+    startDate: startDate,
+    link: link,
+    details: details,
     countryCode: countryCode,
-    value: budgetValue,
   };
 
   const CustomSelect = ({
@@ -274,17 +275,17 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
       }
     );
     fetch(
-        'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzY1MjZjNTUzNCI_3D_pc',
-        {
-          // conversion Api webhook
-          method: 'POST',
-          mode: 'cors',
-          body: JSON.stringify(conversionData), // body data type must match "Content-Type" header
-        }
-      )
-      .then((res) =>res.json())
-      .then((res) =>console.log("fetching datas..", res))
-      .catch((err)=> console.log(err));
+      'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzY1MjZjNTUzNCI_3D_pc',
+      {
+        // conversion Api webhook
+        method: 'POST',
+        mode: 'cors',
+        body: JSON.stringify(conversionData), // body data type must match "Content-Type" header
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => console.log("fetching datas..", res))
+      .catch((err) => console.log(err));
 
   };
   const sendDataToPably2 = (data) => {
@@ -360,21 +361,21 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
         //   }
         // }
         if (pagenum === 5) {
-          if (service === '') {
-            setValidOptions(false);
+          if (!selectedOptionService) {
+            // setValidOptions(false);
             return;
           }
         }
         if (pagenum === 6) {
-          if (selectedOptionBudget == "") {
-            setSelectedOptionBudget(false);
+          if (!selectedOptionBudget) {
+            //setSelectedOptionBudget(false);
             return;
           }
         }
 
         if (pagenum === 7) {
-          if (selectedOptionStartDate == "") {
-            setSelectedOptionStartDate(false);
+          if (!selectedOptionStartDate) {
+            //  setSelectedOptionStartDate(false);
             return;
           }
         }
@@ -956,7 +957,7 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
                   className={styles.okBtn}
                   onClick={() => {
                     handlePageUp();
-                    sendDataToPably();
+                    // sendDataToPably();
                   }}
                 >
                   Next
@@ -987,7 +988,7 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
                   className={styles.okBtn}
                   onClick={() => {
                     handlePageUp();
-                    sendDataToPably();
+                    // sendDataToPably();
                   }}
                 >
                   Next

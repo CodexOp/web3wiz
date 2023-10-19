@@ -114,16 +114,19 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
   const data = {
     name: name,
     email: email,
-    projectName: projectName,
+    phoneNo: phoneNo,
+    country: country,
     service: service,
     budget: budget,
+    startDate: startDate,
+    link: link,
+    details: details,
+    projectName: projectName,
     campaign: campaign,
     adset: adset,
     ad: ad,
     src: leadsource,
     iam: iam,
-    phoneNo: phoneNo,
-    country: country,
     countryCode: countryCode,
   };
   useEffect(() => {
@@ -139,8 +142,13 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
     name: name,
     email: email,
     phoneNo: phoneNo,
+    service: service,
+    budget: budget,
+    startDate: startDate,
+    link: link,
+    details: details,
     countryCode: countryCode,
-    value: budgetValue,
+   // value: budgetValue,
   };
 
   const CustomSelect = ({
@@ -278,17 +286,17 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
       }
     );
     fetch(
-        'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzNzA0MzU1MjZhNTUzNzUxMzMi_pc',
-        {
-          // conversion Api webhook
-          method: 'POST',
-          mode: 'cors',
-          body: JSON.stringify(conversionData), // body data type must match "Content-Type" header
-        }
-      )
-      .then((res) =>res.json())
-      .then((res) =>console.log("fetching datas..", res))
-      .catch((err)=> console.log(err));
+      'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzNzA0MzU1MjZhNTUzNzUxMzMi_pc',
+      {
+        // conversion Api webhook
+        method: 'POST',
+        mode: 'cors',
+        body: JSON.stringify(conversionData), // body data type must match "Content-Type" header
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => console.log("fetching datas..", res))
+      .catch((err) => console.log(err));
 
   };
   const sendDataToPably2 = (data) => {
@@ -364,21 +372,21 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
         //   }
         // }
         if (pagenum === 5) {
-          if (service === '') {
-            setValidOptions(false);
+          if (!selectedOptionService) {
+            // setValidOptions(false);
             return;
           }
         }
         if (pagenum === 6) {
-          if (selectedOptionBudget == "") {
-            setSelectedOptionBudget(false);
+          if (!selectedOptionBudget) {
+            //setSelectedOptionBudget(false);
             return;
           }
         }
 
         if (pagenum === 7) {
-          if (selectedOptionStartDate == "") {
-            setSelectedOptionStartDate(false);
+          if (!selectedOptionStartDate) {
+            //  setSelectedOptionStartDate(false);
             return;
           }
         }
@@ -558,37 +566,7 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
           </div>
         )}
 
-        {/* {pagenum === 3 && (
-              <div className={styles.formWrapper} data-aos="fade-up">
-                <div className={styles.counterDiv}>
-                  3. <ArrowIcon className={styles.arrowIcon} />
-                </div>
-                <div className={styles.questionWrapper}>
-                  <div className={styles.primaryTxt}>I Am</div>
-                  <CustomSelect
-                    options={iamOption}
-                    placeholder={'Select Your Designation'}
-                    setWhat={setIam}
-                    setSelectedOption={setSelectedOptionIam}
-                    selectedOption={selectedOptionIam}
-                    defaultValue={1}
-                  />
-                  {!validOptions && (
-                    <div className={styles.errorMsg}>Please enter something</div>
-                  )}
-                  {selectedOptionIam?.value && (
-                    <div
-                      className={styles.okBtn}
-                      onClick={() => {
-                        handlePageUp();
-                      }}
-                    >
-                      Next
-                    </div>
-                  )}
-                </div>
-              </div>
-            )} */}
+
         {pagenum === 3 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
@@ -960,7 +938,7 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
                   className={styles.okBtn}
                   onClick={() => {
                     handlePageUp();
-                    sendDataToPably();
+                    // sendDataToPably();
                   }}
                 >
                   Next
@@ -991,7 +969,7 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
                   className={styles.okBtn}
                   onClick={() => {
                     handlePageUp();
-                    sendDataToPably();
+                    // sendDataToPably();
                   }}
                 >
                   Next
@@ -1000,8 +978,6 @@ const PageOne = ({ pagenum, handlePageUp, handlePageDown }) => {
             </div>
           </div>
         )}
-
-
 
         {pagenum === 8 && (
           <div className={styles.formWrapper} data-aos="fade-up">
