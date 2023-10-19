@@ -185,34 +185,34 @@ export default function Homev2() {
           <div id="home" className={styles.mainWrapper1}>
             <div className={styles.titleContent}>
               <div>
-                <div className={styles.mainHeadingTxt}>
+                <h1 className={styles.mainHeadingTxt}>
                   We&nbsp;create
                   <br />
-                  <div className={styles.gradientTxt}>
+                  <h2 className={styles.gradientTxt}>
                     {" "}
                     <ReactTypingEffect speed={50} typingDelay={1000} eraseDelay={2000} eraseSpeed={50} text={["Smart Contract", "Websites", "Dapps", "Marketplace"]} />
-                  </div>
-                </div>
+                  </h2>
+                </h1>
               </div>
-              <p className={styles.titleInfo}>We provide blockchain services from Smart Contract Development and Audit to creating Launchpads, NFT Marketplaces and any kind of unique DAPPs</p>
+              <h5 className={styles.titleInfo}>We provide blockchain services from Smart Contract Development and Audit to creating Launchpads, NFT Marketplaces and any kind of unique DAPPs</h5>
               <div className={styles.titleFeatures}>
                 <div className={styles.titleFeatureItem}>
                   <div className={styles.titleFeatureItemContent1}>
                     <CountUp end={40} delay={2} />+
                   </div>
-                  <p className={styles.titleFeatureItemContent2}>SmartContract</p>
+                  <h5 className={styles.titleFeatureItemContent2}>SmartContract</h5>
                 </div>
                 <div className={styles.titleFeatureItem}>
                   <div className={styles.titleFeatureItemContent1}>
                     <CountUp end={100} delay={2} />+
                   </div>
-                  <p className={styles.titleFeatureItemContent2}>Projects Completed </p>
+                  <h5 className={styles.titleFeatureItemContent2}>Projects Completed </h5>
                 </div>
                 <div className={styles.titleFeatureItem}>
                   <div className={styles.titleFeatureItemContent1}>
                     <CountUp end={20} delay={2} />+
                   </div>
-                  <p className={styles.titleFeatureItemContent2}>Team Members</p>
+                  <h5 className={styles.titleFeatureItemContent2}>Team Members</h5>
                 </div>
               </div>
               <Link to={"/form" + params}>
@@ -237,22 +237,22 @@ export default function Homev2() {
             <div className={styles.featureGridItems}>
               <img src={endtoendservice} alt="transparency-img" className={styles.featureGridIcons} />
               <h2>End to end service</h2>
-              <p>You don't need to look for any other service provider for any technical stuff. We have got all covered for you.</p>
+              <h5>You don't need to look for any other service provider for any technical stuff. We have got all covered for you.</h5>
             </div>
             <div className={styles.featureGridItems}>
               <img src={customerService} alt="folderLockIcon" className={styles.featureGridIcons} />
               <h2>24/7 customer service</h2>
-              <p>We understand that our customers may need assistance at any time, day or night, and we are committed to being available whenever they need us.</p>
+              <h5>We understand that our customers may need assistance at any time, day or night, and we are committed to being available whenever they need us.</h5>
             </div>
             <div className={styles.featureGridItems}>
               <img src={teamofprofessionals} alt="shieldIcon" className={styles.featureGridIcons} />
               <h2>Team of professionals</h2>
-              <p>We understand that big and complex projects require professionals to work on. </p>
+              <h5>We understand that big and complex projects require professionals to work on. </h5>
             </div>
             <div className={styles.featureGridItems}>
               <img src={registered} alt="lockIcon" className={styles.featureGridIcons} />
               <h2>USA registered</h2>
-              <p>We are USA registered and comply all rules of US government.</p>
+              <h5>We are USA registered and comply all rules of US government.</h5>
             </div>
           </div>
           <div className={styles.clientTxtWrapper}>
@@ -294,9 +294,9 @@ export default function Homev2() {
             <h1 className={styles.ourServicesHeading}>
               Our <span>Services</span>
             </h1>
-            <p className={styles.ourServicesTxt}>
+            <h5 className={styles.ourServicesTxt}>
               Our services help everyone from startups to enterprises to launch and maintain their applications on the blockchain.
-            </p>
+            </h5>
           </div>
           <div className={styles.serviceGrid}>
             <div className={styles.serviceGridItem}>
@@ -304,16 +304,16 @@ export default function Homev2() {
               <h2 className={styles.serviceGridItemHeading}>
                 SMART CONTRACT
               </h2>
-              <p className={styles.serviceGridItemTxt}>
-                Ensure security with our custom smart contracts, Certik verified and tailored for you</p>
+              <h5 className={styles.serviceGridItemTxt}>
+                Ensure security with our custom smart contracts, Certik verified and tailored for you</h5>
               {/* <div className={styles.knowmoreBtn}>Know More</div> */}
             </div>
             <div className={styles.serviceGridItem}>
               <img src={dappDevelopment} alt="folderLockIcon" className={styles.serviceGridItemImg} />
               <h2 className={styles.serviceGridItemHeading}>
                 DAPP DEVELOPMENT</h2>
-              <p className={styles.serviceGridItemTxt}>
-                Securely build and launch your DApp with our expert development services</p>
+              <h5 className={styles.serviceGridItemTxt}>
+                Securely build and launch your DApp with our expert development services</h5>
               {/* <div className={styles.knowmoreBtn}>Know More</div> */}
             </div>
             <div className={styles.serviceGridItem}>
@@ -321,24 +321,24 @@ export default function Homev2() {
               <h2 className={styles.serviceGridItemHeading}>
                 WEBSITE DEVELOPMENT
               </h2>
-              <p className={styles.serviceGridItemTxt}>
-                Create a sleek and user-friendly website of your desired theme with our team.</p>
+              <h5 className={styles.serviceGridItemTxt}>
+                Create a sleek and user-friendly website of your desired theme with our team.</h5>
               {/* <div className={styles.knowmoreBtn}>Know More</div> */}
             </div>
             <div className={styles.serviceGridItem}>
               <img src={nft} alt="transparency-img" className={styles.serviceGridItemImg} />
               <h2 className={styles.serviceGridItemHeading}>
                 NFT AND TOKEN </h2>
-              <p className={styles.serviceGridItemTxt}>
-                Tokenize your assets with our NFT and token services.</p>
+              <h5 className={styles.serviceGridItemTxt}>
+                Tokenize your assets with our NFT and token services.</h5>
               {/* <div className={styles.knowmoreBtn}>Know More</div> */}
             </div>
             <div className={styles.serviceGridItem}>
               <img src={android} alt="folderLockIcon" className={styles.serviceGridItemImg} />
               <h2 className={styles.serviceGridItemHeading}>
                 ANDROID AND IOS APP</h2>
-              <p className={styles.serviceGridItemTxt}>
-                Launch your mobile app on both Android and iOS with us.</p>
+              <h5 className={styles.serviceGridItemTxt}>
+                Launch your mobile app on both Android and iOS with us.</h5>
               {/* <div className={styles.knowmoreBtn}>Know More</div> */}
             </div>
             <div className={styles.serviceGridItem}>
@@ -346,8 +346,8 @@ export default function Homev2() {
               <h2 className={styles.serviceGridItemHeading}>
                 MARKETPLACES
               </h2>
-              <p className={styles.serviceGridItemTxt}>
-                Join the NFT revolution with our NFT marketplace development service.</p>
+              <h5 className={styles.serviceGridItemTxt}>
+                Join the NFT revolution with our NFT marketplace development service.</h5>
               {/* <div className={styles.knowmoreBtn}>Know More</div> */}
             </div>
           </div>
@@ -373,8 +373,8 @@ export default function Homev2() {
           <h1 className={styles.ourProjectsHeading}>
             Our <span>Projects</span>
           </h1>
-          <p className={styles.ourProjectTxt}>
-            Explore our diverse portfolio of projects, including website and dapp development, among other services.</p>
+          <h5 className={styles.ourProjectTxt}>
+            Explore our diverse portfolio of projects, including website and dapp development, among other services.</h5>
 
           <div className={styles.projectImgWrapper}>
             <img src={scribbleImg} alt="scribbleImg" className={styles.scribbleImg} />
@@ -596,22 +596,22 @@ export default function Homev2() {
                 <img src={blogImg1} className={styles.blogImg} alt="blog-img" />
                 <h2 className={styles.blogHeading}>
                   Top 5 real-world use cases of blockchain technology </h2>
-                <p className={styles.blogDesc}>
+                <h5 className={styles.blogDesc}>
                     Blockchain technology can be used to create an unchangeable and secure record of a product's journey <br /> .&nbsp;.&nbsp;. 
-                </p>
+                </h5>
                 <Link to="blog/Top-5-real-world-use-cases-of-blockchain-technology" target="_blank" rel="noopener noreferrer">
-                  <p className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
+                  <h5 className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
                      Read More{">"} 
-                  </p>
+                  </h5>
                 </Link>
               </div>
               <div className={styles.blog}>
                 <img src={blogImg2} className={styles.blogImg} alt="blog-img" />
                 <h2 className={styles.blogHeading}>
                   Which platforms should you use to buy NFTs in 2023? </h2>
-                <p className={styles.blogDesc}>
+                <h5 className={styles.blogDesc}>
                    In recent years, the world of NFTs has exploded, with more and more people investing in digital assets like <br /> .&nbsp;.&nbsp;. 
-                </p>
+                </h5>
                 <Link to="blog/Which-platforms-should-you-use-to-buy-NFTs-in-2023" target="_blank" rel="noopener noreferrer">
                   <p className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
                     Read More{">"} 
@@ -622,13 +622,13 @@ export default function Homev2() {
                 <img src={blogImg3} className={styles.blogImg} alt="blog-img" />
                 <h2 className={styles.blogHeading}>
                   Top 5 Metaverse Games, 2023 edition </h2>
-                <p className={styles.blogDesc}>
+                <h5 className={styles.blogDesc}>
                    Metaverse games are online virtual worlds where players can interact with each other, explore, create, and play games <br /> .&nbsp;.&nbsp;. 
-                </p>
+                </h5>
                 <Link to="blog/Top-5-Metaverse-Games,-2023-edition" target="_blank" rel="noopener noreferrer">
-                  <p className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
+                  <h5 className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
                      Read More{">"} 
-                  </p>
+                  </h5>
                 </Link>
               </div>
             </div>
@@ -636,8 +636,8 @@ export default function Homev2() {
           <h1 className={styles.newsletterHeading}>
               Subscribe TO Our <span>Newsletter</span> 
           </h1>
-          <p className={styles.newsletterTxt}>
-            Get updates and information about crypto world by subscribe to our newsletter </p> 
+          <h5 className={styles.newsletterTxt}>
+            Get updates and information about crypto world by subscribe to our newsletter </h5> 
           <div className={styles.signupWrapper}>
             <div className={styles.signupInput}>
               <input
@@ -666,7 +666,7 @@ export default function Homev2() {
                 Subscribe
               </button>
             </div>
-            {validEmail ? null : <p className={styles.emailError}>Please enter valid Email</p>}
+            {validEmail ? null : <h5 className={styles.emailError}>Please enter valid Email</h5>}
           </div>
           <div className={styles.socialIconDiv}>
             <a href="https://instagram.com/thematrixlabs.eth?igshid=NDk5N2NlZjQ=" >

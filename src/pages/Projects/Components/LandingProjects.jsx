@@ -54,14 +54,14 @@ export default function LandingProjects({ setIsLanding }) {
                     <Link to="/form"  target="_blank" rel="noopener noreferrer"><button className={styles.button}onClick={() => callFacebookPixel('ClickedContactUs', 10)}>Contact Experts</button></Link>
                 </div>
                 <div className={styles.flexItem2}>
-                    <img src={landingImg} alt="" />
+                    <img src={landingImg} alt="landingImg" />
                 </div>
             </div>
         </div>
         <div className={styles.arrowDown}>
             <a href="#projects">
             <button className={styles.noStyle}>
-                <img src={arrowDown} alt="" />
+                <img src={arrowDown} alt="arrowDown" />
             </button>
             </a>
         </div>

@@ -1,0 +1,75 @@
+
+
+.box{
+  position: relative;
+  width: 200px;
+  margin: 0px 10px;
+  padding: 10px 30px;
+}
+
+  .box::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      margin: 0px 10px;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 50px; 
+      border: 2px solid transparent;
+      background: linear-gradient(45deg,#27B67A,#00C9F5) border-box;
+      -webkit-mask:
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+    }
+
+
+.clientBoxes{
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+}      
+
+.infoBox {
+  margin-left: 10px;
+}
+
+.bnbRaised{
+  display: flex;
+  align-items: center;
+  
+}
+.bnbRaised img{
+width: 40px;
+height: 40px;
+border-radius: 50%;
+}
+
+.raisedAmount{
+  font-size: 12px;
+
+}
+
+.projectName{
+  color:#15D28E;
+  font-size: 12px;
+}
+
+
+@media (max-width:450px) {
+  
+.box{
+  position: relative;
+  width: 200px;
+  margin: 0px 8px;
+  padding: 10px 15px;
+}
+
+.box::after {
+ 
+  margin: 0px 8px;
+}
+}
