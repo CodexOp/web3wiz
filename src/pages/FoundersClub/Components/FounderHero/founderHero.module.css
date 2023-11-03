@@ -1,0 +1,104 @@
+.heroSection {
+  margin-top: 9.5rem;
+  margin-bottom: 2rem;
+}
+
+.heroHeading {
+  color: var(--fc-white);
+  text-align: center;
+  font-family: var(--fc-clashVar);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.heroHeading > span {
+  background: var(--fc-testLinearGradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroDesc {
+  width: 44.6875rem;
+  margin: auto;
+  margin-top: 2.25rem;
+  color: var(--fc-lightGray);
+  text-align: center;
+  font-family: var(--fc-outFit);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 146%; /* 2.19rem */
+}
+
+.heroButtonWrapper {
+  width: fit-content;
+  margin: auto;
+  margin-top: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hreoContactUs {
+  height: 3.25rem;
+  color: var(--fc-white) !important;
+  border-radius: 0.5rem;
+  border: 1px solid var(--fc-blackGray);
+  background: var(--fc-lightBlack);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.hreoContactUs:hover {
+  border: 1px solid var(--fc-white);
+}
+
+@media (max-width: 1024px) {
+  .heroHeading {
+    width: 95%;
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroHeading {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  .heroDesc {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 488px) {
+  .heroSection {
+    margin-top: 5rem;
+  }
+  .heroDesc {
+    width: 90%;
+    font-size: 1rem;
+  }
+  .heroButtonWrapper {
+    width: 90%;
+  }
+  .heroButtonWrapper {
+    flex-direction: column-reverse;
+  }
+
+  .hreoContactUs {
+    font-size: 1rem;
+    width: 100%;
+  }
+}
