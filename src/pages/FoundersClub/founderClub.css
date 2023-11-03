@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: "ClashDisplay-Variable";
+  src: url("./Fonts/Variable/ClashDisplay-Variable.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ClashDeisplay";
+  src: url("./Fonts/OTF/ClashDisplay-Regular.otf") format("truetype");
+}
+
+:root {
+  --fc-white: #fff;
+  --fc-lightBlack: rgba(0, 0, 0, 0.2);
+  --fc-lightGray: rgba(255, 255, 255, 0.7);
+  --fc-blackGray: rgba(255, 255, 255, 0.3);
+  --fc-grayStroke: rgba(255, 255, 255, 0.3);
+  --fc-blackBackground: rgba(34, 46, 38, 0.2);
+  --fc-textDesc: rgba(255, 255, 255, 0.6);
+  --fc-testiStroke: rgba(255, 255, 255, 0.4);
+  --fc-gray: #a2a2a2;
+  --fc-gray6: #d1d1d6;
+  --fc-outFit: "Outfit", sans-serif;
+  --fc-clashVar: "ClashDisplay-Variable", sans-serif;
+  --fc-clash: "ClashDeisplay", sans-serif;
+  --fc-testLinearGradient: linear-gradient(
+    90deg,
+    #27b67a 35.67%,
+    #38fece 61.22%
+  );
+  --fc-buttonLinearGradient: linear-gradient(
+    103deg,
+    #27b67a 0%,
+    #27b67a 99.99%,
+    #ccd000 100%
+  );
+}
+
+.founder_club_button {
+  height: 3.25rem;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: var(--fc-buttonLinearGradient);
+  color: var(--fc-white) !important;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.founder_club_button:hover {
+  background: linear-gradient(103deg, #ccd000 100%, #27b67a 0%, #27b67a 99.99%);
+}
+
+.founder_background_blur_blue {
+  position: absolute;
+  width: 35.75rem;
+  height: 30.125rem;
+  border-radius: 35.75rem;
+  background: #264ea1;
+  filter: blur(500px);
+  -moz-filter: blur(500px);
+  z-index: -1;
+}
+
+@media (max-width: 558px) {
+  .founder_club_button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 488px) {
+  .founder_club_button {
+    font-size: 1rem;
+    width: 100%;
+  }
+}

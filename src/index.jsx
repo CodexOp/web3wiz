@@ -21,6 +21,7 @@ import FormTwo from './pages/Form2/FormTwo';
 import FormTwoUS from './pages/FormUS/FormTwo';
 import HomePageBlockChain from './pages/HomePageBlockChain';
 import HomePageBlockChainUS from './pages/HomePageBlockChainUS';
+import FoundersClub from './pages/FoundersClub/FoundersClub';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -48,21 +49,21 @@ root.render(
         <Routes>
           <Route path="/homev2" element={<App />} />
           <Route exact path="/" element={<Homev2 />} />
-          <Route exact path="/blockchain" element={<HomePageBlockChain/>} />
-          <Route exact path="/blockchainUS" element={<HomePageBlockChainUS/>} />
+          <Route exact path="/blockchain" element={<HomePageBlockChain />} />
+          <Route exact path="/blockchainUS" element={<HomePageBlockChainUS />} />
           <Route exact path="/thankyou-b" element={<Thankyou />} />
           <Route exact path="/thankyou-g" element={<ThankyouG />} />
           <Route exact path="/privacy-policy" element={<Privacy />} />
           <Route exact path="/form" element={<Form />} />
           <Route exact path="/blockchainForm" element={<FormTwo />} />
-          <Route exact path="/blockchainFormUS" element={<FormTwoUS/>} />
+          <Route exact path="/blockchainFormUS" element={<FormTwoUS />} />
           <Route exact path="/projects" element={<Projects />} />
           <Route exact path="/contact-us" element={<ContactUs />} />
           <Route exact path="/our-company" element={<OurCompany />} />
           <Route exact path="/blog/:title" element={<Blog />} />
           <Route exact path="/eventsignup" element={<EventSignup />} />
           <Route exact path="/terms-and-conditions" element={<TermsAndConditions />} />
-
+          <Route exact path="/founders-club" element={<FoundersClub />} />
         </Routes>
       </Router>
     </HelmetProvider>
