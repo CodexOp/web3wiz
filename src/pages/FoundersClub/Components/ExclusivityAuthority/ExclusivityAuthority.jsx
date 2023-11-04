@@ -1,15 +1,20 @@
 import React from 'react'
 
 import styles from "./exclusivityAuthority.module.css"
+import esclusivity from "../../images/Exclusivity.png"
+
 
 const ExclusivityAuthority = () => {
+
     return (
         <section className={styles.authority} style={{ position: "relative" }}>
             <div className='founder_background_blur_blue' style={{ left: "0", bottom: "-80%" }}></div>
-            <h1 className={styles.authorityHeading}>Exclusivity & Authority</h1>
+            <h1 className={styles.authorityHeading} >Exclusivity & Authority</h1>
             <div className={styles.authorityWrapper}>
                 <div className={styles.authorityAnimation}>
-                    <div className={styles.authoritySpline}></div>
+                    <div className={styles.authoritySpline}>
+                        <img src={esclusivity} alt="esclusivity" style={{ margin: "auto" }} />
+                    </div>
                 </div>
 
                 <div className={styles.authorityItem}>

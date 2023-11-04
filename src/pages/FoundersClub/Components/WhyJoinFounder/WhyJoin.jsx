@@ -2,6 +2,7 @@ import React from 'react'
 
 import styles from "./whyjoin.module.css"
 import whyJoin from "../../images/whyJoin.svg"
+import { Link } from 'react-router-dom'
 
 const WhyJoin = () => {
     return (
@@ -19,7 +20,7 @@ const WhyJoin = () => {
                     <p className={styles.joinDesc}>
                         "Because here, wisdom flows from real battles, not just boardrooms. Imagine a cabal where sharing a blockchain blunder is as cool as revealing a hidden gem. Exclusivity? Check. Insight? Double-check. A chance to be part of this circle? Priceless (and we don't take that term lightly in the crypto world)."
                     </p>
-                    <button className='founder_club_button'>Apply for the Inner Circle</button>
+                    <Link to="/founders-form" className='founder_club_button_link'><button className='founder_club_button'>Apply for the Inner Circle</button></Link>
                 </div>
             </div>
         </section>

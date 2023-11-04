@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaPlus, FaTimes } from 'react-icons/fa';
+import { FaPlus } from 'react-icons/fa';
 
 import styles from "./founderAccordian.module.css"
 
@@ -8,6 +8,7 @@ const FounderAccordion = ({ items }) => {
 
     const toggleAccordion = (index) => {
         console.log(index);
+        console.log("this is open index", openIndex);
         setOpenIndex(openIndex === index ? null : index);
     };
 
@@ -17,10 +18,10 @@ const FounderAccordion = ({ items }) => {
             <h1 className={styles.accordianHeading}>Frequently Asked Questions</h1>
             <div className={styles.accordionMain}>
                 {items?.map((item, index) => (
-                    <div key={index} className={`${styles.accordion}`}>
+                    <div key={index} className={`${styles.accordion} ${openIndex === index ? styles.accordionOpen : ""}`}>
                         <div className={styles.accordionHeader} onClick={() => toggleAccordion(index)}>
                             <h2>{item.title}</h2>
-                            {openIndex === index ? <FaTimes className={styles.icon} /> : <FaPlus className={styles.icon} />}
+                            <FaPlus className={openIndex === index ? styles.icon : ""} />
                         </div>
                         {openIndex === index && (
                             <div className={styles.accordionContent}>
@@ -35,3 +36,5 @@ const FounderAccordion = ({ items }) => {
 }
 
 export default FounderAccordion
+
+// data-aos={index % 2 === 0 ? "fade-right" : "fade-left"} data-aos-duration="1500"

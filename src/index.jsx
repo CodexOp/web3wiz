@@ -22,6 +22,8 @@ import FormTwoUS from './pages/FormUS/FormTwo';
 import HomePageBlockChain from './pages/HomePageBlockChain';
 import HomePageBlockChainUS from './pages/HomePageBlockChainUS';
 import FoundersClub from './pages/FoundersClub/FoundersClub';
+import FounderForm from './pages/FounderForm/FounderForm';
+
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -64,6 +66,7 @@ root.render(
           <Route exact path="/eventsignup" element={<EventSignup />} />
           <Route exact path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route exact path="/founders-club" element={<FoundersClub />} />
+          <Route exact path="/founders-form" element={<FounderForm />} />
         </Routes>
       </Router>
     </HelmetProvider>

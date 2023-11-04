@@ -25,7 +25,7 @@ const FounderContact = () => {
 
         // Call Pabbly API endpoint to add the email to your list
         try {
-            const apiURL = "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzNjA0MzU1MjZlNTUzYzUxMzMi_pc"
+            const apiURL = "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMjA0Mzc1MjY0NTUzMDUxM2Ei_pc"
             const response = await fetch(apiURL, {
                 method: 'POST',
                 headers: {
@@ -66,8 +66,8 @@ const FounderContact = () => {
                 position="top-center"
                 reverseOrder={false}
             />
-            <h1 className={styles.fcontactHeading}>Contact Us</h1>
-            <p className={styles.fcontactDesc}>Share a slice of your founder's journey with us and get a shoutout from us.</p>
+            <h1 className={styles.fcontactHeading} >Contact Us</h1>
+            <p className={styles.fcontactDesc} >Share a slice of your founder's journey with us and get a shoutout from us.</p>
 
             <div className={styles.fcontactFormContent}>
                 <div className={styles.fcontactFromwrapper}>

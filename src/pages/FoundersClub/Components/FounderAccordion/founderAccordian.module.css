@@ -24,8 +24,21 @@
   background: var(--fc-blackBackground);
   margin-bottom: 10px;
   overflow: hidden;
-  transition: all 0.5s ease-in-out;
   padding: 2.1875rem 2rem;
+  height: auto;
+  max-height: 6.125rem;
+  transition: max-height 400ms ease-in-out !important;
+}
+
+.accordion.accordionOpen {
+  border: 2px solid #27b67a !important;
+  height: auto;
+  max-height: 20rem !important;
+}
+
+.accordion:hover {
+  border: 2px solid var(--fc-white);
+  transition: all 0.3s ease-in-out !important;
 }
 
 .accordionHeader {
@@ -55,9 +68,13 @@
   padding-top: 2rem;
 }
 
+.accordionHeader > svg {
+  color: var(--fc-white);
+  transition: transform 0.3s ease-in-out;
+}
+
 .icon {
-  font-size: 20px;
-  transition: transform 0.5s ease-in-out;
+  transform: rotate(45deg);
 }
 
 @media (max-width: 1024px) {

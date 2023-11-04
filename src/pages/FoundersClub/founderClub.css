@@ -64,19 +64,17 @@
   width: 35.75rem;
   height: 30.125rem;
   border-radius: 35.75rem;
-  background: #264ea1;
+  background: #264ea1 !important;
   filter: blur(500px);
   -moz-filter: blur(500px);
   z-index: -1;
 }
 
 @media (max-width: 558px) {
-  .founder_club_button {
-    font-size: 1rem;
+  .founder_club_button_link {
+    width: 100%;
   }
-}
 
-@media (max-width: 488px) {
   .founder_club_button {
     font-size: 1rem;
     width: 100%;

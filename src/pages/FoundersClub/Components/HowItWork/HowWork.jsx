@@ -20,7 +20,7 @@ const HowWork = () => {
                         </div>
                     </div>
 
-                    <div className={styles.workItem}>
+                    <div className={styles.workItem} >
                         <div className={styles.workIcon}>
                             {icon.loveHand}
                         </div>
@@ -42,7 +42,7 @@ const HowWork = () => {
                 </div>
 
                 <div className={styles.workImageContainer}>
-                    <div className={styles.workImage}>
+                    <div className={styles.workImage} >
                         <img src={howItwork} alt="howItwork" />
                     </div>
                 </div>

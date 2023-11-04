@@ -2,14 +2,15 @@ import React from 'react'
 
 import styles from "./founderBenefits.module.css"
 import icon from '../../iconFounder';
+import benefts from "../../images/Benefits.png"
 
 const FounderBenefits = () => {
     return (
         <section className={styles.benefits}>
-            <h1 className={styles.benefitsHeading}>Benefits</h1>
+            <h1 className={styles.benefitsHeading} >Benefits</h1>
             <div className={styles.benefitsWrapper}>
                 <div className={styles.benefitsContainer}>
-                    <div className={styles.benefitsItem}>
+                    <div className={styles.benefitsItem} >
                         <div className={styles.benefitsIcon}>
                             {icon.connection}
                         </div>
@@ -19,7 +20,7 @@ const FounderBenefits = () => {
                         </div>
                     </div>
 
-                    <div className={styles.benefitsItem}>
+                    <div className={styles.benefitsItem} >
                         <div className={styles.benefitsIcon}>
                             {icon.insights}
                         </div>
@@ -29,7 +30,7 @@ const FounderBenefits = () => {
                         </div>
                     </div>
 
-                    <div className={styles.benefitsItem}>
+                    <div className={styles.benefitsItem} >
                         <div className={styles.benefitsIcon}>
                             {icon.shareExperience}
                         </div>
@@ -41,8 +42,8 @@ const FounderBenefits = () => {
                 </div>
 
                 <div className={styles.benefitsImageContainer}>
-                    <div className={styles.benefitsImage}>
-
+                    <div className={styles.benefitsImage} >
+                        <img src={benefts} alt="benefts" style={{ margin: "auto" }} />
                     </div>
                 </div>
             </div>

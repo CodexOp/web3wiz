@@ -1,6 +1,7 @@
 import React from 'react'
 
 import styles from "./founderNetworking.module.css"
+import networking from "../../images/Networking.png"
 
 const FounderNetworking = () => {
     return (
@@ -14,7 +15,9 @@ const FounderNetworking = () => {
                 </div>
 
                 <div className={styles.networkAnimation}>
-                    <div className={styles.networkSpline}></div>
+                    <div className={styles.networkSpline}>
+                        <img src={networking} alt="networking" style={{ margin: "auto" }} />
+                    </div>
                 </div>
             </div>
         </section>
