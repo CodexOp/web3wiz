@@ -29,7 +29,13 @@
 }
 
 .mainuiImg {
-  width: 40%;
+  width: 25%;
+}
+
+.mainuiDesc {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: -1rem;
 }
 
 .LetsgoBtn {
@@ -207,7 +213,7 @@
 .congratsWrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
   width: 100%;
   max-width: 650px;
@@ -222,11 +228,16 @@
   text-align: center;
 }
 
+.congratsDesc {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
 .contactUsWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .contactUsTxt {
@@ -275,6 +286,7 @@
   padding: 10px 40px;
   border-radius: 10px;
   transition: 0.3s all ease-in-out;
+  margin-bottom: 5rem;
 }
 
 .finishButton:hover {
@@ -423,6 +435,15 @@
   }
 }
 
+@media (max-width: 450px) {
+  .mainuiImg {
+    width: 75%;
+  }
+  .congratsTxt {
+    margin-top: -3rem;
+  }
+}
+
 @media (max-width: 400px) {
   .selectBtnWrapper {
     background: #527fa9;
@@ -441,12 +462,6 @@
   .selectedTxt {
     padding: 10px;
     font-size: 16px;
-  }
-}
-
-@media (max-width: 450px) {
-  .mainuiImg {
-    width: 75%;
   }
 }
 

@@ -27,6 +27,17 @@ const FounderContact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+
+        const contactData = {
+            firstname: formData.firstname,
+            lastname: formData.lastname,
+            companyname: formData.companyname,
+            hurdle: formData.hurdle,
+            wildworld: formData.wildworld
+        }
+
+        console.log(contactData);
+
         // Call Pabbly API endpoint to add the email to your list
         try {
             const apiURL = "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMjA0Mzc1MjY0NTUzMDUxM2Ei_pc"
@@ -35,9 +46,10 @@ const FounderContact = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(contactData),
             });
 
+            console.log("this is response", response);
             if (response.ok) {
                 // Handle successful submission, e.g., show a success message
                 console.log('Form submitted successfully!');

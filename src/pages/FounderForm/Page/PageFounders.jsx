@@ -3,14 +3,11 @@ import mainuiImg from '../../../assets//whatsapp.webp';
 import { ReactComponent as ArrowIcon } from '../../../assets/images/icon-arrow.svg';
 import { ReactComponent as FinalImg } from '../../../assets/images/finalImg.svg';
 import { ReactComponent as Whatsapp } from '../../../assets/images/icon-whatsapp.svg';
-// import { ReactComponent as SelectBtnIcon } from '../../../assets/images/icon-pagebtn.svg';
-// import { useSearchParams } from 'react-router-dom';
 import styles from './style.module.css';
 import validator from 'validator';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Helmet } from 'react-helmet-async';
-// import ReactPixel from 'react-facebook-pixel';
 
 const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
 
@@ -32,24 +29,17 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
   const [validFunding, setValidFunding] = useState(true) // funding
   const [membership, setMembership] = useState("")
   const [validMembership, setValidMembership] = useState(true);
-  const [custom_href, setCustomHref] = useState(null);
+  const [custom_url, setCustomUrl] = useState(null);
   const [validEmail, setValidEmail] = useState(true);
   const [email, setEmail] = useState('');
-  // const [campaign, setCampaign] = useState('');
-  // const [adset, setAdset] = useState('');
-  // const [ad, setAd] = useState('');
   const [name, setName] = useState('');
   const [phoneNo, setPhoneNo] = useState('');
   const [countryCode, setCountryCode] = useState('');
-  // const [budget, setBudget] = useState('');
-  // const [leadsource, setLeadsource] = useState('');
   const [validName, setValidName] = useState(true);
   const [validPhone, setValidPhone] = useState(true);
   const [validCC, setValidCC] = useState(true);
-  // const [service, setService] = useState('');
-  // const [budgetValue, setBudgetValue] = useState(0);
   const emailRef = useRef();
-  // const queryParams = new URLSearchParams(window.location.search);
+
 
   const data = {
     name: name,
@@ -89,11 +79,12 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
 
 
   useEffect(() => {
-    setCustomHref(
+    const club = "Founders Club"
+    setCustomUrl(
       'https://wa.me/12342559266?text=%20Hi%20I%20am%20' +
       name +
       '%2C%20I%20am%20looking%20for%20joining%20' +
-      "Founders Club" +
+      club +
       '.%20Can%20you%20please%20tell%C2%A0more%C2%A0about%C2%A0it%3F%0A'
     );
 
@@ -137,35 +128,6 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
 
   };
 
-  // const sendDataToPably2 = (data) => {
-  //   try {
-  //     fetch(
-  //       'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc',
-  //       {
-  //         // Enter your IP address here
-  //         method: 'POST',
-  //         mode: 'cors',
-  //         body: JSON.stringify(data), // body data type must match "Content-Type" header
-  //       }
-  //     );
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-
-
-  // const callFaceBookPixel = (value, leadName) => {
-  //   ReactPixel.trackCustom(leadName, { value: value, currency: 'USD' });
-  //   sendDataToPably2({
-  //     event: leadName,
-  //     value: value,
-  //     currency: 'USD',
-  //     userAgent: navigator.userAgent,
-  //     href: window.location.href,
-  //     timestamp: Math.floor(Date.now() / 1000),
-  //   });
-  // };
 
 
   useEffect(() => {
@@ -286,10 +248,9 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
               alt="matrix labs contact"
             />
             <div className={styles.mainuiheading}>
-              Hello! We're glad that you're interested in working with us.
-              <br />
-              Let’s get started 👋
+              Unlock Your Potential, Join the Founders Club Today!
             </div>
+            <p className={styles.mainuiDesc}>Hello! We're thrilled to welcome visionary minds like yours to our Founders Club. Embrace the opportunity to collaborate, innovate, and thrive. Let's embark on this exciting journey together. Ready to make your mark? Let's Go! 👋✨</p>
             <div className={styles.letsGOBtnWrapper}>
               <div
                 className={styles.LetsgoBtn}
@@ -1059,18 +1020,16 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
           <div className={styles.congratsWrapper} data-aos="fade-up">
             <FinalImg />
             <div className={styles.congratsTxt}>
-              We've got your response. Complete the process by contacting us
-              below👇
+              Thank You for Joining the Founders Club
             </div>
+            <p className={styles.congratsDesc}>Congratulations! Your submission has been received successfully. We're excited to have you as part of our innovative community. Get ready to connect, collaborate, and create amazing things together.</p>
             <div className={styles.contactUsWrapper}>
               <div className={styles.contactUsTxt}>
                 Contact us <span className={styles.highlightedTxt}>NOW</span>
               </div>
-              <a href={custom_href} className={styles.finishButton}>
+              <a href={custom_url} className={styles.finishButton}>
                 <p>Finish</p>
-                <Whatsapp height={30} width={40}
-                // onClick={() => { callFaceBookPixel(budgetValue, "formFinished"); }} 
-                />
+                <Whatsapp height={30} width={40} />
               </a>
             </div>
           </div>
