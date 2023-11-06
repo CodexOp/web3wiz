@@ -27,6 +27,9 @@ const items = [
 
 
 const FoundersClub = () => {
+
+
+
     return (
         <div style={{ overflow: "hidden", position: "relative", zIndex: "2" }}>
             <Navbar />

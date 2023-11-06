@@ -3,11 +3,15 @@ import React from 'react'
 import styles from "./howItwork.module.css";
 import howItwork from "../../images/howItWork.svg"
 import icon from '../../iconFounder';
+import { motion } from "framer-motion"
 
 const HowWork = () => {
+
+
     return (
-        <section className={styles.howWork}>
-            <h1 className={styles.howWorkHeading}>How it Works</h1>
+        <section className={`${styles.howWork}`}>
+            <motion.h1 initial="hidden"
+                whileInView="visible" viewport={{ once: true }} transition={{ duration: 10 }} className={`${styles.howWorkHeading}`} >How it Works</motion.h1>
             <div className={styles.workWrapper}>
                 <div className={styles.workContainer}>
                     <div className={styles.workItem}>

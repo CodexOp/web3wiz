@@ -3,8 +3,8 @@ import mainuiImg from '../../../assets//whatsapp.webp';
 import { ReactComponent as ArrowIcon } from '../../../assets/images/icon-arrow.svg';
 import { ReactComponent as FinalImg } from '../../../assets/images/finalImg.svg';
 import { ReactComponent as Whatsapp } from '../../../assets/images/icon-whatsapp.svg';
-import { ReactComponent as SelectBtnIcon } from '../../../assets/images/icon-pagebtn.svg';
-import { useSearchParams } from 'react-router-dom';
+// import { ReactComponent as SelectBtnIcon } from '../../../assets/images/icon-pagebtn.svg';
+// import { useSearchParams } from 'react-router-dom';
 import styles from './style.module.css';
 import validator from 'validator';
 import AOS from 'aos';
@@ -14,11 +14,6 @@ import ReactPixel from 'react-facebook-pixel';
 
 const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
 
-  const [showOptions, setShowOptions] = useState(false);
-  // const [selectedOption, setSelectedOption] = useState(null);
-  const [selectedOptionService, setSelectedOptionService] = useState(null);
-  const [selectedOptionIam, setSelectedOptionIam] = useState(null);
-  const [countryName, setCountryName] = useState(null);
   const [linkedIn, setLinkedIn] = useState("") // for linkedin
   const [validLinkedin, setValidLinkedin] = useState(true); // for linkedin
   const [company, setCompany] = useState("") // comaany name
@@ -37,45 +32,24 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
   const [validFunding, setValidFunding] = useState(true) // funding
   const [membership, setMembership] = useState("")
   const [validMembership, setValidMembership] = useState(true);
-  const [otherInput, settherInput] = useState(null);
-  const [selectedOptionBudget, setSelectedOptionBudget] = useState(null);
-  //FOR DEVELOPMENT START DATE
-  const [selectedOptionStartDate, setSelectedOptionStartDate] = useState(null);
-
   const [custom_href, setCustomHref] = useState(null);
   const [validEmail, setValidEmail] = useState(true);
   const [email, setEmail] = useState('');
-  const [campaign, setCampaign] = useState('');
-  const [adset, setAdset] = useState('');
-  const [ad, setAd] = useState('');
+  // const [campaign, setCampaign] = useState('');
+  // const [adset, setAdset] = useState('');
+  // const [ad, setAd] = useState('');
   const [name, setName] = useState('');
-  //FOR Taking Project Link
-  const [link, setLink] = useState('');
-  //FOR Taking Details of the Projects 
-  const [details, setDetails] = useState('');
-  const [iam, setIam] = useState('');
   const [phoneNo, setPhoneNo] = useState('');
   const [countryCode, setCountryCode] = useState('');
-  const [country, setCountry] = useState('');
-  const [budget, setBudget] = useState('');
-  //FOR START DATE 
-  const [startDate, setStartDate] = useState('');
-  const [leadsource, setLeadsource] = useState('');
-  const [projectName, setProjectName] = useState('');
-  const [validProjectName, setValidProjectName] = useState(true);
+  // const [budget, setBudget] = useState('');
+  // const [leadsource, setLeadsource] = useState('');
   const [validName, setValidName] = useState(true);
-  // For Taking Project Link
-  const [validLink, setValidLink] = useState(true);
-  // For Taking Project Link
-  const [validDetails, setValidDetails] = useState(true);
-
-  const [validOptions, setValidOptions] = useState(true);
   const [validPhone, setValidPhone] = useState(true);
   const [validCC, setValidCC] = useState(true);
-  const [service, setService] = useState('');
-  const [budgetValue, setBudgetValue] = useState(0);
+  // const [service, setService] = useState('');
+  // const [budgetValue, setBudgetValue] = useState(0);
   const emailRef = useRef();
-  const queryParams = new URLSearchParams(window.location.search);
+  // const queryParams = new URLSearchParams(window.location.search);
 
   const data = {
     name: name,
@@ -92,15 +66,7 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
     membership: membership,
   };
 
-  useEffect(() => {
-    if (budget === '1000$ - 5000$') {
-      setBudgetValue(2500);
-    } else if (budget === '5000$ - 10000$') {
-      setBudgetValue(7500);
-    } else if (budget === 'Above 10000$') {
-      setBudgetValue(15000);
-    }
-  }, [budget]);
+
 
   const conversionData = {
     name: name,
@@ -120,113 +86,14 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
   console.log("This is conversion Data", conversionData);
   console.log("This is data", data)
 
-  const CustomSelect = ({
-    options,
-    placeholder,
-    setWhat,
-    setSelectedOption,
-    selectedOption,
-  }) => {
-    const handleToggleOptions = () => {
-      setShowOptions((prevShowOptions) => !prevShowOptions);
-    };
 
-    const handleSelectOption = (option) => {
-      setSelectedOption(option);
-      setShowOptions(false);
-    };
-    return (
-      <div className={styles.customSelect}>
-        <div
-          className={styles.selectButton}
-          onClick={handleToggleOptions}
-          style={{
-            backgroundColor: selectedOption ? '#fff' : '#1D3852',
-            color: selectedOption ? '#333' : '#bbb',
-            borderRadius: showOptions ? '10px 10px 10px 0' : '10px',
-          }}
-        >
-          {selectedOption?.label === 'Other' ? (
-            <input
-              placeholder="Other"
-              className={`${styles.selectedTxt} ${styles.selectedInputTxt}`}
-              autoFocus
-              value={selectedOption.value}
-              onChange={(e) => {
-                setWhat(e.target.value);
-                setSelectedOption({
-                  label: 'Other',
-                  value: e.target.value,
-                });
-                setValidOptions(true);
-              }}
-            />
-          ) : (
-            <div
-              className={styles.selectedTxt}
-              style={{
-                opacity: selectedOption ? '1' : '0.5',
-              }}
-            >
-              {selectedOption ? selectedOption.label : placeholder}
-            </div>
-          )}
-          <div className={styles.selectBtnWrapper}>
-            <SelectBtnIcon className={`arrow ${showOptions ? 'open' : ''}`} />
-          </div>
-        </div>
-        {showOptions && (
-          <div className={styles.options}>
-            {options.map((option) => (
-              <div
-                key={option.value}
-                className={`option ${option === selectedOption ? 'selected' : ''
-                  }`}
-                onClick={() => {
-                  setWhat(option.value);
-                  setValidOptions(true);
-                  handleSelectOption(option);
-                }}
-              >
-                {option.label}
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-    );
-  };
 
   useEffect(() => {
-    if (queryParams.get('campaign') === undefined || null) {
-      setCampaign('organic');
-    } else {
-      setCampaign(queryParams.get('campaign'));
-    }
-
-    if (queryParams.get('adset') === undefined || null) {
-      setAdset('organic');
-    } else {
-      setAdset(queryParams.get('adset'));
-    }
-
-    if (queryParams.get('ad') === undefined || null) {
-      setAd('organic');
-    } else {
-      setAd(queryParams.get('ad'));
-    }
-
-    if (queryParams.get('src') === undefined || null) {
-      setLeadsource('organice');
-    } else {
-      setLeadsource(queryParams.get('src'));
-    }
-
     setCustomHref(
       'https://wa.me/12342559266?text=%20Hi%20I%20am%20' +
       name +
-      '%2C%20I%20am%20looking%20for%20getting%20' +
-      service +
+      '%2C%20I%20am%20looking%20for%20joining%20' +
+      "Founders Club" +
       '.%20Can%20you%20please%20tell%C2%A0more%C2%A0about%C2%A0it%3F%0A'
     );
 
@@ -234,7 +101,7 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
 
     if (pagenum === 13) {
       try {
-        callFaceBookPixel(budgetValue, 'leadGeneratedForm');
+        // callFaceBookPixel(budgetValue, 'leadGeneratedForm');
         sendDataToPably();
       } catch (error) {
         console.log(error)
@@ -254,6 +121,7 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
         body: JSON.stringify(data), // body data type must match "Content-Type" header
       }
     );
+
     fetch(
       'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzY1MjZjNTUzNCI_3D_pc',
       {
@@ -268,17 +136,21 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
       .catch((err) => console.log(err));
 
   };
-  const sendDataToPably2 = (data) => {
-    fetch(
-      'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc',
-      {
-        // Enter your IP address here
 
-        method: 'POST',
-        mode: 'cors',
-        body: JSON.stringify(data), // body data type must match "Content-Type" header
-      }
-    );
+  const sendDataToPably2 = (data) => {
+    try {
+      fetch(
+        'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc',
+        {
+          // Enter your IP address here
+          method: 'POST',
+          mode: 'cors',
+          body: JSON.stringify(data), // body data type must match "Content-Type" header
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
   };
 
 
@@ -817,7 +689,8 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
               />
               {!validLinkedin && (
                 <div className={styles.errorMsg}>
-                  Please enter a valid country
+                  Please enter a valid Linkedin URL <br />
+                  if not applicable <bold>N/A</bold>
                 </div>
               )}
               <div
@@ -862,7 +735,8 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
               />
               {!validCompany && (
                 <div className={styles.errorMsg}>
-                  Please enter a valid country
+                  Please enter a valid Company or Organization name <br />
+                  if not applicable <bold>N/A</bold>
                 </div>
               )}
               <div
@@ -907,7 +781,7 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
               />
               {!validRole && (
                 <div className={styles.errorMsg}>
-                  Please enter a valid country
+                  Please enter a valid Current Role or Position
                 </div>
               )}
               <div
@@ -952,7 +826,8 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
               />
               {!validWeb3 && (
                 <div className={styles.errorMsg}>
-                  Please enter a valid country
+                  Please enter a valid Answer <br />
+                  if not applicable <bold>N/A</bold>
                 </div>
               )}
               <div
@@ -994,7 +869,7 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
                 }}
               />
               {!validRevenue && (
-                <div className={styles.errorMsg}>Please enter a valid link</div>
+                <div className={styles.errorMsg}>Please enter a valid Revenue in USD</div>
               )}
               <div
                 className={styles.okBtn}
@@ -1035,7 +910,7 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
                 }}
               />
               {!validEmployee && (
-                <div className={styles.errorMsg}>Please enter a valid link</div>
+                <div className={styles.errorMsg}>Please enter a valid Total Employees</div>
               )}
               <div
                 className={styles.okBtn}
@@ -1060,7 +935,7 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
               10. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
-              <div className={styles.primaryTxt}>Company Website*</div>
+              <div className={styles.primaryTxt}>Company Website</div>
               <div className={styles.secondaryTxt}>If your organization maintains an official website, kindly share the URL for our reference.</div>
               <input
                 className={styles.nameInput}
@@ -1076,7 +951,7 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
                 }}
               />
               {!validWebsite && (
-                <div className={styles.errorMsg}>Please enter a valid link</div>
+                <div className={styles.errorMsg}>Please enter a valid Company Website link</div>
               )}
               <div
                 className={styles.okBtn}
@@ -1117,7 +992,10 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
                 }}
               />
               {!validFunding && (
-                <div className={styles.errorMsg}>Please enter a valid link</div>
+                <div className={styles.errorMsg}>
+                  Please enter a valid Answer<br />
+                  if not applicable <bold>N/A</bold>
+                </div>
               )}
               <div
                 className={styles.okBtn}
@@ -1158,7 +1036,7 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
                 }}
               />
               {!validMembership && (
-                <div className={styles.errorMsg}>Please enter a valid link</div>
+                <div className={styles.errorMsg}>Please enter a valid Answer</div>
               )}
               <div
                 className={styles.okBtn}
@@ -1190,7 +1068,9 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
               </div>
               <a href={custom_href} className={styles.finishButton}>
                 <p>Finish</p>
-                <Whatsapp height={30} width={40} onClick={() => { callFaceBookPixel(budgetValue, "formFinished"); }} />
+                <Whatsapp height={30} width={40}
+                // onClick={() => { callFaceBookPixel(budgetValue, "formFinished"); }} 
+                />
               </a>
             </div>
           </div>
