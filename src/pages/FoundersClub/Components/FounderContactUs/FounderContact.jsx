@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import toast, { Toaster } from "react-hot-toast";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion"
 
 import styles from "./founderContact.module.css"
+import { fadeInUp } from '../../animationValue';
 
 const FounderContact = () => {
     const [formData, setFormData] = useState({
@@ -19,6 +22,7 @@ const FounderContact = () => {
             [name]: value
         });
     };
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -60,16 +64,45 @@ const FounderContact = () => {
         }
     };
 
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+        threshold: 0.1, // Adjust the threshold as needed
+    });
+
+    const [secRef, secInView] = useInView({
+        triggerOnce: false,
+        threshold: 0.2, // Adjust the threshold as needed
+    });
+    const [thirdRef, thirdInView] = useInView({
+        triggerOnce: false,
+        threshold: 0.2, // Adjust the threshold as needed
+    });
     return (
         <section className={styles.fcontact} id="founder_contact_form">
             <Toaster
                 position="top-center"
                 reverseOrder={false}
             />
-            <h1 className={styles.fcontactHeading} >Contact Us</h1>
-            <p className={styles.fcontactDesc} >Share a slice of your founder's journey with us and get a shoutout from us.</p>
+            <motion.h1 className={styles.fcontactHeading}
+                ref={ref}
+                variants={fadeInUp}
+                initial="initial"
+                animate={inView ? "animate" : "initial"}
+                transition={{ duration: 1 }}
+            >Contact Us</motion.h1>
+            <motion.p className={styles.fcontactDesc} ref={secRef}
+                variants={fadeInUp}
+                initial="initial"
+                animate={secInView ? "animate" : "initial"}
+                transition={{ duration: 1 }}>Share a slice of your founder's journey with us and get a shoutout from us.</motion.p>
 
-            <div className={styles.fcontactFormContent}>
+            <motion.div className={styles.fcontactFormContent}
+                ref={thirdRef}
+                variants={fadeInUp}
+                initial="initial"
+                animate={thirdInView ? "animate" : "initial"}
+                transition={{ duration: 1 }}
+            >
                 <div className={styles.fcontactFromwrapper}>
                     <form className={styles.fcontactFrom} onSubmit={handleSubmit}>
                         <div className={styles.fcontactName}>
@@ -90,7 +123,7 @@ const FounderContact = () => {
                         </div>
                     </form>
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }

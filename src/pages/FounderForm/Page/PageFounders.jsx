@@ -10,7 +10,7 @@ import validator from 'validator';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Helmet } from 'react-helmet-async';
-import ReactPixel from 'react-facebook-pixel';
+// import ReactPixel from 'react-facebook-pixel';
 
 const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
 
@@ -113,7 +113,7 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
   //ISSUE
   const sendDataToPably = () => {
     fetch(
-      'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzNzA0MzU1MjZhNTUzMDUxMzQi_pc',
+      'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMjA0Mzc1MjY0NTUzMDUxM2Ei_pc',
       {
         // Enter your IP address here
         method: 'POST',
@@ -137,35 +137,35 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
 
   };
 
-  const sendDataToPably2 = (data) => {
-    try {
-      fetch(
-        'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc',
-        {
-          // Enter your IP address here
-          method: 'POST',
-          mode: 'cors',
-          body: JSON.stringify(data), // body data type must match "Content-Type" header
-        }
-      );
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const sendDataToPably2 = (data) => {
+  //   try {
+  //     fetch(
+  //       'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzU1MjY1NTUzMyI_3D_pc',
+  //       {
+  //         // Enter your IP address here
+  //         method: 'POST',
+  //         mode: 'cors',
+  //         body: JSON.stringify(data), // body data type must match "Content-Type" header
+  //       }
+  //     );
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
 
 
-  const callFaceBookPixel = (value, leadName) => {
-    ReactPixel.trackCustom(leadName, { value: value, currency: 'USD' });
-    sendDataToPably2({
-      event: leadName,
-      value: value,
-      currency: 'USD',
-      userAgent: navigator.userAgent,
-      href: window.location.href,
-      timestamp: Math.floor(Date.now() / 1000),
-    });
-  };
+  // const callFaceBookPixel = (value, leadName) => {
+  //   ReactPixel.trackCustom(leadName, { value: value, currency: 'USD' });
+  //   sendDataToPably2({
+  //     event: leadName,
+  //     value: value,
+  //     currency: 'USD',
+  //     userAgent: navigator.userAgent,
+  //     href: window.location.href,
+  //     timestamp: Math.floor(Date.now() / 1000),
+  //   });
+  // };
 
 
   useEffect(() => {
