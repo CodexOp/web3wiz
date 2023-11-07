@@ -111,7 +111,9 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
         mode: 'cors',
         body: JSON.stringify(data), // body data type must match "Content-Type" header
       }
-    );
+    ).then((res) => res.json())
+      .then((res) => console.log("fetch succesfull..", res))
+      .catch((err) => console.log(err));
 
     fetch(
       'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NmMwNTY5MDYzZTA0MzY1MjZjNTUzNCI_3D_pc',
@@ -125,7 +127,6 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
       .then((res) => res.json())
       .then((res) => console.log("fetching datas..", res))
       .catch((err) => console.log(err));
-
   };
 
 
@@ -266,6 +267,7 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
             </div>
           </div>
         )}
+
         {pagenum === 1 && (
           <div className={styles.formWrapper} data-aos="fade-up">
             <div className={styles.counterDiv}>
