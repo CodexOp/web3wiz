@@ -29,7 +29,6 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
   const [validFunding, setValidFunding] = useState(true) // funding
   const [membership, setMembership] = useState("")
   const [validMembership, setValidMembership] = useState(true);
-  const [custom_url, setCustomUrl] = useState(null);
   const [validEmail, setValidEmail] = useState(true);
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
@@ -79,17 +78,7 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
 
 
   useEffect(() => {
-    const club = "Founders Club"
-    setCustomUrl(
-      'https://wa.me/12342559266?text=%20Hi%20I%20am%20' +
-      name +
-      '%2C%20I%20am%20looking%20for%20joining%20' +
-      club +
-      '.%20Can%20you%20please%20tell%C2%A0more%C2%A0about%C2%A0it%3F%0A'
-    );
-
     // User completes the form
-
     if (pagenum === 13) {
       try {
         // callFaceBookPixel(budgetValue, 'leadGeneratedForm');
@@ -1024,16 +1013,11 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
             <div className={styles.congratsTxt}>
               Thank You for Joining the Founders Club
             </div>
-            <p className={styles.congratsDesc}>Congratulations! Your submission has been received successfully. We're excited to have you as part of our innovative community. Get ready to connect, collaborate, and create amazing things together.</p>
-            <div className={styles.contactUsWrapper}>
-              <div className={styles.contactUsTxt}>
-                Contact us <span className={styles.highlightedTxt}>NOW</span>
-              </div>
-              <a href={custom_url} className={styles.finishButton}>
-                <p>Finish</p>
-                <Whatsapp height={30} width={40} />
-              </a>
-            </div>
+            <p className={styles.congratsDesc}>
+              Congratulations! Your submission has been received successfully. We're excited to have you as part of our innovative
+              community. Get ready to connect, collaborate, and create amazing things together.
+            </p>
+
           </div>
         )}
       </div>
