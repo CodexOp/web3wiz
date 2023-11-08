@@ -37,6 +37,11 @@
   );
 }
 
+.mainContainerFounder {
+  max-width: 1500px;
+  margin: auto;
+}
+
 .founder_club_button {
   height: 3.25rem;
   padding: 0.5rem 2rem;
