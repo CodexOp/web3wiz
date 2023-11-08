@@ -72,16 +72,11 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
     membership: membership,
   };
 
-  console.log("This is conversion Data", conversionData);
-  console.log("This is data", data)
-
-
 
   useEffect(() => {
     // User completes the form
     if (pagenum === 13) {
       try {
-        // callFaceBookPixel(budgetValue, 'leadGeneratedForm');
         sendDataToPably();
       } catch (error) {
         console.log(error)
@@ -90,7 +85,7 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
   }, [pagenum]);
 
 
-  //ISSUE
+
   const sendDataToPably = () => {
     fetch(
       'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMjA0Mzc1MjY0NTUzMDUxM2Ei_pc',
@@ -240,7 +235,8 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
             <div className={styles.mainuiheading}>
               Unlock Your Potential, Join the Founders Club Today!
             </div>
-            <p className={styles.mainuiDesc}>Hello! We're thrilled to welcome visionary minds like yours to our Founders Club. Embrace the opportunity to collaborate, innovate, and thrive. Let's embark on this exciting journey together. Ready to make your mark? Let's Go! 👋✨</p>
+            <p className={styles.mainuiDesc}>Feeling the weight of web3 complexities on your shoulders? You're not  alone.
+              Join us and turn challenges into shared triumphs. Sign up now,  your network of founders awaits.</p>
             <div className={styles.letsGOBtnWrapper}>
               <div
                 className={styles.LetsgoBtn}
@@ -972,7 +968,7 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
               12. <ArrowIcon className={styles.arrowIcon} />
             </div>
             <div className={styles.questionWrapper}>
-              <div className={styles.primaryTxt}>Exclusive Club Membership Fee (INR 8000/month)</div>
+              <div className={styles.primaryTxt}>Exclusive Club Membership Fee (100 $/month)</div>
               <div className={styles.secondaryTxt}>Are you amenable to the monthly fee of INR 8000 to participate in our exclusive club?</div>
               <input
                 className={styles.nameInput}
@@ -1011,11 +1007,10 @@ const PageFounders = ({ pagenum, handlePageUp, handlePageDown }) => {
           <div className={styles.congratsWrapper} data-aos="fade-up">
             <FinalImg />
             <div className={styles.congratsTxt}>
-              Thank You for Joining the Founders Club
+              Form Submitted Successfully
             </div>
             <p className={styles.congratsDesc}>
-              Congratulations! Your submission has been received successfully. We're excited to have you as part of our innovative
-              community. Get ready to connect, collaborate, and create amazing things together.
+              Thank you for taking the first step towards joining the inner circle of  extraordinary founders. You're one step closer to unlocking the  exclusive world of web3 excellence. We'll be in touch soon!
             </p>
 
           </div>
