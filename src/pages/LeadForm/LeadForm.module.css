@@ -1,0 +1,359 @@
+
+
+.formMainDiv {
+    width: 80%;
+    margin: auto;
+    background: #1A1A1A;
+    border-radius: 1.25rem;
+    padding: 1.5rem 3rem;
+    margin-top: 3rem;
+    /* border: 2px solid red; */
+}
+
+/* Heading  */
+.heading {
+    color: #27B67A;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* Paragraph  */
+.para {
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.3125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 85%;
+    margin: auto;
+}
+
+/* Form Div  */
+.formDiv {
+    /* border: 2px solid red; */
+    margin-top: 5rem;
+}
+
+/* name-email-box  Starts*/
+.nameEmailBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+
+.label {
+    color: #FFF;
+    /* text-align: center; */
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.name {
+    border-radius: 0.625rem;
+    background: #010101;
+    height: 4.625rem;
+    border: none;
+    /* width: 100%; */
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #D1D1D1;
+    padding-left: 1rem;
+    /* flex-shrink: 0; */
+}
+
+.name::placeholder {
+    /* color: #D1D1D1;
+    /* text-align: center; */
+    padding-left: 1rem;
+
+}
+
+
+.nameDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+/* name-email-box ENDS */
+
+
+/* NumCountryBox Starts  */
+.numCountryBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.select {
+    border-radius: 0.625rem;
+    background: #010101;
+    height: 4.625rem;
+    color: #D1D1D1;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+}
+
+.select option {
+    color: #D1D1D1;
+}
+
+/* NumCountryBox Ends  */
+
+/* expBudgetBox Starts  */
+.expBudgetBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.expDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.expDiv p {
+    color: #D1D1D1;
+    font-family: Poppins;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.budgetDiv p {
+    color: #D1D1D1;
+    font-family: Poppins;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.budgetDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+/* expBudgetBox Ends  */
+
+/*Deadline Website Link Starts */
+.deadlineLinkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.deadlineDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+
+.deadlineDiv p {
+    color: #D1D1D1;
+    font-family: Poppins;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.websiteDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.details {
+    border-radius: 0.625rem;
+    background: #010101;
+    height: 4.625rem;
+    border: none;
+    /* width: 100%; */
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #D1D1D1;
+    padding-left: 1rem;
+    /* flex-shrink: 0; */
+}
+
+.details::placeholder {
+    /* color: #D1D1D1;
+    /* text-align: center; */
+    padding-left: 1rem;
+
+}
+
+/* Deadline Website Link Ends  */
+
+
+/* Website Main Div Starts */
+.websiteMainDiv {
+    margin-top: 2.5rem;
+}
+
+.websiteDiv textarea {
+    border-radius: 0.625rem;
+    background: #010101;
+    color: #D1D1D1;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 100%;
+    height: 8.9375rem;
+    margin-top: 0.5rem;
+    border: none;
+    resize: none;
+}
+
+.websiteDiv p {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.websiteDiv textarea::placeholder {
+    padding-left: 1rem;
+    padding-top: 0.75rem;
+}
+
+/* Website Main Div Ends */
+
+/* mess Main Div Starts  */
+.messMainDiv {
+    margin-top: 2.5rem;
+}
+
+.messDiv p {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.messDiv textarea {
+    border-radius: 0.625rem;
+    background: #010101;
+    color: #D1D1D1;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 100%;
+    height: 8.9375rem;
+    margin-top: 0.5rem;
+    border: none;
+    resize: none;
+}
+
+.messDiv textarea::placeholder {
+    padding-left: 1rem;
+    padding-top: 0.75rem;
+}
+
+/* mess Main Div Ends  */
+
+.submitForm {
+    padding-top: 2.5rem;
+    /* border: 2px solid red; */
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputBtn{
+    border-radius: 0.625rem;
+    background: #27B67A;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    height: 4rem;
+    padding: 0px 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width:768px){
+    .heading{
+        font-size: 1.8rem;
+    }
+    .para{
+        font-size: 1rem;
+    }
+    .formMainDiv{
+        width: 90%;
+    }
+    .nameEmailBox , .numCountryBox , .expBudgetBox, .deadlineLinkbox{
+        flex-direction: column;
+        /* border: 2px solid white; */
+        align-items: unset;
+
+    }
+
+    .nameDiv{
+        flex: unset;
+        /* border: 2px solid red; */
+    }
+}
+
+@media (max-width:475px){
+    .formMainDiv{
+        padding: 2rem 1rem;
+    }
+
+    label{
+        font-size: 1rem; 
+    }
+}
+
