@@ -24,6 +24,8 @@ import HomePageBlockChainUS from './pages/HomePageBlockChainUS';
 import FoundersClub from './pages/FoundersClub/FoundersClub';
 import FounderForm from './pages/FounderForm/FounderForm';
 import LeadHome from './pages/LeadHome';
+import LeadForm from './pages/LeadForm/LeadForm';
+
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -55,6 +57,8 @@ root.render(
           <Route exact path="/lead-home" element={<LeadHome />} />
           <Route exact path="/blockchain" element={<HomePageBlockChain />} />
           <Route exact path="/blockchainUS" element={<HomePageBlockChainUS />} />
+          <Route exact path="/LeadForm" element={<LeadForm />} />
+
           <Route exact path="/thankyou-b" element={<Thankyou />} />
           <Route exact path="/thankyou-g" element={<ThankyouG />} />
           <Route exact path="/privacy-policy" element={<Privacy />} />
