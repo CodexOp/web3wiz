@@ -50,7 +50,7 @@ const Review = () => {
             align="center"
             className={styles.ourpartner_heading}
             sx={{
-              fontFamily: "poppins",
+              fontFamily: "ClashDisplay",
               fontSize: { xs: "30px", sm: "52px" },
               fontWeight: 700,
             }}
@@ -60,7 +60,7 @@ const Review = () => {
 
               className={styles.borderText}
               sx={{
-                fontFamily: "poppins",
+                fontFamily: "ClashDisplay",
                 fontWeight: 700,
                 fontSize: { xs: "30px", sm: "52px" },
               }}
@@ -73,6 +73,7 @@ const Review = () => {
         <Box sx={{
           width: "100%",
           margin: "auto",
+          marginTop: "5rem",
         }}>
           <Slider {...settings}>
             <div className={styles.clientReviewCrouselItem}>

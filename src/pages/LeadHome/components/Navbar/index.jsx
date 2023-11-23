@@ -18,7 +18,7 @@ export default function Navbar(props) {
   useEffect(() => {
     setParams(window.location.search);
 
-}, [])
+  }, [])
   return (
     <>
       <header className={styles.primaryHeader}>
@@ -41,7 +41,7 @@ export default function Navbar(props) {
                 {' '}
                 <div className={styles.navbarbtn}>Projects</div>
               </Link>
-              <Link to={"/form"+params} target="_blank" rel="noopener noreferrer">
+              <Link to={"/form" + params} target="_blank" rel="noopener noreferrer">
                 <div className={styles.getaquotaBtn} onClick={() => callFacebookPixel('ClickedGetQuote', 10)}>
                   Get a Quote
                 </div>

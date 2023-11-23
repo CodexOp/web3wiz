@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "ClashDisplay-Variable";
+  src: url("./Fonts/Variable/ClashDisplay-Variable.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ClashDisplay";
+  src: url("./Fonts/OTF/ClashDisplay-Bold.otf") format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --lh-clashVar: "ClashDisplay-Variable", sans-serif;
+  --lh-clash: "ClashDisplay", sans-serif;
+  --lh-jakartaSans: "Plus Jakarta Sans", sans-serif;
+}
+
+.MuiContainer-root {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+/* slider button  */
+
+.MuiBox-root .slick-prev:before,
+.MuiBox-root .slick-next:before {
+  color: #15d28e;
+}
+
+.react-datepicker-wrapper {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}

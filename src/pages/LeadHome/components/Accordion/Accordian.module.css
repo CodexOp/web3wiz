@@ -1,0 +1,121 @@
+.accordionContainer {
+  margin-top: 10rem;
+  margin-bottom: 6rem;
+}
+
+.accordianHeading {
+  color: #ffffff;
+  text-align: center;
+  font-family: var(--lh-clash);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 2.8125rem; /* 102.273% */
+}
+
+.accordianHeading > span {
+  background: linear-gradient(90.06deg, #27b67a 1.07%, #38ffcf 99.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.accordionMain {
+  width: 60%;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+.accordion {
+  border-radius: 0.75rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(34, 46, 38, 0.2);
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding: 2.1875rem 2rem;
+  height: auto;
+  max-height: 6.125rem;
+  transition: max-height 400ms ease-in-out !important;
+}
+
+.accordion.accordionOpen {
+  border: 2px solid #27b67a !important;
+  height: auto;
+  max-height: 20rem !important;
+}
+
+.accordion:hover {
+  border: 2px solid #ffffff;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+.accordionHeader h2 {
+  color: #ffffff;
+  font-family: Outfit, sans-serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.accordionContent p {
+  color: rgba(255, 255, 255, 0.4);
+  text-align: justify;
+  font-family: Outfit, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 130.523%; /* 1.30525rem */
+  letter-spacing: -0.03rem;
+  padding-top: 2rem;
+}
+
+.accordionHeader > svg {
+  color: #ffffff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 1024px) {
+  .accordionMain {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordianHeading {
+    font-size: 2.2rem;
+  }
+
+  .accordionMain {
+    width: 90%;
+  }
+}
+
+@media (max-width: 588px) {
+  .accordionContainer {
+    margin-top: 6rem;
+  }
+
+  .accordianHeading {
+    font-size: 2rem;
+  }
+  .accordionMain {
+    width: 95%;
+  }
+  .accordion {
+    padding: 2rem 1rem;
+  }
+  .accordionHeader > h2,
+  .accordionHeader > svg {
+    font-size: 1rem;
+  }
+}

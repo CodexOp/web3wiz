@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import bg1Img from "../../assets/images/icon-bg1.svg";
+// import bg1Img from "../../assets/images/icon-bg1.svg";
 // import transparencyImg from "../../assets/images/icon-transparency.svg";
 // import folderLockIcon from "../../assets/images/icon-folderLock.svg";
 // import shieldIcon from "../../assets/images/icon-shield.svg";
@@ -18,7 +18,7 @@ import Footer from "./components/Footer";
 import igIcon from "./components/assests/images/icon-ig.svg";
 import linkedInIcon from "./components/assests/images/icon-linkedIn.svg";
 import telegramIcon from "./components/assests/images/icon-telegram.svg";
-import rightarrow from "./components/assests/images/right-arrow.svg";
+// import rightarrow from "./components/assests/images/right-arrow.svg";
 import twitterIcon from "./components/assests/images/icon-twitter.svg";
 import emailIcon from "./components/assests/images/icon-email.svg";
 import blogImg1 from "./components/assests/images/blogImg1.svg";
@@ -26,10 +26,10 @@ import blogImg2 from "./components/assests/images/blogImg2.svg";
 import blogImg3 from "./components/assests/images/blogImg3.svg";
 import arrowIcon from "./components/assests/images/icon-arrow.svg";
 import closeIcon from "./components/assests/images/icon-cross.svg";
-import registered from "./components/assests/registered.svg";
-import teamofprofessionals from "./components/assests/teamofprofessionals.svg";
-import customerService from "./components/assests/customerService.svg";
-import endtoendservice from "./components/assests/endtoendservice.svg";
+// import registered from "./components/assests/registered.svg";
+// import teamofprofessionals from "./components/assests/teamofprofessionals.svg";
+// import customerService from "./components/assests/customerService.svg";
+// import endtoendservice from "./components/assests/endtoendservice.svg";
 // import starIcon from "./components/assests/images/icon-star.svg";
 // import quotesIcon from "./components/assests/images/icon-quotes.svg";
 // import clientImg from "./components/assests/images/icon-clientimg.svg";
@@ -40,10 +40,11 @@ import marketplaces from "./components/assests/images/marketplaces.svg";
 import dappDevelopment from "./components/assests/images/dappDevelopment.svg";
 import android from "./components/assests/images/android.svg";
 import Navbar from "./components/Navbar";
-import ReactTypingEffect from "react-typing-effect";
+// import ReactTypingEffect from "react-typing-effect";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import { Link } from "react-router-dom";
+import "./index.css";
 import styles from "./style.module.css";
 import Partners from "./components/Partners/Partners";
 import Review from "./components/reviews/Review";
@@ -54,6 +55,20 @@ import { Lottie, triggerLottie } from "../../components/Lottie/Lottie";
 import useFacebookPixel from "../../hooks/FacebookPixel/useFacebookPixel";
 import validator from "validator";
 import ChatBox from "../../components/ChatBox/ChatBox";
+import SecuritySection from "./components/SecuritySection/SecuritySection";
+import WhatWeAre from "./components/WhatWeAre/WhatWeAre";
+import WhyUs from "./components/WhyUsLead/WhyUs";
+import YourDreams from "./components/YourDreams/YourDreams";
+
+import { IoIosMail } from "react-icons/io";
+import { FaLinkedin, FaTelegramPlane, FaTwitter } from "react-icons/fa";
+import { GrInstagram } from "react-icons/gr";
+
+import { MatrixRainingLetters } from "react-mdr";
+
+import LeadForm from "../LeadForm/LeadForm";
+import Accordion from "./components/Accordion/Accordion";
+
 
 const options = {
   autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
@@ -61,7 +76,25 @@ const options = {
 };
 ReactPixel.init("1233452067589283", "", options);
 
-export default function Homev2() {
+
+const items = [
+  {
+    title: `Do you provide custom smart contracts?`, content: `Yes, we do provide Custom Smart Contracts according to the client’s needs.`
+  },
+  { title: 'How long is the after sales service?', content: 'Customer satisfaction is our top priority. So we provide upto 7 days of service from the date of delivery.' },
+  {
+    title: `Do you provide hosting as well?`, content: `Yes, we do provide hosting solutions if the clients need it.`
+  },
+  {
+    title: `Do you provide presale support?`, content: `Yes, will be providing presale support if the clients need it.`
+  },
+  {
+    title: `Do you take upfront payment?`, content: `Yes, we will be taking 50% payment upfront before we start working on any order.`
+  }
+
+];
+
+export default function LeadHome() {
   useEffect(() => {
     setParams(window.location.search);
   }, []);
@@ -168,63 +201,66 @@ export default function Homev2() {
     }
   };
 
-  const [isFaq1Open, setisFaq1Open] = useState(false);
-  const [isFaq2Open, setisFaq2Open] = useState(false);
-  const [isFaq3Open, setisFaq3Open] = useState(false);
-  const [isFaq4Open, setisFaq4Open] = useState(false);
-  const [isFaq5Open, setisFaq5Open] = useState(false);
 
   return (
     <>
       <Lottie text={"Thank you for subscribing! Stay tuned for our latest news and updates."} />
       <Navbar />
-      <ChatBox />
+      {/* <ChatBox /> */}
       <div className="landing"></div>
       <div className={styles.homeWrapper} id="home">
+        <MatrixRainingLetters key="foo-bar" custom_class="m-0 p-0" />
         <div className={styles.backdropDiv1}>
+
           <div id="home" className={styles.mainWrapper1}>
-            <div className={styles.titleContent}>
-              <div>
-                <h1 className={styles.mainHeadingTxt}>
-                  We&nbsp;create
-                  <br />
-                  <h2 className={styles.gradientTxt}>
-                    {" "}
-                    <ReactTypingEffect speed={50} typingDelay={1000} eraseDelay={2000} eraseSpeed={50} text={["Smart Contract", "Websites", "Dapps", "Marketplace"]} />
-                  </h2>
-                </h1>
+            <div className={styles.leadHero} >
+              <div className={styles.titleContent}>
+
+                <h5 className={styles.titleInfo}>Unlock a 6-Figure Crypto Empire: Your Journey to Blockchain Wealth Begins Here!</h5>
+                <div className={styles.titleFeatures}>
+                  <div className={styles.titleFeatureItem}>
+                    <div className={styles.titleFeatureItemContent1}>
+                      <CountUp end={40} delay={2} />+
+                    </div>
+                    <h5 className={styles.titleFeatureItemContent2}>Smart Contract</h5>
+                  </div>
+                  <div className={styles.titleFeatureItem}>
+                    <div className={styles.titleFeatureItemContent1}>
+                      <CountUp end={100} delay={2} />+
+                    </div>
+                    <h5 className={styles.titleFeatureItemContent2}>Projects Completed </h5>
+                  </div>
+                  <div className={styles.titleFeatureItem}>
+                    <div className={styles.titleFeatureItemContent1}>
+                      <CountUp end={20} delay={2} />+
+                    </div>
+                    <h5 className={styles.titleFeatureItemContent2}>Team Members</h5>
+                  </div>
+                </div>
+
+                <button className={styles.bookCounsultation}>Book my free Consultation</button>
               </div>
-              <h5 className={styles.titleInfo}>We provide blockchain services from Smart Contract Development and Audit to creating Launchpads, NFT Marketplaces and any kind of unique DAPPs</h5>
-              <div className={styles.titleFeatures}>
-                <div className={styles.titleFeatureItem}>
-                  <div className={styles.titleFeatureItemContent1}>
-                    <CountUp end={40} delay={2} />+
-                  </div>
-                  <h5 className={styles.titleFeatureItemContent2}>SmartContract</h5>
-                </div>
-                <div className={styles.titleFeatureItem}>
-                  <div className={styles.titleFeatureItemContent1}>
-                    <CountUp end={100} delay={2} />+
-                  </div>
-                  <h5 className={styles.titleFeatureItemContent2}>Projects Completed </h5>
-                </div>
-                <div className={styles.titleFeatureItem}>
-                  <div className={styles.titleFeatureItemContent1}>
-                    <CountUp end={20} delay={2} />+
-                  </div>
-                  <h5 className={styles.titleFeatureItemContent2}>Team Members</h5>
-                </div>
-              </div>
-              <Link to={"/form" + params}>
-                <button className={styles.getaquotaBtn} onClick={() => callFacebookPixel("GetQuoteClicked", 10)} style={{ border: "0px" }}>
-                  Get&nbsp;a&nbsp;Quote <img className={styles.rightarrow} src={rightarrow} alt="right arrow" />
-                </button>
-              </Link>
             </div>
-            <img src={bg1Img} alt="ai-img" className={styles.floatImg} />
           </div>
         </div>
-        <div className={styles.mainWrapper2}>
+
+        {/* video section  */}
+        <div className={styles.videoSection}>
+          <div className={styles.leadVideoWrapper}>
+            <video src="" controls className={styles.leadVideo}></video>
+          </div>
+        </div>
+
+        <Raised />
+
+        <SecuritySection />
+
+        <div className={styles.whatWeAre}>
+          <WhatWeAre />
+        </div>
+
+
+        {/* <div className={styles.mainWrapper2}>
           <h1 className={styles.maintext2}>
             Build with us <span> where scalability is never an issue</span>
           </h1>
@@ -255,39 +291,8 @@ export default function Homev2() {
               <h5>We are USA registered and comply all rules of US government.</h5>
             </div>
           </div>
-          <div className={styles.clientTxtWrapper}>
-            <div className={styles.clientTxtItem}>
-              <h2 className={styles.clientTxtnum}>
-                <CountUp end={50}>
-                  {({ countUpRef, start }) => (
-                    <VisibilitySensor onChange={start}>
-                      <span ref={countUpRef} />
-                    </VisibilitySensor>
-                  )}
-                </CountUp>
-                +
-              </h2>
-              <h2 className={styles.clientTxt1}>CLIENTS</h2>
-            </div>
-            <div className={styles.clientTxtItem}>
-              <h2 className={styles.clientTxt}>
-                {"$"}
-                <div className={styles.clientTxtnum}>
-                  <CountUp end={100}>
-                    {({ countUpRef, start }) => (
-                      <VisibilitySensor onChange={start}>
-                        <span ref={countUpRef} />
-                      </VisibilitySensor>
-                    )}
-                  </CountUp>
-                </div>
-                M
-              </h2>
-              <h2 className={styles.clientTxt2}>RAISED</h2>
-            </div>
-          </div>
-        </div>
-        <Raised />
+        </div> */}
+
 
         <div id="services" className={styles.mainWrapper3}>
           <div className="servicesProvided">
@@ -351,8 +356,41 @@ export default function Homev2() {
               {/* <div className={styles.knowmoreBtn}>Know More</div> */}
             </div>
           </div>
+          {/* countup  */}
+          <div className={styles.clientTxtWrapper}>
+            <div className={styles.clientTxtItem}>
+              <h2 className={styles.clientTxtnum}>
+                <CountUp end={50}>
+                  {({ countUpRef, start }) => (
+                    <VisibilitySensor onChange={start}>
+                      <span ref={countUpRef} />
+                    </VisibilitySensor>
+                  )}
+                </CountUp>
+                +
+              </h2>
+              <h2 className={styles.clientTxt1}>CLIENTS</h2>
+            </div>
+            <div className={styles.clientTxtItem}>
+              <h2 className={styles.clientTxt}>
+                {"$"}
+                <div className={styles.clientTxtnum}>
+                  <CountUp end={100}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start}>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                </div>
+                M
+              </h2>
+              <h2 className={styles.clientTxt2}>Raised By our clients</h2>
+            </div>
+          </div>
         </div>
-        <div className={styles.styledSectionWrapper}>
+
+        {/* <div className={styles.styledSectionWrapper}>
           <div className={styles.styledSection1}>
             <h1 className={styles.styledSectionTxt}>
               Tap into the billion-dollar decentralized
@@ -367,7 +405,8 @@ export default function Homev2() {
               </button>
             </Link>
           </div>
-        </div>
+        </div> */}
+
         <div className="projectsDone"> </div>
         <div className={styles.mainWrapper4}>
           <h1 className={styles.ourProjectsHeading}>
@@ -387,8 +426,13 @@ export default function Homev2() {
               </h4>
             </div>
           </Link>
-          <Partners />
         </div>
+
+        <WhyUs />
+
+        <Partners />
+
+
         <div className={styles.styledSectionWrapper}>
           <div className={styles.styledSection2}>
             <h1 className={styles.styledSectionTxt}>
@@ -400,11 +444,13 @@ export default function Homev2() {
             </h1>
             <Link to={"/form" + params} onClick={() => callFacebookPixel("ClickedTalkWithExperts", 4)}>
               <button className={styles.styledwhiteBtn} style={{ border: "0px" }}>
-                Talk With Experts
+                Book a Call with Dev Team
               </button>
             </Link>
           </div>
+          <div className={styles.greenBorderDown}></div>
         </div>
+
         <div className={styles.mainWrapper5}>
           <h2 className={styles.platformHeading}>
             Platforms We Work On </h2>
@@ -434,158 +480,43 @@ export default function Homev2() {
             </div>
           </div>
         </div>
+
         <Review />
-        <div className={styles.mainWrapper6}>
-          <div className="testimonials"> </div>
-          <div className={styles.faqsDiv} id="faqs">
-            <h1 className={styles.faqsDivHeading}>
-              Frequently Asked <span>Questions</span>
-            </h1>
-            <div className={styles.faqDropdown}>
-              <div className={styles.faqDropdownheading} onClick={() => setisFaq1Open(!isFaq1Open)}>
-                <h2>
-                  Do you provide custom smart contracts? </h2>
-                <div>
-                  <div
-                    style={{
-                      display: isFaq1Open ? "none" : "flex",
-                      overflow: "hidden",
-                    }}
-                  ></div>
-                  <div onClick={() => setisFaq1Open(!isFaq1Open)} className={styles.dropdownArrowicon}>
-                    <img src={isFaq1Open ? closeIcon : arrowIcon} alt="arrow" />
-                  </div>
-                </div>
-              </div>
-              <h2
-                className={styles.faqDropdowntxtContent}
-                style={{
-                  height: isFaq1Open ? "auto" : 0,
-                  margin: isFaq1Open ? "10px 0" : "0",
-                  overflow: "hidden",
-                  transition: "height 0.5s ease-out",
-                }}
-              >
-                Yes, we do provide Custom Smart Contracts according to the client’s needs.
-              </h2>
+
+        <YourDreams />
+
+        <div className={styles.styledSectionWrapper}>
+          <div className={styles.joinFamilyMain}>
+            <div className={`${styles.styledSection3}`}>
+              <h1 className={styles.styledSectionTxt}>
+                Join our family, and your
+                <br />
+                first consultation is on us.
+              </h1>
+              <p className={styles.styledSectionDesc}>
+                We're so confident in our abilities that we offer a 100%
+                <br />satisfaction guarantee, and get 100% refund if not satisfied.
+
+              </p>
+              <Link to={"/form" + params} onClick={() => callFacebookPixel("ClickedTalkWithExperts", 4)}>
+                <button className={styles.styledwhiteBtn} style={{ border: "0px" }}>
+                  Contact us now to seize the future!
+                </button>
+              </Link>
             </div>
-
-            <div className={styles.faqDropdown}>
-              <div className={styles.faqDropdownheading} onClick={() => setisFaq2Open(!isFaq2Open)}>
-                <h2>
-                  How long is the after sales service? </h2>
-                <div>
-                  <div
-                    style={{
-                      display: isFaq2Open ? "none" : "flex",
-                      overflow: "hidden",
-                    }}
-                  ></div>
-                  <div className={styles.dropdownArrowicon}>
-                    <img src={isFaq2Open ? closeIcon : arrowIcon} alt="arrow" />
-                  </div>
-                </div>
-              </div>
-              <h2
-                className={styles.faqDropdowntxtContent}
-                style={{
-                  height: isFaq2Open ? "auto" : 0,
-                  margin: isFaq2Open ? "10px 0" : "0",
-                  overflow: "hidden",
-                  transition: "height 0.5s ease-out",
-                }}
-              >
-                Customer satisfaction is our top priority. So we provide upto 7 days of service from the date of delivery.</h2>
-
-            </div>
-
-            <div className={styles.faqDropdown}>
-              <div className={styles.faqDropdownheading} onClick={() => setisFaq3Open(!isFaq3Open)}>
-                <h2>
-                  Do you provide hosting as well? </h2>
-                <div>
-                  <div
-                    style={{
-                      display: isFaq3Open ? "none" : "flex",
-                      overflow: "hidden",
-                    }}
-                  ></div>
-                  <div className={styles.dropdownArrowicon}>
-                    <img src={isFaq2Open ? closeIcon : arrowIcon} alt="arrow" />
-                  </div>
-                </div>
-              </div>
-              <h2
-                className={styles.faqDropdowntxtContent}
-                style={{
-                  height: isFaq3Open ? "auto" : 0,
-                  margin: isFaq3Open ? "10px 0" : "0",
-                  overflow: "hidden",
-                  transition: "height 0.5s ease-out",
-                }}
-              >
-                 Yes, we do provide hosting solutions if the clients need it. 
-              </h2>
-            </div>
-
-            <div className={styles.faqDropdown}>
-              <div className={styles.faqDropdownheading} onClick={() => setisFaq4Open(!isFaq4Open)}>
-                <h2>
-                  Do you provide presale support? </h2>
-                <div>
-                  <div
-                    style={{
-                      display: isFaq4Open ? "none" : "flex",
-                      overflow: "hidden",
-                    }}
-                  ></div>
-                  <div className={styles.dropdownArrowicon}>
-                    <img src={isFaq4Open ? closeIcon : arrowIcon} alt="arrow" />
-                  </div>
-                </div>
-              </div>
-              <h2
-                className={styles.faqDropdowntxtContent}
-                style={{
-                  height: isFaq4Open ? "auto" : 0,
-                  margin: isFaq4Open ? "10px 0" : "0",
-                  overflow: "hidden",
-                  transition: "height 0.5s ease-out",
-                }}
-              >
-                  Yes, will be providing presale support if the clients need it. 
-              </h2>
-            </div>
-
-            <div className={styles.faqDropdown}>
-              <div className={styles.faqDropdownheading} onClick={() => setisFaq5Open(!isFaq5Open)}>
-                <h2>
-                 Do you take upfront payment? </h2>
-                <div>
-                  <div
-                    style={{
-                      display: isFaq5Open ? "none" : "flex",
-                      overflow: "hidden",
-                    }}
-                  ></div>
-                  <div className={styles.dropdownArrowicon}>
-                    <img src={isFaq5Open ? closeIcon : arrowIcon} alt="arrow" />
-                  </div>
-                </div>
-              </div>
-              <h2
-                className={styles.faqDropdowntxtContent}
-                style={{
-                  height: isFaq5Open ? "auto" : 0,
-                  margin: isFaq5Open ? "10px 0" : "0",
-                  overflow: "hidden",
-                  transition: "height 0.5s ease-out",
-                }}
-              >
-                  Yes, we will be taking 50% payment upfront before we start working on any order.
-              </h2>
+            <div className={styles.joinFamilyLottie}>
+              {/* <h1>hellow</h1> */}
             </div>
           </div>
+          <div className={styles.greenBorderDown}></div>
+        </div>
+
+        <LeadForm />
+
+        <Accordion items={items} />
+
+        <div className={styles.mainWrapper6}>
+          <div className="testimonials"> </div>
 
           <div className={styles.blogsDiv}>
             <h1 className={styles.blogsDivHeading}>
@@ -597,11 +528,11 @@ export default function Homev2() {
                 <h2 className={styles.blogHeading}>
                   Top 5 real-world use cases of blockchain technology </h2>
                 <h5 className={styles.blogDesc}>
-                    Blockchain technology can be used to create an unchangeable and secure record of a product's journey <br /> .&nbsp;.&nbsp;. 
+                  Blockchain technology can be used to create an unchangeable and secure record of a product's journey <br /> .&nbsp;.&nbsp;.
                 </h5>
                 <Link to="blog/Top-5-real-world-use-cases-of-blockchain-technology" target="_blank" rel="noopener noreferrer">
                   <h5 className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
-                     Read More{">"} 
+                    Read More{">"}
                   </h5>
                 </Link>
               </div>
@@ -610,11 +541,11 @@ export default function Homev2() {
                 <h2 className={styles.blogHeading}>
                   Which platforms should you use to buy NFTs in 2023? </h2>
                 <h5 className={styles.blogDesc}>
-                   In recent years, the world of NFTs has exploded, with more and more people investing in digital assets like <br /> .&nbsp;.&nbsp;. 
+                  In recent years, the world of NFTs has exploded, with more and more people investing in digital assets like <br /> .&nbsp;.&nbsp;.
                 </h5>
                 <Link to="blog/Which-platforms-should-you-use-to-buy-NFTs-in-2023" target="_blank" rel="noopener noreferrer">
                   <p className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
-                    Read More{">"} 
+                    Read More{">"}
                   </p>
                 </Link>
               </div>
@@ -623,21 +554,21 @@ export default function Homev2() {
                 <h2 className={styles.blogHeading}>
                   Top 5 Metaverse Games, 2023 edition </h2>
                 <h5 className={styles.blogDesc}>
-                   Metaverse games are online virtual worlds where players can interact with each other, explore, create, and play games <br /> .&nbsp;.&nbsp;. 
+                  Metaverse games are online virtual worlds where players can interact with each other, explore, create, and play games <br /> .&nbsp;.&nbsp;.
                 </h5>
                 <Link to="blog/Top-5-Metaverse-Games,-2023-edition" target="_blank" rel="noopener noreferrer">
                   <h5 className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
-                     Read More{">"} 
+                    Read More{">"}
                   </h5>
                 </Link>
               </div>
             </div>
           </div>
           <h1 className={styles.newsletterHeading}>
-              Subscribe TO Our <span>Newsletter</span> 
+            Subscribe TO Our <span>Newsletter</span>
           </h1>
           <h5 className={styles.newsletterTxt}>
-            Get updates and information about crypto world by subscribe to our newsletter </h5> 
+            Get updates and information about crypto world by subscribe to our newsletter </h5>
           <div className={styles.signupWrapper}>
             <div className={styles.signupInput}>
               <input
@@ -661,7 +592,7 @@ export default function Homev2() {
                     setValidEmail(false);
                   }
                 }}
-                style={{ cursor: "pointer" ,border:"0px"}}
+                style={{ cursor: "pointer", border: "0px" }}
               >
                 Subscribe
               </button>
@@ -670,24 +601,29 @@ export default function Homev2() {
           </div>
           <div className={styles.socialIconDiv}>
             <a href="https://instagram.com/thematrixlabs.eth?igshid=NDk5N2NlZjQ=" >
-              <img src={igIcon} className={styles.socialIcons} alt="ig-icon" />
+              <GrInstagram />
             </a>
             <a href="https://www.linkedin.com/company/thematrixlabs/">
-              <img src={linkedInIcon} className={styles.socialIcons} alt="linkedIn-icon" />
+              <FaLinkedin />
             </a>
             <a href="https://twitter.com/TheMatrixLabs?t=WI-bvQduDTmbcLZ-ikyrbg&s=09">
-              <img src={twitterIcon} className={styles.socialIcons} alt="twitter-icon" />
+              <FaTwitter />
             </a>
             <a href="https://t.me/brickMatrix">
-              <img src={telegramIcon} className={styles.socialIcons} alt="telegram-icon" />
+              <FaTelegramPlane />
             </a>
             <a href="mailto:contact@thematrixlabs.com">
-              <img src={emailIcon} className={styles.socialIcons} alt="email-icon" />
+              {/* <img src={emailIcon} className={styles.socialIcons} alt="email-icon" /> */}
+              <IoIosMail size={"3rem"} style={{ marginTop: "-0.3rem" }} />
             </a>
           </div>
         </div>
+
       </div>
-      <Footer />
+
+      <div className={styles.leadFormFooter}>
+        <Footer />
+      </div>
     </>
   );
 }

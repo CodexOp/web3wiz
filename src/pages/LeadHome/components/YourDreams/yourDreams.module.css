@@ -1,0 +1,165 @@
+.yourDreamMain {
+  margin-top: 10rem;
+}
+
+.yourDreamWrapper {
+  width: 90%;
+  margin: auto;
+}
+
+.securityContent {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.rightContent2 {
+  width: 60%;
+}
+
+.leftContent2 {
+  width: 40%;
+}
+
+.securityHeading1 {
+  color: #fff;
+  font-family: var(--lh-clash);
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  display: none;
+}
+
+.securityHeading2 {
+  color: #fff;
+  font-family: var(--lh-clash);
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.securityHeading1 > span,
+.securityHeading2 > span {
+  color: #15d28e;
+}
+
+.leftContent2 {
+  position: relative;
+}
+
+.contetn2Img_1 {
+  width: 22rem;
+  height: 30rem;
+  border-radius: 1rem;
+}
+.content2Img_1 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.contetn2Img_2 {
+  position: relative;
+  z-index: 1;
+  margin-top: -10rem;
+  margin-left: 6rem;
+  width: 22rem;
+  height: 33rem;
+  border-radius: 28rem;
+}
+.contetn2Img_2 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+.dreamContentWrapper {
+  margin-top: 2.62rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dreamContent {
+  display: flex;
+  padding: 2rem 1.5rem;
+  align-items: center;
+  gap: 2rem;
+  align-self: stretch;
+  border-radius: 1rem;
+  background: rgba(217, 217, 217, 0.1);
+}
+
+.dreamIcon {
+  display: flex;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.dreamText {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 149.328%; /* 2.23994rem */
+}
+
+@media only screen and (max-width: 1024px) {
+  .securityContent {
+    flex-direction: column;
+  }
+
+  .leftContent2 {
+    display: none;
+  }
+
+  .rightContent2 {
+    width: 100%;
+  }
+
+  .securityHeading2 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .securityHeading2 {
+    font-size: 30px;
+  }
+
+  .dreamIcon {
+    width: 2rem;
+  }
+
+  .dreamContent {
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .dreamText {
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .dreamText {
+    font-size: 1.1rem;
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+}
