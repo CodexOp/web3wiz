@@ -54,7 +54,7 @@ root.render(
         <Routes>
           <Route path="/homev2" element={<App />} />
           <Route exact path="/" element={<Homev2 />} />
-          <Route exact path="/" element={<LeadHome />} />
+          <Route exact path="/lead-home" element={<LeadHome />} />
           <Route exact path="/blockchain" element={<HomePageBlockChain />} />
           <Route exact path="/blockchainUS" element={<HomePageBlockChainUS />} />
           <Route exact path="/LeadForm" element={<LeadForm />} />
