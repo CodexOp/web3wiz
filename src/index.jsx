@@ -10,20 +10,20 @@ import Thankyou from './pages/thankyou/Thankyou';
 import { Thankyou as ThankyouG } from './pages/thankyou-G/Thankyou'
 import Privacy from './pages/privacy/Privacy';
 import Form from './pages/form/Form';
-// import Projects from './pages/Projects/Projects';
-// import Homev2 from './pages/Homev2';
-// import ContactUs from './pages/ContactUs/ContactUs';
-// import Blog from './pages/Blog/Blog';
-// import EventSignup from './pages/EventSignup/EventSignup';
+import Projects from './pages/Projects/Projects';
+import Homev2 from './pages/Homev2';
+import ContactUs from './pages/ContactUs/ContactUs';
+import Blog from './pages/Blog/Blog';
+import EventSignup from './pages/EventSignup/EventSignup';
 import TermsAndConditions from './pages/T&C/TermsAndCondition';
-// import OurCompany from './pages/Our-Company-Details/OurCompany';
+import OurCompany from './pages/Our-Company-Details/OurCompany';
 import FormTwo from './pages/Form2/FormTwo';
 import FormTwoUS from './pages/FormUS/FormTwo';
 import HomePageBlockChain from './pages/HomePageBlockChain';
 import HomePageBlockChainUS from './pages/HomePageBlockChainUS';
-// import FoundersClub from './pages/FoundersClub/FoundersClub';
-// import FounderForm from './pages/FounderForm/FounderForm';
-// import LeadForm from './pages/LeadForm/LeadForm';
+import FoundersClub from './pages/FoundersClub/FoundersClub';
+import FounderForm from './pages/FounderForm/FounderForm';
+import LeadForm from './pages/LeadForm/LeadForm';
 import LeadHome from './pages/LeadHome';
 
 
@@ -53,25 +53,25 @@ root.render(
       <Router>
         <Routes>
           <Route path="/homev2" element={<App />} />
-          {/* <Route exact path="/" element={<Homev2 />} /> */}
+          <Route exact path="/" element={<Homev2 />} />
           <Route exact path="/" element={<LeadHome />} />
           <Route exact path="/blockchain" element={<HomePageBlockChain />} />
           <Route exact path="/blockchainUS" element={<HomePageBlockChainUS />} />
-          {/* <Route exact path="/LeadForm" element={<LeadForm />} /> */}
+          <Route exact path="/LeadForm" element={<LeadForm />} />
           <Route exact path="/thankyou-b" element={<Thankyou />} />
           <Route exact path="/thankyou-g" element={<ThankyouG />} />
           <Route exact path="/privacy-policy" element={<Privacy />} />
           <Route exact path="/form" element={<Form />} />
           <Route exact path="/blockchainForm" element={<FormTwo />} />
           <Route exact path="/blockchainFormUS" element={<FormTwoUS />} />
-          {/* <Route exact path="/projects" element={<Projects />} /> */}
-          {/* <Route exact path="/contact-us" element={<ContactUs />} /> */}
-          {/* <Route exact path="/our-company" element={<OurCompany />} /> */}
-          {/* <Route exact path="/blog/:title" element={<Blog />} /> */}
-          {/* <Route exact path="/eventsignup" element={<EventSignup />} /> */}
+          <Route exact path="/projects" element={<Projects />} />
+          <Route exact path="/contact-us" element={<ContactUs />} />
+          <Route exact path="/our-company" element={<OurCompany />} />
+          <Route exact path="/blog/:title" element={<Blog />} />
+          <Route exact path="/eventsignup" element={<EventSignup />} />
           <Route exact path="/terms-and-conditions" element={<TermsAndConditions />} />
-          {/* <Route exact path="/founders-club" element={<FoundersClub />} /> */}
-          {/* <Route exact path="/founders-form" element={<FounderForm />} /> */}
+          <Route exact path="/founders-club" element={<FoundersClub />} />
+          <Route exact path="/founders-form" element={<FounderForm />} />
         </Routes>
       </Router>
     </HelmetProvider>
