@@ -7,18 +7,16 @@ body,
 #root {
 }
 
-*, #root, html {
+*,
+#root,
+html {
   scrollbar-width: thin;
   scrollbar-color: #00d186 #2b2b2b;
   scroll-behavior: smooth;
 }
 
-
-
-.css-1lfjpnz-MuiContainer-root{
+.css-1lfjpnz-MuiContainer-root {
 }
-  
-
 
 body {
   margin: 0;

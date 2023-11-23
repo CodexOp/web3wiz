@@ -1,20 +1,20 @@
-html{
+html {
   scroll-behavior: smooth;
-
 }
 
-
 .primaryHeader {
-    z-index: 5;
-    padding-top: 1rem;
-    display: grid;
-    place-items: center;
-    font-family: 'Montserrat';
-    position: sticky;
-    top: 0;
-    background: linear-gradient(180deg, #041422 -19.53%, #150B1D 122.66%);
-  }
-  
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  font-family: "Montserrat";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 50%;
+  background: transparent;
+  width: 95%;
+}
+
 .navWrapper {
   padding: 1em 4em;
   display: flex;
@@ -22,17 +22,16 @@ html{
   align-items: center;
   gap: 5%;
   box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.14);
-  border-radius: 50px;
-  background: linear-gradient(180deg, #041422 -19.53%, #150B1D 122.66%);  
-  border: 1px solid rgba(50, 94, 63, 1)
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(50, 94, 63, 1);
+  backdrop-filter: blur(5px);
+  border-radius: 1.25rem;
 }
-
-
 
 .mobileNavToggle {
   display: none;
 }
-  
+
 .navList {
   font-size: 16px;
 }
@@ -42,8 +41,8 @@ html{
   gap: clamp(1rem, 5vw, 3rem);
   font-weight: var(--fw-semi-bold);
 }
-  
-.navList{
+
+.navList {
   color: white;
 }
 
@@ -52,7 +51,7 @@ html{
   color: black;
 }
 
-.logo{
+.logo {
   display: flex;
   align-items: center;
   color: white;
@@ -60,44 +59,43 @@ html{
 }
 
 .button {
-    display: inline-flex; 
-    background: #27B67A;
-    border-radius: 90px;
-    color: #061113;
-  }
+  display: inline-flex;
+  background: #27b67a;
+  border-radius: 90px;
+  color: #061113;
+}
 
 .display-sm-hidden {
-    display: none;
-  }
-.icon-close,
-.icon-hamburger{
-    color: white;
-    z-index: 10;
+  display: none;
 }
-.toggleDisplay{
+.icon-close,
+.icon-hamburger {
+  color: white;
+  z-index: 10;
+}
+.toggleDisplay {
   display: none;
 }
 
-.navbarOptionbtns
-{
-    display: flex;
-    gap: 20px;
-    align-self: center;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: auto;
+.navbarOptionbtns {
+  display: flex;
+  gap: 20px;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
 }
 
-.navbarbtn{
+.navbarbtn {
   background: transparent;
-  color: #FEFEFE;
-  font-family: 'Poppins';
+  color: #fefefe;
+  font-family: "Poppins";
   font-style: normal;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.1em;
   cursor: pointer;
-  transition:  all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   border: none;
 }
 
@@ -105,12 +103,12 @@ html{
   font-weight: 600;
 }
 
-.navbarbtn:hover{
-  color: #27B67A;
+.navbarbtn:hover {
+  color: #27b67a;
 }
 
-.highlighted a{
-  font-family: 'Poppins';
+.highlighted a {
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -118,23 +116,23 @@ html{
   cursor: default;
   letter-spacing: 0.1em;
 
-  color: #27B67A;
+  color: #27b67a;
 }
 
-.QuotaBtn{
-  background: #27B67A;
+.QuotaBtn {
+  background: #27b67a;
   border-radius: 90px;
   padding: 10px 30px;
-  color: #FFFFFF;
-  font-family: 'Poppins';
+  color: #ffffff;
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
 }
 
-.headerTitle{
-  font-family: 'Orbitron';
+.headerTitle {
+  font-family: "Orbitron";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -144,140 +142,143 @@ html{
   letter-spacing: 0.1em;
 }
 
-.menuIcon{
+.menuIcon {
   display: none;
 }
 
-@media(min-width: 50em){
-    .display-md-inline-flex{
-        display: inline-flex;
-    }
+@media (min-width: 50em) {
+  .display-md-inline-flex {
+    display: inline-flex;
+  }
 }
-  @media (max-width: 50em) {
-    .primaryHeader {
-      padding-top: 0;
-      top: 0;
-    }
-    .mobileWidth{
-      width: 100% !important;
-    }
-    .navWrapper{
-      background: linear-gradient(180deg, #041422 -19.53%, #150B1D 122.66%);
-      border-radius: 0;
-      padding: 2em 1em;
-    }
+@media (max-width: 50em) {
+  /* .primaryHeader {
+    padding-top: 0;
+    top: 0;
+  } */
+  .mobileWidth {
+    width: 100% !important;
+  }
+  /* .navWrapper {
+    background: linear-gradient(180deg, #041422 -19.53%, #150b1d 122.66%);
+    border-radius: 0;
+    padding: 2em 1em;
+  } */
 
-
-    .primaryNavigation {
-      display: none;
-      position: fixed;
-      padding: 4em;
-      inset: 1rem 0 auto;
-      max-width: 15rem;
-      margin-left: auto;
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
-      z-index: 6;
-    }
-  
-    .primaryHeader[data-overlay]::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: 5;
-      /* height: 100vh; */
-      background-image: linear-gradient(rgb(0 0 0 / 0.3), rgb(0 0 0 / 0.8));
-    }
-  
-    .navList {
-      display: grid;
-      gap: var(--size-600);
-      text-align: center;
-      font-weight: var(--fw-bold);
-    }
-  
-    .primaryNavigation[data-visible] {
-      display: block;
-    }
-    .toggleDisplay[data-visible]{
-      display: block;
-    }
-  
-    .mobileNavToggle {
-      z-index: 10;
-      display: block;
-      cursor: pointer;
-      background: transparent;
-      border: 0;
-      padding: 0.5em;
-    }
-
-    .logo img{
-        transform: scale(0.8);
-    }
-
+  .primaryNavigation {
+    display: none;
+    position: fixed;
+    padding: 4em;
+    inset: 1rem 0 auto;
+    max-width: 15rem;
+    margin-left: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index: 6;
   }
 
-  @media only screen and (min-width:800px)  {
-    .navbarOptionbtns{
-      display: flex !important;
-    }
+  .primaryHeader[data-overlay]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    /* height: 100vh; */
+    background-image: linear-gradient(rgb(0 0 0 / 0.3), rgb(0 0 0 / 0.8));
   }
- 
-  @media only screen and (max-width: 800px) {
-    .headerTitle{
-      font-size: 15px;
-      line-height: 15px;
-    }
-   
-    .QuotaBtn{
-      display: block;
-    }
-    .menuIcon{
-      display: inline;
-      width: 20px;
-      height: 20px;
-    }
-    .navWrapper{
-      border: none;
-    }
 
-    .navbarOptionbtns
-{
+  .navList {
+    display: grid;
+    gap: var(--size-600);
+    text-align: center;
+    font-weight: var(--fw-bold);
+  }
+
+  .primaryNavigation[data-visible] {
+    display: block;
+  }
+  .toggleDisplay[data-visible] {
+    display: block;
+  }
+
+  .mobileNavToggle {
+    z-index: 10;
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0.5em;
+  }
+
+  .logo img {
+    transform: scale(0.8);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .navbarOptionbtns {
+    display: flex !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .headerTitle {
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  .QuotaBtn {
+    display: block;
+  }
+  .menuIcon {
+    display: inline;
+    width: 20px;
+    height: 20px;
+  }
+  /* .navWrapper {
+    border: none;
+  } */
+
+  .navbarOptionbtns {
     width: 50%;
     position: absolute;
-    top:90px;
+    top: 90px;
     right: 0;
     padding: 100px 20px;
     text-align: center;
-    background: #150B1D;
-}
+    background: #150b1d;
+  }
 
-.navbarbtn{
-  line-height: 40px;
-
-}
-}
-
-
-@media (max-width:400px) {
-  .navbarOptionbtns
-  {
-      width: 70%;
-      position: absolute;
-      top:90px;
-      right: 0;
-      padding: 100px 20px;
-      text-align: center;
-      background: #150B1D;
+  .navbarbtn {
+    line-height: 40px;
   }
 }
-.getaquotaBtn{
-  background: #27B67A;
-  border-radius: 90px;
+
+@media (max-width: 580px) {
+  .navWrapper {
+    padding: 1em 2em;
+  }
+}
+
+@media (max-width: 400px) {
+  .navWrapper {
+    padding: 1em 1em;
+  }
+  .navbarOptionbtns {
+    width: 70%;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    padding: 100px 20px;
+    text-align: center;
+    background: #150b1d;
+  }
+}
+.getaquotaBtn {
+  background: #27b67a;
+  border-radius: 0.5rem;
   padding: 10px 30px;
-  color: #FFFFFF;
-  font-family: 'Poppins';
+  color: #ffffff;
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -298,7 +299,7 @@ html{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #27B67A;
+  background-color: #27b67a;
   border-radius: 10px;
   z-index: -2;
 }
@@ -322,10 +323,10 @@ html{
 }
 
 @media (max-width: 800px) {
-  .getaquotaBtn{
+  .getaquotaBtn {
     padding: 2px 20px;
     font-size: 12px;
     line-height: 20px;
     margin: 10px auto;
-}
+  }
 }

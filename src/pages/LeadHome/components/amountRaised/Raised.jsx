@@ -31,20 +31,20 @@ import raised19 from "../../components/assests/images/raised19.jpg"
 const Raised = () => {
   var settings = {
     dots: false,
-    arrows:false,
+    arrows: false,
     infinite: true,
     speed: 3000,
-    pauseOnHover:false,
+    pauseOnHover: false,
     slidesToShow: 5,
     slidesToScroll: 1,
     rtl: false,
     autoplay: true,
     autoplaySpeed: 0,
-    mobileFirst:true,//add this one
+    mobileFirst: true,//add this one
 
     cssEase: "linear",
     responsive: [
-          {
+      {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
@@ -68,24 +68,24 @@ const Raised = () => {
           slidesToShow: 5,
         },
       },
-    ] 
-      };
+    ]
+  };
   var settings2 = {
     dots: false,
-    arrows:false,
+    arrows: false,
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
     rtl: true,
     autoplay: true,
-    pauseOnHover:false,
+    pauseOnHover: false,
     speed: 3000,
     autoplaySpeed: 0,
-    mobileFirst:true,//add this one
+    mobileFirst: true,//add this one
 
     cssEase: "linear",
     responsive: [
-          {
+      {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
@@ -109,282 +109,282 @@ const Raised = () => {
           slidesToShow: 5,
         },
       },
-    ] 
-      };
+    ]
+  };
   return (
     <>
-    <Container
-      maxWidth="xl"
-      sx={{
-        mt: "5rem",
-      }}
-    >
-      <span id="services" />
-      <Box
-        className={styles.primaryText}
+      <Container
+        maxWidth="xl"
         sx={{
-          width: "100%",
-          height: "auto",
-          px: { xs: "0rem", sm: "3rem" },
+          mt: "5rem",
         }}
       >
-
-       
-      </Box>
-      <Box sx={{
-           width:"100%",
-           margin:"auto"
-          }}>
-      <Slider {...settings}>
-  
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised1} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Rocket Global</h3>
-                            </div>
-                        </div>
-                    </div>
+        <span id="services" />
+        <Box
+          className={styles.primaryText}
+          sx={{
+            width: "100%",
+            height: "auto",
+            px: { xs: "0rem", sm: "3rem" },
+          }}
+        >
 
 
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised2} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1333 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Golddoge Sachs</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised10} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>346 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Goldenzone</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised5} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1025 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Chihuahua</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised6} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>586 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Luna Freaks</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised11} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>269 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Pink Piggy</h3>
-                            </div>
-                        </div>
-                    </div>
-      </Slider>
-      </Box>
- 
-    </Container>
-    <Container
-      maxWidth="xl"
-      sx={{
-        my: "1rem",
-      }}
-    >
-      <span id="services" />
-      <Box
-        className={styles.primaryText}
-        sx={{
+        </Box>
+        <Box sx={{
           width: "100%",
-          height: "auto",
-             
-          px: { xs: "0rem", sm: "3rem" },
+          margin: "auto"
+        }}>
+          <Slider {...settings}>
+
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised1} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>1500 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Rocket Global</h3>
+                </div>
+              </div>
+            </div>
+
+
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised2} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>1333 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Golddoge Sachs</h3>
+                </div>
+              </div>
+            </div>
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised10} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>346 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Goldenzone</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised5} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>1025 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Chihuahua</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised6} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>586 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Luna Freaks</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised11} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>269 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Pink Piggy</h3>
+                </div>
+              </div>
+            </div>
+          </Slider>
+        </Box>
+
+      </Container>
+      <Container
+        maxWidth="xl"
+        sx={{
+          my: "1rem",
         }}
       >
+        <span id="services" />
+        <Box
+          className={styles.primaryText}
+          sx={{
+            width: "100%",
+            height: "auto",
 
-       
-      </Box>
-      <Box sx={{
-           width:"100%",
-           margin:"auto"
-          }}>
-      <Slider {...settings2}>
-      <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised12} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>263 BNB Raised</h3>
-                            <h3 className={styles.projectName}>RestN</h3>
-                            </div>
-                        </div>
-                    </div>
+            px: { xs: "0rem", sm: "3rem" },
+          }}
+        >
 
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised13} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>226 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Stake to own</h3>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised4} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1085 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Decentralized United</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised3} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>1200 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Cosmik Finance</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised14} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>222 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Amber Protocol</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised15} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>198 BNB Raised</h3>
-                            <h3 className={styles.projectName}>PandoraX</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised16} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>148 BNB Raised</h3>
-                            <h3 className={styles.projectName}>PureFi</h3>
-                            </div>
-                        </div>
-                    </div>
-      </Slider>
-      </Box>
- 
-    </Container>
-    <Container
-      maxWidth="xl"
-      sx={{
-        mb:"5rem"
-      }}
-    >
-      <span id="services" />
-      <Box
-        className={styles.primaryText}
-        sx={{
+        </Box>
+        <Box sx={{
           width: "100%",
-          height: "auto",
-       
-          px: { xs: "0rem", sm: "3rem" },
+          margin: "auto"
+        }}>
+          <Slider {...settings2}>
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised12} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>263 BNB Raised</h3>
+                  <h3 className={styles.projectName}>RestN</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised13} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>226 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Stake to own</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised4} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>1085 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Decentralized United</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised3} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>1200 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Cosmik Finance</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised14} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>222 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Amber Protocol</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised15} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>198 BNB Raised</h3>
+                  <h3 className={styles.projectName}>PandoraX</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised16} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>148 BNB Raised</h3>
+                  <h3 className={styles.projectName}>PureFi</h3>
+                </div>
+              </div>
+            </div>
+          </Slider>
+        </Box>
+
+      </Container>
+      <Container
+        maxWidth="xl"
+        sx={{
+          mb: "5rem"
         }}
       >
+        <span id="services" />
+        <Box
+          className={styles.primaryText}
+          sx={{
+            width: "100%",
+            height: "auto",
 
-       
-      </Box>
-      <Box sx={{
-           width:"100%",
-           margin:"auto"
-          }}>
-      <Slider {...settings}>
-      <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised7} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>500 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Yinyang</h3>
-                            </div>
-                        </div>
-                    </div>
+            px: { xs: "0rem", sm: "3rem" },
+          }}
+        >
 
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised8} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>473 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Bulldog Inu</h3>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised9} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>382 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Web3 Betting</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised17} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>146 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Lucky Metaverse</h3>
-                            </div>
-                        </div>
-                    </div>
+        </Box>
+        <Box sx={{
+          width: "100%",
+          margin: "auto"
+        }}>
+          <Slider {...settings}>
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised7} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>500 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Yinyang</h3>
+                </div>
+              </div>
+            </div>
 
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised18} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>142 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Multinet</h3>
-                            </div>
-                        </div>
-                    </div>
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised8} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>473 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Bulldog Inu</h3>
+                </div>
+              </div>
+            </div>
 
-            
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised9} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>382 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Web3 Betting</h3>
+                </div>
+              </div>
+            </div>
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised17} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>146 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Lucky Metaverse</h3>
+                </div>
+              </div>
+            </div>
 
-                    <div className={styles.box}>
-                        <div className={styles.bnbRaised}>
-                            <img src={raised19} alt="logo" />
-                            <div className={styles.infoBox}>
-                            <h3 className={styles.raisedAmount}>120 BNB Raised</h3>
-                            <h3 className={styles.projectName}>Ak-7k</h3>
-                            </div>
-                        </div>
-                    </div>
-      </Slider>
-      </Box>
- 
-    </Container>
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised18} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>142 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Multinet</h3>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div className={styles.box}>
+              <div className={styles.bnbRaised}>
+                <img src={raised19} alt="logo" />
+                <div className={styles.infoBox}>
+                  <h3 className={styles.raisedAmount}>120 BNB Raised</h3>
+                  <h3 className={styles.projectName}>Ak-7k</h3>
+                </div>
+              </div>
+            </div>
+          </Slider>
+        </Box>
+
+      </Container>
     </>
   )
 }

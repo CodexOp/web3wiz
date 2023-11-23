@@ -1,0 +1,14 @@
+.whatWeareInfo {
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #fff;
+  text-align: center;
+  font-family: var(--lh-jakartaSans);
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
