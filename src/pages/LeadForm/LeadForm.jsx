@@ -9,13 +9,15 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 const LeadForm = () => {
-    const [startDate, setStartDate] = useState(new Date());
-    const [endDate, setEndDate] = useState(new Date());
+    const [startDate, setStartDate] = useState(null);
+    const [endDate, setEndDate] = useState(null);
     const [deadline, setDeadline] = useState(null);
-    console.log(deadline);
+
 
     const handleStartDateChange = (date) => {
         setStartDate(date);
+        // Disable dates before the selected start date in the end date picker
+        setEndDate(new Date(Math.max(date, endDate)));
     };
 
     const handleEndDateChange = (date) => {
@@ -32,10 +34,10 @@ const LeadForm = () => {
 
     const updateDeadline = (start, end) => {
         if (start && end && start <= end) {
-            const deadlineRange = {
-                from: formatDateString(start),
-                to: formatDateString(end),
-            };
+            const from = formatDateString(start);
+            const to = formatDateString(end);
+
+            const deadlineRange = `from ${from} to ${to}`;
             setDeadline(deadlineRange);
         } else {
             setDeadline(null);
@@ -63,12 +65,14 @@ const LeadForm = () => {
         const { name, value } = e.target
         setVal({ ...val, [name]: value })
     }
-    console.log(val, "val")
+
+    const finalData = { ...val, deadline: deadline }
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(val, "OBJ")
-        axios.post("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMzA0MzE1MjZmNTUzYzUxMzQi_pc", val)
+        // console.log(finalData, "OBJ")
+        axios.post("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMzA0MzE1MjZmNTUzYzUxMzQi_pc", finalData)
             .then((res) => console.log(res,
                 'res'))
             .catch((err) => console.log(err));
@@ -369,10 +373,10 @@ const LeadForm = () => {
                                 </p>
                                 <div className={styles.deadlineInput}>
 
-                                    <DatePicker placeholderText="Start Date" dateFormat="dd/MM/yyyy" value={startDate} onChange={handleStartDateChange} />
+                                    <DatePicker placeholderText="Start Date" dateFormat="dd/MM/yyyy" selected={startDate} onChange={handleStartDateChange} />
 
 
-                                    <DatePicker placeholderText="End Date" dateFormat="dd/MM/yyyy" value={endDate} onChange={handleEndDateChange} />
+                                    <DatePicker placeholderText="End Date" minDate={startDate ? new Date(startDate.getTime() + 24 * 60 * 60 * 1000) : null} dateFormat="dd/MM/yyyy" selected={endDate} onChange={handleEndDateChange} />
 
                                 </div>
                             </div>

@@ -28,8 +28,9 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  width: 85%;
+  width: 80%;
   margin: auto;
+  margin-top: 1rem;
 }
 
 /* Form Div  */
@@ -339,6 +340,15 @@
   cursor: pointer;
 }
 
+.select {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.select option {
+  font-size: 1rem;
+}
+
 @media (max-width: 768px) {
   .heading {
     font-size: 1.8rem;
@@ -362,6 +372,24 @@
     flex: unset;
     /* border: 2px solid red; */
   }
+
+  .deadlineInput {
+    flex-direction: column;
+  }
+
+  .label {
+    font-size: 1.3rem;
+  }
+
+  .websiteDiv p {
+    font-size: 1rem;
+  }
+
+  .formMainDiv input,
+  .formMainDiv .select {
+    height: 3.5rem;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 475px) {
@@ -369,7 +397,18 @@
     padding: 2rem 1rem;
   }
 
-  label {
+  .label {
     font-size: 1rem;
+  }
+
+  .inputBtn {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .inputBtn {
+    padding: 0 0.2rem;
+    font-size: 0.8rem;
   }
 }

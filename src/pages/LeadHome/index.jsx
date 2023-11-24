@@ -477,7 +477,7 @@ export default function LeadHome() {
           </div>
         </div>
 
-        {/* <Review /> */}
+        <Review />
 
         {/* <YourDreams /> */}
 
