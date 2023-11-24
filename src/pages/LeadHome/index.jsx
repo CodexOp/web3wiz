@@ -251,9 +251,9 @@ export default function LeadHome() {
           </div>
         </div>
 
-        {/* <Raised /> */}
+        <Raised />
 
-        {/* <SecuritySection /> */}
+        <SecuritySection />
 
 
         {/* <div className={styles.mainWrapper2}>
@@ -424,9 +424,9 @@ export default function LeadHome() {
           </Link>
         </div>
 
-        {/* <WhyUs /> */}
+        <WhyUs />
 
-        {/* <Partners /> */}
+        <Partners />
 
 
         <div className={styles.styledSectionWrapper}>
@@ -479,7 +479,7 @@ export default function LeadHome() {
 
         <Review />
 
-        {/* <YourDreams /> */}
+        <YourDreams />
 
         <div className={styles.styledSectionWrapper}>
           <div className={styles.joinFamilyMain}>
