@@ -56,9 +56,9 @@ import useFacebookPixel from "../../hooks/FacebookPixel/useFacebookPixel";
 import validator from "validator";
 import ChatBox from "../../components/ChatBox/ChatBox";
 import SecuritySection from "./components/SecuritySection/SecuritySection";
-import WhatWeAre from "./components/WhatWeAre/WhatWeAre";
 import WhyUs from "./components/WhyUsLead/WhyUs";
 import YourDreams from "./components/YourDreams/YourDreams";
+import WhatWeAre from "./components/WhatWeAre/WhatWeAre"
 
 import { IoIosMail } from "react-icons/io";
 import { FaLinkedin, FaTelegramPlane, FaTwitter } from "react-icons/fa";
@@ -214,9 +214,9 @@ export default function LeadHome() {
         {/* <ChatBox /> */}
         <div className="landing"></div>
         <div className={styles.homeWrapper} id="home">
-          <MatrixRainingLetters key="foo-bar" custom_class="m-0 p-0" />
-          <div className={styles.backdropDiv1}>
 
+          <div className={styles.backdropDiv1}>
+            <MatrixRainingLetters key="foo-bar" custom_class="m-0 p-0 matrixRainHeight" />
             <div id="home" className={styles.mainWrapper1}>
               <div className={styles.leadHero} >
                 <div className={styles.titleContent}>
@@ -256,7 +256,7 @@ export default function LeadHome() {
             </div>
           </div>
 
-          {/* <Raised /> */}
+          <Raised />
 
           <SecuritySection />
 
@@ -293,6 +293,8 @@ export default function LeadHome() {
             </div>
           </div>
         </div> */}
+
+          <WhatWeAre />
 
 
           <div id="service1" className={styles.mainWrapper3}>

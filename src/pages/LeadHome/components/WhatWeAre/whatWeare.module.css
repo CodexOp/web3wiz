@@ -1,3 +1,8 @@
+.whatWeAreContainer {
+  padding: 3rem 0rem;
+  background: #27b67a;
+}
+
 .whatWeareInfo {
   margin-left: 3rem;
   display: flex;
@@ -11,4 +16,15 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+@media (max-width: 580px) {
+  .whatWeAreContainer {
+    padding: 1.5rem 0rem;
+  }
+
+  .whatWeareInfo {
+    margin-left: 1.5rem;
+    font-size: 1.4rem;
+  }
 }
