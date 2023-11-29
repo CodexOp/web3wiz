@@ -201,62 +201,67 @@ export default function LeadHome() {
     }
   };
 
+  const scrollToForm = () => {
+    const section1 = document.querySelector('#leadForm');
+    section1.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <>
-      <Lottie text={"Thank you for subscribing! Stay tuned for our latest news and updates."} />
-      <Navbar />
-      {/* <ChatBox /> */}
-      <div className="landing"></div>
-      <div className={styles.homeWrapper} id="home">
-        <MatrixRainingLetters key="foo-bar" custom_class="m-0 p-0" />
-        <div className={styles.backdropDiv1}>
+      <div className={styles.mainLeadPageWrapper}>
+        <Lottie text={"Thank you for subscribing! Stay tuned for our latest news and updates."} />
+        <Navbar />
+        {/* <ChatBox /> */}
+        <div className="landing"></div>
+        <div className={styles.homeWrapper} id="home">
+          <MatrixRainingLetters key="foo-bar" custom_class="m-0 p-0" />
+          <div className={styles.backdropDiv1}>
 
-          <div id="home" className={styles.mainWrapper1}>
-            <div className={styles.leadHero} >
-              <div className={styles.titleContent}>
+            <div id="home" className={styles.mainWrapper1}>
+              <div className={styles.leadHero} >
+                <div className={styles.titleContent}>
 
-                <h5 className={styles.titleInfo}>Unlock a 6-Figure Crypto Empire: Your Journey to Blockchain Wealth Begins Here!</h5>
-                <div className={styles.titleFeatures}>
-                  <div className={styles.titleFeatureItem}>
-                    <div className={styles.titleFeatureItemContent1}>
-                      <CountUp end={40} delay={2} />+
+                  <h5 className={styles.titleInfo}>Unlock a 6-Figure Crypto Empire: Your Journey to Blockchain Wealth Begins Here!</h5>
+                  <div className={styles.titleFeatures}>
+                    <div className={styles.titleFeatureItem}>
+                      <div className={styles.titleFeatureItemContent1}>
+                        <CountUp end={40} delay={2} />+
+                      </div>
+                      <h5 className={styles.titleFeatureItemContent2}>Smart Contract</h5>
                     </div>
-                    <h5 className={styles.titleFeatureItemContent2}>Smart Contract</h5>
-                  </div>
-                  <div className={styles.titleFeatureItem}>
-                    <div className={styles.titleFeatureItemContent1}>
-                      <CountUp end={100} delay={2} />+
+                    <div className={styles.titleFeatureItem}>
+                      <div className={styles.titleFeatureItemContent1}>
+                        <CountUp end={100} delay={2} />+
+                      </div>
+                      <h5 className={styles.titleFeatureItemContent2}>Projects Completed </h5>
                     </div>
-                    <h5 className={styles.titleFeatureItemContent2}>Projects Completed </h5>
-                  </div>
-                  <div className={styles.titleFeatureItem}>
-                    <div className={styles.titleFeatureItemContent1}>
-                      <CountUp end={20} delay={2} />+
+                    <div className={styles.titleFeatureItem}>
+                      <div className={styles.titleFeatureItemContent1}>
+                        <CountUp end={20} delay={2} />+
+                      </div>
+                      <h5 className={styles.titleFeatureItemContent2}>Team Members</h5>
                     </div>
-                    <h5 className={styles.titleFeatureItemContent2}>Team Members</h5>
                   </div>
+
+                  <button onClick={scrollToForm} className={styles.bookCounsultation}>Book my free Consultation</button>
                 </div>
-
-                <button className={styles.bookCounsultation}>Book my free Consultation</button>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* video section  */}
-        <div className={styles.videoSection}>
-          <div className={styles.leadVideoWrapper}>
-            <video src="" controls className={styles.leadVideo}></video>
+          {/* video section  */}
+          <div className={styles.videoSection}>
+            <div className={styles.leadVideoWrapper}>
+              <video src="" controls className={styles.leadVideo}></video>
+            </div>
           </div>
-        </div>
 
-        <Raised />
+          {/* <Raised /> */}
 
-        <SecuritySection />
+          <SecuritySection />
 
 
-        {/* <div className={styles.mainWrapper2}>
+          {/* <div className={styles.mainWrapper2}>
           <h1 className={styles.maintext2}>
             Build with us <span> where scalability is never an issue</span>
           </h1>
@@ -290,103 +295,103 @@ export default function LeadHome() {
         </div> */}
 
 
-        <div id="services" className={styles.mainWrapper3}>
-          <div className="servicesProvided">
-            <h1 className={styles.ourServicesHeading}>
-              Our <span>Services</span>
-            </h1>
-            <h5 className={styles.ourServicesTxt}>
-              Our services help everyone from startups to enterprises to launch and maintain their applications on the blockchain.
-            </h5>
-          </div>
-          <div className={styles.serviceGrid}>
-            <div className={styles.serviceGridItem}>
-              <img src={smartContract} alt="transparency-img" className={styles.serviceGridItemImg} />
-              <h2 className={styles.serviceGridItemHeading}>
-                SMART CONTRACT
-              </h2>
-              <h5 className={styles.serviceGridItemTxt}>
-                Ensure security with our custom smart contracts, Certik verified and tailored for you</h5>
-              {/* <div className={styles.knowmoreBtn}>Know More</div> */}
+          <div id="service1" className={styles.mainWrapper3}>
+            <div className="servicesProvided">
+              <h1 className={styles.ourServicesHeading}>
+                Our <span>Services</span>
+              </h1>
+              <h5 className={styles.ourServicesTxt}>
+                Our services help everyone from startups to enterprises to launch and maintain their applications on the blockchain.
+              </h5>
             </div>
-            <div className={styles.serviceGridItem}>
-              <img src={dappDevelopment} alt="folderLockIcon" className={styles.serviceGridItemImg} />
-              <h2 className={styles.serviceGridItemHeading}>
-                DAPP DEVELOPMENT</h2>
-              <h5 className={styles.serviceGridItemTxt}>
-                Securely build and launch your DApp with our expert development services</h5>
-              {/* <div className={styles.knowmoreBtn}>Know More</div> */}
+            <div className={styles.serviceGrid}>
+              <div className={styles.serviceGridItem}>
+                <img src={smartContract} alt="transparency-img" className={styles.serviceGridItemImg} />
+                <h2 className={styles.serviceGridItemHeading}>
+                  SMART CONTRACT
+                </h2>
+                <h5 className={styles.serviceGridItemTxt}>
+                  Ensure security with our custom smart contracts, Certik verified and tailored for you</h5>
+                {/* <div className={styles.knowmoreBtn}>Know More</div> */}
+              </div>
+              <div className={styles.serviceGridItem}>
+                <img src={dappDevelopment} alt="folderLockIcon" className={styles.serviceGridItemImg} />
+                <h2 className={styles.serviceGridItemHeading}>
+                  DAPP DEVELOPMENT</h2>
+                <h5 className={styles.serviceGridItemTxt}>
+                  Securely build and launch your DApp with our expert development services</h5>
+                {/* <div className={styles.knowmoreBtn}>Know More</div> */}
+              </div>
+              <div className={styles.serviceGridItem}>
+                <img src={website} alt="shieldIcon" className={styles.serviceGridItemImg} />
+                <h2 className={styles.serviceGridItemHeading}>
+                  WEBSITE DEVELOPMENT
+                </h2>
+                <h5 className={styles.serviceGridItemTxt}>
+                  Create a sleek and user-friendly website of your desired theme with our team.</h5>
+                {/* <div className={styles.knowmoreBtn}>Know More</div> */}
+              </div>
+              <div className={styles.serviceGridItem}>
+                <img src={nft} alt="transparency-img" className={styles.serviceGridItemImg} />
+                <h2 className={styles.serviceGridItemHeading}>
+                  NFT AND TOKEN </h2>
+                <h5 className={styles.serviceGridItemTxt}>
+                  Tokenize your assets with our NFT and token services.</h5>
+                {/* <div className={styles.knowmoreBtn}>Know More</div> */}
+              </div>
+              <div className={styles.serviceGridItem}>
+                <img src={android} alt="folderLockIcon" className={styles.serviceGridItemImg} />
+                <h2 className={styles.serviceGridItemHeading}>
+                  ANDROID AND IOS APP</h2>
+                <h5 className={styles.serviceGridItemTxt}>
+                  Launch your mobile app on both Android and iOS with us.</h5>
+                {/* <div className={styles.knowmoreBtn}>Know More</div> */}
+              </div>
+              <div className={styles.serviceGridItem}>
+                <img src={marketplaces} alt="shieldIcon" className={styles.serviceGridItemImg} />
+                <h2 className={styles.serviceGridItemHeading}>
+                  MARKETPLACES
+                </h2>
+                <h5 className={styles.serviceGridItemTxt}>
+                  Join the NFT revolution with our NFT marketplace development service.</h5>
+                {/* <div className={styles.knowmoreBtn}>Know More</div> */}
+              </div>
             </div>
-            <div className={styles.serviceGridItem}>
-              <img src={website} alt="shieldIcon" className={styles.serviceGridItemImg} />
-              <h2 className={styles.serviceGridItemHeading}>
-                WEBSITE DEVELOPMENT
-              </h2>
-              <h5 className={styles.serviceGridItemTxt}>
-                Create a sleek and user-friendly website of your desired theme with our team.</h5>
-              {/* <div className={styles.knowmoreBtn}>Know More</div> */}
-            </div>
-            <div className={styles.serviceGridItem}>
-              <img src={nft} alt="transparency-img" className={styles.serviceGridItemImg} />
-              <h2 className={styles.serviceGridItemHeading}>
-                NFT AND TOKEN </h2>
-              <h5 className={styles.serviceGridItemTxt}>
-                Tokenize your assets with our NFT and token services.</h5>
-              {/* <div className={styles.knowmoreBtn}>Know More</div> */}
-            </div>
-            <div className={styles.serviceGridItem}>
-              <img src={android} alt="folderLockIcon" className={styles.serviceGridItemImg} />
-              <h2 className={styles.serviceGridItemHeading}>
-                ANDROID AND IOS APP</h2>
-              <h5 className={styles.serviceGridItemTxt}>
-                Launch your mobile app on both Android and iOS with us.</h5>
-              {/* <div className={styles.knowmoreBtn}>Know More</div> */}
-            </div>
-            <div className={styles.serviceGridItem}>
-              <img src={marketplaces} alt="shieldIcon" className={styles.serviceGridItemImg} />
-              <h2 className={styles.serviceGridItemHeading}>
-                MARKETPLACES
-              </h2>
-              <h5 className={styles.serviceGridItemTxt}>
-                Join the NFT revolution with our NFT marketplace development service.</h5>
-              {/* <div className={styles.knowmoreBtn}>Know More</div> */}
-            </div>
-          </div>
-          {/* countup  */}
-          <div className={styles.clientTxtWrapper}>
-            <div className={styles.clientTxtItem}>
-              <h2 className={styles.clientTxtnum}>
-                <CountUp end={50}>
-                  {({ countUpRef, start }) => (
-                    <VisibilitySensor onChange={start}>
-                      <span ref={countUpRef} />
-                    </VisibilitySensor>
-                  )}
-                </CountUp>
-                +
-              </h2>
-              <h2 className={styles.clientTxt1}>CLIENTS</h2>
-            </div>
-            <div className={styles.clientTxtItem}>
-              <h2 className={styles.clientTxt}>
-                {"$"}
-                <div className={styles.clientTxtnum}>
-                  <CountUp end={100}>
+            {/* countup  */}
+            <div className={styles.clientTxtWrapper}>
+              <div className={styles.clientTxtItem}>
+                <h2 className={styles.clientTxtnum}>
+                  <CountUp end={50}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start}>
                         <span ref={countUpRef} />
                       </VisibilitySensor>
                     )}
                   </CountUp>
-                </div>
-                M
-              </h2>
-              <h2 className={styles.clientTxt2}>Raised By our clients</h2>
+                  +
+                </h2>
+                <h2 className={styles.clientTxt1}>CLIENTS</h2>
+              </div>
+              <div className={styles.clientTxtItem}>
+                <h2 className={styles.clientTxt}>
+                  {"$"}
+                  <div className={styles.clientTxtnum}>
+                    <CountUp end={100}>
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start}>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                  </div>
+                  M
+                </h2>
+                <h2 className={styles.clientTxt2}>Raised By our clients</h2>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* <div className={styles.styledSectionWrapper}>
+          {/* <div className={styles.styledSectionWrapper}>
           <div className={styles.styledSection1}>
             <h1 className={styles.styledSectionTxt}>
               Tap into the billion-dollar decentralized
@@ -403,222 +408,229 @@ export default function LeadHome() {
           </div>
         </div> */}
 
-        <div className="projectsDone"> </div>
-        <div className={styles.mainWrapper4}>
-          <h1 className={styles.ourProjectsHeading}>
-            Our <span>Projects</span>
-          </h1>
-          <h5 className={styles.ourProjectTxt}>
-            Explore our diverse portfolio of projects, including website and dapp development, among other services.</h5>
-
-          <div className={styles.projectImgWrapper}>
-            <img src={scribbleImg} alt="scribbleImg" className={styles.scribbleImg} />
-            <img src={projectsImg} alt="projectsImg" className={styles.projectsImg} />
-          </div>
-          <Link to="/projects" target="_blank" rel="noopener noreferrer">
-            <div className={styles.seeallProjectsBtn} onClick={() => callFacebookPixel("ClickedSeeAllProjects", 3)}>
-              <h4>
-                See&nbsp;all&nbsp;Projects
-              </h4>
-            </div>
-          </Link>
-        </div>
-
-        <WhyUs />
-
-        <Partners />
-
-
-        <div className={styles.styledSectionWrapper}>
-          <div className={styles.styledSection2}>
-            <h1 className={styles.styledSectionTxt}>
-              Are you looking for a reliable
-              <br />
-              Dapp solution that can give your
-              <br />
-              business the much-needed boost?
+          <div className="projectsDone"> </div>
+          <div className={styles.mainWrapper4}>
+            <h1 className={styles.ourProjectsHeading}>
+              Our <span>Projects</span>
             </h1>
-            <Link to={"/form" + params} onClick={() => callFacebookPixel("ClickedTalkWithExperts", 4)}>
-              <button className={styles.styledwhiteBtn} style={{ border: "0px" }}>
-                Book a Call with Dev Team
-              </button>
+            <h5 className={styles.ourProjectTxt}>
+              Explore our diverse portfolio of projects, including website and dapp development, among other services.</h5>
+
+            <div className={styles.projectImgWrapper}>
+              <img src={scribbleImg} alt="scribbleImg" className={styles.scribbleImg} />
+              <img src={projectsImg} alt="projectsImg" className={styles.projectsImg} />
+            </div>
+            <Link to="/projects" target="_blank" rel="noopener noreferrer">
+              <div className={styles.seeallProjectsBtn} onClick={() => callFacebookPixel("ClickedSeeAllProjects", 3)}>
+                <h4>
+                  See&nbsp;all&nbsp;Projects
+                </h4>
+              </div>
             </Link>
           </div>
-          <div className={styles.greenBorderDown}></div>
-        </div>
 
-        <div className={styles.mainWrapper5}>
-          <h2 className={styles.platformHeading}>
-            Platforms We Work On </h2>
-          <div className={styles.platformsDiv}>
-            <div className={styles.platform}>
-              <img src={ethereumIcon} alt="ethereumIcon" className={styles.platformIcon} />
-              <h2>
-                Ethereum
-              </h2>
-            </div>
-            <div className={styles.platform}>
-              <img src={binanceIcon} alt="binanceIcon" className={styles.platformIcon} />
-              <h2>
-                Binance
-              </h2>
-            </div>
-            <div className={styles.platform}>
-              <img src={polygonIcon} alt="polygonIcon" className={styles.platformIcon} />
-              <h2>
-                Polygon
-              </h2>
-            </div>
-            <div className={styles.platform}>
-              <img src={tronIcon} alt="tronIcon" className={styles.platformIcon} />
-              <h2>
-                Tron</h2>
-            </div>
-          </div>
-        </div>
+          <WhyUs />
 
-        <Review />
+          <Partners />
 
-        <YourDreams />
 
-        <div className={styles.styledSectionWrapper}>
-          <div className={styles.joinFamilyMain}>
-            <div className={`${styles.styledSection3}`}>
+          <div className={styles.styledSectionWrapper}>
+            <div className={styles.styledSection2}>
               <h1 className={styles.styledSectionTxt}>
-                Join our family, and your
+                Are you looking for a reliable
                 <br />
-                first consultation is on us.
+                Dapp solution that can give your
+                <br />
+                business the much-needed boost?
               </h1>
-              <p className={styles.styledSectionDesc}>
-                We're so confident in our abilities that we offer a 100%
-                <br />satisfaction guarantee, and get 100% refund if not satisfied.
-
-              </p>
-              <Link to={"/form" + params} onClick={() => callFacebookPixel("ClickedTalkWithExperts", 4)}>
+              <Link onClick={() => {
+                callFacebookPixel("ClickedTalkWithExperts", 4)
+                scrollToForm();
+              }}>
                 <button className={styles.styledwhiteBtn} style={{ border: "0px" }}>
-                  Contact us now to seize the future!
+                  Book a Call with Dev Team
                 </button>
               </Link>
             </div>
-            <div className={styles.joinFamilyLottie}>
-              {/* <h1>hellow</h1> */}
+            <div className={styles.greenBorderDown}></div>
+          </div>
+
+          <div className={styles.mainWrapper5}>
+            <h2 className={styles.platformHeading}>
+              Platforms We Work On </h2>
+            <div className={styles.platformsDiv}>
+              <div className={styles.platform}>
+                <img src={ethereumIcon} alt="ethereumIcon" className={styles.platformIcon} />
+                <h2>
+                  Ethereum
+                </h2>
+              </div>
+              <div className={styles.platform}>
+                <img src={binanceIcon} alt="binanceIcon" className={styles.platformIcon} />
+                <h2>
+                  Binance
+                </h2>
+              </div>
+              <div className={styles.platform}>
+                <img src={polygonIcon} alt="polygonIcon" className={styles.platformIcon} />
+                <h2>
+                  Polygon
+                </h2>
+              </div>
+              <div className={styles.platform}>
+                <img src={tronIcon} alt="tronIcon" className={styles.platformIcon} />
+                <h2>
+                  Tron</h2>
+              </div>
             </div>
           </div>
-          <div className={styles.greenBorderDown}></div>
-        </div>
 
-        <LeadForm />
+          <Review />
 
-        <Accordion items={items} />
+          <YourDreams />
 
-        <div className={styles.mainWrapper6}>
-          <div className="testimonials"> </div>
+          <div className={styles.styledSectionWrapper}>
+            <div className={styles.joinFamilyMain}>
+              <div className={`${styles.styledSection3}`}>
+                <h1 className={styles.styledSectionTxt}>
+                  Join our family, and your
+                  <br />
+                  first consultation is on us.
+                </h1>
+                <p className={styles.styledSectionDesc}>
+                  We're so confident in our abilities that we offer a 100%
+                  <br />satisfaction guarantee, and get 100% refund if not satisfied.
 
-          <div className={styles.blogsDiv}>
-            <h1 className={styles.blogsDivHeading}>
-              Latest <span>Blogs</span>
+                </p>
+                <Link onClick={() => {
+                  callFacebookPixel("ClickedTalkWithExperts", 4)
+                  scrollToForm();
+                }}>
+                  <button className={styles.styledwhiteBtn} style={{ border: "0px" }}>
+                    Contact us now to seize the future!
+                  </button>
+                </Link>
+              </div>
+              <div className={styles.joinFamilyLottie}>
+                {/* <h1>hellow</h1> */}
+              </div>
+            </div>
+            <div className={styles.greenBorderDown}></div>
+          </div>
+
+          <LeadForm />
+
+          <Accordion items={items} />
+
+          <div className={styles.mainWrapper6}>
+            <div className="testimonials"> </div>
+
+            <div className={styles.blogsDiv}>
+              <h1 className={styles.blogsDivHeading}>
+                Latest <span>Blogs</span>
+              </h1>
+              <div className={styles.blogsGrid}>
+                <div className={styles.blog}>
+                  <img src={blogImg1} className={styles.blogImg} alt="blog-img" />
+                  <h2 className={styles.blogHeading}>
+                    Top 5 real-world use cases of blockchain technology </h2>
+                  <h5 className={styles.blogDesc}>
+                    Blockchain technology can be used to create an unchangeable and secure record of a product's journey <br /> .&nbsp;.&nbsp;.
+                  </h5>
+                  <Link to="blog/Top-5-real-world-use-cases-of-blockchain-technology" target="_blank" rel="noopener noreferrer">
+                    <h5 className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
+                      Read More{">"}
+                    </h5>
+                  </Link>
+                </div>
+                <div className={styles.blog}>
+                  <img src={blogImg2} className={styles.blogImg} alt="blog-img" />
+                  <h2 className={styles.blogHeading}>
+                    Which platforms should you use to buy NFTs in 2023? </h2>
+                  <h5 className={styles.blogDesc}>
+                    In recent years, the world of NFTs has exploded, with more and more people investing in digital assets like <br /> .&nbsp;.&nbsp;.
+                  </h5>
+                  <Link to="blog/Which-platforms-should-you-use-to-buy-NFTs-in-2023" target="_blank" rel="noopener noreferrer">
+                    <p className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
+                      Read More{">"}
+                    </p>
+                  </Link>
+                </div>
+                <div className={styles.blog}>
+                  <img src={blogImg3} className={styles.blogImg} alt="blog-img" />
+                  <h2 className={styles.blogHeading}>
+                    Top 5 Metaverse Games, 2023 edition </h2>
+                  <h5 className={styles.blogDesc}>
+                    Metaverse games are online virtual worlds where players can interact with each other, explore, create, and play games <br /> .&nbsp;.&nbsp;.
+                  </h5>
+                  <Link to="blog/Top-5-Metaverse-Games,-2023-edition" target="_blank" rel="noopener noreferrer">
+                    <h5 className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
+                      Read More{">"}
+                    </h5>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <h1 className={styles.newsletterHeading}>
+              Subscribe TO Our <span>Newsletter</span>
             </h1>
-            <div className={styles.blogsGrid}>
-              <div className={styles.blog}>
-                <img src={blogImg1} className={styles.blogImg} alt="blog-img" />
-                <h2 className={styles.blogHeading}>
-                  Top 5 real-world use cases of blockchain technology </h2>
-                <h5 className={styles.blogDesc}>
-                  Blockchain technology can be used to create an unchangeable and secure record of a product's journey <br /> .&nbsp;.&nbsp;.
-                </h5>
-                <Link to="blog/Top-5-real-world-use-cases-of-blockchain-technology" target="_blank" rel="noopener noreferrer">
-                  <h5 className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
-                    Read More{">"}
-                  </h5>
-                </Link>
+            <h5 className={styles.newsletterTxt}>
+              Get updates and information about crypto world by subscribe to our newsletter </h5>
+            <div className={styles.signupWrapper}>
+              <div className={styles.signupInput}>
+                <input
+                  placeholder="Enter Your Email Address"
+                  value={userEmail}
+                  onChange={(event) => {
+                    setUserEmail(event.target.value);
+                    setValidEmail(true);
+                  }}
+                />
+                <button
+                  className={styles.subscribeBtn}
+                  onClick={() => {
+                    if (validator.isEmail(userEmail)) {
+                      handleOnClickSubscribe();
+                      triggerLottie();
+                      setUserEmail("");
+                      ReactPixel.trackCustom("newsletterSubscribed", { value: 7500, currency: "USD" });
+                      sendDataToPably({ event: "newsletterSubscribed", value: 7500, currency: "USD", email: userEmail, userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000) });
+                    } else {
+                      setValidEmail(false);
+                    }
+                  }}
+                  style={{ cursor: "pointer", border: "0px" }}
+                >
+                  Subscribe
+                </button>
               </div>
-              <div className={styles.blog}>
-                <img src={blogImg2} className={styles.blogImg} alt="blog-img" />
-                <h2 className={styles.blogHeading}>
-                  Which platforms should you use to buy NFTs in 2023? </h2>
-                <h5 className={styles.blogDesc}>
-                  In recent years, the world of NFTs has exploded, with more and more people investing in digital assets like <br /> .&nbsp;.&nbsp;.
-                </h5>
-                <Link to="blog/Which-platforms-should-you-use-to-buy-NFTs-in-2023" target="_blank" rel="noopener noreferrer">
-                  <p className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
-                    Read More{">"}
-                  </p>
-                </Link>
-              </div>
-              <div className={styles.blog}>
-                <img src={blogImg3} className={styles.blogImg} alt="blog-img" />
-                <h2 className={styles.blogHeading}>
-                  Top 5 Metaverse Games, 2023 edition </h2>
-                <h5 className={styles.blogDesc}>
-                  Metaverse games are online virtual worlds where players can interact with each other, explore, create, and play games <br /> .&nbsp;.&nbsp;.
-                </h5>
-                <Link to="blog/Top-5-Metaverse-Games,-2023-edition" target="_blank" rel="noopener noreferrer">
-                  <h5 className={styles.readmoreBtn} onClick={() => callFacebookPixel("ClickedReadMore", 3)}>
-                    Read More{">"}
-                  </h5>
-                </Link>
-              </div>
+              {validEmail ? null : <h5 className={styles.emailError}>Please enter valid Email</h5>}
+            </div>
+            <div className={styles.socialIconDiv}>
+              <a href="https://instagram.com/thematrixlabs.eth?igshid=NDk5N2NlZjQ=" >
+                <GrInstagram />
+              </a>
+              <a href="https://www.linkedin.com/company/thematrixlabs/">
+                <FaLinkedin />
+              </a>
+              <a href="https://twitter.com/TheMatrixLabs?t=WI-bvQduDTmbcLZ-ikyrbg&s=09">
+                <FaTwitter />
+              </a>
+              <a href="https://t.me/brickMatrix">
+                <FaTelegramPlane />
+              </a>
+              <a href="mailto:contact@thematrixlabs.com">
+                {/* <img src={emailIcon} className={styles.socialIcons} alt="email-icon" /> */}
+                <IoIosMail size={"3rem"} style={{ marginTop: "-0.3rem" }} />
+              </a>
             </div>
           </div>
-          <h1 className={styles.newsletterHeading}>
-            Subscribe TO Our <span>Newsletter</span>
-          </h1>
-          <h5 className={styles.newsletterTxt}>
-            Get updates and information about crypto world by subscribe to our newsletter </h5>
-          <div className={styles.signupWrapper}>
-            <div className={styles.signupInput}>
-              <input
-                placeholder="Enter Your Email Address"
-                value={userEmail}
-                onChange={(event) => {
-                  setUserEmail(event.target.value);
-                  setValidEmail(true);
-                }}
-              />
-              <button
-                className={styles.subscribeBtn}
-                onClick={() => {
-                  if (validator.isEmail(userEmail)) {
-                    handleOnClickSubscribe();
-                    triggerLottie();
-                    setUserEmail("");
-                    ReactPixel.trackCustom("newsletterSubscribed", { value: 7500, currency: "USD" });
-                    sendDataToPably({ event: "newsletterSubscribed", value: 7500, currency: "USD", email: userEmail, userAgent: navigator.userAgent, href: window.location.href, timestamp: Math.floor(Date.now() / 1000) });
-                  } else {
-                    setValidEmail(false);
-                  }
-                }}
-                style={{ cursor: "pointer", border: "0px" }}
-              >
-                Subscribe
-              </button>
-            </div>
-            {validEmail ? null : <h5 className={styles.emailError}>Please enter valid Email</h5>}
-          </div>
-          <div className={styles.socialIconDiv}>
-            <a href="https://instagram.com/thematrixlabs.eth?igshid=NDk5N2NlZjQ=" >
-              <GrInstagram />
-            </a>
-            <a href="https://www.linkedin.com/company/thematrixlabs/">
-              <FaLinkedin />
-            </a>
-            <a href="https://twitter.com/TheMatrixLabs?t=WI-bvQduDTmbcLZ-ikyrbg&s=09">
-              <FaTwitter />
-            </a>
-            <a href="https://t.me/brickMatrix">
-              <FaTelegramPlane />
-            </a>
-            <a href="mailto:contact@thematrixlabs.com">
-              {/* <img src={emailIcon} className={styles.socialIcons} alt="email-icon" /> */}
-              <IoIosMail size={"3rem"} style={{ marginTop: "-0.3rem" }} />
-            </a>
-          </div>
+
         </div>
 
-      </div>
-
-      <div className={styles.leadFormFooter}>
-        <Footer />
+        <div className={styles.leadFormFooter}>
+          <Footer />
+        </div>
       </div>
     </>
   );

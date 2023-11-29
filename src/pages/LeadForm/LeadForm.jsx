@@ -80,7 +80,7 @@ const LeadForm = () => {
 
 
     return (
-        <div>
+        <div id='leadForm'>
             <div className={styles.formMainDiv}>
                 <h1 className={styles.heading}>Looking for a reliable Software solutions</h1>
 
