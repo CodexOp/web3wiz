@@ -19,6 +19,17 @@ export default function Navbar(props) {
     setParams(window.location.search);
 
   }, [])
+
+  const scrollToService1 = () => {
+    const section1 = document.querySelector('#service1');
+    section1.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToForm = () => {
+    const section1 = document.querySelector('#leadForm');
+    section1.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <header className={styles.primaryHeader}>
@@ -32,16 +43,16 @@ export default function Navbar(props) {
             </Link>
             <div className={styles.navbarOptionbtns} style={{ display: show ? 'block' : 'none' }}>
               <div className={styles.highlighted}>
-                <a href="/#home">Home</a>
+                <a href='/#home'>Home</a>
               </div>
-              <a href="/#services">
+              <a onClick={scrollToService1}>
                 <div className={styles.navbarbtn}>Services</div>
               </a>
               <Link to="/projects" target="_blank" rel="noopener noreferrer">
                 {' '}
                 <div className={styles.navbarbtn}>Projects</div>
               </Link>
-              <Link to={"/form" + params} target="_blank" rel="noopener noreferrer">
+              <Link onClick={scrollToForm}>
                 <div className={styles.getaquotaBtn} onClick={() => callFacebookPixel('ClickedGetQuote', 10)}>
                   Get a Quote
                 </div>

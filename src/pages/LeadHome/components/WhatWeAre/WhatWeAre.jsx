@@ -23,7 +23,7 @@ const WhatWeAre = () => {
         }
     ]
     return (
-        <div>
+        <div className={styles.whatWeAreContainer}>
             <Marquee autoFill={true}>
                 {
                     data?.map((item, index) => (
